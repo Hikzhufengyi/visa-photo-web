@@ -33,6 +33,7 @@ const seoLinks = [
 
 export function MarketingHome({ locale }: { locale: Locale }) {
   const copy = getCopy(locale);
+  const appStoreCta = locale === "zh" ? "下载 App" : "Download app";
 
   return (
     <main className="page-shell">
@@ -101,6 +102,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </article>
           ))}
         </div>
+        <div className="section-cta">
+          <Link
+            className="button button-compact button-primary"
+            href={siteConfig.appStoreUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {appStoreCta}
+          </Link>
+        </div>
       </section>
 
       <section className="section showcase" id="showcase">
@@ -165,6 +176,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </div>
           </article>
         </div>
+        <div className="section-cta">
+          <Link
+            className="button button-compact button-primary"
+            href={siteConfig.appStoreUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {appStoreCta}
+          </Link>
+        </div>
       </section>
 
       <section className="section split-section">
@@ -191,6 +212,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               />
             </div>
           </article>
+        </div>
+        <div className="section-cta">
+          <Link
+            className="button button-compact button-primary"
+            href={siteConfig.appStoreUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {appStoreCta}
+          </Link>
         </div>
       </section>
 
@@ -224,6 +255,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               height={5400}
             />
           </article>
+        </div>
+        <div className="section-cta">
+          <Link
+            className="button button-compact button-primary"
+            href={siteConfig.appStoreUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {appStoreCta}
+          </Link>
         </div>
       </section>
 
@@ -335,9 +376,9 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="section seo-links-section">
+      <section className="section seo-links-section secondary-section">
         <div className="section-heading">
-          <p className="eyebrow">SEO</p>
+          <p className="eyebrow">{locale === "zh" ? "规格指南" : "Guides"}</p>
           <h2>{copy.home.seoHeading}</h2>
         </div>
         <div className="seo-link-grid">

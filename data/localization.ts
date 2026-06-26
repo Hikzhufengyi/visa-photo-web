@@ -23,9 +23,9 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "离线安全的 iPhone 证件照 App",
-      title: "在 iPhone 上制作可提交、可打印的证件照。",
+      title: "离线制作护照照和签证照。",
       description:
-        "IDPhoto Pro 支持护照照、签证照、绿卡照、居留卡照和证件照制作。照片处理在设备本地完成，不上传服务器；编辑页支持 AI 自动校准、手动多参数校准、多项检测评分标准、一次买断解锁和 4x6 打印排版。",
+        "在 iPhone 上完成拍摄、AI 校准、合规检查、背景处理、电子文件导出和 4x6 打印排版。照片本地处理，一次买断，无订阅。",
       highlights: [
         "100% 本地处理，不上传照片",
         "一次买断，无订阅、无广告",
@@ -151,9 +151,9 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "Private On-Device Passport Photo App",
-      title: "Create submission-ready ID photos on iPhone.",
+      title: "Private passport and visa photos on your iPhone.",
       description:
-        "IDPhoto Pro helps you create passport, visa, green card, residence card, and ID photos with on-device processing, AI auto calibration, manual multi-parameter adjustment, multiple scoring standards, one-time purchase unlock, and 4x6 print layouts.",
+        "Create passport, visa, green card, residence card, and ID photos with on-device processing, AI calibration, smart checks, digital export, and 4x6 print layouts. One-time purchase. No subscription.",
       highlights: [
         "100% on-device photo processing, no server upload",
         "One-time purchase, no subscription, no ads",
