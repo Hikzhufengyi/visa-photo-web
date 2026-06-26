@@ -1,0 +1,163 @@
+import Link from "next/link";
+import { siteConfig } from "@/data/site";
+
+export const metadata = {
+  title: "Privacy Policy",
+  description: "Privacy Policy for IDPhoto Pro."
+};
+
+export default function PrivacyPage() {
+  return (
+    <main className="legal-page">
+      <div className="legal-shell">
+        <p className="eyebrow">Privacy Policy</p>
+        <h1>Privacy Policy for IDPhoto Pro</h1>
+        <p className="policy-meta">Effective date: May 21, 2026</p>
+
+        <p>
+          IDPhoto Pro is designed to help users create passport, visa,
+          immigration, green card, residence card, and ID photos while keeping
+          photo processing private and local.
+        </p>
+
+        <section className="policy-section">
+          <h2>1. Photo Processing</h2>
+          <p>
+            All photo processing happens on your device. IDPhoto Pro does not
+            upload your photos to a server for face detection, cropping,
+            background replacement, light repair, compression, export, print
+            layout generation, or creation history.
+          </p>
+          <p>
+            Face position, eye line, head proportion, top margin, and similar
+            photo checks are performed locally using on-device image analysis.
+            IDPhoto Pro does not create, collect, store, or upload face
+            templates.
+          </p>
+          <p>
+            Photos may leave the app only when you choose to save them to
+            Photos, save them to Files, or share them through the iOS system
+            share sheet.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>2. Data We Store Locally</h2>
+          <p>IDPhoto Pro may store the following data locally on your device:</p>
+          <ul className="policy-list">
+            <li>Your local username</li>
+            <li>Your local avatar</li>
+            <li>Creation records</li>
+            <li>
+              Exported preview images and export files saved in the app sandbox
+            </li>
+            <li>App preferences such as onboarding status</li>
+          </ul>
+          <p>
+            This data is used only to provide app features on your device. It
+            is not synced to a cloud account by IDPhoto Pro.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>3. Data We Do Not Collect</h2>
+          <p>In this version, IDPhoto Pro does not collect:</p>
+          <ul className="policy-list">
+            <li>Photos</li>
+            <li>Face images or face templates</li>
+            <li>Government ID numbers</li>
+            <li>Passport numbers</li>
+            <li>Location data</li>
+            <li>Contact lists</li>
+            <li>Advertising identifiers</li>
+            <li>Third-party analytics events</li>
+          </ul>
+          <p>
+            IDPhoto Pro does not include ad SDKs or third-party analytics SDKs
+            in this version.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>4. Purchases</h2>
+          <p>
+            IDPhoto Pro may offer a lifetime unlock as a one-time,
+            non-consumable in-app purchase through Apple. There is no
+            subscription, no recurring charge, and no advertising in the app.
+          </p>
+          <p>
+            Purchases are processed by Apple. IDPhoto Pro receives purchase
+            entitlement information from StoreKit so the app can unlock paid
+            features. We do not receive your payment card information.
+          </p>
+          <p>
+            You can restore a previous purchase in the app. Restore Purchase
+            checks your App Store account purchase history through Apple and
+            does not upload your photos.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>5. Sharing and Export</h2>
+          <p>
+            When you save or share an exported photo, JPG, PNG, HEIF, PDF, or
+            print layout, your action is handled by iOS system services such as
+            Photos, Files, Mail, Messages, AirDrop, or other apps you choose.
+            Those services and apps may have their own privacy practices.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>6. Deleting Data</h2>
+          <p>
+            You can clear local creation records in the app. You can also
+            delete the app to remove locally stored app data, subject to iOS
+            storage behavior and backups.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>7. Children&apos;s Privacy</h2>
+          <p>
+            IDPhoto Pro is a general utility app. It is not designed to
+            knowingly collect personal data from children. Because photo
+            processing is local, the app does not send children&apos;s photos to
+            our servers.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>8. Disclaimer</h2>
+          <p>
+            IDPhoto Pro is not affiliated with any government, embassy, visa
+            center, or official application portal. The app helps prepare photos
+            based on published requirements, but it cannot guarantee acceptance
+            by any authority. Users should review the official source before
+            submitting final photos.
+          </p>
+          <p>
+            Compliance checks are guidance only. Requirements may change, and
+            final acceptance is decided by the receiving authority.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>9. Changes to This Policy</h2>
+          <p>
+            We may update this privacy policy when the app changes. The
+            effective date will be updated when material changes are made.
+          </p>
+        </section>
+
+        <section className="policy-section">
+          <h2>10. Contact</h2>
+          <p>
+            For privacy questions, contact the developer at{" "}
+            <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>{" "}
+            or use the <Link href="/support">technical support page</Link>.
+          </p>
+        </section>
+      </div>
+    </main>
+  );
+}

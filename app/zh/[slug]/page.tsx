@@ -1,0 +1,52 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { SeoLanding } from "@/components/seo-landing";
+import { getSeoPage, seoPages } from "@/data/seo-pages";
+import { siteConfig } from "@/data/site";
+
+type PageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateStaticParams() {
+  return seoPages.map((page) => ({
+    slug: page.slug
+  }));
+}
+
+export async function generateMetadata({
+  params
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getSeoPage(slug);
+
+  if (!page) {
+    return {};
+  }
+
+  return {
+    title: `${page.title} | 中文`,
+    description: `${page.heading}. Typical size: ${page.size}, background: ${page.background}, with iPhone on-device checks plus digital and print-ready export support.`,
+    alternates: {
+      canonical: `/zh/${page.slug}`
+    },
+    openGraph: {
+      title: `${page.title} | 中文`,
+      description: page.intro,
+      url: `${siteConfig.domain}/zh/${page.slug}`
+    }
+  };
+}
+
+export default async function ZhSeoPage({ params }: PageProps) {
+  const { slug } = await params;
+  const page = getSeoPage(slug);
+
+  if (!page) {
+    notFound();
+  }
+
+  return <SeoLanding locale="zh" page={page} />;
+}
