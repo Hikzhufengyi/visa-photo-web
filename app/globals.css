@@ -776,6 +776,11 @@ h3 {
 
 .seo-links-section {
   margin-top: 12px;
+  padding-top: 10px;
+}
+
+.secondary-section {
+  opacity: 0.92;
 }
 
 .seo-link-grid,
@@ -793,11 +798,23 @@ h3 {
 }
 
 .seo-link-card {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.64);
-  padding: 20px 22px;
+  border: 1px solid rgba(35, 23, 15, 0.08);
+  background: rgba(255, 255, 255, 0.38);
+  padding: 13px 16px;
+  color: var(--muted);
+  font-size: 0.94rem;
   font-weight: 700;
-  box-shadow: var(--shadow);
+  box-shadow: none;
+  transition:
+    transform 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.seo-link-card:hover {
+  transform: translateY(-1px);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .seo-shell {
@@ -855,6 +872,19 @@ h3 {
     transform 180ms ease,
     box-shadow 180ms ease,
     border-color 180ms ease;
+}
+
+.button-compact {
+  min-height: 42px;
+  padding: 0 16px;
+  font-size: 0.94rem;
+  box-shadow: 0 10px 24px rgba(188, 93, 46, 0.16);
+}
+
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
 }
 
 .button:hover {

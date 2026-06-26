@@ -343,14 +343,14 @@ export function MarketingHome({ locale }: { locale: Locale }) {
       <section className="section app-store-section">
         <div className="section-heading">
           <p className="eyebrow">{locale === "zh" ? "App Store" : "App Store"}</p>
-          <h2>{locale === "zh" ? "商店页面展示真实产品功能" : "The App Store page shows the real product experience"}</h2>
+          <h2>{locale === "zh" ? "已在 App Store 上架" : "Available on the App Store"}</h2>
         </div>
         <div className="app-store-card">
           <div className="app-store-copy">
             <p>
               {locale === "zh"
-                ? "App Store 页面会直接展示 IDPhoto Pro 的核心能力：离线处理、智能检测、AI 校准、官方规格模板、电子文件导出和打印排版。用户在下载前就能看到它不是普通修图工具，而是完整的证件照制作流程。"
-                : "The App Store page presents IDPhoto Pro's core workflow clearly: on-device processing, smart checks, AI calibration, official-size presets, digital export, and print layouts. People can understand the product before downloading it."}
+                ? "在 App Store 查看 IDPhoto Pro 的截图、功能介绍和下载入口。核心功能包括离线处理、智能检测、AI 校准、官方规格模板、电子文件导出和打印排版。"
+                : "View IDPhoto Pro screenshots, feature details, and download options on the App Store. The app focuses on on-device processing, smart checks, AI calibration, official-size presets, digital export, and print layouts."}
             </p>
             <div className="legal-links">
               <Link href={`/${locale}/download`}>{copy.nav.download}</Link>
