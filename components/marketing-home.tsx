@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { DownloadQr } from "@/components/download-qr";
+import { LazyAutoplayVideo } from "@/components/lazy-autoplay-video";
 import type { Locale } from "@/data/localization";
 import { getCopy } from "@/data/localization";
 import { siteConfig } from "@/data/site";
@@ -9,8 +10,13 @@ const seoLinks = [
   "us-passport-photo-size",
   "us-visa-photo-size",
   "green-card-photo-requirements",
+  "uscis-photo-requirements",
+  "dv-lottery-photo-requirements",
   "schengen-visa-photo-size",
+  "2x2-passport-photo-size",
+  "600x600-passport-photo",
   "canada-visa-photo-size",
+  "canada-passport-photo-size",
   "canada-pr-card-photo-size",
   "india-passport-photo-size",
   "india-visa-photo-size",
@@ -41,7 +47,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             <Link href={`/${locale}/support`}>{copy.nav.support}</Link>
             <Link href={`/${locale}/blog`}>{copy.nav.blog}</Link>
           </div>
-          <ul className="hero-points">
+          <ul className="hero-points hero-proof-grid">
             {copy.home.highlights.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -106,19 +112,18 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <article className="showcase-card showcase-card-large">
             <div className="showcase-copy">
               <p className="card-label">{locale === "zh" ? "规格库" : "Preset Library"}</p>
-              <h3>{locale === "zh" ? "按国家、证件和尺寸搜索规格" : "Search presets by country, document, and size"}</h3>
+              <h3>{locale === "zh" ? "多国家、多证件类型规格适配" : "Multi-country, multi-document preset support"}</h3>
               <p>
                 {locale === "zh"
-                  ? "App 内置的是官方规格库，不只是单一的 2x2 裁切。用户可以按国家、护照、签证、移民和打印用途筛选模板。"
-                  : "The app ships with a real preset library, not a single 2x2 cropper. Users can filter templates by country, passport, visa, immigration, and print use cases."}
+                  ? "App 内置多国家证件照规格库，不只是单一的 2x2 裁切。用户可以按国家、护照、签证、移民、居留卡、身份证件和打印用途筛选模板。"
+                  : "The app includes a multi-country document photo preset library, not a single 2x2 cropper. Users can filter templates by country, passport, visa, immigration, residence card, ID, and print use cases."}
               </p>
             </div>
             <div className="device-frame">
-              <Image
-                src="/screenshots/home.png"
-                alt="IDPhoto Pro preset library"
-                width={1320}
-                height={2868}
+              <LazyAutoplayVideo
+                className="device-video"
+                src="/screenshots/country-selection-demo.mp4"
+                label={locale === "zh" ? "IDPhoto Pro 多国家证件规格选择演示" : "IDPhoto Pro multi-country preset selection demo"}
               />
             </div>
           </article>
@@ -144,19 +149,18 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <article className="showcase-card">
             <div className="showcase-copy">
               <p className="card-label">{locale === "zh" ? "编辑器" : "Editor"}</p>
-              <h3>{locale === "zh" ? "裁切、缩放、旋转和修图后即时检查" : "Adjust and review instantly in one editor"}</h3>
+              <h3>{locale === "zh" ? "AI 自动校准，也能手动精细调整" : "AI auto calibration with manual fine control"}</h3>
               <p>
                 {locale === "zh"
-                  ? "编辑器不只是移动头像，还包含背景切换、亮度、对比度、阴影、色温和锐度等调整。"
-                  : "The editor handles more than drag-to-move. It includes background switching, brightness, contrast, shadow, warmth, and sharpness controls."}
+                  ? "编辑器会根据当前国家和证件类型的公开尺寸、比例和构图要求做校准，并用多项检测评分提示风险；用户也可以手动调整位置、缩放、旋转、亮度、锐度、背景和文件输出。"
+                  : "The editor calibrates against the selected country and document size, ratio, and framing guidance, then uses multiple scoring checks to surface risk. Users can still manually adjust position, zoom, rotation, lighting, sharpness, background, and output."}
               </p>
             </div>
             <div className="device-frame">
-              <Image
-                src="/screenshots/editor.png"
-                alt="IDPhoto Pro editor"
-                width={1320}
-                height={2868}
+              <LazyAutoplayVideo
+                className="device-video"
+                src="/screenshots/editor-demo.mp4"
+                label={locale === "zh" ? "IDPhoto Pro 编辑证件照演示" : "IDPhoto Pro document photo editor demo"}
               />
             </div>
           </article>
@@ -171,7 +175,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         <div className="split-grid">
           <article className="info-card">
             <p>{copy.home.checksIntro}</p>
-            <ul className="check-list">
+            <ul className="smart-check-list">
               {copy.home.checks.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -180,8 +184,8 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <article className="image-card">
             <div className="device-frame">
               <Image
-                src="/screenshots/checks.png"
-                alt="IDPhoto Pro compliance checks"
+                src="/screenshots/smart-check-score.png"
+                alt={locale === "zh" ? "IDPhoto Pro 智能检测评分和问题提示" : "IDPhoto Pro smart check score and issue summary"}
                 width={1320}
                 height={2868}
               />
@@ -195,13 +199,12 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <p className="eyebrow">{locale === "zh" ? "导出方式" : "Export"}</p>
           <h2>{copy.home.exportHeading}</h2>
         </div>
-        <div className="split-grid reverse">
-          <article className="image-card wide-image-card">
-            <Image
-              src="/screenshots/export-sheet.png"
-              alt="IDPhoto Pro print layout preview"
-              width={1320}
-              height={2868}
+        <div className="export-showcase-grid">
+          <article className="image-card phone-media-card">
+            <LazyAutoplayVideo
+              className="device-video"
+              src="/screenshots/export-demo.mp4"
+              label={locale === "zh" ? "IDPhoto Pro 导出演示" : "IDPhoto Pro export demo"}
             />
           </article>
           <article className="info-card">
@@ -211,6 +214,15 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </article>
+          <article className="image-card export-result-card">
+            <p className="card-label">{locale === "zh" ? "导出结果" : "Exported Result"}</p>
+            <Image
+              src="/screenshots/export-result-4up.jpg"
+              alt={locale === "zh" ? "IDPhoto Pro 四张打印排版导出结果" : "IDPhoto Pro four-photo print layout export result"}
+              width={3600}
+              height={5400}
+            />
           </article>
         </div>
       </section>
@@ -223,18 +235,19 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         <div className="split-grid">
           <article className="info-card">
             <p>{copy.home.pricingIntro}</p>
-            <ul className="check-list">
+            <ul className="pricing-check-list">
               {copy.home.pricingItems.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
-          <article className="info-card">
-            <p>
-              {locale === "zh"
-                ? "这类购买模式更适合低频但高意图的护照照和签证照需求，也更容易建立用户信任。"
-                : "This purchase model fits low-frequency but high-intent document-photo needs and makes the product easier to trust."}
-            </p>
+          <article className="image-card unlock-shot-card">
+            <Image
+              src="/screenshots/lifetime-unlock.png"
+              alt={locale === "zh" ? "IDPhoto Pro 一次解锁页面" : "IDPhoto Pro lifetime unlock screen"}
+              width={1320}
+              height={2868}
+            />
             <div className="hero-actions">
               <Link
                 className="button button-primary"
@@ -288,15 +301,15 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section app-store-section">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "产品定位" : "Positioning"}</p>
-          <h2>{locale === "zh" ? "官网描述要和 App Store 实际功能一致" : "Site messaging should match the real App Store product"}</h2>
+          <p className="eyebrow">{locale === "zh" ? "App Store" : "App Store"}</p>
+          <h2>{locale === "zh" ? "商店页面展示真实产品功能" : "The App Store page shows the real product experience"}</h2>
         </div>
         <div className="app-store-card">
           <div className="app-store-copy">
             <p>
               {locale === "zh"
-                ? "这款产品的真实定位是 iPhone 上的证件照制作工具，强调本地处理、规则检查、导出和打印能力，而不是在线上传到服务器的 Web 修图服务。"
-                : "The real product is an iPhone document-photo tool focused on on-device processing, compliance checks, export, and print workflows, not a cloud photo-editing service."}
+                ? "App Store 页面会直接展示 IDPhoto Pro 的核心能力：离线处理、智能检测、AI 校准、官方规格模板、电子文件导出和打印排版。用户在下载前就能看到它不是普通修图工具，而是完整的证件照制作流程。"
+                : "The App Store page presents IDPhoto Pro's core workflow clearly: on-device processing, smart checks, AI calibration, official-size presets, digital export, and print layouts. People can understand the product before downloading it."}
             </p>
             <div className="legal-links">
               <Link href={`/${locale}/download`}>{copy.nav.download}</Link>
@@ -305,12 +318,18 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               <Link href={`/${locale}/privacy`}>{copy.nav.privacy}</Link>
             </div>
           </div>
-          <div className="app-store-shot">
+          <div className="app-store-shot-list">
             <Image
-              src="/screenshots/app-store.png"
-              alt="IDPhoto Pro App Store page"
-              width={1320}
-              height={2868}
+              src="/screenshots/app-store-listing-1.png"
+              alt={locale === "zh" ? "IDPhoto Pro App Store 商店页标题和截图" : "IDPhoto Pro App Store listing title and screenshots"}
+              width={2120}
+              height={515}
+            />
+            <Image
+              src="/screenshots/app-store-listing-2.png"
+              alt={locale === "zh" ? "IDPhoto Pro App Store 商店页功能展示" : "IDPhoto Pro App Store listing feature preview"}
+              width={2096}
+              height={833}
             />
           </div>
         </div>

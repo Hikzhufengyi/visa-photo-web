@@ -133,6 +133,82 @@ export const seoPages: SeoPage[] = [
     ]
   },
   {
+    slug: "uscis-photo-requirements",
+    title: "USCIS Photo Requirements",
+    heading: "USCIS photo requirements for immigration applications",
+    country: "United States",
+    documentName: "USCIS Photo",
+    size: "2 x 2 in",
+    pixels: "600 x 600 px or higher",
+    background: "White or off-white",
+    keyword: "USCIS photo requirements",
+    intro:
+      "Prepare USCIS-style immigration photos on iPhone with 2 x 2 inch sizing, white or off-white background guidance, face-position checks, and digital export support.",
+    requirements: [
+      "Common USCIS photo size: 2 x 2 inches",
+      "Square digital file, commonly 600 x 600 px or higher",
+      "Plain white or off-white background",
+      "Full face visible, centered, and looking directly at the camera",
+      "Recent, sharp photo with no heavy shadows or filters"
+    ],
+    steps: [
+      "Choose a US immigration or USCIS-style preset.",
+      "Import a clear front-facing portrait.",
+      "Review head size, eye height, centering, top margin, background, and sharpness checks.",
+      "Export a digital file for the selected application workflow."
+    ],
+    faq: [
+      {
+        question: "Are USCIS photos usually the same size as US passport photos?",
+        answer:
+          "Many USCIS-style photo workflows use a 2 x 2 inch photo, but always verify the exact requirement for the form or portal you are using."
+      },
+      {
+        question: "Can IDPhoto Pro guarantee USCIS acceptance?",
+        answer:
+          "No. The app helps prepare and check the photo, while final acceptance is decided by USCIS or the receiving service."
+      }
+    ]
+  },
+  {
+    slug: "dv-lottery-photo-requirements",
+    title: "DV Lottery Photo Requirements",
+    heading: "DV Lottery photo size and requirements",
+    country: "United States",
+    documentName: "DV Lottery",
+    size: "2 x 2 in",
+    pixels: "600 x 600 px",
+    background: "White or off-white",
+    keyword: "DV lottery photo requirements",
+    intro:
+      "Prepare a DV Lottery style photo on iPhone with a square 600 x 600 px target, white or off-white background guidance, and face-position checks before export.",
+    requirements: [
+      "Digital target commonly used for DV Lottery: 600 x 600 px",
+      "Square 2 x 2 inch style framing",
+      "Plain white or off-white background",
+      "Neutral expression with both eyes open",
+      "No filters, heavy shadows, or face obstruction"
+    ],
+    steps: [
+      "Select a US 2 x 2 inch photo preset.",
+      "Import or capture a recent front-facing photo.",
+      "Use on-device checks for head size, eye height, centering, and background.",
+      "Export the final square digital image."
+    ],
+    faq: [
+      {
+        question: "What pixel size is used for DV Lottery photos?",
+        answer:
+          "A common DV Lottery digital target is 600 x 600 px. Verify the latest official instruction before submitting."
+      },
+      {
+        question: "Can I use a phone photo for DV Lottery?",
+        answer:
+          "A phone photo may work if it is sharp, recent, evenly lit, front-facing, and adjusted to the required size and framing."
+      }
+    ]
+  },
+  {
     slug: "schengen-visa-photo-size",
     title: "Schengen Visa Photo Size",
     heading: "Schengen visa photo size and requirements",
@@ -209,19 +285,58 @@ export const seoPages: SeoPage[] = [
     ]
   },
   {
+    slug: "canada-passport-photo-size",
+    title: "Canada Passport Photo Size",
+    heading: "Canada passport photo size and requirements",
+    country: "Canada",
+    documentName: "Passport",
+    size: "50 x 70 mm",
+    pixels: "591 x 827 px at 300 DPI or higher",
+    background: "White or light-colored",
+    keyword: "Canada passport photo size",
+    intro:
+      "Prepare a Canada passport photo on iPhone with 50 x 70 mm sizing, white or light-colored background guidance, face-framing checks, and print-ready export support.",
+    requirements: [
+      "Common Canada passport photo size: 50 x 70 mm",
+      "Plain white or light-colored background",
+      "Face centered with neutral expression",
+      "Head height and chin-to-crown measurement should follow current official guidance",
+      "Sharp photo with balanced lighting and no heavy shadows"
+    ],
+    steps: [
+      "Choose the Canada passport preset.",
+      "Import a recent front-facing portrait.",
+      "Review head size, centering, top margin, background, and sharpness checks.",
+      "Export a digital file or print-ready sheet."
+    ],
+    faq: [
+      {
+        question: "Is a Canada passport photo 50 x 70 mm?",
+        answer:
+          "A common Canada passport photo size is 50 x 70 mm. Always verify the latest Passport Canada instruction before final submission."
+      },
+      {
+        question: "Can I create a Canada passport photo on iPhone?",
+        answer:
+          "Yes. You can use the app to crop, check, and export the photo, but the final receiving authority decides acceptance."
+      }
+    ]
+  },
+  {
     slug: "canada-pr-card-photo-size",
     title: "Canada PR Card Photo Size",
     heading: "Canada PR card photo size and requirements",
     country: "Canada",
     documentName: "Permanent Resident Card",
     size: "50 x 70 mm",
-    pixels: "591 x 827 px at 300 DPI or higher",
+    pixels: "715 x 1000 px to 2000 x 2800 px",
     background: "White or light-colored",
     keyword: "canada pr card photo size",
     intro:
       "Prepare a Canada permanent resident card photo with size, background, head-position guidance, and print or digital export support on iPhone.",
     requirements: [
       "Common photo size: 50 x 70 mm",
+      "Face height target: 31 x 36 mm from chin to crown",
       "White or light-colored plain background",
       "Face and shoulders visible with balanced framing",
       "Head upright and centered",
@@ -291,14 +406,15 @@ export const seoPages: SeoPage[] = [
     country: "India",
     documentName: "Visa",
     size: "2 x 2 in",
-    pixels: "600 x 600 px or higher",
+    pixels: "350 x 350 px to 1000 x 1000 px",
     background: "White or light plain background",
     keyword: "india visa photo size",
     intro:
       "Prepare an India visa photo on iPhone with square sizing, background guidance, face checks, target-KB compression, and export support.",
     requirements: [
       "Common photo size: 2 x 2 inches",
-      "Square digital image, commonly 600 x 600 px or higher",
+      "Square digital image: minimum 350 x 350 px, maximum 1000 x 1000 px",
+      "JPEG file size commonly required between 10 KB and 300 KB",
       "Plain white or light background",
       "Face centered with eyes open",
       "File should be sharp and suitable for the target upload portal"
@@ -366,14 +482,14 @@ export const seoPages: SeoPage[] = [
     heading: "PAN card photo size and requirements",
     country: "India",
     documentName: "PAN Card",
-    size: "3.5 x 2.5 cm",
-    pixels: "413 x 295 px at 300 DPI or higher",
+    size: "2.5 x 3.5 cm",
+    pixels: "295 x 413 px at 300 DPI or higher",
     background: "Plain light background",
     keyword: "pan card photo size",
     intro:
       "Prepare a PAN card style photo on iPhone with size guidance, plain background checks, and export options for online or printed use.",
     requirements: [
-      "Common photo size: 3.5 x 2.5 cm",
+      "Common printed photo size: 2.5 x 3.5 cm",
       "Plain light background",
       "Face clear and centered",
       "Sharp image without heavy shadows",
@@ -389,7 +505,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "What is a common PAN card photo size?",
         answer:
-          "A common printed PAN card photo target is 3.5 x 2.5 cm, but online requirements may vary by service channel."
+          "A common printed PAN card photo target is 2.5 x 3.5 cm, but online requirements may vary by service channel."
       },
       {
         question: "Can IDPhoto Pro make small document photos?",
@@ -433,6 +549,82 @@ export const seoPages: SeoPage[] = [
         question: "Does every document photo fit the same number on 4x6?",
         answer:
           "No. The number of photos depends on the document photo size, margins, and selected layout."
+      }
+    ]
+  },
+  {
+    slug: "2x2-passport-photo-size",
+    title: "2x2 Passport Photo Size",
+    heading: "2x2 passport photo size guide",
+    country: "Multiple countries",
+    documentName: "2x2 Passport Photo",
+    size: "2 x 2 in",
+    pixels: "600 x 600 px or higher",
+    background: "Depends on selected country or document",
+    keyword: "2x2 passport photo size",
+    intro:
+      "Create a 2 x 2 inch passport or visa photo on iPhone with square framing, background guidance, face-position checks, and digital or print-ready export.",
+    requirements: [
+      "Photo size: 2 x 2 inches",
+      "Common digital target: 600 x 600 px or higher",
+      "Background depends on the selected country or application",
+      "Face centered, looking directly at the camera",
+      "Review the exact official requirement before submission"
+    ],
+    steps: [
+      "Choose a 2 x 2 inch preset in the app.",
+      "Import or capture a clear front-facing portrait.",
+      "Review head size, eye height, centering, top margin, background, and sharpness checks.",
+      "Export the digital photo or generate a 4x6 print layout."
+    ],
+    faq: [
+      {
+        question: "Which documents use a 2x2 photo?",
+        answer:
+          "US passport, many US visa, green card, USCIS, and India visa workflows commonly use a 2 x 2 inch style photo, but exact requirements vary."
+      },
+      {
+        question: "Can a 2x2 photo be printed on 4x6 paper?",
+        answer:
+          "Yes. A 4x6 inch print sheet can hold multiple 2 x 2 inch photos depending on margins and layout."
+      }
+    ]
+  },
+  {
+    slug: "600x600-passport-photo",
+    title: "600x600 Passport Photo",
+    heading: "600 x 600 passport photo guide",
+    country: "Multiple countries",
+    documentName: "600 x 600 Photo",
+    size: "Square digital photo",
+    pixels: "600 x 600 px",
+    background: "Depends on selected country or document",
+    keyword: "600x600 passport photo",
+    intro:
+      "Prepare a 600 x 600 px passport, visa, or immigration photo on iPhone with square crop, face-position checks, and export support.",
+    requirements: [
+      "Digital image target: 600 x 600 px",
+      "Square crop with face centered",
+      "Background depends on the selected application",
+      "Sharp, recent, front-facing photo",
+      "Use the exact portal requirement before uploading"
+    ],
+    steps: [
+      "Choose a square passport or visa preset.",
+      "Adjust crop, zoom, and rotation.",
+      "Review the local checks before export.",
+      "Export the final digital image."
+    ],
+    faq: [
+      {
+        question: "Is 600 x 600 px enough for a passport photo?",
+        answer:
+          "Some digital passport, visa, and immigration workflows use 600 x 600 px, but requirements vary by country and portal."
+      },
+      {
+        question: "Can IDPhoto Pro export 600 x 600 photos?",
+        answer:
+          "Yes. The app supports square document photo presets and digital export workflows."
       }
     ]
   },
@@ -481,17 +673,18 @@ export const seoPages: SeoPage[] = [
     country: "Saudi Arabia",
     documentName: "Iqama",
     size: "4 x 6 cm",
-    pixels: "480 x 640 px",
+    pixels: "472 x 709 px at 300 DPI or higher",
     background: "White",
     keyword: "saudi iqama photo size",
     intro:
       "Use IDPhoto Pro on iPhone to prepare a Saudi Iqama photo with the right size, background, framing, and export format before submission or printing.",
     requirements: [
-      "Target photo size: 4 x 6 cm",
-      "Recommended digital size: 480 x 640 px or higher",
+      "Common local ID photo preset: 4 x 6 cm",
+      "Recommended digital size: 472 x 709 px at 300 DPI or higher",
       "Plain white background",
       "Face centered and looking directly at the camera",
-      "No heavy shadow, blur, or obstruction on the face"
+      "No heavy shadow, blur, or obstruction on the face",
+      "Verify the latest Absher, Muqeem, or receiving-office instruction before final submission"
     ],
     steps: [
       "Choose the Saudi Iqama preset from the built-in document library.",
@@ -518,18 +711,19 @@ export const seoPages: SeoPage[] = [
     heading: "UAE Emirates ID photo size and requirements",
     country: "United Arab Emirates",
     documentName: "Emirates ID",
-    size: "4 x 6 cm",
-    pixels: "480 x 640 px",
+    size: "35 x 45 mm or 40 x 60 mm, depending on channel",
+    pixels: "Use the ICP or receiving-channel requirement",
     background: "White",
     keyword: "uae emirates id photo size",
     intro:
       "Use IDPhoto Pro to understand a typical UAE Emirates ID photo size, background, and framing requirement before exporting a final file on iPhone.",
     requirements: [
-      "Common photo size: 4 x 6 cm",
-      "Recommended digital file: 480 x 640 px or higher",
+      "Use the size required by the selected ICP or service channel",
+      "Some UAE ID and residence workflows use 35 x 45 mm or 40 x 60 mm presets",
       "White or very light background",
       "Neutral expression with eyes open",
-      "Face should occupy a clear central area"
+      "Face should occupy a clear central area",
+      "Verify the latest ICP smart services instruction before final submission"
     ],
     steps: [
       "Pick the Emirates ID preset from the document picker.",
@@ -557,17 +751,18 @@ export const seoPages: SeoPage[] = [
     country: "Qatar",
     documentName: "Residence Permit",
     size: "4 x 6 cm",
-    pixels: "480 x 640 px",
+    pixels: "472 x 709 px at 300 DPI or higher",
     background: "White",
     keyword: "qatar residence permit photo size",
     intro:
       "Generate a Qatar residence permit photo on iPhone with the expected dimensions, white background, and centered portrait layout.",
     requirements: [
-      "Common size: 4 x 6 cm",
-      "Recommended minimum digital file: 480 x 640 px",
+      "Common GCC residence photo preset: 4 x 6 cm",
+      "Recommended minimum digital file: 472 x 709 px at 300 DPI or higher",
       "Plain white background",
       "Head upright and centered",
-      "No distracting accessories or shadows"
+      "No distracting accessories or shadows",
+      "Verify the exact Metrash or receiving-channel instruction before final submission"
     ],
     steps: [
       "Select the Qatar residence permit preset.",
@@ -594,18 +789,19 @@ export const seoPages: SeoPage[] = [
     heading: "Kuwait Civil ID photo size and requirements",
     country: "Kuwait",
     documentName: "Civil ID",
-    size: "4 x 5 cm",
-    pixels: "480 x 600 px",
+    size: "4 x 6 cm",
+    pixels: "472 x 709 px at 300 DPI or higher",
     background: "White",
     keyword: "kuwait civil id photo size",
     intro:
       "Check a typical Kuwait Civil ID photo size and create a compliant export with the right framing, background, and file format on iPhone.",
     requirements: [
-      "Typical size: 4 x 5 cm",
-      "Suggested digital dimensions: 480 x 600 px or higher",
+      "Typical Civil ID photo preset: 4 x 6 cm",
+      "Suggested digital dimensions: 472 x 709 px at 300 DPI or higher",
       "Plain white background",
       "Face fully visible and front-facing",
-      "Sharp image with no blur or heavy edits"
+      "Sharp image with no blur or heavy edits",
+      "Kuwait passport services may use different sizes, so verify the selected service before submission"
     ],
     steps: [
       "Open the Kuwait Civil ID preset in the app.",
@@ -617,7 +813,7 @@ export const seoPages: SeoPage[] = [
       {
         question: "What is the Kuwait Civil ID photo size?",
         answer:
-          "A typical target is 4 x 5 cm with a plain white background. Double-check the latest official guidance before submission."
+          "A typical Civil ID photo preset is 4 x 6 cm with a plain white background. Double-check the latest official guidance before submission."
       },
       {
         question: "Does the app check face position?",
@@ -633,17 +829,18 @@ export const seoPages: SeoPage[] = [
     country: "Oman",
     documentName: "Residence Card",
     size: "4 x 6 cm",
-    pixels: "480 x 640 px",
-    background: "White",
+    pixels: "472 x 709 px at 300 DPI or higher",
+    background: "White or service-specific plain background",
     keyword: "oman residence card photo size",
     intro:
       "Create an Oman residence card photo with the correct size, a clean background, and a print-ready export option using IDPhoto Pro on iPhone.",
     requirements: [
-      "Common size: 4 x 6 cm",
-      "Recommended digital size: 480 x 640 px or higher",
-      "White background",
+      "Common residence photo preset: 4 x 6 cm",
+      "Recommended digital size: 472 x 709 px at 300 DPI or higher",
+      "Use the background required by the selected Oman service channel",
       "Straight pose with visible facial features",
-      "Balanced lighting with no dark shadows"
+      "Balanced lighting with no dark shadows",
+      "Verify the latest Royal Oman Police or receiving-channel instruction before final submission"
     ],
     steps: [
       "Select the Oman residence card preset.",

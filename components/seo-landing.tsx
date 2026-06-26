@@ -11,9 +11,63 @@ export function SeoLanding({
   page: SeoPage;
 }) {
   const isZh = locale === "zh";
+  const pageUrl = `${siteConfig.domain}/${locale}/${page.slug}`;
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: page.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  };
+  const softwareJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: siteConfig.appStoreName,
+    applicationCategory: "PhotographyApplication",
+    operatingSystem: "iOS",
+    url: siteConfig.appStoreUrl,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock"
+    }
+  };
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: page.heading,
+    description: page.intro,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name
+    }
+  };
 
   return (
     <main className="legal-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="seo-shell">
         <div className="seo-hero">
           <p className="eyebrow">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SiteChrome } from "@/components/site-chrome";
+import { coreSeoKeywords } from "@/data/seo-keywords";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -12,22 +13,27 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "visa photo",
-    "passport photo",
-    "ID photo",
-    "US passport photo",
-    "Schengen visa photo",
-    "Canada visa photo",
-    "India passport photo",
-    "4x6 passport photo",
+    ...coreSeoKeywords,
     "证件照",
-    "签证照片"
+    "护照照片",
+    "签证照片",
+    "美国护照照片",
+    "加拿大签证照片",
+    "申根签证照片",
+    "印度护照照片",
+    "4x6 证件照排版"
   ],
+  category: "photo",
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.name
+  },
   alternates: {
     canonical: "/",
     languages: {
       en: "/en",
-      zh: "/zh"
+      zh: "/zh",
+      "x-default": "/en"
     }
   },
   openGraph: {
@@ -35,13 +41,22 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.domain,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/screenshots/app-store-listing-1.png",
+        width: 2120,
+        height: 515,
+        alt: "IDPhoto Pro App Store listing"
+      }
+    ],
     locale: "zh_CN",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
-    description: siteConfig.description
+    description: siteConfig.description,
+    images: ["/screenshots/app-store-listing-1.png"]
   }
 };
 

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "IDPhoto Pro",
   domain: "https://passportidphoto.com",
-  appStoreUrl: "https://apps.apple.com/app/id6771586096",
+  appStoreUrl: "https://apps.apple.com/us/app/idphoto-pro-passport-photo/id6771586096",
   appStoreId: "6771586096",
   appStoreName: "IDPhoto Pro: Passport Photo",
   supportEmail: "hikzhufengyi@163.com",
