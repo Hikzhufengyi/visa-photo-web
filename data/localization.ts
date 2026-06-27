@@ -96,15 +96,15 @@ export const uiCopy = {
       eyebrow: "下载",
       title: "下载 IDPhoto Pro",
       description:
-        "目前先提供 iPhone 版本。这个页面既可以作为正式下载入口，也方便后面继续补上 Android 下载渠道。",
+        "目前先提供 iPhone 版本。你可以直接扫码跳到 App Store，后面如果补 Android，这个页面也可以继续沿用。",
       platform:
-        "当前版本先上架 iPhone。适合护照照、签证照、证件照和打印版导出场景。",
+        "当前版本先上架 iPhone，适合护照照、签证照、常见证件照，以及电子版和打印版导出。",
       iosTitle: "扫码在 iPhone 上下载",
       iosDescription:
-        "直接用 iPhone 相机扫一扫，就可以跳到 App Store 下载页面。",
+        "直接用 iPhone 相机扫一扫，就能打开 App Store 下载页。",
       androidTitle: "Android 后续补充",
       androidDescription:
-        "Android 下载入口还没上线，但位置已经预留好了。后面无论接 Google Play 还是 APK，都不需要重新改页面结构。",
+        "Android 下载入口还没上线，不过位置已经预留好了。以后无论接 Google Play 还是 APK，都不用重做这一页。",
       backHome: "返回首页"
     },
     about: {
@@ -232,15 +232,15 @@ export const uiCopy = {
       eyebrow: "Download",
       title: "Download IDPhoto Pro",
       description:
-        "The first release is for iPhone. This page works as the official download destination now and leaves room for Android later.",
+        "The first release is for iPhone. You can scan the code to jump straight to the App Store, and this page can stay in place when Android is added later.",
       platform:
-        "Current platform: iPhone via the App Store. Best suited for passport photos, visa photos, ID photos, and print-layout export.",
+        "Current platform: iPhone via the App Store. Best for passport photos, visa photos, common ID photos, and both digital and print export.",
       iosTitle: "Scan to download on iPhone",
       iosDescription:
-        "Use your iPhone camera to scan the code and jump straight to the App Store listing.",
+        "Use your iPhone camera to scan the code and open the App Store listing directly.",
       androidTitle: "Android coming later",
       androidDescription:
-        "Android is not available yet, but the spot is already reserved. When the Android build is ready, the page structure does not need to change.",
+        "Android is not available yet, but the spot is already reserved. When the Android build is ready, this page will not need a redesign.",
       backHome: "Back to home"
     },
     about: {

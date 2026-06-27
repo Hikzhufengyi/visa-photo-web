@@ -14,8 +14,8 @@ export function SupportPage({ locale }: { locale: Locale }) {
         <h1>{isZh ? "IDPhoto Pro 技术支持" : "IDPhoto Pro Support"}</h1>
         <p>
           {isZh
-            ? "如果你在制作、检查或导出护照照、签证照、绿卡照、居留卡照或其他证件照时遇到问题，可以先查看下面的常见问题，或联系开发者。"
-            : "Need help creating, checking, or exporting passport, visa, green card, residence card, or ID photos? Use the information below to troubleshoot common issues or contact the developer."}
+            ? "如果你在制作、检查或导出证件照时卡住了，可以先看下面这些常见问题；如果还没解决，再直接联系我。"
+            : "If you get stuck while creating, checking, or exporting a document photo, start with the common questions below. If that still does not solve it, contact me directly."}
         </p>
 
         <section className="notice-card">
@@ -28,8 +28,8 @@ export function SupportPage({ locale }: { locale: Locale }) {
         <section className="notice-card">
           <strong>{isZh ? "购买提醒：" : "Purchase reminder:"}</strong>{" "}
           {isZh
-            ? "IDPhoto Pro 使用一次性终身解锁。没有订阅、没有连续扣费，也没有广告。"
-            : "IDPhoto Pro uses a one-time lifetime unlock. There is no subscription, no recurring charge, and no advertising."}
+            ? "IDPhoto Pro 使用一次性解锁。没有订阅、没有连续扣费，也没有广告。"
+            : "IDPhoto Pro uses a one-time unlock. There is no subscription, no recurring charge, and no advertising."}
         </section>
 
         <section className="policy-section">
@@ -37,6 +37,11 @@ export function SupportPage({ locale }: { locale: Locale }) {
           <p>
             {isZh ? "邮箱：" : "Email:"}{" "}
             <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>
+          </p>
+          <p>
+            {isZh
+              ? "来信时尽量附上证件类型、遇到的问题，以及相关截图，我会更容易定位。"
+              : "If you can include the document type, the issue you hit, and a screenshot, it is much easier for me to pinpoint the problem."}
           </p>
           <div className="hero-actions">
             <Link
@@ -59,8 +64,8 @@ export function SupportPage({ locale }: { locale: Locale }) {
           <h3>{isZh ? "为什么我的照片被标记为需要处理？" : "Why was my photo marked as needing attention?"}</h3>
           <p>
             {isZh
-              ? "App 会检查头部大小、面部位置、眼线高度、头顶留白、背景、清晰度和文件大小等常见要求。请根据检查列表调整照片后再导出。"
-              : "The app checks common requirements such as head size, face position, eye line height, top margin, background, sharpness, and file-size guidance. Review the checklist and adjust the photo before exporting."}
+              ? "App 会检查头部大小、面部位置、眼线高度、头顶留白、背景、清晰度和文件大小等常见要求。通常按检查列表一点点修正，结果就会更稳。"
+              : "The app checks common requirements such as head size, face position, eye line height, top margin, background, sharpness, and file-size guidance. In most cases, working through the checklist step by step is enough."}
           </p>
 
           <h3>{isZh ? "为什么预览里会显示引导线？" : "Why does the preview show guide lines?"}</h3>
@@ -80,8 +85,8 @@ export function SupportPage({ locale }: { locale: Locale }) {
           <h3>{isZh ? "面部检测会上传到服务器吗？" : "Are my face checks uploaded to a server?"}</h3>
           <p>
             {isZh
-              ? "不会。面部位置、眼线高度、头部比例和留白检查会在你的设备本地处理。IDPhoto Pro 不会上传照片，也不会创建服务器端人脸模板。"
-              : "No. Face position, eye line, head proportion, and margin checks are processed on your device. IDPhoto Pro does not upload your photos or create server-side face templates."}
+              ? "不会。面部位置、眼线高度、头部比例和留白检查都在你的设备本地处理。IDPhoto Pro 不会上传照片，也不会在服务器端保存人脸模板。"
+              : "No. Face position, eye line, head proportion, and margin checks are processed on your device. IDPhoto Pro does not upload your photos or store face templates on a server."}
           </p>
 
           <h3>{isZh ? "我的制作记录保存在哪里？" : "Where are my creation records stored?"}</h3>

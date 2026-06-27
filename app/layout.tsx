@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     capable: true,
     title: siteConfig.name
   },
+  icons: {
+    icon: "/icon",
+    apple: "/apple-icon"
+  },
   alternates: {
     canonical: "/",
     languages: {
