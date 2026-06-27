@@ -6,5 +6,5 @@ export const siteConfig = {
   appStoreName: "IDPhoto Pro: Passport Photo",
   supportEmail: "hikzhufengyi@163.com",
   description:
-    "IDPhoto Pro 是一款 iPhone 证件照 App，支持护照照、签证照和多国证件规格，本地检查与导出都在设备上完成。"
+    "IDPhoto Pro helps people create passport, visa, and ID photos on iPhone with official-size presets, on-device checks, and export-ready files."
 };

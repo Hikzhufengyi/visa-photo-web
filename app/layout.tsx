@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         alt: "IDPhoto Pro App Store listing"
       }
     ],
-    locale: "zh_CN",
+    locale: "en_US",
     type: "website"
   },
   twitter: {
@@ -70,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body>
         <SiteChrome>{children}</SiteChrome>
       </body>
