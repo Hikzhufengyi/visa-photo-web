@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "About",
-  description: "About IDPhoto Pro and this document photo website."
+  title: "About IDPhoto Pro",
+  description:
+    "Learn what IDPhoto Pro does, which document-photo workflows it supports, and how this website relates to the app."
 };
 
 export default function AboutPage() {

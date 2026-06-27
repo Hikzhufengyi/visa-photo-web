@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Blog",
-  description: "Content hub for passport photo, visa photo, and ID photo guides."
+  title: "Document Photo Guides",
+  description:
+    "Browse passport photo, visa photo, print layout, and document photo requirement guides published for IDPhoto Pro users."
 };
 
 export default function BlogPage() {

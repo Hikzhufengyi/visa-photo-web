@@ -3,8 +3,9 @@ import { DownloadQr } from "@/components/download-qr";
 import { siteConfig } from "@/data/site";
 
 export const metadata = {
-  title: "Download",
-  description: "Download IDPhoto Pro from the App Store."
+  title: "Download IDPhoto Pro",
+  description:
+    "Download IDPhoto Pro from the App Store and scan the QR code on desktop to open the iPhone app listing."
 };
 
 export default function DownloadPage() {

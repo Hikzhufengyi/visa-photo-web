@@ -29,7 +29,7 @@ export async function generateMetadata({
 
   return {
     title: page.title,
-    description: `${page.heading}. Typical size: ${page.size}, background: ${page.background}, with iPhone on-device checks plus digital and print-ready export support.`,
+    description: `${page.heading}. Typical size: ${page.size}. Background: ${page.background}. Use IDPhoto Pro on iPhone to adjust the photo, review checks, and export digital or print-ready files.`,
     keywords: getSeoPageKeywords(page),
     alternates: {
       canonical: `/en/${page.slug}`,

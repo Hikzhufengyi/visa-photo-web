@@ -23,14 +23,14 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "离线安全的 iPhone 证件照 App",
-      title: "离线制作护照照和签证照。",
+      title: "在 iPhone 上完成护照照、签证照和证件照。",
       description:
-        "在 iPhone 上完成拍摄、AI 校准、合规检查、背景处理、电子文件导出和 4x6 打印排版。照片本地处理，一次买断，无订阅。",
+        "从选规格、调照片、检查构图到导出电子版和打印版，都可以直接在 iPhone 上完成。照片不上传服务器，一次买断，无订阅。",
       highlights: [
         "100% 本地处理，不上传照片",
         "一次买断，无订阅、无广告",
-        "多项评分标准：尺寸、比例、背景、眼线、留白、居中、倾斜和清晰度",
-        "AI 一键校准 + 多种合规检查方式，提升提交前准备成功率"
+        "检查尺寸、背景、眼线、留白、居中、倾斜和清晰度",
+        "支持电子版导出，也支持 4x6、A4、Letter 打印排版"
       ],
       stepsHeading: "它不是简单裁一张图，而是一整套证件照流程",
       steps: [
@@ -49,7 +49,7 @@ export const uiCopy = {
       ],
       checksHeading: "智能检测，每一项细微问题都提前暴露出来",
       checksIntro:
-        "做证件照时，用户最担心的通常不是美观，而是能不能提交。IDPhoto Pro 会根据所选国家和证件类型，在设备本地逐项检查照片规格、头像构图、面部状态、背景和画质，把细微风险提前显示出来，帮助你在导出前提高照片准备完成度。",
+        "做证件照时，最怕的通常不是拍得不好看，而是交上去才发现尺寸、背景或构图不对。IDPhoto Pro 会按所选国家和证件类型，在设备本地逐项检查照片规格、头像位置、背景和画质，让问题尽量在导出前暴露出来。",
       checks: [
         "当前国家和证件类型的尺寸规格",
         "最终照片画幅比例",
@@ -72,7 +72,7 @@ export const uiCopy = {
       ],
       exportHeading: "支持多种图片格式和多种打印排版尺寸",
       exportIntro:
-        "制作完成后，可以按不同用途导出电子文件或打印版。支持 JPG、PNG、HEIF、PDF，多种证件照排版尺寸，以及常用 4x6、A4、Letter 打印排版。",
+        "照片调整完成后，可以直接导出电子文件，也可以生成打印排版。支持 JPG、PNG、HEIF、PDF，以及常用的 4x6、A4、Letter 版式。",
       exportItems: [
         "JPG、PNG、HEIF、PDF",
         "4x6、A4、Letter 打印版",
@@ -80,11 +80,11 @@ export const uiCopy = {
       ],
       pricingHeading: "可以先检查，再决定要不要买断解锁",
       pricingIntro:
-        "这不是订阅制产品。用户可以先把照片调好、把检查结果看明白，确认需要导出最终文件时，再一次性解锁专业版。",
+        "这不是订阅制产品。可以先把照片调好、把检查结果看清楚，确认需要导出最终文件时，再一次性解锁。",
       pricingItems: ["一次买断", "无订阅", "无广告", "本地处理，不上传服务器"],
       qrHeading: "现在先提供 iPhone 下载，Android 后面再补上",
       qrIntro:
-        "如果用户已经在电脑或平板上浏览官网，可以直接扫码到 App Store。等 Android 版本准备好之后，再把第二个下载入口接上就行。",
+        "如果你现在是在电脑或平板上看官网，可以直接扫码跳到 App Store。Android 版本准备好后，再把第二个下载入口补上。",
       qrCaption: "iOS 下载二维码",
       seoHeading: "热门证件照规格指南",
       ctaPrimary: "App Store 下载",
@@ -151,14 +151,14 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "Private On-Device Passport Photo App",
-      title: "Private passport and visa photos on your iPhone.",
+      title: "Create passport and visa photos on your iPhone.",
       description:
-        "Create passport, visa, green card, residence card, and ID photos with on-device processing, AI calibration, smart checks, digital export, and 4x6 print layouts. One-time purchase. No subscription.",
+        "Choose a document preset, adjust the photo, review checks, and export digital or print-ready files directly on iPhone. Processing stays on device. One-time purchase. No subscription.",
       highlights: [
         "100% on-device photo processing, no server upload",
         "One-time purchase, no subscription, no ads",
-        "Multiple scoring standards for size, ratio, background, eye height, margins, centering, tilt, and sharpness",
-        "AI auto calibration plus multiple compliance checks to improve submission readiness"
+        "Checks for size, background, eye height, margins, centering, tilt, and sharpness",
+        "Supports digital export and 4x6, A4, and Letter print layouts"
       ],
       stepsHeading: "It is not just a cropper. It is a document-photo workflow.",
       steps: [
@@ -180,7 +180,7 @@ export const uiCopy = {
       ],
       checksHeading: "Smart checks surface every small issue before export.",
       checksIntro:
-        "For document photos, people usually care less about style and more about whether the file is likely to work. IDPhoto Pro reviews the selected country and document type on device, then checks photo specs, face framing, facial state, background, and image quality item by item before export.",
+        "With document photos, the real concern is usually not style but whether the file is likely to pass review. IDPhoto Pro checks the selected country and document type on device, then reviews framing, background, and image quality before export.",
       checks: [
         "Selected country and document size",
         "Final photo aspect ratio",
@@ -203,7 +203,7 @@ export const uiCopy = {
       ],
       exportHeading: "Export in multiple file formats and print layout sizes",
       exportIntro:
-        "After editing, export a digital file or a print-ready sheet for different use cases. IDPhoto Pro supports JPG, PNG, HEIF, PDF, multiple document photo layouts, plus common 4x6, A4, and Letter print sheets.",
+        "After editing, export a digital file for upload or a print-ready sheet for photo labs. IDPhoto Pro supports JPG, PNG, HEIF, PDF, and common 4x6, A4, and Letter layouts.",
       exportItems: [
         "JPG, PNG, HEIF, and PDF",
         "4x6, A4, and Letter print layouts",
@@ -211,7 +211,7 @@ export const uiCopy = {
       ],
       pricingHeading: "Check first, then decide whether to unlock export",
       pricingIntro:
-        "The app is not subscription-based. People can review their photo first, understand the checks, and only pay once they are ready to export the final file.",
+        "The app is not subscription-based. People can review the photo first, understand the checks, and pay once they are ready to export the final file.",
       pricingItems: [
         "One-time purchase",
         "No subscription",
@@ -220,7 +220,7 @@ export const uiCopy = {
       ],
       qrHeading: "iPhone download now, Android later",
       qrIntro:
-        "If someone lands on the site from desktop or tablet, they can still move straight to the App Store by scanning the QR code. When Android is ready, the second slot is already reserved.",
+        "If someone opens the site on desktop or tablet, they can still jump straight to the App Store by scanning the QR code. When Android is ready, the second slot is already reserved.",
       qrCaption: "iOS download QR",
       seoHeading: "Popular document photo size guides",
       ctaPrimary: "Download on the App Store",

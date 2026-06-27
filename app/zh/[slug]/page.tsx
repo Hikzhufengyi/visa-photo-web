@@ -29,7 +29,7 @@ export async function generateMetadata({
 
   return {
     title: `${page.title} | 中文`,
-    description: `${page.heading}. Typical size: ${page.size}, background: ${page.background}, with iPhone on-device checks plus digital and print-ready export support.`,
+    description: `${page.heading}。常见尺寸：${page.size}。背景要求：${page.background}。可在 iPhone 上用 IDPhoto Pro 调整照片、检查细节并导出电子版或打印版。`,
     keywords: [
       ...getSeoPageKeywords(page),
       `${page.documentName} 证件照`,
