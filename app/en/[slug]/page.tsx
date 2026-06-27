@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { SeoLanding } from "@/components/seo-landing";
 import { getSeoPageKeywords } from "@/data/seo-keywords";
 import { getSeoPage, seoPages } from "@/data/seo-pages";
-import { siteConfig } from "@/data/site";
+import { buildSeoPageMetadata } from "@/data/seo-utils";
 
 type PageProps = {
   params: Promise<{
@@ -28,37 +28,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: page.title,
-    description: `${page.heading}. Typical size: ${page.size}. Background: ${page.background}. Use IDPhoto Pro on iPhone to adjust the photo, review checks, and export digital or print-ready files.`,
+    ...buildSeoPageMetadata(page, "en"),
     keywords: getSeoPageKeywords(page),
-    alternates: {
-      canonical: `/en/${page.slug}`,
-      languages: {
-        en: `/en/${page.slug}`,
-        zh: `/zh/${page.slug}`,
-        "x-default": `/en/${page.slug}`
-      }
-    },
-    openGraph: {
-      title: page.title,
-      description: page.intro,
-      url: `${siteConfig.domain}/en/${page.slug}`,
-      type: "article",
-      images: [
-        {
-          url: "/screenshots/smart-check-score.png",
-          width: 1320,
-          height: 2868,
-          alt: `${page.documentName} photo checks in IDPhoto Pro`
-        }
-      ]
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: page.title,
-      description: page.intro,
-      images: ["/screenshots/smart-check-score.png"]
-    }
   };
 }
 

@@ -34,6 +34,18 @@ const seoLinks = [
 export function MarketingHome({ locale }: { locale: Locale }) {
   const copy = getCopy(locale);
   const appStoreCta = locale === "zh" ? "下载 App" : "Download app";
+  const heroMeta =
+    locale === "zh"
+      ? [
+          { value: "80+", label: "国家与证件模板" },
+          { value: "300 DPI", label: "打印级导出" },
+          { value: "On-device", label: "本地隐私处理" }
+        ]
+      : [
+          { value: "80+", label: "country presets" },
+          { value: "300 DPI", label: "print-ready export" },
+          { value: "On-device", label: "private processing" }
+        ];
 
   return (
     <main className="page-shell">
@@ -42,6 +54,14 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <p className="eyebrow">{copy.home.eyebrow}</p>
           <h1>{copy.home.title}</h1>
           <p className="hero-text">{copy.home.description}</p>
+          <div className="hero-meta" aria-label={locale === "zh" ? "产品关键指标" : "Product highlights"}>
+            {heroMeta.map((item) => (
+              <div className="hero-meta-item" key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
           <div className="mini-nav">
             <Link href={`/${locale}/download`}>{copy.nav.download}</Link>
             <Link href={`/${locale}/about`}>{copy.nav.about}</Link>
@@ -68,6 +88,14 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="hero-visual">
+          <div className="hero-visual-copy">
+            <p>{locale === "zh" ? "Professional preset engine" : "Professional preset engine"}</p>
+            <h2>
+              {locale === "zh"
+                ? "像成熟影像工具，而不是普通裁切页。"
+                : "Designed like a serious imaging tool, not a simple cropper."}
+            </h2>
+          </div>
           <div className="phone-stack phone-stack-front">
             <Image
               src="/screenshots/home.png"

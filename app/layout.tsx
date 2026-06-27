@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteChrome } from "@/components/site-chrome";
 import { coreSeoKeywords } from "@/data/seo-keywords";
 import { siteConfig } from "@/data/site";
+
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -24,6 +28,11 @@ export const metadata: Metadata = {
     "4x6 证件照排版"
   ],
   category: "photo",
+  verification: googleSiteVerification
+    ? {
+        google: googleSiteVerification
+      }
+    : undefined,
   appleWebApp: {
     capable: true,
     title: siteConfig.name
@@ -72,6 +81,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <GoogleAnalytics measurementId={googleAnalyticsId} />
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>

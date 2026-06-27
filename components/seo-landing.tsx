@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/data/localization";
 import type { SeoPage } from "@/data/seo-pages";
+import { buildSeoPageJsonLd } from "@/data/seo-utils";
 import { siteConfig } from "@/data/site";
 
 export function SeoLanding({
@@ -11,62 +12,25 @@ export function SeoLanding({
   page: SeoPage;
 }) {
   const isZh = locale === "zh";
-  const pageUrl = `${siteConfig.domain}/${locale}/${page.slug}`;
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: page.faq.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer
-      }
-    }))
-  };
-  const softwareJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: siteConfig.appStoreName,
-    applicationCategory: "PhotographyApplication",
-    operatingSystem: "iOS",
-    url: siteConfig.appStoreUrl,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock"
-    }
-  };
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: page.heading,
-    description: page.intro,
-    url: pageUrl,
-    mainEntityOfPage: pageUrl,
-    author: {
-      "@type": "Organization",
-      name: siteConfig.name
-    },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name
-    }
-  };
+  const jsonLd = buildSeoPageJsonLd(page, locale);
 
   return (
     <main className="legal-page">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.faq) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.software) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.article) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.breadcrumb) }}
       />
       <div className="seo-shell">
         <div className="seo-hero">

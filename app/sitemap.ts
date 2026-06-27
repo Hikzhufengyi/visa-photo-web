@@ -4,6 +4,7 @@ import { seoPages } from "@/data/seo-pages";
 import { siteConfig } from "@/data/site";
 
 const staticRoutes = [
+  "",
   "/about",
   "/privacy",
   "/terms",
@@ -15,12 +16,8 @@ const staticRoutes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const localizedStaticRoutes = locales.flatMap((locale) => [
-    {
-      url: `${siteConfig.domain}/${locale}`,
-      lastModified: now
-    },
     ...staticRoutes.map((route) => ({
-      url: `${siteConfig.domain}/${locale}${route}`,
+      url: route ? `${siteConfig.domain}/${locale}${route}` : `${siteConfig.domain}/${locale}`,
       lastModified: now
     }))
   ]);
@@ -34,6 +31,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: siteConfig.domain,
+      lastModified: now
+    },
+    {
+      url: `${siteConfig.domain}/en`,
+      lastModified: now
+    },
+    {
+      url: `${siteConfig.domain}/zh`,
       lastModified: now
     },
     ...localizedStaticRoutes,

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { SeoLanding } from "@/components/seo-landing";
 import { getSeoPage, seoPages } from "@/data/seo-pages";
-import { siteConfig } from "@/data/site";
+import { redirect } from "next/navigation";
+import { buildSeoPageMetadata } from "@/data/seo-utils";
 
 type PageProps = {
   params: Promise<{
@@ -26,18 +25,7 @@ export async function generateMetadata({
     return {};
   }
 
-  return {
-    title: page.title,
-    description: `${page.heading}. Typical size: ${page.size}, background: ${page.background}, with iPhone on-device checks plus digital and print-ready export support.`,
-    alternates: {
-      canonical: `/en/${page.slug}`
-    },
-    openGraph: {
-      title: page.title,
-      description: page.intro,
-      url: `${siteConfig.domain}/en/${page.slug}`
-    }
-  };
+  return buildSeoPageMetadata(page, "en");
 }
 
 export default async function SeoLandingPage({ params }: PageProps) {
@@ -45,8 +33,8 @@ export default async function SeoLandingPage({ params }: PageProps) {
   const page = getSeoPage(slug);
 
   if (!page) {
-    notFound();
+    redirect("/en");
   }
 
-  return <SeoLanding locale="en" page={page} />;
+  redirect(`/en/${page.slug}`);
 }
