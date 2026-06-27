@@ -84,8 +84,8 @@ export default function OpenGraphImage() {
                 letterSpacing: -2
               }}
             >
-              <span>Passport and visa</span>
-              <span>photos on iPhone</span>
+              <span>Passport &amp; visa photos</span>
+              <span>for iPhone</span>
             </div>
             <div
               style={{
@@ -97,8 +97,8 @@ export default function OpenGraphImage() {
               }}
             >
               <span>
-                On-device checks, digital export, and print-ready layouts for
-                passport photos, visa photos, and common ID photos.
+                Official-size presets, on-device checks, and export-ready files
+                for passport photos, visa photos, and common ID photos.
               </span>
             </div>
           </div>
@@ -110,9 +110,9 @@ export default function OpenGraphImage() {
               color: "#744524"
             }}
           >
-            <span>On-device processing</span>
+            <span>Document presets</span>
+            <span>On-device checks</span>
             <span>One-time purchase</span>
-            <span>4x6 / A4 / Letter</span>
           </div>
         </div>
         <div
