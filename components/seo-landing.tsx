@@ -71,6 +71,16 @@ export function SeoLanding({
               </li>
               <li>{isZh ? `背景：${page.background}` : `Background: ${page.background}`}</li>
             </ul>
+            {page.sourceUrl ? (
+              <Link
+                className="inline-source-link"
+                href={page.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {isZh ? "查看官方要求来源" : "Review official requirement source"}
+              </Link>
+            ) : null}
           </article>
 
           <article className="seo-card">

@@ -9,6 +9,7 @@ export type SeoPage = {
   pixels: string;
   background: string;
   keyword: string;
+  sourceUrl?: string;
   intro: string;
   requirements: string[];
   steps: string[];
@@ -881,6 +882,334 @@ export const seoPages: SeoPage[] = [
         question: "Can I prepare Oman residence card photos on my phone?",
         answer:
           "Yes. A phone photo can work if it is sharp, evenly lit, and adjusted to the final requirement."
+      }
+    ]
+  },
+  {
+    slug: "uk-passport-photo-size",
+    title: "UK Passport Photo Size",
+    heading: "UK passport photo size and requirements",
+    searchIntent: "country-document",
+    country: "United Kingdom",
+    documentName: "Passport",
+    size: "35 x 45 mm",
+    pixels: "600 x 750 px or higher",
+    background: "Plain light grey or cream",
+    keyword: "UK passport photo size",
+    sourceUrl: "https://www.gov.uk/photos-for-passports/photo-requirements",
+    intro:
+      "Create a UK passport photo on iPhone with 35 x 45 mm sizing, light background guidance, face-framing checks, and export options for digital upload or printing.",
+    requirements: [
+      "Photo size: 35 x 45 mm",
+      "Plain light grey or cream background",
+      "Head and shoulders visible with the face centered",
+      "Neutral expression, mouth closed, and eyes open",
+      "No shadows, blur, red eye, or visible heavy retouching",
+      "Review the latest GOV.UK photo rules before submitting"
+    ],
+    steps: [
+      "Choose the UK passport preset in IDPhoto Pro.",
+      "Import or capture a front-facing portrait with even lighting.",
+      "Use checks for head size, eye height, centering, top margin, background, and sharpness.",
+      "Export a digital file or print-ready sheet after reviewing the checklist."
+    ],
+    faq: [
+      {
+        question: "What size is a UK passport photo?",
+        answer:
+          "A common UK passport photo size is 35 x 45 mm. Digital submission rules can include additional quality checks, so review the latest GOV.UK guidance."
+      },
+      {
+        question: "What background is used for UK passport photos?",
+        answer:
+          "UK passport photos commonly require a plain light grey or cream background with no shadows or patterns."
+      }
+    ]
+  },
+  {
+    slug: "australia-passport-photo-size",
+    title: "Australia Passport Photo Size",
+    heading: "Australia passport photo size and requirements",
+    searchIntent: "country-document",
+    country: "Australia",
+    documentName: "Passport",
+    size: "35 x 45 mm",
+    pixels: "420 x 540 px at 300 DPI or higher",
+    background: "Plain white or light-colored",
+    keyword: "Australia passport photo size",
+    sourceUrl: "https://www.passports.gov.au/getting-passport-how-it-works/photo-guidelines",
+    intro:
+      "Prepare an Australia passport photo on iPhone with 35 x 45 mm sizing, light background guidance, face-position checks, and print or digital export.",
+    requirements: [
+      "Photo size: 35 x 45 mm",
+      "Plain white or light-colored background",
+      "Face looking directly at the camera with a neutral expression",
+      "Head size and eye line should match the selected guide",
+      "No glare, heavy shadow, blur, or face obstruction",
+      "Check the current Australian Passport Office guidance before final use"
+    ],
+    steps: [
+      "Select the Australia passport preset.",
+      "Use a recent front-facing photo with balanced lighting.",
+      "Adjust crop, rotation, scale, background, and sharpness on device.",
+      "Export a digital image, PDF, or print sheet for your workflow."
+    ],
+    faq: [
+      {
+        question: "What size is an Australia passport photo?",
+        answer:
+          "A common Australia passport photo size is 35 x 45 mm. Always verify the latest Australian Passport Office guidance before submitting."
+      },
+      {
+        question: "Can I make an Australia passport photo on iPhone?",
+        answer:
+          "Yes. IDPhoto Pro can help crop, align, check, and export the photo locally on iPhone."
+      }
+    ]
+  },
+  {
+    slug: "china-visa-photo-size",
+    title: "China Visa Photo Size",
+    heading: "China visa photo size and requirements",
+    searchIntent: "country-document",
+    country: "China",
+    documentName: "Visa",
+    size: "33 x 48 mm",
+    pixels: "390 x 567 px at 300 DPI or higher",
+    background: "White or near-white",
+    keyword: "China visa photo size",
+    sourceUrl: "https://www.visaforchina.cn/",
+    intro:
+      "Create a China visa photo on iPhone with 33 x 48 mm sizing, white background guidance, strict face-framing checks, and digital or print export.",
+    requirements: [
+      "Common China visa photo size: 33 x 48 mm",
+      "White or near-white plain background",
+      "Face centered with full facial features visible",
+      "Head height and margins should be checked carefully",
+      "Natural color, no heavy retouching, blur, or strong shadows",
+      "Confirm the latest visa center or consulate photo instruction before submission"
+    ],
+    steps: [
+      "Choose the China visa preset.",
+      "Import a sharp passport-style portrait.",
+      "Review head size, eye line, centering, top margin, background, and sharpness checks.",
+      "Export the finished digital file or print layout."
+    ],
+    faq: [
+      {
+        question: "What size is a China visa photo?",
+        answer:
+          "A common China visa photo size is 33 x 48 mm. Requirements may vary by visa center or application channel, so verify the current instruction."
+      },
+      {
+        question: "What background should I use for a China visa photo?",
+        answer:
+          "A white or near-white plain background is commonly expected for China visa photos."
+      }
+    ]
+  },
+  {
+    slug: "japan-visa-photo-size",
+    title: "Japan Visa Photo Size",
+    heading: "Japan visa photo size and requirements",
+    searchIntent: "country-document",
+    country: "Japan",
+    documentName: "Visa",
+    size: "35 x 45 mm",
+    pixels: "413 x 531 px at 300 DPI or higher",
+    background: "Plain white or light background",
+    keyword: "Japan visa photo size",
+    sourceUrl: "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+    intro:
+      "Prepare a Japan visa photo on iPhone with 35 x 45 mm sizing, plain background guidance, face-position checks, and export for upload or printing.",
+    requirements: [
+      "Common Japan visa photo size: 35 x 45 mm",
+      "Plain white or light background",
+      "Face forward with eyes open and head upright",
+      "Balanced top margin and centered face position",
+      "Sharp, recent image with no distracting shadows",
+      "Review the latest embassy or Ministry of Foreign Affairs instruction before applying"
+    ],
+    steps: [
+      "Select the Japan visa preset.",
+      "Import or take a recent front-facing portrait.",
+      "Adjust crop, scale, rotation, and background on device.",
+      "Review the checklist, then export the final file or print sheet."
+    ],
+    faq: [
+      {
+        question: "What size is a Japan visa photo?",
+        answer:
+          "A common Japan visa photo size is 35 x 45 mm, but embassies and application channels can publish specific instructions."
+      },
+      {
+        question: "Can IDPhoto Pro export Japan visa photos for printing?",
+        answer:
+          "Yes. You can export a single photo or generate a print-ready sheet depending on your workflow."
+      }
+    ]
+  },
+  {
+    slug: "singapore-passport-photo-size",
+    title: "Singapore Passport Photo Size",
+    heading: "Singapore passport photo size and requirements",
+    searchIntent: "country-document",
+    country: "Singapore",
+    documentName: "Passport",
+    size: "35 x 45 mm",
+    pixels: "400 x 514 px or higher",
+    background: "White or light-colored",
+    keyword: "Singapore passport photo size",
+    sourceUrl: "https://www.ica.gov.sg/",
+    intro:
+      "Create a Singapore passport photo on iPhone with 35 x 45 mm sizing, light background guidance, face alignment checks, and digital export support.",
+    requirements: [
+      "Common passport photo size: 35 x 45 mm",
+      "White or light-colored plain background",
+      "Face and shoulders visible with the face centered",
+      "Eyes open, neutral expression, and no heavy shadows",
+      "Digital upload rules can include pixel and file-size checks",
+      "Verify the latest ICA photo requirement before submitting"
+    ],
+    steps: [
+      "Choose the Singapore passport preset.",
+      "Import a clear portrait with even lighting.",
+      "Review face position, head size, background, sharpness, and export guidance.",
+      "Export a digital image or print layout as needed."
+    ],
+    faq: [
+      {
+        question: "What size is a Singapore passport photo?",
+        answer:
+          "A common Singapore passport photo size is 35 x 45 mm. Check ICA instructions for the latest digital submission rules."
+      },
+      {
+        question: "Can I prepare a Singapore passport photo on iPhone?",
+        answer:
+          "Yes. The app can help align, check, and export a passport-style photo locally on your iPhone."
+      }
+    ]
+  },
+  {
+    slug: "malaysia-passport-photo-size",
+    title: "Malaysia Passport Photo Size",
+    heading: "Malaysia passport photo size and requirements",
+    searchIntent: "country-document",
+    country: "Malaysia",
+    documentName: "Passport",
+    size: "35 x 50 mm",
+    pixels: "413 x 591 px at 300 DPI or higher",
+    background: "White or blue depending on channel",
+    keyword: "Malaysia passport photo size",
+    sourceUrl: "https://www.imi.gov.my/",
+    intro:
+      "Prepare a Malaysia passport photo on iPhone with 35 x 50 mm sizing, background color guidance, face-position checks, and print-ready export.",
+    requirements: [
+      "Common Malaysia passport photo size: 35 x 50 mm",
+      "Background requirements can vary by service channel",
+      "Face should be centered and looking straight ahead",
+      "Use even lighting with no heavy shadow or blur",
+      "Head size and top margin should match the selected guide",
+      "Review the latest immigration office requirement before final submission"
+    ],
+    steps: [
+      "Select the Malaysia passport preset.",
+      "Import or capture a front-facing photo.",
+      "Choose the required background color and review framing checks.",
+      "Export the digital photo or a print-ready sheet."
+    ],
+    faq: [
+      {
+        question: "What size is a Malaysia passport photo?",
+        answer:
+          "A common Malaysia passport photo size is 35 x 50 mm. Background and submission details can vary by channel, so verify the current requirement."
+      },
+      {
+        question: "Does IDPhoto Pro support blue backgrounds?",
+        answer:
+          "Yes. The app includes common document background options including white, off-white, light gray, and blue."
+      }
+    ]
+  },
+  {
+    slug: "germany-passport-photo-size",
+    title: "Germany Passport Photo Size",
+    heading: "Germany passport photo size and biometric requirements",
+    searchIntent: "country-document",
+    country: "Germany",
+    documentName: "Passport",
+    size: "35 x 45 mm",
+    pixels: "413 x 531 px at 300 DPI or higher",
+    background: "Plain light background",
+    keyword: "Germany passport photo size",
+    sourceUrl: "https://www.germany.info/",
+    intro:
+      "Create a Germany passport photo on iPhone with 35 x 45 mm biometric-style sizing, plain background guidance, face-framing checks, and export options.",
+    requirements: [
+      "Photo size: 35 x 45 mm",
+      "Plain light background with no distracting shadows",
+      "Face centered, looking directly at the camera",
+      "Neutral expression and eyes open",
+      "Head height and eye line should follow biometric photo guidance",
+      "Review the latest German authority instructions before using the final photo"
+    ],
+    steps: [
+      "Choose the Germany passport preset.",
+      "Use a sharp, recent, front-facing photo.",
+      "Review head size, eye height, centering, top margin, background, and sharpness checks.",
+      "Export a digital file, PDF, or print-ready layout."
+    ],
+    faq: [
+      {
+        question: "What size is a German passport photo?",
+        answer:
+          "A common German passport photo size is 35 x 45 mm. Biometric photo rules can be strict, so check the latest official instruction."
+      },
+      {
+        question: "Can IDPhoto Pro check biometric-style framing?",
+        answer:
+          "The app provides guidance for head size, eye height, centering, margins, background, and image quality before export."
+      }
+    ]
+  },
+  {
+    slug: "france-visa-photo-size",
+    title: "France Visa Photo Size",
+    heading: "France visa photo size and requirements",
+    searchIntent: "country-document",
+    country: "France",
+    documentName: "Visa",
+    size: "35 x 45 mm",
+    pixels: "413 x 531 px at 300 DPI or higher",
+    background: "Plain light background",
+    keyword: "France visa photo size",
+    sourceUrl: "https://france-visas.gouv.fr/",
+    intro:
+      "Prepare a France visa photo on iPhone with 35 x 45 mm sizing, light background guidance, face-position checks, and digital or print export.",
+    requirements: [
+      "Photo size: 35 x 45 mm",
+      "Plain light background",
+      "Face centered and looking straight at the camera",
+      "Neutral expression, eyes open, and full face visible",
+      "No heavy shadows, blur, filters, or distracting accessories",
+      "Verify the latest France-Visas or visa center requirement before submission"
+    ],
+    steps: [
+      "Select the France visa preset.",
+      "Import a recent passport-style portrait.",
+      "Check face position, head size, eye line, background, and sharpness.",
+      "Export the file for upload or create a print sheet."
+    ],
+    faq: [
+      {
+        question: "What size is a France visa photo?",
+        answer:
+          "A common France visa photo size is 35 x 45 mm, similar to many Schengen visa workflows."
+      },
+      {
+        question: "Is a France visa photo the same as a Schengen visa photo?",
+        answer:
+          "France is part of the Schengen Area, but you should still follow the current France-Visas or visa center instructions for your application."
       }
     ]
   }
