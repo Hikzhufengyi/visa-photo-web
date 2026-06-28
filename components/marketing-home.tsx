@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { DownloadQr } from "@/components/download-qr";
 import { LazyAutoplayVideo } from "@/components/lazy-autoplay-video";
 import type { Locale } from "@/data/localization";
 import { getCopy } from "@/data/localization";
@@ -9,35 +8,13 @@ import { siteConfig } from "@/data/site";
 const seoLinks = [
   "us-passport-photo-size",
   "us-visa-photo-size",
-  "green-card-photo-requirements",
-  "uscis-photo-requirements",
-  "dv-lottery-photo-requirements",
   "schengen-visa-photo-size",
-  "uk-passport-photo-size",
-  "australia-passport-photo-size",
-  "canada-visa-photo-size",
   "canada-passport-photo-size",
-  "canada-pr-card-photo-size",
-  "china-visa-photo-size",
   "india-passport-photo-size",
-  "india-visa-photo-size",
-  "japan-visa-photo-size",
-  "singapore-passport-photo-size",
-  "malaysia-passport-photo-size",
-  "germany-passport-photo-size",
-  "france-visa-photo-size",
-  "aadhaar-photo-size",
-  "pan-card-photo-size",
   "saudi-iqama-photo-size",
   "uae-emirates-id-photo-size",
-  "qatar-residence-permit-photo-size",
-  "kuwait-civil-id-photo-size",
   "oman-residence-card-photo-size",
-  "bahrain-cpr-photo-size",
-  "2x2-passport-photo-size",
-  "600x600-passport-photo",
-  "4x6-passport-photo-print-layout",
-  "passport-photo-pdf-export"
+  "600x600-passport-photo"
 ];
 
 const homeLabels = {
@@ -71,6 +48,9 @@ const homeLabels = {
     export: "Export",
     exportedResult: "Exported result",
     purchase: "Purchase",
+    finalCtaTitle: "Ready to make the photo on your iPhone?",
+    finalCtaText:
+      "Download the app from the App Store, or open the download page if you want to scan the QR code from another device.",
     openStore: "Open App Store",
     support: "See support",
     download: "Download"
@@ -104,6 +84,8 @@ const homeLabels = {
     export: "导出方式",
     exportedResult: "导出结果",
     purchase: "购买方式",
+    finalCtaTitle: "准备在 iPhone 上制作证件照？",
+    finalCtaText: "可以直接打开 App Store 下载，也可以进入下载页，用另一台设备扫码。",
     openStore: "查看 App Store",
     support: "查看技术支持",
     download: "下载入口"
@@ -138,6 +120,9 @@ const homeLabels = {
     export: "التصدير",
     exportedResult: "نتيجة التصدير",
     purchase: "الشراء",
+    finalCtaTitle: "جاهز لتجهيز الصورة على iPhone؟",
+    finalCtaText:
+      "نزّل التطبيق من App Store مباشرة، أو افتح صفحة التنزيل إذا كنت تريد مسح رمز QR من جهاز آخر.",
     openStore: "فتح App Store",
     support: "الدعم الفني",
     download: "التنزيل"
@@ -172,6 +157,9 @@ const homeLabels = {
     export: "Export",
     exportedResult: "Exportiertes Ergebnis",
     purchase: "Kauf",
+    finalCtaTitle: "Bereit, das Foto auf dem iPhone zu erstellen?",
+    finalCtaText:
+      "Lade die App direkt im App Store oder öffne die Downloadseite, wenn du den QR-Code von einem anderen Gerät scannen möchtest.",
     openStore: "App Store öffnen",
     support: "Support ansehen",
     download: "Download"
@@ -199,6 +187,8 @@ const homeLabels = {
   export: string;
   exportedResult: string;
   purchase: string;
+  finalCtaTitle: string;
+  finalCtaText: string;
   openStore: string;
   support: string;
   download: string;
@@ -301,16 +291,6 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </article>
           ))}
         </div>
-        <div className="section-cta">
-          <Link
-            className="button button-compact button-primary"
-            href={siteConfig.appStoreUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {labels.appStoreCta}
-          </Link>
-        </div>
       </section>
 
       <section className="section showcase" id="showcase">
@@ -363,16 +343,6 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </div>
           </article>
         </div>
-        <div className="section-cta">
-          <Link
-            className="button button-compact button-primary"
-            href={siteConfig.appStoreUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {labels.appStoreCta}
-          </Link>
-        </div>
       </section>
 
       <section className="section split-section">
@@ -399,16 +369,6 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               />
             </div>
           </article>
-        </div>
-        <div className="section-cta">
-          <Link
-            className="button button-compact button-primary"
-            href={siteConfig.appStoreUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {labels.appStoreCta}
-          </Link>
         </div>
       </section>
 
@@ -443,25 +403,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             />
           </article>
         </div>
-        <div className="section-cta">
-          <Link
-            className="button button-compact button-primary"
-            href={siteConfig.appStoreUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {labels.appStoreCta}
-          </Link>
-        </div>
       </section>
 
-      <section className="section split-section">
+      <section className="section final-cta-section">
         <div className="section-heading">
-          <p className="eyebrow">{labels.purchase}</p>
-          <h2>{copy.home.pricingHeading}</h2>
+          <p className="eyebrow">{labels.download}</p>
+          <h2>{labels.finalCtaTitle}</h2>
         </div>
         <div className="split-grid">
           <article className="info-card">
+            <p>{labels.finalCtaText}</p>
             <p>{copy.home.pricingIntro}</p>
             <ul className="pricing-check-list">
               {copy.home.pricingItems.map((item) => (
@@ -485,44 +436,10 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               >
                 {labels.openStore}
               </Link>
-              <Link className="button button-secondary" href={`/${locale}/support`}>
-                {labels.support}
-              </Link>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="section split-section">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.download}</p>
-          <h2>{copy.home.qrHeading}</h2>
-        </div>
-        <div className="split-grid">
-          <article className="info-card">
-            <p>{copy.home.qrIntro}</p>
-            <div className="hero-actions">
-              <Link className="button button-primary" href={`/${locale}/download`}>
+              <Link className="button button-secondary" href={`/${locale}/download`}>
                 {copy.home.qrPage}
               </Link>
-              <Link
-                className="button button-secondary"
-                href={siteConfig.appStoreUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {copy.home.appStoreLink}
-              </Link>
             </div>
-          </article>
-          <article className="info-card qr-preview-card">
-            <div className="qr-shell">
-              <DownloadQr
-                url={siteConfig.appStoreUrl}
-                alt="QR code for IDPhoto Pro App Store download"
-              />
-            </div>
-            <p className="qr-caption">{copy.home.qrCaption}</p>
           </article>
         </div>
       </section>
