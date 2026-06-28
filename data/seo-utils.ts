@@ -2,6 +2,21 @@ import type { Locale } from "@/data/localization";
 import type { SeoPage } from "@/data/seo-pages";
 import { siteConfig } from "@/data/site";
 
+const intentLabels = {
+  "country-document": {
+    en: "Country and document photo requirement",
+    zh: "国家和证件照片规格"
+  },
+  "document-size": {
+    en: "Photo size guide",
+    zh: "照片尺寸指南"
+  },
+  "export-workflow": {
+    en: "Export workflow guide",
+    zh: "导出流程指南"
+  }
+};
+
 export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
   const isZh = locale === "zh";
   const title = isZh ? `${page.title} | 中文` : page.title;
@@ -80,6 +95,7 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
       description: page.intro,
       url,
       mainEntityOfPage: url,
+      articleSection: intentLabels[page.searchIntent][locale],
       about: [
         page.country,
         page.documentName,

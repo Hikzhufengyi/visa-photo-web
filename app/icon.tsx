@@ -17,85 +17,85 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background:
-            "linear-gradient(160deg, #f7ead6 0%, #f3d4a3 42%, #c97b3d 100%)"
+          background: "linear-gradient(160deg, #f8fafc 0%, #dfe6ee 100%)"
         }}
       >
         <div
           style={{
             width: 360,
             height: 360,
-            borderRadius: 92,
-            background: "rgba(255,255,255,0.9)",
+            borderRadius: 104,
+            background: "linear-gradient(180deg, #1b2430 0%, #0c121a 100%)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0 24px 80px rgba(95, 49, 14, 0.16)"
+            boxShadow: "0 24px 80px rgba(15, 23, 34, 0.24)"
           }}
         >
           <div
             style={{
-              width: 208,
-              height: 250,
-              borderRadius: 34,
-              border: "12px solid #bf6a2d",
+              width: 214,
+              height: 264,
+              borderRadius: 36,
+              border: "14px solid #f8fafc",
               position: "relative",
-              display: "flex"
+              display: "flex",
+              background: "rgba(248, 250, 252, 0.08)"
             }}
           >
             <div
               style={{
                 position: "absolute",
-                left: 32,
-                top: 34,
-                width: 46,
-                height: 46,
+                left: 34,
+                top: 36,
+                width: 50,
+                height: 50,
                 borderRadius: "50%",
-                background: "#bf6a2d"
+                background: "#f8fafc"
               }}
             />
             <div
               style={{
                 position: "absolute",
-                left: 22,
-                top: 98,
-                width: 144,
-                height: 92,
-                borderRadius: 28,
-                background: "#f3d4a3"
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                right: 22,
-                top: 38,
-                width: 48,
-                height: 12,
-                borderRadius: 999,
-                background: "#bf6a2d"
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                right: 22,
-                top: 72,
-                width: 62,
-                height: 12,
-                borderRadius: 999,
-                background: "#d7a06d"
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                right: 22,
+                left: 24,
                 top: 106,
+                width: 154,
+                height: 98,
+                borderRadius: "38px 38px 24px 24px",
+                background: "#f8fafc"
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                right: 24,
+                top: 42,
+                width: 50,
+                height: 12,
+                borderRadius: 999,
+                background: "#c8d2df"
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                right: 24,
+                top: 76,
+                width: 64,
+                height: 12,
+                borderRadius: 999,
+                background: "#c8d2df"
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                right: 24,
+                top: 110,
                 width: 56,
                 height: 12,
                 borderRadius: 999,
-                background: "#d7a06d"
+                background: "#c8d2df"
               }}
             />
           </div>
