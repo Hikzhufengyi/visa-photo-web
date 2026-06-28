@@ -6,15 +6,15 @@ import { getCopy } from "@/data/localization";
 import { siteConfig } from "@/data/site";
 
 const seoLinks = [
-  "us-passport-photo-size",
-  "us-visa-photo-size",
-  "schengen-visa-photo-size",
-  "canada-passport-photo-size",
-  "india-passport-photo-size",
-  "saudi-iqama-photo-size",
-  "uae-emirates-id-photo-size",
-  "oman-residence-card-photo-size",
-  "600x600-passport-photo"
+  { slug: "us-passport-photo-size", icon: "🇺🇸", label: "US Passport Photo" },
+  { slug: "us-visa-photo-size", icon: "🇺🇸", label: "US Visa Photo" },
+  { slug: "schengen-visa-photo-size", icon: "🇪🇺", label: "Schengen Visa Photo" },
+  { slug: "canada-passport-photo-size", icon: "🇨🇦", label: "Canada Passport Photo" },
+  { slug: "india-passport-photo-size", icon: "🇮🇳", label: "India Passport Photo" },
+  { slug: "saudi-iqama-photo-size", icon: "🇸🇦", label: "Saudi Iqama Photo" },
+  { slug: "uae-emirates-id-photo-size", icon: "🇦🇪", label: "UAE Emirates ID Photo" },
+  { slug: "oman-residence-card-photo-size", icon: "🇴🇲", label: "Oman Residence Card Photo" },
+  { slug: "600x600-passport-photo", icon: "▣", label: "600 x 600 Passport Photo" }
 ];
 
 const homeLabels = {
@@ -269,9 +269,10 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <h2>{copy.home.seoHeading}</h2>
         </div>
         <div className="seo-link-grid">
-          {seoLinks.map((slug) => (
-            <Link className="seo-link-card" href={`/${locale}/${slug}`} key={slug}>
-              {slug.replaceAll("-", " ").replaceAll(/\b\w/g, (match) => match.toUpperCase())}
+          {seoLinks.map((item) => (
+            <Link className="seo-link-card" href={`/${locale}/${item.slug}`} key={item.slug}>
+              <span className="seo-link-icon" aria-hidden="true">{item.icon}</span>
+              <span>{item.label}</span>
             </Link>
           ))}
         </div>
