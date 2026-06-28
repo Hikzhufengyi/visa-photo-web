@@ -31,6 +31,7 @@ export const seoPages: SeoPage[] = [
     pixels: "600 x 600 px or higher",
     background: "White or off-white",
     keyword: "us passport photo size",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
     intro:
       "Create a US passport photo on iPhone with a 2 x 2 inch square crop, white or off-white background guidance, face-position checks, and 4x6 print layout export.",
     requirements: [
@@ -70,6 +71,7 @@ export const seoPages: SeoPage[] = [
     pixels: "600 x 600 px or higher",
     background: "White or off-white",
     keyword: "us visa photo size",
+    sourceUrl: "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html",
     intro:
       "Prepare a US visa photo on iPhone with square sizing, white background guidance, face-position checks, and export options for online upload or printing.",
     requirements: [
@@ -109,6 +111,7 @@ export const seoPages: SeoPage[] = [
     pixels: "600 x 600 px or higher",
     background: "White or off-white",
     keyword: "green card photo requirements",
+    sourceUrl: "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html",
     intro:
       "Use IDPhoto Pro to prepare a green card style photo with square sizing, background guidance, face alignment checks, and digital export options.",
     requirements: [
@@ -148,6 +151,7 @@ export const seoPages: SeoPage[] = [
     pixels: "600 x 600 px or higher",
     background: "White or off-white",
     keyword: "USCIS photo requirements",
+    sourceUrl: "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html",
     intro:
       "Prepare USCIS-style immigration photos on iPhone with 2 x 2 inch sizing, white or off-white background guidance, face-position checks, and digital export support.",
     requirements: [
@@ -187,6 +191,7 @@ export const seoPages: SeoPage[] = [
     pixels: "600 x 600 px",
     background: "White or off-white",
     keyword: "DV lottery photo requirements",
+    sourceUrl: "https://dvprogram.state.gov/",
     intro:
       "Prepare a DV Lottery style photo on iPhone with a square 600 x 600 px target, white or off-white background guidance, and face-position checks before export.",
     requirements: [
@@ -304,6 +309,7 @@ export const seoPages: SeoPage[] = [
     pixels: "591 x 827 px at 300 DPI or higher",
     background: "White or light-colored",
     keyword: "Canada passport photo size",
+    sourceUrl: "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/photos.html",
     intro:
       "Prepare a Canada passport photo on iPhone with 50 x 70 mm sizing, white or light-colored background guidance, face-framing checks, and print-ready export support.",
     requirements: [
@@ -422,6 +428,7 @@ export const seoPages: SeoPage[] = [
     pixels: "350 x 350 px to 1000 x 1000 px",
     background: "White or light plain background",
     keyword: "india visa photo size",
+    sourceUrl: "https://indianvisaonline.gov.in/",
     intro:
       "Prepare an India visa photo on iPhone with square sizing, background guidance, face checks, target-KB compression, and export support.",
     requirements: [

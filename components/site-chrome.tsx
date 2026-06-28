@@ -10,6 +10,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   const firstSegment = pathname.split("/")[1];
   const locale = isLocale(firstSegment) ? firstSegment : defaultLocale;
   const copy = getCopy(locale);
+  const isRtl = locale === "ar";
   const pathWithoutLocale = isLocale(firstSegment)
     ? pathname.replace(`/${firstSegment}`, "") || "/"
     : pathname;
@@ -23,7 +24,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <header className="site-header">
+      <header className="site-header" dir={isRtl ? "rtl" : "ltr"}>
         <Link className="brand" href={`/${locale}`} aria-label={`${siteConfig.name} home`}>
           <span className="brand-mark">ID</span>
           <span>{siteConfig.name}</span>
@@ -48,9 +49,9 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
         </nav>
       </header>
 
-      {children}
+      <div dir={isRtl ? "rtl" : "ltr"}>{children}</div>
 
-      <footer className="site-footer">
+      <footer className="site-footer" dir={isRtl ? "rtl" : "ltr"}>
         <span>{`© 2026 ${siteConfig.name}`}</span>
         <span>{copy.footer.notice}</span>
         <Link href={localizedHref("/support")}>{copy.nav.support}</Link>

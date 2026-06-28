@@ -13,33 +13,49 @@ const seoLinks = [
   "uscis-photo-requirements",
   "dv-lottery-photo-requirements",
   "schengen-visa-photo-size",
-  "2x2-passport-photo-size",
-  "600x600-passport-photo",
+  "uk-passport-photo-size",
+  "australia-passport-photo-size",
   "canada-visa-photo-size",
   "canada-passport-photo-size",
   "canada-pr-card-photo-size",
+  "china-visa-photo-size",
   "india-passport-photo-size",
   "india-visa-photo-size",
+  "japan-visa-photo-size",
+  "singapore-passport-photo-size",
+  "malaysia-passport-photo-size",
+  "germany-passport-photo-size",
+  "france-visa-photo-size",
   "aadhaar-photo-size",
   "pan-card-photo-size",
-  "4x6-passport-photo-print-layout",
-  "passport-photo-pdf-export",
   "saudi-iqama-photo-size",
   "uae-emirates-id-photo-size",
   "qatar-residence-permit-photo-size",
   "kuwait-civil-id-photo-size",
-  "oman-residence-card-photo-size"
+  "oman-residence-card-photo-size",
+  "bahrain-cpr-photo-size",
+  "2x2-passport-photo-size",
+  "600x600-passport-photo",
+  "4x6-passport-photo-print-layout",
+  "passport-photo-pdf-export"
 ];
 
 export function MarketingHome({ locale }: { locale: Locale }) {
   const copy = getCopy(locale);
-  const appStoreCta = locale === "zh" ? "下载 App" : "Download app";
-  const heroMeta =
-    locale === "zh"
+  const isZh = locale === "zh";
+  const isAr = locale === "ar";
+  const appStoreCta = isZh ? "下载 App" : isAr ? "تنزيل التطبيق" : "Download app";
+  const heroMeta = isZh
+    ? [
+        { value: "80+", label: "国家与证件模板" },
+        { value: "300 DPI", label: "打印级导出" },
+        { value: "On-device", label: "本地隐私处理" }
+      ]
+    : isAr
       ? [
-          { value: "80+", label: "国家与证件模板" },
-          { value: "300 DPI", label: "打印级导出" },
-          { value: "On-device", label: "本地隐私处理" }
+          { value: "80+", label: "قوالب دول ومستندات" },
+          { value: "300 DPI", label: "تصدير جاهز للطباعة" },
+          { value: "On-device", label: "معالجة خاصة على الجهاز" }
         ]
       : [
           { value: "80+", label: "country presets" },
@@ -54,7 +70,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <p className="eyebrow">{copy.home.eyebrow}</p>
           <h1>{copy.home.title}</h1>
           <p className="hero-text">{copy.home.description}</p>
-          <div className="hero-meta" aria-label={locale === "zh" ? "产品关键指标" : "Product highlights"}>
+          <div className="hero-meta" aria-label={isZh ? "产品关键指标" : isAr ? "أبرز مزايا المنتج" : "Product highlights"}>
             {heroMeta.map((item) => (
               <div className="hero-meta-item" key={item.label}>
                 <strong>{item.value}</strong>
@@ -89,10 +105,12 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         </div>
         <div className="hero-visual">
           <div className="hero-visual-copy">
-            <p>{locale === "zh" ? "Professional preset engine" : "Professional preset engine"}</p>
+            <p>{isAr ? "محرك قوالب احترافي" : "Professional preset engine"}</p>
             <h2>
-              {locale === "zh"
+              {isZh
                 ? "像成熟影像工具，而不是普通裁切页。"
+                : isAr
+                  ? "مصمم كأداة صور جادة، وليس مجرد أداة قص."
                 : "Designed like a serious imaging tool, not a simple cropper."}
             </h2>
           </div>
@@ -118,7 +136,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section" id="workflow">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "使用流程" : "How it works"}</p>
+          <p className="eyebrow">{isZh ? "使用流程" : isAr ? "طريقة الاستخدام" : "How it works"}</p>
           <h2>{copy.home.stepsHeading}</h2>
         </div>
         <div className="step-grid">
@@ -144,17 +162,19 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section showcase" id="showcase">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "产品界面" : "Inside the app"}</p>
-          <h2>{locale === "zh" ? "这些页面对应 App 里的真实功能" : "These screens match real app features"}</h2>
+          <p className="eyebrow">{isZh ? "产品界面" : isAr ? "داخل التطبيق" : "Inside the app"}</p>
+          <h2>{isZh ? "这些页面对应 App 里的真实功能" : isAr ? "هذه الشاشات تطابق وظائف التطبيق الحقيقية" : "These screens match real app features"}</h2>
         </div>
         <div className="showcase-grid">
           <article className="showcase-card showcase-card-large">
             <div className="showcase-copy">
-              <p className="card-label">{locale === "zh" ? "规格库" : "Preset Library"}</p>
-              <h3>{locale === "zh" ? "多国家、多证件类型规格适配" : "Multi-country, multi-document preset support"}</h3>
+              <p className="card-label">{isZh ? "规格库" : isAr ? "مكتبة القوالب" : "Preset Library"}</p>
+              <h3>{isZh ? "多国家、多证件类型规格适配" : isAr ? "دعم قوالب متعددة للدول والمستندات" : "Multi-country, multi-document preset support"}</h3>
               <p>
-                {locale === "zh"
+                {isZh
                   ? "App 内置多国家证件照规格库，不只是单一的 2x2 裁切。用户可以按国家、护照、签证、移民、居留卡、身份证件和打印用途筛选模板。"
+                  : isAr
+                    ? "يتضمن التطبيق مكتبة قوالب متعددة الدول، وليس مجرد قص 2x2. يمكن التصفية حسب الدولة والجواز والتأشيرة والإقامة والهوية والطباعة."
                   : "The app includes a multi-country document photo preset library, not a single 2x2 cropper. Users can filter templates by country, passport, visa, immigration, residence card, ID, and print use cases."}
               </p>
             </div>
@@ -162,17 +182,19 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               <LazyAutoplayVideo
                 className="device-video"
                 src="/screenshots/country-selection-demo.mp4"
-                label={locale === "zh" ? "IDPhoto Pro 多国家证件规格选择演示" : "IDPhoto Pro multi-country preset selection demo"}
+                label={isZh ? "IDPhoto Pro 多国家证件规格选择演示" : isAr ? "عرض اختيار قوالب IDPhoto Pro" : "IDPhoto Pro multi-country preset selection demo"}
               />
             </div>
           </article>
           <article className="showcase-card">
             <div className="showcase-copy">
-              <p className="card-label">{locale === "zh" ? "规格详情" : "Spec Detail"}</p>
-              <h3>{locale === "zh" ? "先看背景、尺寸和要求，再开始制作" : "Review size, background, and notes before editing"}</h3>
+              <p className="card-label">{isZh ? "规格详情" : isAr ? "تفاصيل القالب" : "Spec Detail"}</p>
+              <h3>{isZh ? "先看背景、尺寸和要求，再开始制作" : isAr ? "راجع المقاس والخلفية والملاحظات قبل التحرير" : "Review size, background, and notes before editing"}</h3>
               <p>
-                {locale === "zh"
+                {isZh
                   ? "规格页会先展示尺寸、像素、背景和要求来源，再进入编辑流程。"
+                  : isAr
+                    ? "تعرض شاشة القالب المقاس والبكسل والخلفية وملاحظات المصدر قبل بدء التحرير."
                   : "Each spec screen shows size, pixel target, background options, and source notes before editing begins."}
               </p>
             </div>
@@ -187,11 +209,13 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </article>
           <article className="showcase-card">
             <div className="showcase-copy">
-              <p className="card-label">{locale === "zh" ? "编辑器" : "Editor"}</p>
-              <h3>{locale === "zh" ? "AI 自动校准，也能手动精细调整" : "AI auto calibration with manual fine control"}</h3>
+              <p className="card-label">{isZh ? "编辑器" : isAr ? "المحرر" : "Editor"}</p>
+              <h3>{isZh ? "AI 自动校准，也能手动精细调整" : isAr ? "معايرة ذكية وتحكم يدوي دقيق" : "AI auto calibration with manual fine control"}</h3>
               <p>
-                {locale === "zh"
+                {isZh
                   ? "编辑器会根据当前国家和证件类型的公开尺寸、比例和构图要求做校准，并用多项检测评分提示风险；用户也可以手动调整位置、缩放、旋转、亮度、锐度、背景和文件输出。"
+                  : isAr
+                    ? "يعتمد المحرر على مقاس ونسبة وإطار المستند المحدد، ثم يعرض فحوصات متعددة للمخاطر مع إمكانية ضبط الموضع والتكبير والدوران والإضاءة والحدة والخلفية والإخراج يدوياً."
                   : "The editor calibrates against the selected country and document size, ratio, and framing guidance, then uses multiple scoring checks to surface risk. Users can still manually adjust position, zoom, rotation, lighting, sharpness, background, and output."}
               </p>
             </div>
@@ -199,7 +223,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               <LazyAutoplayVideo
                 className="device-video"
                 src="/screenshots/editor-demo.mp4"
-                label={locale === "zh" ? "IDPhoto Pro 编辑证件照演示" : "IDPhoto Pro document photo editor demo"}
+                label={isZh ? "IDPhoto Pro 编辑证件照演示" : isAr ? "عرض تحرير صورة المستند في IDPhoto Pro" : "IDPhoto Pro document photo editor demo"}
               />
             </div>
           </article>
@@ -218,7 +242,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "检查结果" : "Checks"}</p>
+          <p className="eyebrow">{isZh ? "检查结果" : isAr ? "الفحوصات" : "Checks"}</p>
           <h2>{copy.home.checksHeading}</h2>
         </div>
         <div className="split-grid">
@@ -234,7 +258,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             <div className="device-frame">
               <Image
                 src="/screenshots/smart-check-score.png"
-                alt={locale === "zh" ? "IDPhoto Pro 智能检测评分和问题提示" : "IDPhoto Pro smart check score and issue summary"}
+                alt={isZh ? "IDPhoto Pro 智能检测评分和问题提示" : isAr ? "درجة الفحص الذكي وملخص المشاكل في IDPhoto Pro" : "IDPhoto Pro smart check score and issue summary"}
                 width={1320}
                 height={2868}
               />
@@ -255,7 +279,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "导出方式" : "Export"}</p>
+          <p className="eyebrow">{isZh ? "导出方式" : isAr ? "التصدير" : "Export"}</p>
           <h2>{copy.home.exportHeading}</h2>
         </div>
         <div className="export-showcase-grid">
@@ -263,7 +287,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             <LazyAutoplayVideo
               className="device-video"
               src="/screenshots/export-demo.mp4"
-              label={locale === "zh" ? "IDPhoto Pro 导出演示" : "IDPhoto Pro export demo"}
+              label={isZh ? "IDPhoto Pro 导出演示" : isAr ? "عرض التصدير في IDPhoto Pro" : "IDPhoto Pro export demo"}
             />
           </article>
           <article className="info-card">
@@ -275,10 +299,10 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </ul>
           </article>
           <article className="image-card export-result-card">
-            <p className="card-label">{locale === "zh" ? "导出结果" : "Exported Result"}</p>
+            <p className="card-label">{isZh ? "导出结果" : isAr ? "نتيجة التصدير" : "Exported Result"}</p>
             <Image
               src="/screenshots/export-result-4up.jpg"
-              alt={locale === "zh" ? "IDPhoto Pro 四张打印排版导出结果" : "IDPhoto Pro four-photo print layout export result"}
+              alt={isZh ? "IDPhoto Pro 四张打印排版导出结果" : isAr ? "نتيجة تخطيط طباعة أربع صور في IDPhoto Pro" : "IDPhoto Pro four-photo print layout export result"}
               width={3600}
               height={5400}
             />
@@ -298,7 +322,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "购买方式" : "Purchase"}</p>
+          <p className="eyebrow">{isZh ? "购买方式" : isAr ? "الشراء" : "Purchase"}</p>
           <h2>{copy.home.pricingHeading}</h2>
         </div>
         <div className="split-grid">
@@ -313,7 +337,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <article className="image-card unlock-shot-card">
             <Image
               src="/screenshots/lifetime-unlock.png"
-              alt={locale === "zh" ? "IDPhoto Pro 一次解锁页面" : "IDPhoto Pro lifetime unlock screen"}
+              alt={isZh ? "IDPhoto Pro 一次解锁页面" : isAr ? "شاشة الفتح مدى الحياة في IDPhoto Pro" : "IDPhoto Pro lifetime unlock screen"}
               width={1320}
               height={2868}
             />
@@ -324,10 +348,10 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                {locale === "zh" ? "查看 App Store" : "Open App Store"}
+                {isZh ? "查看 App Store" : isAr ? "فتح App Store" : "Open App Store"}
               </Link>
               <Link className="button button-secondary" href={`/${locale}/support`}>
-                {locale === "zh" ? "查看技术支持" : "See support"}
+                {isZh ? "查看技术支持" : isAr ? "الدعم الفني" : "See support"}
               </Link>
             </div>
           </article>
@@ -336,7 +360,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "下载入口" : "Download"}</p>
+          <p className="eyebrow">{isZh ? "下载入口" : isAr ? "التنزيل" : "Download"}</p>
           <h2>{copy.home.qrHeading}</h2>
         </div>
         <div className="split-grid">
@@ -370,14 +394,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section app-store-section">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "App Store" : "App Store"}</p>
-          <h2>{locale === "zh" ? "已在 App Store 上架" : "Available on the App Store"}</h2>
+          <p className="eyebrow">App Store</p>
+          <h2>{isZh ? "已在 App Store 上架" : isAr ? "متوفر على App Store" : "Available on the App Store"}</h2>
         </div>
         <div className="app-store-card">
           <div className="app-store-copy">
             <p>
-              {locale === "zh"
+              {isZh
                 ? "在 App Store 查看 IDPhoto Pro 的截图、功能介绍和下载入口。核心功能包括离线处理、智能检测、AI 校准、官方规格模板、电子文件导出和打印排版。"
+                : isAr
+                  ? "اعرض لقطات IDPhoto Pro ومزاياه وخيار التنزيل على App Store. يركز التطبيق على المعالجة على الجهاز، الفحوصات الذكية، المعايرة، القوالب الرسمية، التصدير الرقمي وتخطيطات الطباعة."
                 : "View IDPhoto Pro screenshots, feature details, and download options on the App Store. The app focuses on on-device processing, smart checks, AI calibration, official-size presets, digital export, and print layouts."}
             </p>
             <div className="legal-links">
@@ -390,13 +416,13 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <div className="app-store-shot-list">
             <Image
               src="/screenshots/app-store-listing-1.png"
-              alt={locale === "zh" ? "IDPhoto Pro App Store 商店页标题和截图" : "IDPhoto Pro App Store listing title and screenshots"}
+              alt={isZh ? "IDPhoto Pro App Store 商店页标题和截图" : isAr ? "عنوان ولقطات صفحة IDPhoto Pro على App Store" : "IDPhoto Pro App Store listing title and screenshots"}
               width={2120}
               height={515}
             />
             <Image
               src="/screenshots/app-store-listing-2.png"
-              alt={locale === "zh" ? "IDPhoto Pro App Store 商店页功能展示" : "IDPhoto Pro App Store listing feature preview"}
+              alt={isZh ? "IDPhoto Pro App Store 商店页功能展示" : isAr ? "معاينة مزايا IDPhoto Pro على App Store" : "IDPhoto Pro App Store listing feature preview"}
               width={2096}
               height={833}
             />
@@ -406,7 +432,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section seo-links-section secondary-section">
         <div className="section-heading">
-          <p className="eyebrow">{locale === "zh" ? "规格指南" : "Guides"}</p>
+          <p className="eyebrow">{isZh ? "规格指南" : isAr ? "الأدلة" : "Guides"}</p>
           <h2>{copy.home.seoHeading}</h2>
         </div>
         <div className="seo-link-grid">

@@ -5,23 +5,29 @@ import { siteConfig } from "@/data/site";
 const intentLabels = {
   "country-document": {
     en: "Country and document photo requirement",
-    zh: "国家和证件照片规格"
+    zh: "国家和证件照片规格",
+    ar: "متطلبات صورة الدولة والمستند"
   },
   "document-size": {
     en: "Photo size guide",
-    zh: "照片尺寸指南"
+    zh: "照片尺寸指南",
+    ar: "دليل مقاس الصورة"
   },
   "export-workflow": {
     en: "Export workflow guide",
-    zh: "导出流程指南"
+    zh: "导出流程指南",
+    ar: "دليل سير عمل التصدير"
   }
 };
 
 export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
   const isZh = locale === "zh";
-  const title = isZh ? `${page.title} | 中文` : page.title;
+  const isAr = locale === "ar";
+  const title = isZh ? `${page.title} | 中文` : isAr ? `${page.title} | العربية` : page.title;
   const description = isZh
     ? `${page.heading}。常见尺寸：${page.size}。背景要求：${page.background}。可在 iPhone 上用 IDPhoto Pro 调整照片、检查细节并导出电子版或打印版。`
+    : isAr
+      ? `${page.heading}. المقاس الشائع: ${page.size}. الخلفية: ${page.background}. استخدم IDPhoto Pro على iPhone لضبط الصورة ومراجعة الفحوصات وتصدير ملف رقمي أو جاهز للطباعة.`
     : `${page.heading}. Typical size: ${page.size}. Background: ${page.background}. Use IDPhoto Pro on iPhone to adjust the photo, review checks, and export digital or print-ready files.`;
 
   return {
@@ -32,6 +38,7 @@ export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
       languages: {
         en: `/en/${page.slug}`,
         zh: `/zh/${page.slug}`,
+        ar: `/ar/${page.slug}`,
         "x-default": `/en/${page.slug}`
       }
     },
@@ -60,7 +67,7 @@ export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
 
 export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
   const url = `${siteConfig.domain}/${locale}/${page.slug}`;
-  const breadcrumbName = locale === "zh" ? "证件照规格指南" : "Document Photo Guides";
+  const breadcrumbName = locale === "zh" ? "证件照规格指南" : locale === "ar" ? "أدلة صور المستندات" : "Document Photo Guides";
 
   return {
     faq: {

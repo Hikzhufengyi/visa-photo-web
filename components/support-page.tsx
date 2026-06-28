@@ -4,43 +4,52 @@ import { siteConfig } from "@/data/site";
 
 export function SupportPage({ locale }: { locale: Locale }) {
   const isZh = locale === "zh";
-  const downloadHref = locale === "zh" ? "/zh/download" : "/en/download";
-  const privacyHref = locale === "zh" ? "/zh/privacy" : "/en/privacy";
+  const isAr = locale === "ar";
+  const downloadHref = `/${locale}/download`;
+  const privacyHref = `/${locale}/privacy`;
 
   return (
     <main className="legal-page">
       <div className="legal-shell">
         <p className="eyebrow">Technical Support</p>
-        <h1>{isZh ? "IDPhoto Pro 技术支持" : "IDPhoto Pro Support"}</h1>
+        <h1>{isZh ? "IDPhoto Pro 技术支持" : isAr ? "دعم IDPhoto Pro" : "IDPhoto Pro Support"}</h1>
         <p>
           {isZh
             ? "如果你在制作、检查或导出证件照时卡住了，可以先看下面这些常见问题；如果还没解决，再直接联系我。"
+            : isAr
+              ? "إذا واجهت مشكلة أثناء إنشاء أو فحص أو تصدير صورة مستند، راجع الأسئلة الشائعة أدناه أو تواصل معنا مباشرة."
             : "If you get stuck while creating, checking, or exporting a document photo, start with the common questions below. If that still does not solve it, contact me directly."}
         </p>
 
         <section className="notice-card">
-          <strong>{isZh ? "隐私提醒：" : "Privacy reminder:"}</strong>{" "}
+          <strong>{isZh ? "隐私提醒：" : isAr ? "تذكير الخصوصية:" : "Privacy reminder:"}</strong>{" "}
           {isZh
             ? "照片处理在你的设备本地完成。IDPhoto Pro 不会把你的照片上传到服务器。"
+            : isAr
+              ? "تتم معالجة الصور على جهازك. لا يرفع IDPhoto Pro صورك إلى خادم."
             : "Photo processing happens on your device. IDPhoto Pro does not upload your photos to a server."}
         </section>
 
         <section className="notice-card">
-          <strong>{isZh ? "购买提醒：" : "Purchase reminder:"}</strong>{" "}
+          <strong>{isZh ? "购买提醒：" : isAr ? "تذكير الشراء:" : "Purchase reminder:"}</strong>{" "}
           {isZh
             ? "IDPhoto Pro 使用一次性解锁。没有订阅、没有连续扣费，也没有广告。"
+            : isAr
+              ? "يستخدم IDPhoto Pro فتحاً لمرة واحدة. لا يوجد اشتراك أو رسوم متكررة أو إعلانات."
             : "IDPhoto Pro uses a one-time unlock. There is no subscription, no recurring charge, and no advertising."}
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "联系" : "Contact"}</h2>
+          <h2>{isZh ? "联系" : isAr ? "التواصل" : "Contact"}</h2>
           <p>
-            {isZh ? "邮箱：" : "Email:"}{" "}
+            {isZh ? "邮箱：" : isAr ? "البريد الإلكتروني:" : "Email:"}{" "}
             <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>
           </p>
           <p>
             {isZh
               ? "来信时尽量附上证件类型、遇到的问题，以及相关截图，我会更容易定位。"
+              : isAr
+                ? "يرجى ذكر نوع المستند والمشكلة وإرفاق لقطة شاشة إن أمكن."
               : "If you can include the document type, the issue you hit, and a screenshot, it is much easier for me to pinpoint the problem."}
           </p>
           <div className="hero-actions">
@@ -50,16 +59,16 @@ export function SupportPage({ locale }: { locale: Locale }) {
               target="_blank"
               rel="noreferrer"
             >
-              {isZh ? "打开 App Store" : "Open App Store"}
+              {isZh ? "打开 App Store" : isAr ? "فتح App Store" : "Open App Store"}
             </Link>
             <Link className="button button-secondary" href={downloadHref}>
-              {isZh ? "前往下载页" : "Download page"}
+              {isZh ? "前往下载页" : isAr ? "صفحة التنزيل" : "Download page"}
             </Link>
           </div>
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "常见问题" : "Common Questions"}</h2>
+          <h2>{isZh ? "常见问题" : isAr ? "الأسئلة الشائعة" : "Common Questions"}</h2>
 
           <h3>{isZh ? "为什么我的照片被标记为需要处理？" : "Why was my photo marked as needing attention?"}</h3>
           <p>
@@ -112,7 +121,7 @@ export function SupportPage({ locale }: { locale: Locale }) {
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "支持的功能" : "Supported Features"}</h2>
+          <h2>{isZh ? "支持的功能" : isAr ? "الميزات المدعومة" : "Supported Features"}</h2>
           <ul className="policy-list">
             <li>{isZh ? "护照照、签证照、移民照和证件照官方尺寸模板" : "Official-size passport, visa, immigration, and ID photo presets"}</li>
             <li>
@@ -128,7 +137,7 @@ export function SupportPage({ locale }: { locale: Locale }) {
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "法律说明" : "Legal Notice"}</h2>
+          <h2>{isZh ? "法律说明" : isAr ? "تنبيه قانوني" : "Legal Notice"}</h2>
           <p>
             {isZh
               ? "IDPhoto Pro 不隶属于任何政府、使领馆、签证中心或官方申请平台。合规检查仅作为辅助提示，最终是否接受由接收机构决定。"

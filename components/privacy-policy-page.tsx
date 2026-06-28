@@ -4,20 +4,23 @@ import { siteConfig } from "@/data/site";
 
 export function PrivacyPolicyPage({ locale }: { locale: Locale }) {
   const isZh = locale === "zh";
-  const supportHref = locale === "zh" ? "/zh/support" : "/en/support";
+  const isAr = locale === "ar";
+  const supportHref = `/${locale}/support`;
 
   return (
     <main className="legal-page">
       <div className="legal-shell">
         <p className="eyebrow">Privacy Policy</p>
-        <h1>{isZh ? "IDPhoto Pro 隐私政策" : "Privacy Policy for IDPhoto Pro"}</h1>
+        <h1>{isZh ? "IDPhoto Pro 隐私政策" : isAr ? "سياسة الخصوصية لـ IDPhoto Pro" : "Privacy Policy for IDPhoto Pro"}</h1>
         <p className="policy-meta">
-          {isZh ? "生效日期：2026 年 5 月 21 日" : "Effective date: May 21, 2026"}
+          {isZh ? "生效日期：2026 年 5 月 21 日" : isAr ? "تاريخ السريان: 21 مايو 2026" : "Effective date: May 21, 2026"}
         </p>
 
         <p>
           {isZh
             ? "IDPhoto Pro 用于帮助用户制作护照照、签证照、移民照、绿卡照、居留卡照和其他证件照，同时尽量让照片处理保持在设备本地完成。"
+            : isAr
+              ? "يساعد IDPhoto Pro المستخدمين على إنشاء صور الجواز والتأشيرة والإقامة والهوية مع الحفاظ على معالجة الصور محلياً على الجهاز."
             : "IDPhoto Pro is designed to help users create passport, visa, immigration, green card, residence card, and ID photos while keeping photo processing private and local."}
         </p>
 
