@@ -26,6 +26,11 @@ export const coreSeoKeywords = [
   "Canada visa photo",
   "India passport photo",
   "GCC ID photo",
+  "Saudi Iqama photo",
+  "Emirates ID photo",
+  "Qatar residence permit photo",
+  "Kuwait Civil ID photo",
+  "Bahrain CPR photo",
   "offline passport photo app",
   "on-device photo processing"
 ];

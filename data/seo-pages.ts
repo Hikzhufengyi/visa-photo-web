@@ -1212,6 +1212,46 @@ export const seoPages: SeoPage[] = [
           "France is part of the Schengen Area, but you should still follow the current France-Visas or visa center instructions for your application."
       }
     ]
+  },
+  {
+    slug: "bahrain-cpr-photo-size",
+    title: "Bahrain CPR Photo Size",
+    heading: "Bahrain CPR and residence permit photo size",
+    searchIntent: "country-document",
+    country: "Bahrain",
+    documentName: "CPR / Residence Permit",
+    size: "4 x 6 cm",
+    pixels: "472 x 709 px at 300 DPI or higher",
+    background: "White",
+    keyword: "Bahrain CPR photo size",
+    intro:
+      "Create a Bahrain CPR or residence permit photo on iPhone with 4 x 6 cm sizing, white background guidance, face-position checks, and digital or print export.",
+    requirements: [
+      "Common GCC ID photo preset: 4 x 6 cm",
+      "Recommended digital size: 472 x 709 px at 300 DPI or higher",
+      "Plain white background",
+      "Face centered, looking directly at the camera",
+      "Sharp image with no heavy shadow, blur, or face obstruction",
+      "Verify the latest Bahrain service-center or government portal instruction before final submission"
+    ],
+    steps: [
+      "Choose the Bahrain CPR or residence permit preset.",
+      "Import a clear front-facing portrait.",
+      "Review head size, centering, top margin, background, and sharpness checks.",
+      "Export a digital file or print-ready sheet."
+    ],
+    faq: [
+      {
+        question: "What size is used for Bahrain CPR photos?",
+        answer:
+          "A common GCC-style ID photo preset is 4 x 6 cm with a plain white background. Always confirm the current requirement for the service channel you use."
+      },
+      {
+        question: "Can I prepare Bahrain CPR photos on iPhone?",
+        answer:
+          "Yes. IDPhoto Pro can help align, check, and export a digital or print-ready Bahrain CPR style photo locally on iPhone."
+      }
+    ]
   }
 ];
 

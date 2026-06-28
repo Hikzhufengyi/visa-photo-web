@@ -68,3 +68,9 @@ Good next batches:
 - Singapore passport photo size
 - Germany passport photo size
 - France visa photo size
+- Saudi Iqama photo size
+- UAE Emirates ID photo size
+- Qatar residence permit photo size
+- Kuwait Civil ID photo size
+- Oman residence card photo size
+- Bahrain CPR photo size
