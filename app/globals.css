@@ -185,6 +185,21 @@ h3 {
   letter-spacing: -0.06em;
 }
 
+.locale-zh .hero-copy h1 {
+  max-width: 9.5ch;
+  font-size: clamp(3.2rem, 5.4vw, 5.6rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.locale-ar .hero-copy h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 5.2vw, 5.4rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
 .hero-text {
   max-width: 52ch;
   margin-top: 24px;
@@ -313,6 +328,8 @@ h3 {
 
 .hero-visual {
   position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
   min-height: 720px;
   overflow: hidden;
   padding: 28px;
@@ -352,12 +369,16 @@ h3 {
 }
 
 .hero-visual-copy {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 28px;
+  position: relative;
   z-index: 1;
-  max-width: 22rem;
+  max-width: min(100%, 24rem);
+  min-height: 168px;
+  padding-right: min(44%, 230px);
+}
+
+.locale-ar .hero-visual-copy {
+  padding-right: 0;
+  padding-left: min(44%, 230px);
 }
 
 .hero-visual-copy p {
@@ -370,8 +391,10 @@ h3 {
 
 .hero-visual-copy h2 {
   margin-top: 12px;
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  line-height: 1.05;
+  font-size: clamp(1.45rem, 1.75vw, 1.9rem);
+  line-height: 1.12;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .card-label,
@@ -455,7 +478,7 @@ h3 {
 
 .phone-stack-front {
   right: 34px;
-  top: 40px;
+  top: 84px;
   z-index: 2;
   animation: float-front 5.4s ease-in-out infinite;
 }
@@ -1155,6 +1178,12 @@ h3 {
     max-width: 12ch;
   }
 
+  .locale-zh .hero-copy h1,
+  .locale-ar .hero-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(3rem, 10vw, 4.6rem);
+  }
+
   .hero-proof-grid {
     grid-template-columns: 1fr;
   }
@@ -1167,8 +1196,16 @@ h3 {
     min-height: 620px;
   }
 
+  .hero-visual-copy,
+  .locale-ar .hero-visual-copy {
+    min-height: 150px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .phone-stack-front {
     right: 20px;
+    top: 178px;
   }
 
   .phone-stack-back {
@@ -1241,6 +1278,15 @@ h3 {
     min-height: 420px;
   }
 
+  .hero-visual-copy,
+  .locale-ar .hero-visual-copy {
+    min-height: 128px;
+  }
+
+  .hero-visual-copy h2 {
+    font-size: clamp(1.25rem, 7vw, 1.75rem);
+  }
+
   .phone-stack {
     width: min(180px, 46vw);
     border-width: 7px;
@@ -1249,7 +1295,7 @@ h3 {
 
   .phone-stack-front {
     right: 10px;
-    top: 18px;
+    top: 146px;
   }
 
   .phone-stack-back {

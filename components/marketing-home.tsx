@@ -64,7 +64,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         ];
 
   return (
-    <main className="page-shell">
+    <main className={`page-shell locale-${locale}`}>
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">{copy.home.eyebrow}</p>
