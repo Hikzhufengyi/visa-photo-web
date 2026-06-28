@@ -2,56 +2,276 @@ import Link from "next/link";
 import type { Locale } from "@/data/localization";
 import { siteConfig } from "@/data/site";
 
+const supportCopy = {
+  en: {
+    eyebrow: "Technical Support",
+    title: "IDPhoto Pro Support",
+    lead:
+      "If you get stuck while creating, checking, or exporting a document photo, start with the common questions below. If that still does not solve it, contact us directly.",
+    privacyLabel: "Privacy reminder:",
+    privacy:
+      "Photo processing happens on your device. IDPhoto Pro does not upload your photos to a server.",
+    purchaseLabel: "Purchase reminder:",
+    purchase:
+      "IDPhoto Pro uses a one-time unlock. There is no subscription, no recurring charge, and no advertising.",
+    contact: "Contact",
+    email: "Email:",
+    contactHelp:
+      "If you can include the document type, the issue you hit, and a screenshot, it is much easier to pinpoint the problem.",
+    openStore: "Open App Store",
+    download: "Download page",
+    faqTitle: "Common Questions",
+    faqs: [
+      {
+        q: "Why was my photo marked as needing attention?",
+        a: "The app checks common requirements such as head size, face position, eye line height, top margin, background, sharpness, and file-size guidance. In most cases, working through the checklist step by step is enough."
+      },
+      {
+        q: "Why does the preview show guide lines?",
+        a: "Guide lines help you align the face, eye line, top margin, and printable area for the selected document type. Different countries and document types may use different size and framing rules."
+      },
+      {
+        q: "Does IDPhoto Pro guarantee acceptance?",
+        a: "No. IDPhoto Pro helps prepare photos based on published requirements, but it cannot guarantee acceptance by any government, embassy, visa center, or application portal. Always review the official source before submitting."
+      },
+      {
+        q: "Are my face checks uploaded to a server?",
+        a: "No. Face position, eye line, head proportion, and margin checks are processed on your device. IDPhoto Pro does not upload your photos or store face templates on a server."
+      },
+      {
+        q: "How do I restore my purchase?",
+        a: "Open the purchase screen or the Profile page in the app and choose Restore Purchase. Purchases are processed by Apple through StoreKit and do not upload your photos."
+      }
+    ],
+    featuresTitle: "Supported Features",
+    features: [
+      "Official-size passport, visa, immigration, and ID photo presets",
+      "On-device checks for head size, face position, eye line, top margin, and background guidance",
+      "Background replacement and light repair",
+      "300 DPI JPG, PNG, HEIF, and PDF export",
+      "Target-KB compression for upload portals",
+      "4x6 inch, A4, and Letter print layouts"
+    ],
+    legalTitle: "Legal Notice",
+    legal:
+      "IDPhoto Pro is not affiliated with any government, embassy, visa center, or official application portal. Compliance checks are guidance only, and final acceptance is decided by the receiving authority.",
+    privacyLinkPrefix: "You can also review the full",
+    privacyLink: "privacy policy",
+    privacyLinkSuffix: "."
+  },
+  zh: {
+    eyebrow: "技术支持",
+    title: "IDPhoto Pro 技术支持",
+    lead:
+      "如果你在制作、检查或导出证件照时卡住了，可以先看下面这些常见问题；如果还没解决，再直接联系我。",
+    privacyLabel: "隐私提醒：",
+    privacy: "照片处理在你的设备本地完成。IDPhoto Pro 不会把你的照片上传到服务器。",
+    purchaseLabel: "购买提醒：",
+    purchase: "IDPhoto Pro 使用一次性解锁。没有订阅、没有连续扣费，也没有广告。",
+    contact: "联系",
+    email: "邮箱：",
+    contactHelp: "来信时尽量附上证件类型、遇到的问题，以及相关截图，我会更容易定位。",
+    openStore: "打开 App Store",
+    download: "前往下载页",
+    faqTitle: "常见问题",
+    faqs: [
+      {
+        q: "为什么我的照片被标记为需要处理？",
+        a: "App 会检查头部大小、面部位置、眼线高度、头顶留白、背景、清晰度和文件大小等常见要求。通常按检查列表一点点修正，结果就会更稳。"
+      },
+      {
+        q: "为什么预览里会显示引导线？",
+        a: "引导线用于帮助你对齐面部、眼线、头顶留白和可打印区域。不同国家和证件类型可能使用不同的尺寸和构图规则。"
+      },
+      {
+        q: "IDPhoto Pro 能保证照片一定通过吗？",
+        a: "不能。IDPhoto Pro 会根据公开要求帮助准备照片，但不能保证任何政府、使领馆、签证中心或申请平台一定接受。提交前请核对官方来源。"
+      },
+      {
+        q: "面部检测会上传到服务器吗？",
+        a: "不会。面部位置、眼线高度、头部比例和留白检查都在你的设备本地处理。IDPhoto Pro 不会上传照片，也不会在服务器端保存人脸模板。"
+      },
+      {
+        q: "如何恢复购买？",
+        a: "打开 App 内的购买页面或个人页面，选择恢复购买。购买由 Apple 通过 StoreKit 处理，恢复购买会检查你的 App Store 账户购买记录，不会上传你的照片。"
+      }
+    ],
+    featuresTitle: "支持的功能",
+    features: [
+      "护照照、签证照、移民照和证件照官方尺寸模板",
+      "头部大小、面部位置、眼线、头顶留白和背景引导等本地检查",
+      "背景替换和轻度画质修复",
+      "300 DPI JPG、PNG、HEIF 和 PDF 导出",
+      "面向上传平台的目标 KB 压缩",
+      "4x6 英寸、A4 和 Letter 打印排版"
+    ],
+    legalTitle: "法律说明",
+    legal:
+      "IDPhoto Pro 不隶属于任何政府、使领馆、签证中心或官方申请平台。合规检查仅作为辅助提示，最终是否接受由接收机构决定。",
+    privacyLinkPrefix: "你也可以查看完整的",
+    privacyLink: "隐私政策",
+    privacyLinkSuffix: "。"
+  },
+  ar: {
+    eyebrow: "الدعم الفني",
+    title: "دعم IDPhoto Pro",
+    lead:
+      "إذا واجهت مشكلة أثناء إنشاء أو فحص أو تصدير صورة مستند، ابدأ بالأسئلة الشائعة أدناه أو تواصل معنا مباشرة.",
+    privacyLabel: "تذكير الخصوصية:",
+    privacy: "تتم معالجة الصور على جهازك. لا يرفع IDPhoto Pro صورك إلى خادم.",
+    purchaseLabel: "تذكير الشراء:",
+    purchase: "يستخدم IDPhoto Pro فتحاً لمرة واحدة. لا يوجد اشتراك أو رسوم متكررة أو إعلانات.",
+    contact: "التواصل",
+    email: "البريد الإلكتروني:",
+    contactHelp: "يرجى ذكر نوع المستند والمشكلة وإرفاق لقطة شاشة إن أمكن.",
+    openStore: "فتح App Store",
+    download: "صفحة التنزيل",
+    faqTitle: "الأسئلة الشائعة",
+    faqs: [
+      {
+        q: "لماذا تظهر الصورة بحاجة إلى مراجعة؟",
+        a: "يفحص التطبيق متطلبات شائعة مثل حجم الرأس، موضع الوجه، خط العين، الهامش العلوي، الخلفية، الوضوح وحجم الملف. غالباً يكفي تعديل البنود خطوة بخطوة."
+      },
+      {
+        q: "لماذا تظهر خطوط إرشادية في المعاينة؟",
+        a: "تساعدك الخطوط على محاذاة الوجه وخط العين والهامش العلوي ومنطقة الطباعة حسب نوع المستند المحدد."
+      },
+      {
+        q: "هل يضمن IDPhoto Pro قبول الصورة؟",
+        a: "لا. يساعد التطبيق في تجهيز الصورة حسب المتطلبات المنشورة، لكنه لا يضمن قبولها من أي جهة حكومية أو سفارة أو مركز تأشيرات أو بوابة تقديم."
+      },
+      {
+        q: "هل يتم رفع فحوصات الوجه إلى خادم؟",
+        a: "لا. تتم فحوصات موضع الوجه وخط العين ونسبة الرأس والهوامش على جهازك. لا يرفع التطبيق صورك ولا يحفظ قوالب وجه على خادم."
+      },
+      {
+        q: "كيف أستعيد عملية الشراء؟",
+        a: "افتح شاشة الشراء أو صفحة الحساب داخل التطبيق واختر استعادة الشراء. تتم العملية عبر Apple StoreKit ولا يتم رفع صورك."
+      }
+    ],
+    featuresTitle: "الميزات المدعومة",
+    features: [
+      "قوالب رسمية لصور الجواز والتأشيرة والإقامة والهوية",
+      "فحوصات على الجهاز لحجم الرأس وموضع الوجه وخط العين والهامش العلوي والخلفية",
+      "تغيير الخلفية وتحسين خفيف للصورة",
+      "تصدير JPG و PNG و HEIF و PDF بدقة 300 DPI",
+      "ضغط بحجم KB مناسب لبوابات الرفع",
+      "تخطيطات طباعة 4x6 و A4 و Letter"
+    ],
+    legalTitle: "تنبيه قانوني",
+    legal:
+      "IDPhoto Pro غير تابع لأي حكومة أو سفارة أو مركز تأشيرات أو بوابة تقديم رسمية. الفحوصات إرشادية فقط، والقبول النهائي تقرره الجهة المستقبلة.",
+    privacyLinkPrefix: "يمكنك أيضاً مراجعة",
+    privacyLink: "سياسة الخصوصية",
+    privacyLinkSuffix: "."
+  },
+  de: {
+    eyebrow: "Technischer Support",
+    title: "IDPhoto Pro Support",
+    lead:
+      "Wenn beim Erstellen, Prüfen oder Exportieren eines Ausweisfotos etwas nicht funktioniert, beginne mit den Fragen unten oder kontaktiere uns direkt.",
+    privacyLabel: "Datenschutzhinweis:",
+    privacy:
+      "Die Fotobearbeitung erfolgt auf deinem Gerät. IDPhoto Pro lädt deine Fotos nicht auf einen Server hoch.",
+    purchaseLabel: "Kaufhinweis:",
+    purchase:
+      "IDPhoto Pro nutzt eine einmalige Freischaltung. Es gibt kein Abo, keine wiederkehrenden Kosten und keine Werbung.",
+    contact: "Kontakt",
+    email: "E-Mail:",
+    contactHelp:
+      "Hilfreich sind Dokumenttyp, eine kurze Beschreibung des Problems und wenn möglich ein Screenshot.",
+    openStore: "App Store öffnen",
+    download: "Downloadseite",
+    faqTitle: "Häufige Fragen",
+    faqs: [
+      {
+        q: "Warum wurde mein Foto als problematisch markiert?",
+        a: "Die App prüft typische Anforderungen wie Kopfhöhe, Gesichtsposition, Augenlinie, oberen Rand, Hintergrund, Schärfe und Dateigröße. Meist reicht es, die Checkliste Schritt für Schritt abzuarbeiten."
+      },
+      {
+        q: "Warum zeigt die Vorschau Hilfslinien?",
+        a: "Hilfslinien helfen bei der Ausrichtung von Gesicht, Augenlinie, oberem Rand und Druckbereich für den gewählten Dokumenttyp."
+      },
+      {
+        q: "Garantiert IDPhoto Pro die Annahme?",
+        a: "Nein. IDPhoto Pro hilft bei der Vorbereitung nach veröffentlichten Anforderungen, kann aber keine Annahme durch Behörden, Botschaften, Visazentren oder Portale garantieren."
+      },
+      {
+        q: "Werden Gesichtsdaten auf einen Server hochgeladen?",
+        a: "Nein. Prüfungen zu Gesicht, Augenlinie, Kopfhöhe und Rändern laufen auf deinem Gerät. Die App lädt keine Fotos hoch und speichert keine Gesichtsvorlagen auf einem Server."
+      },
+      {
+        q: "Wie stelle ich einen Kauf wieder her?",
+        a: "Öffne in der App den Kaufbildschirm oder dein Profil und wähle Kauf wiederherstellen. Die Prüfung läuft über Apple StoreKit und lädt keine Fotos hoch."
+      }
+    ],
+    featuresTitle: "Unterstützte Funktionen",
+    features: [
+      "Vorlagen für Pass-, Visa-, Aufenthalts- und Ausweisfotos",
+      "Prüfungen auf dem Gerät für Kopfhöhe, Gesichtsposition, Augenlinie, oberen Rand und Hintergrund",
+      "Hintergrundwechsel und leichte Bildverbesserung",
+      "300-DPI-Export als JPG, PNG, HEIF und PDF",
+      "Komprimierung auf Ziel-KB für Upload-Portale",
+      "Drucklayouts für 4x6, A4 und Letter"
+    ],
+    legalTitle: "Rechtlicher Hinweis",
+    legal:
+      "IDPhoto Pro ist nicht mit Behörden, Botschaften, Visazentren oder offiziellen Antragsportalen verbunden. Prüfungen dienen nur als Orientierung; die endgültige Annahme entscheidet die empfangende Stelle.",
+    privacyLinkPrefix: "Du kannst auch die vollständige",
+    privacyLink: "Datenschutzerklärung",
+    privacyLinkSuffix: "lesen."
+  }
+} satisfies Record<Locale, {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  privacyLabel: string;
+  privacy: string;
+  purchaseLabel: string;
+  purchase: string;
+  contact: string;
+  email: string;
+  contactHelp: string;
+  openStore: string;
+  download: string;
+  faqTitle: string;
+  faqs: { q: string; a: string }[];
+  featuresTitle: string;
+  features: string[];
+  legalTitle: string;
+  legal: string;
+  privacyLinkPrefix: string;
+  privacyLink: string;
+  privacyLinkSuffix: string;
+}>;
+
 export function SupportPage({ locale }: { locale: Locale }) {
-  const isZh = locale === "zh";
-  const isAr = locale === "ar";
+  const copy = supportCopy[locale];
   const downloadHref = `/${locale}/download`;
   const privacyHref = `/${locale}/privacy`;
 
   return (
     <main className="legal-page">
       <div className="legal-shell">
-        <p className="eyebrow">Technical Support</p>
-        <h1>{isZh ? "IDPhoto Pro 技术支持" : isAr ? "دعم IDPhoto Pro" : "IDPhoto Pro Support"}</h1>
-        <p>
-          {isZh
-            ? "如果你在制作、检查或导出证件照时卡住了，可以先看下面这些常见问题；如果还没解决，再直接联系我。"
-            : isAr
-              ? "إذا واجهت مشكلة أثناء إنشاء أو فحص أو تصدير صورة مستند، راجع الأسئلة الشائعة أدناه أو تواصل معنا مباشرة."
-            : "If you get stuck while creating, checking, or exporting a document photo, start with the common questions below. If that still does not solve it, contact me directly."}
-        </p>
+        <p className="eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p>{copy.lead}</p>
 
         <section className="notice-card">
-          <strong>{isZh ? "隐私提醒：" : isAr ? "تذكير الخصوصية:" : "Privacy reminder:"}</strong>{" "}
-          {isZh
-            ? "照片处理在你的设备本地完成。IDPhoto Pro 不会把你的照片上传到服务器。"
-            : isAr
-              ? "تتم معالجة الصور على جهازك. لا يرفع IDPhoto Pro صورك إلى خادم."
-            : "Photo processing happens on your device. IDPhoto Pro does not upload your photos to a server."}
+          <strong>{copy.privacyLabel}</strong> {copy.privacy}
         </section>
 
         <section className="notice-card">
-          <strong>{isZh ? "购买提醒：" : isAr ? "تذكير الشراء:" : "Purchase reminder:"}</strong>{" "}
-          {isZh
-            ? "IDPhoto Pro 使用一次性解锁。没有订阅、没有连续扣费，也没有广告。"
-            : isAr
-              ? "يستخدم IDPhoto Pro فتحاً لمرة واحدة. لا يوجد اشتراك أو رسوم متكررة أو إعلانات."
-            : "IDPhoto Pro uses a one-time unlock. There is no subscription, no recurring charge, and no advertising."}
+          <strong>{copy.purchaseLabel}</strong> {copy.purchase}
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "联系" : isAr ? "التواصل" : "Contact"}</h2>
+          <h2>{copy.contact}</h2>
           <p>
-            {isZh ? "邮箱：" : isAr ? "البريد الإلكتروني:" : "Email:"}{" "}
+            {copy.email}{" "}
             <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>
           </p>
-          <p>
-            {isZh
-              ? "来信时尽量附上证件类型、遇到的问题，以及相关截图，我会更容易定位。"
-              : isAr
-                ? "يرجى ذكر نوع المستند والمشكلة وإرفاق لقطة شاشة إن أمكن."
-              : "If you can include the document type, the issue you hit, and a screenshot, it is much easier for me to pinpoint the problem."}
-          </p>
+          <p>{copy.contactHelp}</p>
           <div className="hero-actions">
             <Link
               className="button button-primary"
@@ -59,94 +279,39 @@ export function SupportPage({ locale }: { locale: Locale }) {
               target="_blank"
               rel="noreferrer"
             >
-              {isZh ? "打开 App Store" : isAr ? "فتح App Store" : "Open App Store"}
+              {copy.openStore}
             </Link>
             <Link className="button button-secondary" href={downloadHref}>
-              {isZh ? "前往下载页" : isAr ? "صفحة التنزيل" : "Download page"}
+              {copy.download}
             </Link>
           </div>
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "常见问题" : isAr ? "الأسئلة الشائعة" : "Common Questions"}</h2>
-
-          <h3>{isZh ? "为什么我的照片被标记为需要处理？" : "Why was my photo marked as needing attention?"}</h3>
-          <p>
-            {isZh
-              ? "App 会检查头部大小、面部位置、眼线高度、头顶留白、背景、清晰度和文件大小等常见要求。通常按检查列表一点点修正，结果就会更稳。"
-              : "The app checks common requirements such as head size, face position, eye line height, top margin, background, sharpness, and file-size guidance. In most cases, working through the checklist step by step is enough."}
-          </p>
-
-          <h3>{isZh ? "为什么预览里会显示引导线？" : "Why does the preview show guide lines?"}</h3>
-          <p>
-            {isZh
-              ? "引导线用于帮助你对齐面部、眼线、头顶留白和可打印区域。不同国家和证件类型可能使用不同的尺寸和构图规则。"
-              : "Guide lines help you align the face, eye line, top margin, and printable area for the selected document type. Different countries and document types may use different size and framing rules."}
-          </p>
-
-          <h3>{isZh ? "IDPhoto Pro 能保证照片一定通过吗？" : "Does IDPhoto Pro guarantee acceptance?"}</h3>
-          <p>
-            {isZh
-              ? "不能。IDPhoto Pro 会根据公开要求帮助准备照片，但不能保证任何政府、使领馆、签证中心或申请平台一定接受。提交前请核对官方来源。"
-              : "No. IDPhoto Pro helps prepare photos based on published requirements, but it cannot guarantee acceptance by any government, embassy, visa center, or application portal. Always review the official source before submitting."}
-          </p>
-
-          <h3>{isZh ? "面部检测会上传到服务器吗？" : "Are my face checks uploaded to a server?"}</h3>
-          <p>
-            {isZh
-              ? "不会。面部位置、眼线高度、头部比例和留白检查都在你的设备本地处理。IDPhoto Pro 不会上传照片，也不会在服务器端保存人脸模板。"
-              : "No. Face position, eye line, head proportion, and margin checks are processed on your device. IDPhoto Pro does not upload your photos or store face templates on a server."}
-          </p>
-
-          <h3>{isZh ? "我的制作记录保存在哪里？" : "Where are my creation records stored?"}</h3>
-          <p>
-            {isZh
-              ? "制作记录保存在你的设备本地。IDPhoto Pro 不会把这些记录上传到云端账户。"
-              : "Creation records are stored locally on your device. They are not uploaded to a cloud account by IDPhoto Pro."}
-          </p>
-
-          <h3>{isZh ? "如何恢复购买？" : "How do I restore my purchase?"}</h3>
-          <p>
-            {isZh
-              ? "打开 App 内的购买页面或个人页面，选择恢复购买。购买由 Apple 通过 StoreKit 处理，恢复购买会检查你的 App Store 账户购买记录，不会上传你的照片。"
-              : "Open the purchase screen or the Profile page in the app and choose Restore Purchase. Purchases are processed by Apple through StoreKit. Restore Purchase checks your App Store account purchase history and does not upload your photos."}
-          </p>
-
-          <h3>{isZh ? "这是订阅吗？" : "Is the purchase a subscription?"}</h3>
-          <p>
-            {isZh
-              ? "不是。解锁方式是一次性、非消耗型 App 内购买，不是订阅，也不会自动续费。"
-              : "No. The unlock is a one-time, non-consumable in-app purchase. It is not a subscription and does not renew."}
-          </p>
+          <h2>{copy.faqTitle}</h2>
+          {copy.faqs.map((item) => (
+            <div key={item.q}>
+              <h3>{item.q}</h3>
+              <p>{item.a}</p>
+            </div>
+          ))}
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "支持的功能" : isAr ? "الميزات المدعومة" : "Supported Features"}</h2>
+          <h2>{copy.featuresTitle}</h2>
           <ul className="policy-list">
-            <li>{isZh ? "护照照、签证照、移民照和证件照官方尺寸模板" : "Official-size passport, visa, immigration, and ID photo presets"}</li>
-            <li>
-              {isZh
-                ? "头部大小、面部位置、眼线、头顶留白和背景引导等本地检查"
-                : "On-device checks for head size, face position, eye line, top margin, and background guidance"}
-            </li>
-            <li>{isZh ? "背景替换和轻度画质修复" : "Background replacement and light repair"}</li>
-            <li>{isZh ? "300 DPI JPG、PNG、HEIF 和 PDF 导出" : "300 DPI JPG, PNG, HEIF, and PDF export"}</li>
-            <li>{isZh ? "面向上传平台的目标 KB 压缩" : "Target-KB compression for upload portals"}</li>
-            <li>{isZh ? "4x6 英寸、A4 和 Letter 打印排版" : "4x6 inch, A4, and Letter print layouts"}</li>
+            {copy.features.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </section>
 
         <section className="policy-section">
-          <h2>{isZh ? "法律说明" : isAr ? "تنبيه قانوني" : "Legal Notice"}</h2>
+          <h2>{copy.legalTitle}</h2>
+          <p>{copy.legal}</p>
           <p>
-            {isZh
-              ? "IDPhoto Pro 不隶属于任何政府、使领馆、签证中心或官方申请平台。合规检查仅作为辅助提示，最终是否接受由接收机构决定。"
-              : "IDPhoto Pro is not affiliated with any government, embassy, visa center, or official application portal. Compliance checks are guidance only, and final acceptance is decided by the receiving authority."}
-          </p>
-          <p>
-            {isZh ? "你也可以查看完整的" : "You can also review the full"}{" "}
-            <Link href={privacyHref}>{isZh ? "隐私政策" : "privacy policy"}</Link>
-            {isZh ? "。" : "."}
+            {copy.privacyLinkPrefix} <Link href={privacyHref}>{copy.privacyLink}</Link>{" "}
+            {copy.privacyLinkSuffix}
           </p>
         </section>
       </div>

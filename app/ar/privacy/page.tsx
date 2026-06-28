@@ -1,9 +1,9 @@
 import { PrivacyPolicyPage } from "@/components/privacy-policy-page";
 
 export const metadata = {
-  title: "Privacy Policy",
+  title: "سياسة الخصوصية",
   description:
-    "Privacy Policy for IDPhoto Pro. Photo processing stays on device, with no photo upload, no ad SDKs, and no third-party analytics SDKs."
+    "سياسة الخصوصية لـ IDPhoto Pro: تتم معالجة الصور على الجهاز بدون رفع الصور وبدون SDK للإعلانات أو تحليلات خارجية."
 };
 
 export default function ArPrivacyPage() {

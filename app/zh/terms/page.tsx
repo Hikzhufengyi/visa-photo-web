@@ -7,7 +7,7 @@ export default function ZhTermsPage() {
   return (
     <main className="legal-page">
       <div className="legal-shell">
-        <p className="eyebrow">Legal</p>
+        <p className="eyebrow">法律条款</p>
         <h1>{copy.terms.title}</h1>
 
         <section className="policy-section">

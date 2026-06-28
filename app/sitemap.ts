@@ -62,23 +62,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1
     },
     {
-      url: `${siteConfig.domain}/en`,
+      url: `${siteConfig.domain}/${locales[0]}`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9
     },
-    {
-      url: `${siteConfig.domain}/zh`,
+    ...locales.slice(1).map((locale) => ({
+      url: `${siteConfig.domain}/${locale}`,
       lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: "weekly" as const,
       priority: 0.9
-    },
-    {
-      url: `${siteConfig.domain}/ar`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9
-    },
+    })),
     ...localizedStaticRoutes,
     ...localizedSeoRoutes
   ];

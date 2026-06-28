@@ -1,9 +1,9 @@
 import { SupportPage } from "@/components/support-page";
 
 export const metadata = {
-  title: "Technical Support",
+  title: "الدعم الفني",
   description:
-    "Technical support for IDPhoto Pro. Get help with document photo checks, export, purchase restore, privacy, and print layouts."
+    "الدعم الفني لـ IDPhoto Pro: مساعدة في فحوصات صور المستندات والتصدير واستعادة الشراء والخصوصية وتخطيطات الطباعة."
 };
 
 export default function ArSupportPage() {

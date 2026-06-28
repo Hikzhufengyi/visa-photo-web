@@ -6,7 +6,7 @@ export default function ArBlogPage() {
   return (
     <main className="legal-page">
       <div className="legal-shell">
-        <p className="eyebrow">Blog</p>
+        <p className="eyebrow">الدليل</p>
         <h1>{copy.blog.title}</h1>
         {copy.blog.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>

@@ -1,14 +1,14 @@
 import { getCopy } from "@/data/localization";
 
-export default function ArAboutPage() {
-  const copy = getCopy("ar");
+export default function DeBlogPage() {
+  const copy = getCopy("de");
 
   return (
     <main className="legal-page">
       <div className="legal-shell">
-        <p className="eyebrow">حول التطبيق</p>
-        <h1>{copy.about.title}</h1>
-        {copy.about.paragraphs.map((paragraph) => (
+        <p className="eyebrow">Ratgeber</p>
+        <h1>{copy.blog.title}</h1>
+        {copy.blog.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>

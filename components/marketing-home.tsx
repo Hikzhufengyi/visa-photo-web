@@ -40,28 +40,173 @@ const seoLinks = [
   "passport-photo-pdf-export"
 ];
 
+const homeLabels = {
+  en: {
+    appStoreCta: "Download app",
+    heroMetaAria: "Product highlights",
+    heroMeta: [
+      { value: "80+", label: "country presets" },
+      { value: "300 DPI", label: "print-ready export" },
+      { value: "On-device", label: "private processing" }
+    ],
+    visualLabel: "Professional preset engine",
+    visualTitle: "Designed like a serious imaging tool, not a simple cropper.",
+    guides: "Guides",
+    workflow: "How it works",
+    inside: "Inside the app",
+    insideTitle: "These screens match real app features",
+    presetLabel: "Preset Library",
+    presetTitle: "Multi-country, multi-document preset support",
+    presetText:
+      "The app includes a multi-country document photo preset library, not a single 2x2 cropper. Users can filter templates by country, passport, visa, immigration, residence card, ID, and print use cases.",
+    specLabel: "Spec Detail",
+    specTitle: "Review size, background, and notes before editing",
+    specText:
+      "Each spec screen shows size, pixel target, background options, and source notes before editing begins.",
+    editorLabel: "Editor",
+    editorTitle: "Smart auto alignment with manual fine control",
+    editorText:
+      "The editor uses the selected country and document requirements for size, ratio, and framing guidance. It also surfaces risks through checks, while still letting you adjust position, zoom, rotation, lighting, sharpness, background, and output.",
+    checks: "Checks",
+    export: "Export",
+    exportedResult: "Exported result",
+    purchase: "Purchase",
+    openStore: "Open App Store",
+    support: "See support",
+    download: "Download"
+  },
+  zh: {
+    appStoreCta: "下载 App",
+    heroMetaAria: "产品关键指标",
+    heroMeta: [
+      { value: "80+", label: "国家与证件模板" },
+      { value: "300 DPI", label: "打印级导出" },
+      { value: "On-device", label: "本地隐私处理" }
+    ],
+    visualLabel: "专业规格模板引擎",
+    visualTitle: "像成熟影像工具，而不是普通裁切页。",
+    guides: "规格指南",
+    workflow: "使用流程",
+    inside: "产品界面",
+    insideTitle: "这些页面对应 App 里的真实功能",
+    presetLabel: "规格库",
+    presetTitle: "多国家、多证件类型规格适配",
+    presetText:
+      "App 内置多国家证件照规格库，不只是单一的 2x2 裁切。用户可以按国家、护照、签证、移民、居留卡、身份证件和打印用途筛选模板。",
+    specLabel: "规格详情",
+    specTitle: "先看背景、尺寸和要求，再开始制作",
+    specText: "规格页会先展示尺寸、像素、背景和要求来源，再进入编辑流程。",
+    editorLabel: "编辑器",
+    editorTitle: "智能自动校准，也能手动精细调整",
+    editorText:
+      "编辑器会根据当前国家和证件类型的公开尺寸、比例和构图要求做校准，并用多项检测评分提示风险；用户也可以手动调整位置、缩放、旋转、亮度、锐度、背景和文件输出。",
+    checks: "检查结果",
+    export: "导出方式",
+    exportedResult: "导出结果",
+    purchase: "购买方式",
+    openStore: "查看 App Store",
+    support: "查看技术支持",
+    download: "下载入口"
+  },
+  ar: {
+    appStoreCta: "تنزيل التطبيق",
+    heroMetaAria: "أبرز مزايا المنتج",
+    heroMeta: [
+      { value: "80+", label: "قوالب دول ومستندات" },
+      { value: "300 DPI", label: "تصدير جاهز للطباعة" },
+      { value: "On-device", label: "معالجة خاصة على الجهاز" }
+    ],
+    visualLabel: "محرك قوالب احترافي",
+    visualTitle: "مصمم كأداة صور رسمية، وليس مجرد أداة قص.",
+    guides: "الأدلة",
+    workflow: "طريقة الاستخدام",
+    inside: "داخل التطبيق",
+    insideTitle: "هذه الشاشات تطابق وظائف التطبيق الحقيقية",
+    presetLabel: "مكتبة القوالب",
+    presetTitle: "قوالب متعددة للدول والمستندات",
+    presetText:
+      "يتضمن التطبيق مكتبة قوالب لعدة دول، وليس مجرد قص 2x2. يمكنك التصفية حسب الدولة والجواز والتأشيرة والإقامة والهوية والطباعة.",
+    specLabel: "تفاصيل القالب",
+    specTitle: "راجع المقاس والخلفية والملاحظات قبل التحرير",
+    specText:
+      "تعرض شاشة القالب المقاس والبكسل وخيارات الخلفية وملاحظات المصدر قبل بدء التحرير.",
+    editorLabel: "المحرر",
+    editorTitle: "محاذاة ذكية مع تحكم يدوي دقيق",
+    editorText:
+      "يعتمد المحرر على متطلبات الدولة والمستند المحدد للمقاس والنسبة والتأطير، ثم يعرض المخاطر عبر فحوصات متعددة مع إمكانية ضبط الموضع والتكبير والدوران والإضاءة والحدة والخلفية والإخراج يدوياً.",
+    checks: "الفحوصات",
+    export: "التصدير",
+    exportedResult: "نتيجة التصدير",
+    purchase: "الشراء",
+    openStore: "فتح App Store",
+    support: "الدعم الفني",
+    download: "التنزيل"
+  },
+  de: {
+    appStoreCta: "App laden",
+    heroMetaAria: "Produktvorteile",
+    heroMeta: [
+      { value: "80+", label: "Länder- und Dokumentvorlagen" },
+      { value: "300 DPI", label: "druckfertiger Export" },
+      { value: "On-device", label: "private Verarbeitung" }
+    ],
+    visualLabel: "Professioneller Vorlagen-Assistent",
+    visualTitle: "Entwickelt wie ein ernsthaftes Fotowerkzeug, nicht wie ein einfacher Zuschnitt.",
+    guides: "Ratgeber",
+    workflow: "So funktioniert es",
+    inside: "In der App",
+    insideTitle: "Diese Ansichten zeigen echte App-Funktionen",
+    presetLabel: "Vorlagenbibliothek",
+    presetTitle: "Vorlagen für mehrere Länder und Dokumenttypen",
+    presetText:
+      "Die App enthält eine Vorlagenbibliothek für viele Dokumentfotos und ist nicht nur ein 2x2-Zuschnitt. Du kannst nach Land, Pass, Visum, Aufenthaltstitel, Ausweis und Druckzweck filtern.",
+    specLabel: "Vorlagendetails",
+    specTitle: "Größe, Hintergrund und Hinweise vor der Bearbeitung prüfen",
+    specText:
+      "Jede Vorlage zeigt Größe, Pixelziel, Hintergrundoptionen und Quellenhinweise, bevor du mit der Bearbeitung beginnst.",
+    editorLabel: "Editor",
+    editorTitle: "Intelligente Ausrichtung mit manueller Feinkontrolle",
+    editorText:
+      "Der Editor orientiert sich an Land, Dokumenttyp, Größe, Seitenverhältnis und Bildausschnitt. Gleichzeitig zeigen Prüfungen mögliche Risiken, während du Position, Zoom, Drehung, Licht, Schärfe, Hintergrund und Export manuell anpassen kannst.",
+    checks: "Prüfungen",
+    export: "Export",
+    exportedResult: "Exportiertes Ergebnis",
+    purchase: "Kauf",
+    openStore: "App Store öffnen",
+    support: "Support ansehen",
+    download: "Download"
+  }
+} satisfies Record<Locale, {
+  appStoreCta: string;
+  heroMetaAria: string;
+  heroMeta: { value: string; label: string }[];
+  visualLabel: string;
+  visualTitle: string;
+  guides: string;
+  workflow: string;
+  inside: string;
+  insideTitle: string;
+  presetLabel: string;
+  presetTitle: string;
+  presetText: string;
+  specLabel: string;
+  specTitle: string;
+  specText: string;
+  editorLabel: string;
+  editorTitle: string;
+  editorText: string;
+  checks: string;
+  export: string;
+  exportedResult: string;
+  purchase: string;
+  openStore: string;
+  support: string;
+  download: string;
+}>;
+
 export function MarketingHome({ locale }: { locale: Locale }) {
   const copy = getCopy(locale);
-  const isZh = locale === "zh";
-  const isAr = locale === "ar";
-  const appStoreCta = isZh ? "下载 App" : isAr ? "تنزيل التطبيق" : "Download app";
-  const heroMeta = isZh
-    ? [
-        { value: "80+", label: "国家与证件模板" },
-        { value: "300 DPI", label: "打印级导出" },
-        { value: "On-device", label: "本地隐私处理" }
-      ]
-    : isAr
-      ? [
-          { value: "80+", label: "قوالب دول ومستندات" },
-          { value: "300 DPI", label: "تصدير جاهز للطباعة" },
-          { value: "On-device", label: "معالجة خاصة على الجهاز" }
-        ]
-      : [
-          { value: "80+", label: "country presets" },
-          { value: "300 DPI", label: "print-ready export" },
-          { value: "On-device", label: "private processing" }
-        ];
+  const labels = homeLabels[locale];
 
   return (
     <main className={`page-shell locale-${locale}`}>
@@ -70,8 +215,8 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <p className="eyebrow">{copy.home.eyebrow}</p>
           <h1>{copy.home.title}</h1>
           <p className="hero-text">{copy.home.description}</p>
-          <div className="hero-meta" aria-label={isZh ? "产品关键指标" : isAr ? "أبرز مزايا المنتج" : "Product highlights"}>
-            {heroMeta.map((item) => (
+          <div className="hero-meta" aria-label={labels.heroMetaAria}>
+            {labels.heroMeta.map((item) => (
               <div className="hero-meta-item" key={item.label}>
                 <strong>{item.value}</strong>
                 <span>{item.label}</span>
@@ -105,14 +250,8 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         </div>
         <div className="hero-visual">
           <div className="hero-visual-copy">
-            <p>{isAr ? "محرك قوالب احترافي" : "Professional preset engine"}</p>
-            <h2>
-              {isZh
-                ? "像成熟影像工具，而不是普通裁切页。"
-                : isAr
-                  ? "مصمم كأداة صور جادة، وليس مجرد أداة قص."
-                : "Designed like a serious imaging tool, not a simple cropper."}
-            </h2>
+            <p>{labels.visualLabel}</p>
+            <h2>{labels.visualTitle}</h2>
           </div>
           <div className="phone-stack phone-stack-front">
             <Image
@@ -136,7 +275,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section seo-links-section secondary-section">
         <div className="section-heading">
-          <p className="eyebrow">{isZh ? "规格指南" : isAr ? "الأدلة" : "Guides"}</p>
+          <p className="eyebrow">{labels.guides}</p>
           <h2>{copy.home.seoHeading}</h2>
         </div>
         <div className="seo-link-grid">
@@ -150,7 +289,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section" id="workflow">
         <div className="section-heading">
-          <p className="eyebrow">{isZh ? "使用流程" : isAr ? "طريقة الاستخدام" : "How it works"}</p>
+          <p className="eyebrow">{labels.workflow}</p>
           <h2>{copy.home.stepsHeading}</h2>
         </div>
         <div className="step-grid">
@@ -169,48 +308,36 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             target="_blank"
             rel="noreferrer"
           >
-            {appStoreCta}
+            {labels.appStoreCta}
           </Link>
         </div>
       </section>
 
       <section className="section showcase" id="showcase">
         <div className="section-heading">
-          <p className="eyebrow">{isZh ? "产品界面" : isAr ? "داخل التطبيق" : "Inside the app"}</p>
-          <h2>{isZh ? "这些页面对应 App 里的真实功能" : isAr ? "هذه الشاشات تطابق وظائف التطبيق الحقيقية" : "These screens match real app features"}</h2>
+          <p className="eyebrow">{labels.inside}</p>
+          <h2>{labels.insideTitle}</h2>
         </div>
         <div className="showcase-grid">
           <article className="showcase-card showcase-card-large">
             <div className="showcase-copy">
-              <p className="card-label">{isZh ? "规格库" : isAr ? "مكتبة القوالب" : "Preset Library"}</p>
-              <h3>{isZh ? "多国家、多证件类型规格适配" : isAr ? "دعم قوالب متعددة للدول والمستندات" : "Multi-country, multi-document preset support"}</h3>
-              <p>
-                {isZh
-                  ? "App 内置多国家证件照规格库，不只是单一的 2x2 裁切。用户可以按国家、护照、签证、移民、居留卡、身份证件和打印用途筛选模板。"
-                  : isAr
-                    ? "يتضمن التطبيق مكتبة قوالب متعددة الدول، وليس مجرد قص 2x2. يمكن التصفية حسب الدولة والجواز والتأشيرة والإقامة والهوية والطباعة."
-                  : "The app includes a multi-country document photo preset library, not a single 2x2 cropper. Users can filter templates by country, passport, visa, immigration, residence card, ID, and print use cases."}
-              </p>
+              <p className="card-label">{labels.presetLabel}</p>
+              <h3>{labels.presetTitle}</h3>
+              <p>{labels.presetText}</p>
             </div>
             <div className="device-frame">
               <LazyAutoplayVideo
                 className="device-video"
                 src="/screenshots/country-selection-demo.mp4"
-                label={isZh ? "IDPhoto Pro 多国家证件规格选择演示" : isAr ? "عرض اختيار قوالب IDPhoto Pro" : "IDPhoto Pro multi-country preset selection demo"}
+                label={labels.presetTitle}
               />
             </div>
           </article>
           <article className="showcase-card">
             <div className="showcase-copy">
-              <p className="card-label">{isZh ? "规格详情" : isAr ? "تفاصيل القالب" : "Spec Detail"}</p>
-              <h3>{isZh ? "先看背景、尺寸和要求，再开始制作" : isAr ? "راجع المقاس والخلفية والملاحظات قبل التحرير" : "Review size, background, and notes before editing"}</h3>
-              <p>
-                {isZh
-                  ? "规格页会先展示尺寸、像素、背景和要求来源，再进入编辑流程。"
-                  : isAr
-                    ? "تعرض شاشة القالب المقاس والبكسل والخلفية وملاحظات المصدر قبل بدء التحرير."
-                  : "Each spec screen shows size, pixel target, background options, and source notes before editing begins."}
-              </p>
+              <p className="card-label">{labels.specLabel}</p>
+              <h3>{labels.specTitle}</h3>
+              <p>{labels.specText}</p>
             </div>
             <div className="device-frame">
               <Image
@@ -223,21 +350,15 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </article>
           <article className="showcase-card">
             <div className="showcase-copy">
-              <p className="card-label">{isZh ? "编辑器" : isAr ? "المحرر" : "Editor"}</p>
-              <h3>{isZh ? "AI 自动校准，也能手动精细调整" : isAr ? "معايرة ذكية وتحكم يدوي دقيق" : "AI auto calibration with manual fine control"}</h3>
-              <p>
-                {isZh
-                  ? "编辑器会根据当前国家和证件类型的公开尺寸、比例和构图要求做校准，并用多项检测评分提示风险；用户也可以手动调整位置、缩放、旋转、亮度、锐度、背景和文件输出。"
-                  : isAr
-                    ? "يعتمد المحرر على مقاس ونسبة وإطار المستند المحدد، ثم يعرض فحوصات متعددة للمخاطر مع إمكانية ضبط الموضع والتكبير والدوران والإضاءة والحدة والخلفية والإخراج يدوياً."
-                  : "The editor calibrates against the selected country and document size, ratio, and framing guidance, then uses multiple scoring checks to surface risk. Users can still manually adjust position, zoom, rotation, lighting, sharpness, background, and output."}
-              </p>
+              <p className="card-label">{labels.editorLabel}</p>
+              <h3>{labels.editorTitle}</h3>
+              <p>{labels.editorText}</p>
             </div>
             <div className="device-frame">
               <LazyAutoplayVideo
                 className="device-video"
                 src="/screenshots/editor-demo.mp4"
-                label={isZh ? "IDPhoto Pro 编辑证件照演示" : isAr ? "عرض تحرير صورة المستند في IDPhoto Pro" : "IDPhoto Pro document photo editor demo"}
+                label={labels.editorTitle}
               />
             </div>
           </article>
@@ -249,14 +370,14 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             target="_blank"
             rel="noreferrer"
           >
-            {appStoreCta}
+            {labels.appStoreCta}
           </Link>
         </div>
       </section>
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{isZh ? "检查结果" : isAr ? "الفحوصات" : "Checks"}</p>
+          <p className="eyebrow">{labels.checks}</p>
           <h2>{copy.home.checksHeading}</h2>
         </div>
         <div className="split-grid">
@@ -272,7 +393,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             <div className="device-frame">
               <Image
                 src="/screenshots/smart-check-score.png"
-                alt={isZh ? "IDPhoto Pro 智能检测评分和问题提示" : isAr ? "درجة الفحص الذكي وملخص المشاكل في IDPhoto Pro" : "IDPhoto Pro smart check score and issue summary"}
+                alt={labels.checks}
                 width={1320}
                 height={2868}
               />
@@ -286,14 +407,14 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             target="_blank"
             rel="noreferrer"
           >
-            {appStoreCta}
+            {labels.appStoreCta}
           </Link>
         </div>
       </section>
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{isZh ? "导出方式" : isAr ? "التصدير" : "Export"}</p>
+          <p className="eyebrow">{labels.export}</p>
           <h2>{copy.home.exportHeading}</h2>
         </div>
         <div className="export-showcase-grid">
@@ -301,7 +422,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             <LazyAutoplayVideo
               className="device-video"
               src="/screenshots/export-demo.mp4"
-              label={isZh ? "IDPhoto Pro 导出演示" : isAr ? "عرض التصدير في IDPhoto Pro" : "IDPhoto Pro export demo"}
+              label={labels.export}
             />
           </article>
           <article className="info-card">
@@ -313,10 +434,10 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </ul>
           </article>
           <article className="image-card export-result-card">
-            <p className="card-label">{isZh ? "导出结果" : isAr ? "نتيجة التصدير" : "Exported Result"}</p>
+            <p className="card-label">{labels.exportedResult}</p>
             <Image
               src="/screenshots/export-result-4up.jpg"
-              alt={isZh ? "IDPhoto Pro 四张打印排版导出结果" : isAr ? "نتيجة تخطيط طباعة أربع صور في IDPhoto Pro" : "IDPhoto Pro four-photo print layout export result"}
+              alt={labels.exportedResult}
               width={3600}
               height={5400}
             />
@@ -329,14 +450,14 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             target="_blank"
             rel="noreferrer"
           >
-            {appStoreCta}
+            {labels.appStoreCta}
           </Link>
         </div>
       </section>
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{isZh ? "购买方式" : isAr ? "الشراء" : "Purchase"}</p>
+          <p className="eyebrow">{labels.purchase}</p>
           <h2>{copy.home.pricingHeading}</h2>
         </div>
         <div className="split-grid">
@@ -351,7 +472,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <article className="image-card unlock-shot-card">
             <Image
               src="/screenshots/lifetime-unlock.png"
-              alt={isZh ? "IDPhoto Pro 一次解锁页面" : isAr ? "شاشة الفتح مدى الحياة في IDPhoto Pro" : "IDPhoto Pro lifetime unlock screen"}
+              alt={labels.purchase}
               width={1320}
               height={2868}
             />
@@ -362,10 +483,10 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                {isZh ? "查看 App Store" : isAr ? "فتح App Store" : "Open App Store"}
+                {labels.openStore}
               </Link>
               <Link className="button button-secondary" href={`/${locale}/support`}>
-                {isZh ? "查看技术支持" : isAr ? "الدعم الفني" : "See support"}
+                {labels.support}
               </Link>
             </div>
           </article>
@@ -374,7 +495,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
 
       <section className="section split-section">
         <div className="section-heading">
-          <p className="eyebrow">{isZh ? "下载入口" : isAr ? "التنزيل" : "Download"}</p>
+          <p className="eyebrow">{labels.download}</p>
           <h2>{copy.home.qrHeading}</h2>
         </div>
         <div className="split-grid">

@@ -1,6 +1,6 @@
-export type Locale = "zh" | "en" | "ar";
+export type Locale = "zh" | "en" | "ar" | "de";
 
-export const locales: Locale[] = ["en", "zh", "ar"];
+export const locales: Locale[] = ["en", "zh", "ar", "de"];
 export const defaultLocale: Locale = "en";
 
 export function isLocale(value: string): value is Locale {
@@ -150,34 +150,34 @@ export const uiCopy = {
       contact: "تواصل"
     },
     home: {
-      eyebrow: "تطبيق صور هوية خاص على iPhone",
-      title: "أنشئ صور الجواز والتأشيرة والهوية على iPhone.",
+      eyebrow: "تطبيق صور مستندات خاص على iPhone",
+      title: "جهّز صور الجواز والتأشيرة والإقامة على iPhone.",
       description:
-        "اختر قالب المستند، عدّل الصورة، راجع الفحوصات، ثم صدّر ملفاً رقمياً أو جاهزاً للطباعة. تتم المعالجة على الجهاز. شراء لمرة واحدة، بلا اشتراك.",
+        "اختر قالب المستند، اضبط الصورة، راجع الفحوصات، ثم صدّر ملفاً رقمياً أو تخطيطاً جاهزاً للطباعة. المعالجة تتم على جهازك. دفع مرة واحدة، بدون اشتراك.",
       highlights: [
         "معالجة الصور على الجهاز بدون رفع إلى خادم",
-        "شراء لمرة واحدة، بلا اشتراك أو إعلانات",
+        "دفع مرة واحدة، بدون اشتراك أو إعلانات",
         "فحص المقاس والخلفية وخط العين والهوامش والتوسيط والوضوح",
         "تصدير رقمي وتخطيطات طباعة 4x6 و A4 و Letter"
       ],
-      stepsHeading: "ليس مجرد قص صورة، بل سير عمل كامل لصورة المستند.",
+      stepsHeading: "ليس مجرد قص صورة، بل سير عمل كامل لصورة رسمية.",
       steps: [
         {
           title: "اختر قالب المستند",
-          description: "ابدأ بدولة ونوع مستند بدلاً من تخمين المقاس والنسبة والإطار."
+          description: "ابدأ بالدولة ونوع المستند بدلاً من تخمين المقاس والنسبة وطريقة التأطير."
         },
         {
-          title: "عدّل الصورة على iPhone",
-          description: "استخدم المعايرة الذكية أو اضبط الموضع والتكبير والدوران والإضاءة والحدة والخلفية يدوياً."
+          title: "اضبط الصورة على iPhone",
+          description: "استخدم المحاذاة الذكية أو اضبط الموضع والتكبير والدوران والإضاءة والحدة والخلفية يدوياً."
         },
         {
           title: "صدّر ملفاً رقمياً أو للطباعة",
-          description: "صدّر ملفاً للرفع أو أنشئ تخطيط طباعة عند الحاجة إلى نسخة ورقية."
+          description: "صدّر ملفاً للرفع في البوابات الإلكترونية أو أنشئ تخطيط طباعة عند الحاجة إلى نسخة ورقية."
         }
       ],
-      checksHeading: "فحوصات ذكية تكشف المشاكل قبل التصدير.",
+      checksHeading: "فحوصات ذكية توضّح المشاكل قبل التصدير.",
       checksIntro:
-        "في صور المستندات، الأهم هو مطابقة الملف للمتطلبات. يفحص IDPhoto Pro نوع الدولة والمستند على الجهاز ثم يراجع الإطار والخلفية وجودة الصورة قبل التصدير.",
+        "في صور الجوازات والتأشيرات والإقامات، الأهم أن يطابق الملف المتطلبات. يفحص IDPhoto Pro الدولة ونوع المستند على جهازك، ثم يراجع التأطير والخلفية وجودة الصورة قبل التصدير.",
       checks: [
         "الدولة ونوع المستند المحددان",
         "نسبة أبعاد الصورة النهائية",
@@ -206,13 +206,13 @@ export const uiCopy = {
         "تخطيطات طباعة 4x6 و A4 و Letter",
         "حفظ في الصور أو مشاركة أو تصدير ملفات"
       ],
-      pricingHeading: "افحص أولاً ثم قرر فتح التصدير",
+      pricingHeading: "افحص الصورة أولاً، ثم افتح التصدير عند الحاجة",
       pricingIntro:
         "التطبيق ليس اشتراكاً. يمكنك مراجعة الصورة والفحوصات أولاً، ثم الدفع مرة واحدة عندما تكون جاهزاً لتصدير الملف النهائي.",
-      pricingItems: ["شراء لمرة واحدة", "بلا اشتراك", "بلا إعلانات", "معالجة على الجهاز بدون رفع"],
-      qrHeading: "تنزيل iPhone الآن، و Android لاحقاً",
+      pricingItems: ["دفع مرة واحدة", "بدون اشتراك", "بدون إعلانات", "معالجة على الجهاز بدون رفع"],
+      qrHeading: "تنزيل التطبيق على iPhone",
       qrIntro:
-        "إذا فتحت الموقع من كمبيوتر أو جهاز لوحي، يمكنك مسح رمز QR للانتقال إلى App Store مباشرة.",
+        "إذا فتحت الموقع من الكمبيوتر أو الجهاز اللوحي، امسح رمز QR بكاميرا iPhone لفتح صفحة App Store مباشرة.",
       qrCaption: "رمز QR لتنزيل iOS",
       seoHeading: "أدلة مقاسات صور المستندات الشائعة",
       ctaPrimary: "تنزيل من App Store",
@@ -223,12 +223,12 @@ export const uiCopy = {
     download: {
       eyebrow: "تنزيل",
       title: "تنزيل IDPhoto Pro",
-      description: "الإصدار الحالي مخصص لـ iPhone عبر App Store.",
-      platform: "مناسب لصور الجواز والتأشيرة والهوية والإقامة والتصدير الرقمي والطباعة.",
+      description: "يتوفر IDPhoto Pro حالياً على iPhone عبر App Store.",
+      platform: "مناسب لصور الجواز والتأشيرة والهوية والإقامة، مع تصدير رقمي وتخطيطات طباعة.",
       iosTitle: "امسح للتنزيل على iPhone",
       iosDescription: "استخدم كاميرا iPhone لمسح الرمز وفتح صفحة App Store.",
-      androidTitle: "Android لاحقاً",
-      androidDescription: "إصدار Android غير متاح حالياً.",
+      androidTitle: "Android غير متاح حالياً",
+      androidDescription: "الإصدار الحالي مخصص لـ iPhone. إذا توفر إصدار Android سنضيفه هنا.",
       backHome: "العودة للرئيسية"
     },
     about: {
@@ -273,37 +273,37 @@ export const uiCopy = {
       contact: "Contact"
     },
     home: {
-      eyebrow: "Private On-Device Passport Photo App",
-      title: "Create passport and visa photos on your iPhone.",
+      eyebrow: "Private passport photo app for iPhone",
+      title: "Make passport, visa, and ID photos on your iPhone.",
       description:
-        "Choose a document preset, adjust the photo, review checks, and export digital or print-ready files directly on iPhone. Processing stays on device. One-time purchase. No subscription.",
+        "Pick the right document preset, adjust the photo, check the common requirements, and export a digital file or print layout. Your photos stay on your iPhone. One-time purchase, no subscription.",
       highlights: [
-        "100% on-device photo processing, no server upload",
+        "On-device photo processing with no server upload",
         "One-time purchase, no subscription, no ads",
-        "Checks for size, background, eye height, margins, centering, tilt, and sharpness",
-        "Supports digital export and 4x6, A4, and Letter print layouts"
+        "Checks size, background, eye line, margins, centering, tilt, and sharpness",
+        "Exports digital files and 4x6, A4, and Letter print layouts"
       ],
-      stepsHeading: "It is not just a cropper. It is a document-photo workflow.",
+      stepsHeading: "More than a cropper: a complete document photo workflow.",
       steps: [
         {
           title: "Choose a document preset",
           description:
-            "Start with a country and document preset instead of guessing dimensions, ratio, and framing."
+            "Start with a country and document type instead of guessing the size, ratio, and framing."
         },
         {
           title: "Adjust the photo on iPhone",
           description:
-            "Use AI auto calibration or manually refine position, zoom, rotation, brightness, sharpness, and background directly on iPhone."
+            "Use smart auto alignment or fine-tune position, zoom, rotation, brightness, sharpness, and background yourself."
         },
         {
           title: "Export digital or print-ready files",
           description:
-            "Export a digital file for upload, or generate a print layout when you need a physical copy."
+            "Export a file for online upload or generate a print layout when you need physical copies."
         }
       ],
-      checksHeading: "Smart checks surface every small issue before export.",
+      checksHeading: "Smart checks catch common issues before you export.",
       checksIntro:
-        "With document photos, the real concern is usually not style but whether the file is likely to pass review. IDPhoto Pro checks the selected country and document type on device, then reviews framing, background, and image quality before export.",
+        "For document photos, the real question is whether the file matches the requirements. IDPhoto Pro checks the selected country and document type on your device, then reviews framing, background, and image quality before export.",
       checks: [
         "Selected country and document size",
         "Final photo aspect ratio",
@@ -318,32 +318,32 @@ export const uiCopy = {
         "Vertical head position",
         "Visible head tilt",
         "Both eyes visible",
-        "Eyes open enough for document use",
+        "Eyes open clearly enough",
         "Possible hat or head covering risk",
         "Face sharpness and clarity",
         "Brightness, contrast, shadow, and warmth risk",
-        "Overall score and failed-item summary before export"
+        "Overall score and issue summary before export"
       ],
-      exportHeading: "Export in multiple file formats and print layout sizes",
+      exportHeading: "Export digital files or ready-to-print layouts",
       exportIntro:
-        "After editing, export a digital file for upload or a print-ready sheet for photo labs. IDPhoto Pro supports JPG, PNG, HEIF, PDF, and common 4x6, A4, and Letter layouts.",
+        "After editing, export a digital file for upload or a print-ready sheet for a photo lab. IDPhoto Pro supports JPG, PNG, HEIF, PDF, and common 4x6, A4, and Letter layouts.",
       exportItems: [
         "JPG, PNG, HEIF, and PDF",
         "4x6, A4, and Letter print layouts",
         "Save to Photos, share, or export files"
       ],
-      pricingHeading: "Check first, then decide whether to unlock export",
+      pricingHeading: "Check the photo first, unlock export only when you need it",
       pricingIntro:
-        "The app is not subscription-based. People can review the photo first, understand the checks, and pay once they are ready to export the final file.",
+        "The app is not a subscription. You can review the photo and the checks first, then pay once when you are ready to export the final file.",
       pricingItems: [
         "One-time purchase",
         "No subscription",
         "No ads",
         "On-device processing with no server upload"
       ],
-      qrHeading: "iPhone download now, Android later",
+      qrHeading: "Download for iPhone",
       qrIntro:
-        "If someone opens the site on desktop or tablet, they can still jump straight to the App Store by scanning the QR code. When Android is ready, the second slot is already reserved.",
+        "Opening this page on a desktop or tablet? Scan the QR code with your iPhone camera to open the App Store listing.",
       qrCaption: "iOS download QR",
       seoHeading: "Popular document photo size guides",
       ctaPrimary: "Download on the App Store",
@@ -355,15 +355,15 @@ export const uiCopy = {
       eyebrow: "Download",
       title: "Download IDPhoto Pro",
       description:
-        "The first release is for iPhone. You can scan the code to jump straight to the App Store, and this page can stay in place when Android is added later.",
+        "IDPhoto Pro is currently available for iPhone. Scan the code to open the App Store listing.",
       platform:
-        "Current platform: iPhone via the App Store. Best for passport photos, visa photos, common ID photos, and both digital and print export.",
+        "Current platform: iPhone via the App Store. Built for passport photos, visa photos, common ID photos, and both digital and print export.",
       iosTitle: "Scan to download on iPhone",
       iosDescription:
         "Use your iPhone camera to scan the code and open the App Store listing directly.",
-      androidTitle: "Android coming later",
+      androidTitle: "Android is not available yet",
       androidDescription:
-        "Android is not available yet, but the spot is already reserved. When the Android build is ready, this page will not need a redesign.",
+        "The current release is iPhone-only. If an Android version becomes available, we will add it here.",
       backHome: "Back to home"
     },
     about: {
@@ -395,6 +395,141 @@ export const uiCopy = {
     },
     terms: {
       title: "Terms of Service"
+    }
+  },
+  de: {
+    nav: {
+      home: "Startseite",
+      download: "Download",
+      support: "Support",
+      privacy: "Datenschutz",
+      about: "Über uns",
+      blog: "Ratgeber"
+    },
+    footer: {
+      notice: "IDPhoto Pro ist nicht mit einer Behörde verbunden.",
+      contact: "Kontakt"
+    },
+    home: {
+      eyebrow: "Private Passfoto-App für iPhone",
+      title: "Pass-, Visa- und Ausweisfotos direkt auf dem iPhone erstellen.",
+      description:
+        "Wähle die passende Vorlage, richte das Foto aus, prüfe typische Anforderungen und exportiere eine digitale Datei oder ein Drucklayout. Deine Fotos bleiben auf dem iPhone. Einmal kaufen, kein Abo.",
+      highlights: [
+        "Bildverarbeitung direkt auf dem Gerät, ohne Server-Upload",
+        "Einmaliger Kauf, kein Abo, keine Werbung",
+        "Prüft Größe, Hintergrund, Augenlinie, Ränder, Zentrierung, Neigung und Schärfe",
+        "Exportiert digitale Dateien sowie Drucklayouts für 4x6, A4 und Letter"
+      ],
+      stepsHeading: "Mehr als Zuschneiden: ein kompletter Ablauf für Ausweisfotos.",
+      steps: [
+        {
+          title: "Vorlage auswählen",
+          description: "Starte mit Land und Dokumenttyp, statt Größe, Seitenverhältnis und Bildausschnitt zu erraten."
+        },
+        {
+          title: "Foto auf dem iPhone anpassen",
+          description: "Nutze die intelligente Ausrichtung oder passe Position, Zoom, Drehung, Helligkeit, Schärfe und Hintergrund manuell an."
+        },
+        {
+          title: "Digital oder druckfertig exportieren",
+          description: "Exportiere eine Datei für Online-Portale oder erstelle ein Drucklayout für Papierabzüge."
+        }
+      ],
+      checksHeading: "Intelligente Prüfungen zeigen typische Probleme vor dem Export.",
+      checksIntro:
+        "Bei Ausweisfotos zählt vor allem, ob die Datei zu den Anforderungen passt. IDPhoto Pro prüft das gewählte Land und den Dokumenttyp auf dem Gerät und kontrolliert Bildausschnitt, Hintergrund und Bildqualität vor dem Export.",
+      checks: [
+        "Gewähltes Land und Dokumentformat",
+        "Seitenverhältnis des fertigen Fotos",
+        "Pixelauflösung für den Export",
+        "Zulässige Hintergrundfarbe",
+        "Sauberkeit des Hintergrunds und Schattenrisiko",
+        "Kopfhöhe im Zielbereich",
+        "Oberer Rand zu groß oder zu klein",
+        "Abstand zwischen Kinn und unterem Rand",
+        "Augenlinie im Zielbereich",
+        "Horizontale Zentrierung des Gesichts",
+        "Vertikale Kopfposition",
+        "Erkennbare Kopfneigung",
+        "Beide Augen sichtbar",
+        "Augen klar genug geöffnet",
+        "Mögliche Kopfbedeckung oder Verdeckung",
+        "Schärfe und Klarheit des Gesichts",
+        "Risiken bei Helligkeit, Kontrast, Schatten und Farbtemperatur",
+        "Gesamtbewertung und Problemliste vor dem Export"
+      ],
+      exportHeading: "Digitale Dateien oder druckfertige Layouts exportieren",
+      exportIntro:
+        "Nach der Bearbeitung exportierst du eine Datei für den Upload oder ein druckfertiges Blatt für Fotolabore. IDPhoto Pro unterstützt JPG, PNG, HEIF, PDF sowie 4x6, A4 und Letter.",
+      exportItems: [
+        "JPG, PNG, HEIF und PDF",
+        "Drucklayouts für 4x6, A4 und Letter",
+        "In Fotos sichern, teilen oder als Datei exportieren"
+      ],
+      pricingHeading: "Erst prüfen, Export nur bei Bedarf freischalten",
+      pricingIntro:
+        "IDPhoto Pro ist kein Abo. Du kannst Foto und Prüfungen zuerst ansehen und erst dann einmalig bezahlen, wenn du die finale Datei exportieren möchtest.",
+      pricingItems: [
+        "Einmaliger Kauf",
+        "Kein Abo",
+        "Keine Werbung",
+        "Verarbeitung auf dem Gerät ohne Server-Upload"
+      ],
+      qrHeading: "Download für iPhone",
+      qrIntro:
+        "Öffnest du diese Seite am Computer oder Tablet? Scanne den QR-Code mit der iPhone-Kamera, um den App Store zu öffnen.",
+      qrCaption: "iOS Download-QR-Code",
+      seoHeading: "Beliebte Ratgeber zu Ausweisfoto-Größen",
+      ctaPrimary: "Im App Store laden",
+      ctaSecondary: "App-Screenshots ansehen",
+      qrPage: "Downloadseite öffnen",
+      appStoreLink: "App Store Link"
+    },
+    download: {
+      eyebrow: "Download",
+      title: "IDPhoto Pro herunterladen",
+      description:
+        "IDPhoto Pro ist derzeit für iPhone verfügbar. Scanne den Code, um die App-Store-Seite zu öffnen.",
+      platform:
+        "Aktuelle Plattform: iPhone über den App Store. Geeignet für Passfotos, Visa-Fotos, Ausweisfotos sowie digitale Dateien und Druckexport.",
+      iosTitle: "Zum Download mit dem iPhone scannen",
+      iosDescription:
+        "Scanne den Code mit der iPhone-Kamera, um die App-Store-Seite direkt zu öffnen.",
+      androidTitle: "Android ist noch nicht verfügbar",
+      androidDescription:
+        "Die aktuelle Version ist nur für iPhone. Falls eine Android-Version verfügbar wird, ergänzen wir sie hier.",
+      backHome: "Zur Startseite"
+    },
+    about: {
+      title: "Über IDPhoto Pro",
+      paragraphs: [
+        "IDPhoto Pro ist für Passfotos, Visa-Fotos, Green-Card-Fotos, Aufenthaltstitel und andere Ausweisfoto-Situationen gedacht, bei denen Größe, Hintergrund, Prüfung und Export zuverlässig zusammenpassen müssen.",
+        "Diese Website ist kein offizieller Behördendienst. Sie erklärt, was die App macht, wofür sie geeignet ist und wo sie heruntergeladen werden kann."
+      ]
+    },
+    blog: {
+      title: "Ratgeber für Ausweisfotos",
+      paragraphs: [
+        "Diese Seite ist der Einstieg für Inhalte zu Passfotos, Visa-Fotos, Aufenthaltstiteln, Druckgrößen und praktischen Aufnahmetipps.",
+        "Zuerst werden die wichtigsten Formatseiten gestärkt, danach kann die Inhaltsbibliothek weiter wachsen."
+      ]
+    },
+    support: {
+      title: "IDPhoto Pro Support",
+      lead:
+        "Wenn beim Erstellen, Prüfen oder Exportieren eines Ausweisfotos etwas unklar ist, starte hier.",
+      privacyReminder:
+        "Datenschutzhinweis: Die Fotobearbeitung bleibt auf deinem Gerät. Fotos werden nicht auf einen Server hochgeladen.",
+      purchaseReminder:
+        "Kaufhinweis: Die Freischaltung ist ein einmaliger Kauf, kein Abo und keine wiederkehrende Zahlung."
+    },
+    privacy: {
+      title: "Datenschutzerklärung für IDPhoto Pro",
+      effective: "Gültig ab: 21. Mai 2026"
+    },
+    terms: {
+      title: "Nutzungsbedingungen"
     }
   }
 } as const;

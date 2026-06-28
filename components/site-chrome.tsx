@@ -5,6 +5,13 @@ import { usePathname } from "next/navigation";
 import { defaultLocale, getCopy, isLocale, locales } from "@/data/localization";
 import { siteConfig } from "@/data/site";
 
+const localeNames = {
+  en: "EN",
+  zh: "中文",
+  ar: "عربي",
+  de: "DE"
+};
+
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const firstSegment = pathname.split("/")[1];
@@ -42,7 +49,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
                 href={`/${nextLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`}
                 key={nextLocale}
               >
-                {nextLocale.toUpperCase()}
+                {localeNames[nextLocale]}
               </Link>
             ))}
           </div>

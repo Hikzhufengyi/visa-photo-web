@@ -6,7 +6,14 @@ export const metadata: Metadata = {
   description:
     "IDPhoto Pro 支持多国证件规格、本地合规检查、电子版导出和打印排版，适合在 iPhone 上制作护照照、签证照和常见证件照。",
   alternates: {
-    canonical: "/zh"
+    canonical: "/zh",
+    languages: {
+      en: "/en",
+      zh: "/zh",
+      ar: "/ar",
+      de: "/de",
+      "x-default": "/en"
+    }
   }
 };
 

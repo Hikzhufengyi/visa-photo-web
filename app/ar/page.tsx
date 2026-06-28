@@ -2,11 +2,18 @@ import type { Metadata } from "next";
 import { MarketingHome } from "@/components/marketing-home";
 
 export const metadata: Metadata = {
-  title: "Passport and Visa Photo App for iPhone",
+  title: "تطبيق صور الجواز والتأشيرة والإقامة على iPhone",
   description:
-    "IDPhoto Pro helps you create passport, visa, and ID photos on iPhone with on-device checks, digital export, and print-ready layouts.",
+    "يساعدك IDPhoto Pro على تجهيز صور الجواز والتأشيرة والإقامة على iPhone مع فحوصات على الجهاز وتصدير رقمي وتخطيطات طباعة.",
   alternates: {
-    canonical: "/ar"
+    canonical: "/ar",
+    languages: {
+      en: "/en",
+      zh: "/zh",
+      ar: "/ar",
+      de: "/de",
+      "x-default": "/en"
+    }
   }
 };
 
