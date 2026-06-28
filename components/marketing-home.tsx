@@ -134,6 +134,20 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <section className="section seo-links-section secondary-section">
+        <div className="section-heading">
+          <p className="eyebrow">{isZh ? "规格指南" : isAr ? "الأدلة" : "Guides"}</p>
+          <h2>{copy.home.seoHeading}</h2>
+        </div>
+        <div className="seo-link-grid">
+          {seoLinks.map((slug) => (
+            <Link className="seo-link-card" href={`/${locale}/${slug}`} key={slug}>
+              {slug.replaceAll("-", " ").replaceAll(/\b\w/g, (match) => match.toUpperCase())}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="section" id="workflow">
         <div className="section-heading">
           <p className="eyebrow">{isZh ? "使用流程" : isAr ? "طريقة الاستخدام" : "How it works"}</p>
@@ -389,58 +403,6 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </div>
             <p className="qr-caption">{copy.home.qrCaption}</p>
           </article>
-        </div>
-      </section>
-
-      <section className="section app-store-section">
-        <div className="section-heading">
-          <p className="eyebrow">App Store</p>
-          <h2>{isZh ? "已在 App Store 上架" : isAr ? "متوفر على App Store" : "Available on the App Store"}</h2>
-        </div>
-        <div className="app-store-card">
-          <div className="app-store-copy">
-            <p>
-              {isZh
-                ? "在 App Store 查看 IDPhoto Pro 的截图、功能介绍和下载入口。核心功能包括离线处理、智能检测、AI 校准、官方规格模板、电子文件导出和打印排版。"
-                : isAr
-                  ? "اعرض لقطات IDPhoto Pro ومزاياه وخيار التنزيل على App Store. يركز التطبيق على المعالجة على الجهاز، الفحوصات الذكية، المعايرة، القوالب الرسمية، التصدير الرقمي وتخطيطات الطباعة."
-                : "View IDPhoto Pro screenshots, feature details, and download options on the App Store. The app focuses on on-device processing, smart checks, AI calibration, official-size presets, digital export, and print layouts."}
-            </p>
-            <div className="legal-links">
-              <Link href={`/${locale}/download`}>{copy.nav.download}</Link>
-              <Link href={`/${locale}/about`}>{copy.nav.about}</Link>
-              <Link href={`/${locale}/support`}>{copy.nav.support}</Link>
-              <Link href={`/${locale}/privacy`}>{copy.nav.privacy}</Link>
-            </div>
-          </div>
-          <div className="app-store-shot-list">
-            <Image
-              src="/screenshots/app-store-listing-1.png"
-              alt={isZh ? "IDPhoto Pro App Store 商店页标题和截图" : isAr ? "عنوان ولقطات صفحة IDPhoto Pro على App Store" : "IDPhoto Pro App Store listing title and screenshots"}
-              width={2120}
-              height={515}
-            />
-            <Image
-              src="/screenshots/app-store-listing-2.png"
-              alt={isZh ? "IDPhoto Pro App Store 商店页功能展示" : isAr ? "معاينة مزايا IDPhoto Pro على App Store" : "IDPhoto Pro App Store listing feature preview"}
-              width={2096}
-              height={833}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="section seo-links-section secondary-section">
-        <div className="section-heading">
-          <p className="eyebrow">{isZh ? "规格指南" : isAr ? "الأدلة" : "Guides"}</p>
-          <h2>{copy.home.seoHeading}</h2>
-        </div>
-        <div className="seo-link-grid">
-          {seoLinks.map((slug) => (
-            <Link className="seo-link-card" href={`/${locale}/${slug}`} key={slug}>
-              {slug.replaceAll("-", " ").replaceAll(/\b\w/g, (match) => match.toUpperCase())}
-            </Link>
-          ))}
         </div>
       </section>
     </main>
