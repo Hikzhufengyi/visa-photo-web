@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { TrackedLink } from "@/components/tracked-link";
 import type { Locale } from "@/data/localization";
-import type { SeoPage } from "@/data/seo-pages";
+import { seoPages, type SeoPage } from "@/data/seo-pages";
 import { buildSeoPageJsonLd } from "@/data/seo-utils";
 import { siteConfig } from "@/data/site";
 
@@ -16,6 +16,7 @@ export function SeoLanding({
   const isAr = locale === "ar";
   const isDe = locale === "de";
   const jsonLd = buildSeoPageJsonLd(page, locale);
+  const relatedPages = getRelatedPages(page);
 
   return (
     <main className="legal-page">
@@ -148,7 +149,41 @@ export function SeoLanding({
             ))}
           </div>
         </section>
+
+        {relatedPages.length > 0 ? (
+          <section className="seo-faq">
+            <p className="card-label">{isZh ? "相关规格" : isAr ? "أدلة مرتبطة" : isDe ? "Verwandte Ratgeber" : "Related guides"}</p>
+            <h2>{isZh ? "继续查看相关证件照规格" : isAr ? "تابع تصفح أدلة الصور المرتبطة" : isDe ? "Weitere passende Fotoanforderungen" : "Continue with related photo requirements"}</h2>
+            <div className="seo-grid">
+              {relatedPages.map((related) => (
+                <article className="seo-card" key={related.slug}>
+                  <h3>{related.title}</h3>
+                  <p>{related.country} · {related.documentName} · {related.size}</p>
+                  <Link className="button button-secondary" href={`/${locale}/${related.slug}`}>
+                    {isZh ? "打开规格" : isAr ? "فتح الدليل" : isDe ? "Ratgeber öffnen" : "Open guide"}
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
       </div>
     </main>
   );
+}
+
+function getRelatedPages(page: SeoPage) {
+  return seoPages
+    .filter((candidate) => candidate.slug !== page.slug)
+    .map((candidate) => ({
+      page: candidate,
+      score:
+        (candidate.country === page.country ? 4 : 0) +
+        (candidate.size === page.size ? 3 : 0) +
+        (candidate.searchIntent === page.searchIntent ? 1 : 0)
+    }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || a.page.title.localeCompare(b.page.title))
+    .slice(0, 4)
+    .map((item) => item.page);
 }

@@ -27,13 +27,7 @@ export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
   const isZh = locale === "zh";
   const isAr = locale === "ar";
   const isDe = locale === "de";
-  const title = isZh
-    ? `${page.title} | 中文`
-    : isAr
-      ? `${page.title} | العربية`
-      : isDe
-        ? `${page.title} | Deutsch`
-        : page.title;
+  const title = buildSeoTitle(page, locale);
   const description = isZh
     ? `${page.heading}。常见尺寸：${page.size}。背景要求：${page.background}。可在 iPhone 上用 IDPhoto Pro 调整照片、检查细节并导出电子版或打印版。`
     : isAr
@@ -82,6 +76,44 @@ export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
       images: ["/screenshots/smart-check-score.png"]
     }
   };
+}
+
+export function buildSeoTitle(page: SeoPage, locale: Locale) {
+  const normalizedSize = page.size.replace(/\s+/g, " ");
+  const isZh = locale === "zh";
+  const isAr = locale === "ar";
+  const isDe = locale === "de";
+
+  if (isZh) {
+    if (page.searchIntent === "export-workflow") {
+      return `${page.title} - iPhone 证件照导出`;
+    }
+    return `${page.title} ${normalizedSize} - iPhone 证件照制作`;
+  }
+
+  if (isAr) {
+    if (page.searchIntent === "export-workflow") {
+      return `${page.title} - تصدير صور المستندات على iPhone`;
+    }
+    return `${page.title} ${normalizedSize} - إنشاء الصورة على iPhone`;
+  }
+
+  if (isDe) {
+    if (page.searchIntent === "export-workflow") {
+      return `${page.title} - Ausweisfoto auf dem iPhone exportieren`;
+    }
+    return `${page.title} ${normalizedSize} - auf dem iPhone erstellen`;
+  }
+
+  if (page.searchIntent === "export-workflow") {
+    return `${page.title} - Make and Export on iPhone`;
+  }
+
+  if (page.searchIntent === "document-size") {
+    return `${page.title} ${normalizedSize} - Maker for iPhone`;
+  }
+
+  return `${page.title} ${normalizedSize} - Requirements & iPhone Maker`;
 }
 
 export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {

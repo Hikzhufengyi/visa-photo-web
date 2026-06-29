@@ -1,17 +1,11 @@
-import { getCopy } from "@/data/localization";
+import { ContentHubPage } from "@/components/content-hub-page";
+
+export const metadata = {
+  title: "Leitfaden für Pass-, Visa- und Ausweisfoto-Größen",
+  description:
+    "Durchsuche IDPhoto Pro Ratgeber für Passfotos, Visafotos, Ausweisfotos, Aufenthaltsdokumente und Drucklayouts."
+};
 
 export default function DeBlogPage() {
-  const copy = getCopy("de");
-
-  return (
-    <main className="legal-page">
-      <div className="legal-shell">
-        <p className="eyebrow">Ratgeber</p>
-        <h1>{copy.blog.title}</h1>
-        {copy.blog.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </main>
-  );
+  return <ContentHubPage locale="de" />;
 }

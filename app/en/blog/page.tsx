@@ -1,17 +1,11 @@
-import { getCopy } from "@/data/localization";
+import { ContentHubPage } from "@/components/content-hub-page";
+
+export const metadata = {
+  title: "Passport & Visa Photo Size Requirements Guide",
+  description:
+    "Browse passport photo, visa photo, ID photo, residence permit, 4x6 print layout, and document photo size requirement guides."
+};
 
 export default function EnBlogPage() {
-  const copy = getCopy("en");
-
-  return (
-    <main className="legal-page">
-      <div className="legal-shell">
-        <p className="eyebrow">Blog</p>
-        <h1>{copy.blog.title}</h1>
-        {copy.blog.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </main>
-  );
+  return <ContentHubPage locale="en" />;
 }

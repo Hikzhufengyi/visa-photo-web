@@ -1,27 +1,11 @@
+import { ContentHubPage } from "@/components/content-hub-page";
+
 export const metadata = {
-  title: "Document Photo Guides",
+  title: "Passport & Visa Photo Size Requirements Guide",
   description:
-    "Browse passport photo, visa photo, print layout, and document photo requirement guides published for IDPhoto Pro users."
+    "Browse passport photo, visa photo, ID photo, residence permit, 4x6 print layout, and document photo size requirement guides."
 };
 
 export default function BlogPage() {
-  return (
-    <main className="legal-page">
-      <div className="legal-shell">
-        <p className="eyebrow">Blog</p>
-        <h1>Document Photo Content Hub</h1>
-        <p>
-          This page is the entry point for search-focused content. The best
-          expansion path is to keep publishing high-intent pages around passport
-          photo size, visa photo size, residence permit photo requirements,
-          print layout formats, and practical shooting tips.
-        </p>
-        <p>
-          The first batch of keyword pages already lives under standalone URLs.
-          Keep those pages accurate and useful before expanding the site to
-          dozens of templates.
-        </p>
-      </div>
-    </main>
-  );
+  return <ContentHubPage locale="en" />;
 }
