@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrackedLink } from "@/components/tracked-link";
 import type { Locale } from "@/data/localization";
 import type { SeoPage } from "@/data/seo-pages";
 import { buildSeoPageJsonLd } from "@/data/seo-utils";
@@ -42,17 +43,24 @@ export function SeoLanding({
           <h1>{page.heading}</h1>
           <p>{page.intro}</p>
           <div className="hero-actions">
-            <Link
+            <TrackedLink
               className="button button-primary"
               href={siteConfig.appStoreUrl}
               target="_blank"
               rel="noreferrer"
+              eventName="app_store_click"
+              eventParams={{ source: "seo_landing", locale, slug: page.slug }}
             >
               {isZh ? "下载 iPhone App" : isAr ? "تنزيل تطبيق iPhone" : isDe ? "Im App Store laden" : "Download on the App Store"}
-            </Link>
-            <Link className="button button-secondary" href={`/${locale}/download`}>
+            </TrackedLink>
+            <TrackedLink
+              className="button button-secondary"
+              href={`/${locale}/download`}
+              eventName="download_page_click"
+              eventParams={{ source: "seo_landing", locale, slug: page.slug }}
+            >
               {isZh ? "查看下载页" : isAr ? "فتح صفحة التنزيل" : isDe ? "Downloadseite öffnen" : "Open download page"}
-            </Link>
+            </TrackedLink>
           </div>
         </div>
 

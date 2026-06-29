@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { DownloadQr } from "@/components/download-qr";
+import { TrackedLink } from "@/components/tracked-link";
 import { getCopy, type Locale } from "@/data/localization";
 import { siteConfig } from "@/data/site";
 
@@ -53,14 +54,16 @@ export function DownloadPage({ locale }: { locale: Locale }) {
               <DownloadQr url={siteConfig.appStoreUrl} alt={labels.qrAlt} />
             </div>
             <div className="hero-actions">
-              <Link
+              <TrackedLink
                 className="button button-primary"
                 href={siteConfig.appStoreUrl}
                 target="_blank"
                 rel="noreferrer"
+                eventName="app_store_click"
+                eventParams={{ source: "download_page", locale }}
               >
                 {labels.openStore}
-              </Link>
+              </TrackedLink>
             </div>
           </article>
 

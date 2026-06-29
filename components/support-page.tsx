@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrackedLink } from "@/components/tracked-link";
 import type { Locale } from "@/data/localization";
 import { siteConfig } from "@/data/site";
 
@@ -273,17 +274,24 @@ export function SupportPage({ locale }: { locale: Locale }) {
           </p>
           <p>{copy.contactHelp}</p>
           <div className="hero-actions">
-            <Link
+            <TrackedLink
               className="button button-primary"
               href={siteConfig.appStoreUrl}
               target="_blank"
               rel="noreferrer"
+              eventName="app_store_click"
+              eventParams={{ source: "support_page", locale }}
             >
               {copy.openStore}
-            </Link>
-            <Link className="button button-secondary" href={downloadHref}>
+            </TrackedLink>
+            <TrackedLink
+              className="button button-secondary"
+              href={downloadHref}
+              eventName="download_page_click"
+              eventParams={{ source: "support_page", locale }}
+            >
               {copy.download}
-            </Link>
+            </TrackedLink>
           </div>
         </section>
 

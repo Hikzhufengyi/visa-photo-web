@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LazyAutoplayVideo } from "@/components/lazy-autoplay-video";
+import { TrackedLink } from "@/components/tracked-link";
 import type { Locale } from "@/data/localization";
 import { getCopy } from "@/data/localization";
 import { siteConfig } from "@/data/site";
@@ -225,14 +226,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             ))}
           </ul>
           <div className="hero-actions">
-            <Link
+            <TrackedLink
               className="button button-primary"
               href={siteConfig.appStoreUrl}
               target="_blank"
               rel="noreferrer"
+              eventName="app_store_click"
+              eventParams={{ source: "home_hero", locale }}
             >
               {copy.home.ctaPrimary}
-            </Link>
+            </TrackedLink>
             <Link className="button button-secondary" href="#showcase">
               {copy.home.ctaSecondary}
             </Link>
@@ -270,10 +273,16 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         </div>
         <div className="seo-link-grid">
           {seoLinks.map((item) => (
-            <Link className="seo-link-card" href={`/${locale}/${item.slug}`} key={item.slug}>
+            <TrackedLink
+              className="seo-link-card"
+              href={`/${locale}/${item.slug}`}
+              key={item.slug}
+              eventName="spec_guide_click"
+              eventParams={{ source: "home_guides", locale, slug: item.slug }}
+            >
               <span className="seo-link-icon" aria-hidden="true">{item.icon}</span>
               <span>{item.label}</span>
-            </Link>
+            </TrackedLink>
           ))}
         </div>
       </section>
@@ -429,17 +438,24 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               height={2868}
             />
             <div className="hero-actions">
-              <Link
+              <TrackedLink
                 className="button button-primary"
                 href={siteConfig.appStoreUrl}
                 target="_blank"
                 rel="noreferrer"
+                eventName="app_store_click"
+                eventParams={{ source: "home_final_cta", locale }}
               >
                 {labels.openStore}
-              </Link>
-              <Link className="button button-secondary" href={`/${locale}/download`}>
+              </TrackedLink>
+              <TrackedLink
+                className="button button-secondary"
+                href={`/${locale}/download`}
+                eventName="download_page_click"
+                eventParams={{ source: "home_final_cta", locale }}
+              >
                 {copy.home.qrPage}
-              </Link>
+              </TrackedLink>
             </div>
           </article>
         </div>

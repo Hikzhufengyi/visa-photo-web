@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { DownloadQr } from "@/components/download-qr";
+import { TrackedLink } from "@/components/tracked-link";
 import { siteConfig } from "@/data/site";
 
 export const metadata = {
@@ -40,14 +41,16 @@ export default function DownloadPage() {
               />
             </div>
             <div className="hero-actions">
-              <Link
+              <TrackedLink
                 className="button button-primary"
                 href={siteConfig.appStoreUrl}
                 target="_blank"
                 rel="noreferrer"
+                eventName="app_store_click"
+                eventParams={{ source: "download_page", locale: "en" }}
               >
                 打开 App Store
-              </Link>
+              </TrackedLink>
             </div>
           </article>
 
