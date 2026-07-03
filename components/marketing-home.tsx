@@ -23,12 +23,12 @@ const homeLabels = {
     appStoreCta: "Download app",
     heroMetaAria: "Product highlights",
     heroMeta: [
-      { value: "80+", label: "country presets" },
-      { value: "300 DPI", label: "print-ready export" },
-      { value: "On-device", label: "private processing" }
+      { value: "100+", label: "document photo specs" },
+      { value: "Digital + print", label: "export options" },
+      { value: "On-device", label: "no server upload" }
     ],
-    visualLabel: "Professional preset engine",
-    visualTitle: "Designed like a serious imaging tool, not a simple cropper.",
+    visualLabel: "Avoid common application photo mistakes",
+    visualTitle: "Size, background, face position, and print layout are checked before you export.",
     guides: "Guides",
     workflow: "How it works",
     inside: "Inside the app",
@@ -60,12 +60,12 @@ const homeLabels = {
     appStoreCta: "下载 App",
     heroMetaAria: "产品关键指标",
     heroMeta: [
-      { value: "80+", label: "国家与证件模板" },
-      { value: "300 DPI", label: "打印级导出" },
-      { value: "On-device", label: "本地隐私处理" }
+      { value: "100+", label: "证件照规格" },
+      { value: "电子版 + 打印版", label: "导出方式" },
+      { value: "本地处理", label: "不上传服务器" }
     ],
-    visualLabel: "专业规格模板引擎",
-    visualTitle: "像成熟影像工具，而不是普通裁切页。",
+    visualLabel: "减少证件照被退回的常见问题",
+    visualTitle: "尺寸、背景、脸部位置和打印排版，导出前先检查清楚。",
     guides: "规格指南",
     workflow: "使用流程",
     inside: "产品界面",
@@ -236,7 +236,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             >
               {copy.home.ctaPrimary}
             </TrackedLink>
-            <Link className="button button-secondary" href="#showcase">
+            <Link className="button button-secondary" href="#guides">
               {copy.home.ctaSecondary}
             </Link>
           </div>
@@ -266,7 +266,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="section seo-links-section secondary-section">
+      <section className="section seo-links-section secondary-section" id="guides">
         <div className="section-heading">
           <p className="eyebrow">{labels.guides}</p>
           <h2>{copy.home.seoHeading}</h2>

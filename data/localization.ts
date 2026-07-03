@@ -23,14 +23,14 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "离线安全的 iPhone 证件照 App",
-      title: "在 iPhone 上完成护照照、签证照和证件照。",
+      title: "别让证件照尺寸、背景或打印排版卡住你的申请",
       description:
-        "从选规格、调照片、检查构图到导出电子版和打印版，都可以直接在 iPhone 上完成。照片不上传服务器，一次买断，无订阅。",
+        "IDPhoto Pro 帮你在 iPhone 上制作护照、签证和 ID 照。选择规格，导入照片，检查脸部位置、背景和尺寸，然后导出电子版或 4x6 打印排版。照片本地处理，不上传服务器。",
       highlights: [
-        "100% 本地处理，不上传照片",
-        "一次买断，无订阅、无广告",
-        "检查尺寸、背景、眼线、留白、居中、倾斜和清晰度",
-        "支持电子版导出，也支持 4x6、A4、Letter 打印排版"
+        "检查尺寸、背景、眼线和头部比例",
+        "支持 JPG、PNG、HEIC、PDF",
+        "支持 4x6、A4、Letter 打印排版",
+        "一次买断，无订阅、无广告"
       ],
       stepsHeading: "它不是简单裁一张图，而是一整套证件照流程",
       steps: [
@@ -88,7 +88,7 @@ export const uiCopy = {
       qrCaption: "iOS 下载二维码",
       seoHeading: "热门证件照规格指南",
       ctaPrimary: "App Store 下载",
-      ctaSecondary: "查看产品截图",
+      ctaSecondary: "查看证件照规格",
       qrPage: "查看下载页",
       appStoreLink: "App Store 链接"
     },
@@ -274,14 +274,14 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "Private passport photo app for iPhone",
-      title: "Make passport, visa, and ID photos on your iPhone.",
+      title: "Do not let photo size, background, or print layout hold up your application.",
       description:
-        "Pick the right document preset, adjust the photo, check the common requirements, and export a digital file or print layout. Your photos stay on your iPhone. One-time purchase, no subscription.",
+        "IDPhoto Pro helps you make passport, visa, and ID photos on your iPhone. Choose a spec, import a photo, check face position, background, and size, then export a digital file or a 4x6 print layout. Photos are processed locally, with no server upload.",
       highlights: [
-        "On-device photo processing with no server upload",
-        "One-time purchase, no subscription, no ads",
-        "Checks size, background, eye line, margins, centering, tilt, and sharpness",
-        "Exports digital files and 4x6, A4, and Letter print layouts"
+        "Check size, background, eye line, and head ratio",
+        "Supports JPG, PNG, HEIC, and PDF",
+        "Supports 4x6, A4, and Letter print layouts",
+        "One-time purchase, no subscription, no ads"
       ],
       stepsHeading: "More than a cropper: a complete document photo workflow.",
       steps: [
@@ -347,7 +347,7 @@ export const uiCopy = {
       qrCaption: "iOS download QR",
       seoHeading: "Popular document photo size guides",
       ctaPrimary: "Download on the App Store",
-      ctaSecondary: "View app screenshots",
+      ctaSecondary: "View photo specs",
       qrPage: "Open download page",
       appStoreLink: "App Store link"
     },
