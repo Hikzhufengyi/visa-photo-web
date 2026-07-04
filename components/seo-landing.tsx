@@ -52,7 +52,13 @@ export function SeoLanding({
               eventName="app_store_click"
               eventParams={{ source: "seo_landing", locale, slug: page.slug }}
             >
-              {isZh ? "下载 iPhone App" : isAr ? "تنزيل تطبيق iPhone" : isDe ? "Im App Store laden" : "Download on the App Store"}
+              {isZh
+                ? "在 iPhone 上制作这张证件照"
+                : isAr
+                  ? "إنشاء هذه الصورة على iPhone"
+                  : isDe
+                    ? "Dieses Foto auf dem iPhone erstellen"
+                    : "Create this photo on iPhone"}
             </TrackedLink>
             <TrackedLink
               className="button button-secondary"
@@ -60,7 +66,13 @@ export function SeoLanding({
               eventName="download_page_click"
               eventParams={{ source: "seo_landing", locale, slug: page.slug }}
             >
-              {isZh ? "查看下载页" : isAr ? "فتح صفحة التنزيل" : isDe ? "Downloadseite öffnen" : "Open download page"}
+              {isZh
+                ? "下载 IDPhoto Pro"
+                : isAr
+                  ? "تنزيل IDPhoto Pro"
+                  : isDe
+                    ? "IDPhoto Pro laden"
+                    : "Download IDPhoto Pro"}
             </TrackedLink>
           </div>
         </div>

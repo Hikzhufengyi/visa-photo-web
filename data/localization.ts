@@ -25,26 +25,26 @@ export const uiCopy = {
       eyebrow: "离线安全的 iPhone 证件照 App",
       title: "别让证件照尺寸、背景或打印排版卡住你的申请",
       description:
-        "IDPhoto Pro 帮你在 iPhone 上制作护照、签证和 ID 照。选择规格，导入照片，检查脸部位置、背景和尺寸，然后导出电子版或 4x6 打印排版。照片本地处理，不上传服务器。",
+        "IDPhoto Pro 帮你在 iPhone 上制作护照照、签证照和 ID 照。选择规格，导入照片，检查脸部位置、背景和尺寸，然后导出电子版或 4x6 打印排版。照片本地处理，不上传服务器。",
       highlights: [
         "检查尺寸、背景、眼线和头部比例",
         "支持 JPG、PNG、HEIC、PDF",
         "支持 4x6、A4、Letter 打印排版",
         "一次买断，无订阅、无广告"
       ],
-      stepsHeading: "它不是简单裁一张图，而是一整套证件照流程",
+      stepsHeading: "申请前，先把这些容易出错的地方检查清楚",
       steps: [
         {
-          title: "选择证件规格",
-          description: "先按国家、证件类型或尺寸找到对应模板，多国家规格适配，不用自己猜比例。"
+          title: "尺寸和像素是否符合要求",
+          description: "不同国家、护照、签证和 ID 照规格不一样，先按目标规格检查尺寸、比例和导出像素。"
         },
         {
-          title: "上传并调整照片",
-          description: "编辑页支持 AI 自动校准，也支持手动调整位置、缩放、旋转、亮度、锐度和背景。"
+          title: "脸部位置和背景是否合适",
+          description: "检查眼线、头部比例、居中、留白和背景颜色，尽量在提交前发现构图问题。"
         },
         {
-          title: "导出电子版或打印版",
-          description: "需要电子版就导出文件，需要冲印就生成 4x6、A4 或 Letter 排版。"
+          title: "电子版和打印版是否准备好",
+          description: "需要上传就导出图片或 PDF，需要冲印就生成 4x6、A4 或 Letter 打印排版。"
         }
       ],
       checksHeading: "智能检测，每一项细微问题都提前暴露出来",
@@ -86,9 +86,9 @@ export const uiCopy = {
       qrIntro:
         "如果你现在是在电脑或平板上看官网，可以直接扫码跳到 App Store。Android 版本准备好后，再把第二个下载入口补上。",
       qrCaption: "iOS 下载二维码",
-      seoHeading: "热门证件照规格指南",
+      seoHeading: "热门证件照规格快速入口",
       ctaPrimary: "App Store 下载",
-      ctaSecondary: "查看证件照规格",
+      ctaSecondary: "查看支持的证件照规格",
       qrPage: "查看下载页",
       appStoreLink: "App Store 链接"
     },
@@ -274,31 +274,31 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "Private passport photo app for iPhone",
-      title: "Do not let photo size, background, or print layout hold up your application.",
+      title: "Don’t let photo size, background, or print layout block your application",
       description:
-        "IDPhoto Pro helps you make passport, visa, and ID photos on your iPhone. Choose a spec, import a photo, check face position, background, and size, then export a digital file or a 4x6 print layout. Photos are processed locally, with no server upload.",
+        "IDPhoto Pro helps you prepare passport, visa, and ID photos on iPhone. Choose a photo size, import a portrait, check face position, background, and dimensions, then export a digital file or 4x6 print layout. Photos stay on your device.",
       highlights: [
-        "Check size, background, eye line, and head ratio",
-        "Supports JPG, PNG, HEIC, and PDF",
-        "Supports 4x6, A4, and Letter print layouts",
-        "One-time purchase, no subscription, no ads"
+        "Check size, background, eye line, and head proportion",
+        "Export JPG, PNG, HEIC, and PDF",
+        "Create 4x6, A4, and Letter print layouts",
+        "One-time unlock, no subscription, no ads"
       ],
-      stepsHeading: "More than a cropper: a complete document photo workflow.",
+      stepsHeading: "Check the details that commonly block applications.",
       steps: [
         {
-          title: "Choose a document preset",
+          title: "Size and pixels",
           description:
-            "Start with a country and document type instead of guessing the size, ratio, and framing."
+            "Passport, visa, and ID photo requirements vary by country and document type, so start by checking size, ratio, and export pixels."
         },
         {
-          title: "Adjust the photo on iPhone",
+          title: "Face position and background",
           description:
-            "Use smart auto alignment or fine-tune position, zoom, rotation, brightness, sharpness, and background yourself."
+            "Review eye line, head proportion, centering, margins, and background color before you submit the photo."
         },
         {
-          title: "Export digital or print-ready files",
+          title: "Digital and print output",
           description:
-            "Export a file for online upload or generate a print layout when you need physical copies."
+            "Export an image or PDF for upload, or create a 4x6, A4, or Letter print layout when you need physical copies."
         }
       ],
       checksHeading: "Smart checks catch common issues before you export.",
@@ -345,9 +345,9 @@ export const uiCopy = {
       qrIntro:
         "Opening this page on a desktop or tablet? Scan the QR code with your iPhone camera to open the App Store listing.",
       qrCaption: "iOS download QR",
-      seoHeading: "Popular document photo size guides",
+      seoHeading: "Popular photo size guide shortcuts",
       ctaPrimary: "Download on the App Store",
-      ctaSecondary: "View photo specs",
+      ctaSecondary: "Browse photo size guides",
       qrPage: "Open download page",
       appStoreLink: "App Store link"
     },

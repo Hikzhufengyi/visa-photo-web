@@ -23,16 +23,17 @@ const homeLabels = {
     appStoreCta: "Download app",
     heroMetaAria: "Product highlights",
     heroMeta: [
-      { value: "100+", label: "document photo specs" },
-      { value: "Digital + print", label: "export options" },
-      { value: "On-device", label: "no server upload" }
+      { value: "100+", label: "photo size presets" },
+      { value: "Digital + print", label: "export" },
+      { value: "On-device", label: "processing" }
     ],
-    visualLabel: "Avoid common application photo mistakes",
-    visualTitle: "Size, background, face position, and print layout are checked before you export.",
+    visualLabel: "From photo checks to print layout",
+    visualTitle: "Check size, face position, and background by spec in one flow.",
     guides: "Guides",
-    workflow: "How it works",
-    inside: "Inside the app",
-    insideTitle: "These screens match real app features",
+    moreGuides: "Browse all photo size guides",
+    workflow: "Before you submit",
+    inside: "App screens",
+    insideTitle: "A closer look inside IDPhoto Pro",
     presetLabel: "Preset Library",
     presetTitle: "Multi-country, multi-document preset support",
     presetText:
@@ -64,12 +65,13 @@ const homeLabels = {
       { value: "电子版 + 打印版", label: "导出方式" },
       { value: "本地处理", label: "不上传服务器" }
     ],
-    visualLabel: "减少证件照被退回的常见问题",
-    visualTitle: "尺寸、背景、脸部位置和打印排版，导出前先检查清楚。",
+    visualLabel: "从照片检查到打印排版",
+    visualTitle: "按规格检查尺寸、脸部位置和背景，一次完成。",
     guides: "规格指南",
-    workflow: "使用流程",
-    inside: "产品界面",
-    insideTitle: "这些页面对应 App 里的真实功能",
+    moreGuides: "查看更多证件照规格",
+    workflow: "避坑检查",
+    inside: "App 界面",
+    insideTitle: "再看一下 IDPhoto Pro 里的具体页面",
     presetLabel: "规格库",
     presetTitle: "多国家、多证件类型规格适配",
     presetText:
@@ -102,6 +104,7 @@ const homeLabels = {
     visualLabel: "محرك قوالب احترافي",
     visualTitle: "مصمم كأداة صور رسمية، وليس مجرد أداة قص.",
     guides: "الأدلة",
+    moreGuides: "تصفح كل أدلة المقاسات",
     workflow: "طريقة الاستخدام",
     inside: "داخل التطبيق",
     insideTitle: "هذه الشاشات تطابق وظائف التطبيق الحقيقية",
@@ -139,6 +142,7 @@ const homeLabels = {
     visualLabel: "Professioneller Vorlagen-Assistent",
     visualTitle: "Entwickelt wie ein ernsthaftes Fotowerkzeug, nicht wie ein einfacher Zuschnitt.",
     guides: "Ratgeber",
+    moreGuides: "Alle Fotogrößen-Ratgeber ansehen",
     workflow: "So funktioniert es",
     inside: "In der App",
     insideTitle: "Diese Ansichten zeigen echte App-Funktionen",
@@ -172,6 +176,7 @@ const homeLabels = {
   visualLabel: string;
   visualTitle: string;
   guides: string;
+  moreGuides: string;
   workflow: string;
   inside: string;
   insideTitle: string;
@@ -248,8 +253,8 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </div>
           <div className="phone-stack phone-stack-front">
             <Image
-              src="/screenshots/home.png"
-              alt="IDPhoto Pro document preset screen"
+              src="/screenshots/hero-checks.png"
+              alt="IDPhoto Pro photo checks and face alignment screen"
               width={1320}
               height={2868}
               priority
@@ -257,8 +262,8 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </div>
           <div className="phone-stack phone-stack-back">
             <Image
-              src="/screenshots/editor.png"
-              alt="IDPhoto Pro editor screen"
+              src="/screenshots/hero-print-export.png"
+              alt="IDPhoto Pro digital export and print layout screen"
               width={1320}
               height={2868}
             />
@@ -285,6 +290,11 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </TrackedLink>
           ))}
         </div>
+        <div className="seo-links-action">
+          <Link className="button button-secondary" href={`/${locale}/blog`}>
+            {labels.moreGuides}
+          </Link>
+        </div>
       </section>
 
       <section className="section" id="workflow">
@@ -300,58 +310,6 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               <p>{step.description}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="section showcase" id="showcase">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.inside}</p>
-          <h2>{labels.insideTitle}</h2>
-        </div>
-        <div className="showcase-grid">
-          <article className="showcase-card showcase-card-large">
-            <div className="showcase-copy">
-              <p className="card-label">{labels.presetLabel}</p>
-              <h3>{labels.presetTitle}</h3>
-              <p>{labels.presetText}</p>
-            </div>
-            <div className="device-frame">
-              <LazyAutoplayVideo
-                className="device-video"
-                src="/screenshots/country-selection-demo.mp4"
-                label={labels.presetTitle}
-              />
-            </div>
-          </article>
-          <article className="showcase-card">
-            <div className="showcase-copy">
-              <p className="card-label">{labels.specLabel}</p>
-              <h3>{labels.specTitle}</h3>
-              <p>{labels.specText}</p>
-            </div>
-            <div className="device-frame">
-              <Image
-                src="/screenshots/details.png"
-                alt="IDPhoto Pro spec details"
-                width={1320}
-                height={2868}
-              />
-            </div>
-          </article>
-          <article className="showcase-card">
-            <div className="showcase-copy">
-              <p className="card-label">{labels.editorLabel}</p>
-              <h3>{labels.editorTitle}</h3>
-              <p>{labels.editorText}</p>
-            </div>
-            <div className="device-frame">
-              <LazyAutoplayVideo
-                className="device-video"
-                src="/screenshots/editor-demo.mp4"
-                label={labels.editorTitle}
-              />
-            </div>
-          </article>
         </div>
       </section>
 
@@ -411,6 +369,58 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               width={3600}
               height={5400}
             />
+          </article>
+        </div>
+      </section>
+
+      <section className="section showcase" id="showcase">
+        <div className="section-heading">
+          <p className="eyebrow">{labels.inside}</p>
+          <h2>{labels.insideTitle}</h2>
+        </div>
+        <div className="showcase-grid">
+          <article className="showcase-card showcase-card-large">
+            <div className="showcase-copy">
+              <p className="card-label">{labels.presetLabel}</p>
+              <h3>{labels.presetTitle}</h3>
+              <p>{labels.presetText}</p>
+            </div>
+            <div className="device-frame">
+              <LazyAutoplayVideo
+                className="device-video"
+                src="/screenshots/country-selection-demo.mp4"
+                label={labels.presetTitle}
+              />
+            </div>
+          </article>
+          <article className="showcase-card">
+            <div className="showcase-copy">
+              <p className="card-label">{labels.specLabel}</p>
+              <h3>{labels.specTitle}</h3>
+              <p>{labels.specText}</p>
+            </div>
+            <div className="device-frame">
+              <Image
+                src="/screenshots/details.png"
+                alt="IDPhoto Pro spec details"
+                width={1320}
+                height={2868}
+              />
+            </div>
+          </article>
+          <article className="showcase-card">
+            <div className="showcase-copy">
+              <p className="card-label">{labels.editorLabel}</p>
+              <h3>{labels.editorTitle}</h3>
+              <p>{labels.editorText}</p>
+            </div>
+            <div className="device-frame">
+              <LazyAutoplayVideo
+                className="device-video"
+                src="/screenshots/editor-demo.mp4"
+                label={labels.editorTitle}
+              />
+            </div>
           </article>
         </div>
       </section>

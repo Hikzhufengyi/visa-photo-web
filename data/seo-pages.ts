@@ -1,3 +1,5 @@
+import { generatedSeoPages } from "@/data/generated-seo-pages";
+
 export type SeoPage = {
   slug: string;
   title: string;
@@ -19,7 +21,7 @@ export type SeoPage = {
   }>;
 };
 
-export const seoPages: SeoPage[] = [
+const curatedSeoPages: SeoPage[] = [
   {
     slug: "us-passport-photo-size",
     title: "US Passport Photo Size",
@@ -1261,6 +1263,8 @@ export const seoPages: SeoPage[] = [
     ]
   }
 ];
+
+export const seoPages: SeoPage[] = [...curatedSeoPages, ...generatedSeoPages];
 
 export function getSeoPage(slug: string) {
   return seoPages.find((page) => page.slug === slug);

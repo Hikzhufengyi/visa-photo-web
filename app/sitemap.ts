@@ -9,7 +9,6 @@ type ChangeFrequency = NonNullable<
 type SitemapItem = MetadataRoute.Sitemap[number];
 
 const staticRoutes = [
-  "",
   "/about",
   "/privacy",
   "/terms",
