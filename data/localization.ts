@@ -72,11 +72,12 @@ export const uiCopy = {
       ],
       exportHeading: "支持多种图片格式和多种打印排版尺寸",
       exportIntro:
-        "照片调整完成后，可以直接导出电子文件，也可以生成打印排版。支持 JPG、PNG、HEIF、PDF，以及常用的 4x6、A4、Letter 版式。",
+        "照片调整完成后，可以直接导出电子文件，也可以生成打印排版。支持 JPG、PNG、HEIC、PDF，以及常用的 4x6、A4、Letter 版式。",
       exportItems: [
-        "JPG、PNG、HEIF、PDF",
-        "4x6、A4、Letter 打印版",
-        "保存到相册、分享或导出文件"
+        "JPG、PNG、HEIC、PDF",
+        "4x6、A4、Letter 打印排版",
+        "300 DPI 打印级导出",
+        "文件压缩适配线上申请"
       ],
       pricingHeading: "可以先检查，再决定要不要买断解锁",
       pricingIntro:
@@ -87,7 +88,7 @@ export const uiCopy = {
         "如果你现在是在电脑或平板上看官网，可以直接扫码跳到 App Store。Android 版本准备好后，再把第二个下载入口补上。",
       qrCaption: "iOS 下载二维码",
       seoHeading: "热门证件照规格快速入口",
-      ctaPrimary: "App Store 下载",
+      ctaPrimary: "下载 iPhone App",
       ctaSecondary: "查看支持的证件照规格",
       qrPage: "查看下载页",
       appStoreLink: "App Store 链接"
@@ -274,7 +275,7 @@ export const uiCopy = {
     },
     home: {
       eyebrow: "Private passport photo app for iPhone",
-      title: "Don’t let photo size, background, or print layout block your application",
+      title: "Passport photos, checked",
       description:
         "IDPhoto Pro helps you prepare passport, visa, and ID photos on iPhone. Choose a photo size, import a portrait, check face position, background, and dimensions, then export a digital file or 4x6 print layout. Photos stay on your device.",
       highlights: [
@@ -326,11 +327,12 @@ export const uiCopy = {
       ],
       exportHeading: "Export digital files or ready-to-print layouts",
       exportIntro:
-        "After editing, export a digital file for upload or a print-ready sheet for a photo lab. IDPhoto Pro supports JPG, PNG, HEIF, PDF, and common 4x6, A4, and Letter layouts.",
+        "After editing, export a digital file for upload or a print-ready sheet for a photo lab. IDPhoto Pro supports JPG, PNG, HEIC, PDF, and common 4x6, A4, and Letter layouts.",
       exportItems: [
-        "JPG, PNG, HEIF, and PDF",
+        "JPG, PNG, HEIC, and PDF",
         "4x6, A4, and Letter print layouts",
-        "Save to Photos, share, or export files"
+        "300 DPI print-quality export",
+        "File compression for online applications"
       ],
       pricingHeading: "Check the photo first, unlock export only when you need it",
       pricingIntro:
@@ -346,7 +348,7 @@ export const uiCopy = {
         "Opening this page on a desktop or tablet? Scan the QR code with your iPhone camera to open the App Store listing.",
       qrCaption: "iOS download QR",
       seoHeading: "Popular photo size guide shortcuts",
-      ctaPrimary: "Download on the App Store",
+      ctaPrimary: "Download iPhone App",
       ctaSecondary: "Browse photo size guides",
       qrPage: "Open download page",
       appStoreLink: "App Store link"

@@ -27,8 +27,9 @@ const homeLabels = {
       { value: "Digital + print", label: "export" },
       { value: "On-device", label: "processing" }
     ],
-    visualLabel: "From photo checks to print layout",
-    visualTitle: "Check size, face position, and background by spec in one flow.",
+    visualLabel: "Photo size guides",
+    visualTitle: "Choose the photo size you need",
+    ctaTrust: "One-time unlock. No subscription. Photos stay on your device.",
     guides: "Guides",
     moreGuides: "Browse all photo size guides",
     workflow: "Before you submit",
@@ -65,8 +66,9 @@ const homeLabels = {
       { value: "电子版 + 打印版", label: "导出方式" },
       { value: "本地处理", label: "不上传服务器" }
     ],
-    visualLabel: "从照片检查到打印排版",
-    visualTitle: "按规格检查尺寸、脸部位置和背景，一次完成。",
+    visualLabel: "规格指南",
+    visualTitle: "先选你要制作的证件照规格",
+    ctaTrust: "一次买断，无订阅。照片本地处理，不上传服务器。",
     guides: "规格指南",
     moreGuides: "查看更多证件照规格",
     workflow: "避坑检查",
@@ -103,6 +105,7 @@ const homeLabels = {
     ],
     visualLabel: "محرك قوالب احترافي",
     visualTitle: "مصمم كأداة صور رسمية، وليس مجرد أداة قص.",
+    ctaTrust: "شراء مرة واحدة. بدون اشتراك. تبقى الصور على جهازك.",
     guides: "الأدلة",
     moreGuides: "تصفح كل أدلة المقاسات",
     workflow: "طريقة الاستخدام",
@@ -141,6 +144,7 @@ const homeLabels = {
     ],
     visualLabel: "Professioneller Vorlagen-Assistent",
     visualTitle: "Entwickelt wie ein ernsthaftes Fotowerkzeug, nicht wie ein einfacher Zuschnitt.",
+    ctaTrust: "Einmalige Freischaltung. Kein Abo. Fotos bleiben auf deinem Gerät.",
     guides: "Ratgeber",
     moreGuides: "Alle Fotogrößen-Ratgeber ansehen",
     workflow: "So funktioniert es",
@@ -175,6 +179,7 @@ const homeLabels = {
   heroMeta: { value: string; label: string }[];
   visualLabel: string;
   visualTitle: string;
+  ctaTrust: string;
   guides: string;
   moreGuides: string;
   workflow: string;
@@ -211,28 +216,9 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           <p className="eyebrow">{copy.home.eyebrow}</p>
           <h1>{copy.home.title}</h1>
           <p className="hero-text">{copy.home.description}</p>
-          <div className="hero-meta" aria-label={labels.heroMetaAria}>
-            {labels.heroMeta.map((item) => (
-              <div className="hero-meta-item" key={item.label}>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mini-nav">
-            <Link href={`/${locale}/download`}>{copy.nav.download}</Link>
-            <Link href={`/${locale}/about`}>{copy.nav.about}</Link>
-            <Link href={`/${locale}/support`}>{copy.nav.support}</Link>
-            <Link href={`/${locale}/blog`}>{copy.nav.blog}</Link>
-          </div>
-          <ul className="hero-points hero-proof-grid">
-            {copy.home.highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
           <div className="hero-actions">
             <TrackedLink
-              className="button button-primary"
+              className="button button-primary hero-primary-cta"
               href={siteConfig.appStoreUrl}
               target="_blank"
               rel="noreferrer"
@@ -245,55 +231,45 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               {copy.home.ctaSecondary}
             </Link>
           </div>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-visual-copy">
-            <p>{labels.visualLabel}</p>
-            <h2>{labels.visualTitle}</h2>
+          <p className="hero-trust-note">{labels.ctaTrust}</p>
+          <div className="hero-meta" aria-label={labels.heroMetaAria}>
+            {labels.heroMeta.map((item) => (
+              <div className="hero-meta-item" key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
           </div>
-          <div className="phone-stack phone-stack-front">
-            <Image
-              src="/screenshots/hero-checks.png"
-              alt="IDPhoto Pro photo checks and face alignment screen"
-              width={1320}
-              height={2868}
-              priority
-            />
+          <ul className="hero-points hero-proof-grid">
+            {copy.home.highlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="hero-visual hero-guide-visual" id="guides" aria-label={copy.home.seoHeading}>
+          <div className="hero-guide-header">
+            <div className="hero-visual-copy">
+              <p>{labels.visualLabel}</p>
+              <h2>{labels.visualTitle}</h2>
+            </div>
+            <Link className="guide-more-link" href={`/${locale}/blog`}>
+              {labels.moreGuides}
+            </Link>
           </div>
-          <div className="phone-stack phone-stack-back">
-            <Image
-              src="/screenshots/hero-print-export.png"
-              alt="IDPhoto Pro digital export and print layout screen"
-              width={1320}
-              height={2868}
-            />
+          <div className="seo-link-grid hero-guide-grid">
+            {seoLinks.map((item) => (
+              <TrackedLink
+                className="seo-link-card"
+                href={`/${locale}/${item.slug}`}
+                key={item.slug}
+                eventName="spec_guide_click"
+                eventParams={{ source: "home_hero_guides", locale, slug: item.slug }}
+              >
+                <span className="seo-link-icon" aria-hidden="true">{item.icon}</span>
+                <span>{item.label}</span>
+              </TrackedLink>
+            ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section seo-links-section secondary-section" id="guides">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.guides}</p>
-          <h2>{copy.home.seoHeading}</h2>
-        </div>
-        <div className="seo-link-grid">
-          {seoLinks.map((item) => (
-            <TrackedLink
-              className="seo-link-card"
-              href={`/${locale}/${item.slug}`}
-              key={item.slug}
-              eventName="spec_guide_click"
-              eventParams={{ source: "home_guides", locale, slug: item.slug }}
-            >
-              <span className="seo-link-icon" aria-hidden="true">{item.icon}</span>
-              <span>{item.label}</span>
-            </TrackedLink>
-          ))}
-        </div>
-        <div className="seo-links-action">
-          <Link className="button button-secondary" href={`/${locale}/blog`}>
-            {labels.moreGuides}
-          </Link>
         </div>
       </section>
 
@@ -353,9 +329,9 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               label={labels.export}
             />
           </article>
-          <article className="info-card">
+          <article className="info-card export-info-card">
             <p>{copy.home.exportIntro}</p>
-            <ul className="launch-list">
+            <ul className="launch-list export-feature-grid">
               {copy.home.exportItems.map((item) => (
                 <li key={item}>{item}</li>
               ))}
