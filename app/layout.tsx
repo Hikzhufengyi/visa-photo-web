@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     title: siteConfig.name
   },
   icons: {
-    icon: "/icon",
-    apple: "/apple-icon"
+    icon: "/app-icon.png",
+    apple: "/app-icon.png"
   },
   alternates: {
     canonical: "/",
