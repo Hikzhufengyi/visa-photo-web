@@ -299,41 +299,18 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             <article className="framer-abstract-card" key={card.title}>
               <div className={`abstract-visual abstract-${card.kind}`}>
                 {card.kind === "check" && (
-                  <div className="abstract-compliance-phone">
-                    <div className="abstract-compliance-photo">
-                      <div className="abstract-compliance-grid" />
-                      <div className="abstract-compliance-eye" />
-                      <div className="abstract-compliance-head" />
-                      <div className="abstract-compliance-body" />
-                      <span>{locale === "zh" ? "眼高范围" : "Eye range"}</span>
+                  <div className="feature-shot-stack feature-shot-stack-check">
+                    <div className="feature-shot-crop feature-shot-crop-face">
+                      <img
+                        src="/screenshots/hero-checks.png"
+                        alt={locale === "zh" ? "证件照检测网格和眼高范围" : "Photo check grid and eye height range"}
+                      />
                     </div>
-                    <div className="abstract-export-score">
-                      <div className="abstract-badge">✓</div>
-                      <div>
-                        <strong>{locale === "zh" ? "Ready to Export" : "Ready to Export"}</strong>
-                        <p>{locale === "zh" ? "关键检查已通过" : "All key checks passed"}</p>
-                      </div>
-                      <em>100%</em>
-                    </div>
-                    <div className="abstract-pass-note">
-                      <span>✓</span>
-                      <p>{locale === "zh" ? "所有关键检查已通过，可以导出。" : "All key checks passed. Ready to export."}</p>
-                    </div>
-                    <div className="abstract-check-list">
-                      {[
-                        locale === "zh" ? "分辨率" : "Resolution",
-                        locale === "zh" ? "背景" : "Background",
-                        locale === "zh" ? "头部比例" : "Head size",
-                        locale === "zh" ? "脸部居中" : "Face centered"
-                      ].map((item) => (
-                        <div key={item}>
-                          <span>✓</span>
-                          <strong>{item}</strong>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="abstract-export-button">
-                      ✓ {locale === "zh" ? "准备导出" : "Ready - Export"}
+                    <div className="feature-shot-crop feature-shot-crop-checks">
+                      <img
+                        src="/screenshots/hero-checks.png"
+                        alt={locale === "zh" ? "Ready to Export 和已通过检查项" : "Ready to Export and passed checks"}
+                      />
                     </div>
                   </div>
                 )}
@@ -373,42 +350,18 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                   </div>
                 )}
                 {card.kind === "print" && (
-                  <div className="abstract-export-flow">
-                    <div className="abstract-export-status">
-                      <span>✓</span>
-                      <strong>Ready</strong>
-                      <em>100%</em>
-                      <b>4 x 6 in</b>
+                  <div className="feature-shot-stack feature-shot-stack-export">
+                    <div className="feature-shot-crop feature-shot-crop-output">
+                      <img
+                        src="/screenshots/feature-export-real.png"
+                        alt={locale === "zh" ? "电子版和打印排版导出选项" : "Digital photo and print sheet export options"}
+                      />
                     </div>
-                    <div className="abstract-output-card">
-                      <strong>{locale === "zh" ? "选择导出" : "Choose Output"}</strong>
-                      <div className="abstract-output-options">
-                        <div>
-                          <i />
-                          <span>{locale === "zh" ? "电子版" : "Digital Photo"}</span>
-                          <p>600 x 600 px · JPG</p>
-                        </div>
-                        <div className="abstract-output-active">
-                          <i />
-                          <span>{locale === "zh" ? "打印版" : "Print Sheet"}</span>
-                          <p>4 x 6 in · crop marks</p>
-                        </div>
-                      </div>
-                      <div className="abstract-more-settings">
-                        <span>{locale === "zh" ? "更多设置" : "More settings"}</span>
-                        <em>JPG · 4 x 6 · compact</em>
-                      </div>
-                    </div>
-                    <div className="abstract-print-preview">
-                      {Array.from({ length: 6 }).map((_, index) => (
-                        <span key={index}>
-                          <i />
-                          <b />
-                        </span>
-                      ))}
-                    </div>
-                    <div className="abstract-save-button">
-                      {locale === "zh" ? "保存打印版" : "Save Print Sheet"}
+                    <div className="feature-shot-crop feature-shot-crop-print">
+                      <img
+                        src="/screenshots/feature-export-real.png"
+                        alt={locale === "zh" ? "4x6 打印排版预览和保存按钮" : "4x6 print sheet preview and save button"}
+                      />
                     </div>
                   </div>
                 )}
