@@ -10,6 +10,7 @@ type SitemapItem = MetadataRoute.Sitemap[number];
 
 const staticRoutes = [
   "/about",
+  "/compliance",
   "/privacy",
   "/terms",
   "/download",
@@ -20,6 +21,7 @@ const staticRoutes = [
 const staticRoutePriority: Record<string, number> = {
   "": 0.9,
   "/download": 0.8,
+  "/compliance": 0.7,
   "/support": 0.7,
   "/blog": 0.7,
   "/about": 0.5,

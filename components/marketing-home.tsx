@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import { LazyAutoplayVideo } from "@/components/lazy-autoplay-video";
 import { TrackedLink } from "@/components/tracked-link";
 import type { Locale } from "@/data/localization";
-import { getCopy } from "@/data/localization";
 import { siteConfig } from "@/data/site";
 
 const seoLinks = [
@@ -20,431 +17,419 @@ const seoLinks = [
 
 const homeLabels = {
   en: {
-    appStoreCta: "Download app",
-    heroMetaAria: "Product highlights",
-    heroMeta: [
-      { value: "100+", label: "photo size presets" },
-      { value: "Digital + print", label: "export" },
-      { value: "On-device", label: "processing" }
+    heroTitle: "Compliant ID photos, generated instantly",
+    heroText: "Prepare passport, visa, and ID photos on iPhone. Choose a size, import a portrait, check face position and background, then export a digital file or 4x6 print layout.",
+    cta: "Download App",
+    trust: "Local processing. Photos stay on your device.",
+    trustPills: ["One-time purchase", "No subscription", "AI checks", "Photos stay on device"],
+    standardsKicker: "Built for accuracy. Designed for privacy.",
+    standardsTitle: "100+ document photo standards",
+    standardsText: "Choose the country, document type, or print size before generating your photo.",
+    searchPlaceholder: "Search 100+ standards",
+    searchMeta: "passport · visa · ID · print",
+    standardLinks: [
+      { icon: "🇺🇸", label: "US Passport", slug: "us-passport-photo-size" },
+      { icon: "🇺🇸", label: "US Visa", slug: "us-visa-photo-size" },
+      { icon: "🇬🇧", label: "UK Passport", slug: "uk-passport-photo-size" },
+      { icon: "🇯🇵", label: "Japan Passport", slug: "japan-passport-photo-size" },
+      { icon: "🇨🇦", label: "Canada Passport", slug: "canada-passport-photo-size" },
+      { icon: "🇪🇺", label: "Schengen Visa", slug: "schengen-visa-photo-size" },
+      { icon: "🇮🇳", label: "India Passport", slug: "india-passport-photo-size" }
     ],
-    visualLabel: "Photo size guides",
-    visualTitle: "Choose the photo size you need",
-    ctaTrust: "One-time unlock. No subscription. Photos stay on your device.",
-    guides: "Guides",
-    moreGuides: "Browse all photo size guides",
-    workflow: "Before you submit",
-    inside: "App screens",
-    insideTitle: "A closer look inside IDPhoto Pro",
-    presetLabel: "Preset Library",
-    presetTitle: "Multi-country, multi-document preset support",
-    presetText:
-      "The app includes a multi-country document photo preset library, not a single 2x2 cropper. Users can filter templates by country, passport, visa, immigration, residence card, ID, and print use cases.",
-    specLabel: "Spec Detail",
-    specTitle: "Review size, background, and notes before editing",
-    specText:
-      "Each spec screen shows size, pixel target, background options, and source notes before editing begins.",
-    editorLabel: "Editor",
-    editorTitle: "Smart auto alignment with manual fine control",
-    editorText:
-      "The editor uses the selected country and document requirements for size, ratio, and framing guidance. It also surfaces risks through checks, while still letting you adjust position, zoom, rotation, lighting, sharpness, background, and output.",
-    checks: "Checks",
-    export: "Export",
-    exportedResult: "Exported result",
-    purchase: "Purchase",
-    finalCtaTitle: "Ready to make the photo on your iPhone?",
-    finalCtaText:
-      "Download the app from the App Store, or open the download page if you want to scan the QR code from another device.",
-    openStore: "Open App Store",
-    support: "See support",
-    download: "Download"
+    allStandardsLabel: "All photo sizes",
+    featureColumns: [
+      { title: "Global compliance", text: "Covers 100+ document photo standards and validates common requirements." },
+      { title: "On-device processing", text: "All image processing is completed on your device. No cloud upload needed." },
+      { title: "Export system", text: "Supports JPG, PNG, HEIC, PDF, plus 4x6, A4, and Letter print layouts." }
+    ],
+    abstractCards: [
+      { title: "Compliance check", tag: "Pass", kind: "check" },
+      { title: "On-device processing", tag: "No upload", kind: "privacy" },
+      { title: "Print layout", tag: "4x6", kind: "print" }
+    ],
+    complianceLink: "View all checks",
+    finalTitle: "Generate a compliant ID photo in seconds.",
+    finalTrust: "One-time purchase. No subscription. Photos stay on your device.",
+    moreGuides: "Browse all photo size guides"
   },
   zh: {
-    appStoreCta: "下载 App",
-    heroMetaAria: "产品关键指标",
-    heroMeta: [
-      { value: "100+", label: "证件照规格" },
-      { value: "电子版 + 打印版", label: "导出方式" },
-      { value: "本地处理", label: "不上传服务器" }
+    heroTitle: "合规证件照，即刻生成",
+    heroText: "面向 100+ 全球标准的护照照、签证照与身份证照生成系统。选择规格，导入照片，检查脸部位置和背景，然后导出电子版或 4x6 打印排版。",
+    cta: "下载 App",
+    trust: "本地处理。照片不上云。",
+    trustPills: ["一次性购买", "非订阅", "AI 检测", "照片不上云"],
+    standardsKicker: "为准确而构建。为隐私而设计。",
+    standardsTitle: "100+ 证件照标准",
+    standardsText: "生成前选择国家、证件类型或打印尺寸。",
+    searchPlaceholder: "搜索 100+ 标准",
+    searchMeta: "护照 · 签证 · 身份证 · 打印",
+    standardLinks: [
+      { icon: "🇺🇸", label: "美国护照", slug: "us-passport-photo-size" },
+      { icon: "🇺🇸", label: "美国签证", slug: "us-visa-photo-size" },
+      { icon: "🇬🇧", label: "英国护照", slug: "uk-passport-photo-size" },
+      { icon: "🇯🇵", label: "日本护照", slug: "japan-passport-photo-size" },
+      { icon: "🇨🇦", label: "加拿大护照", slug: "canada-passport-photo-size" },
+      { icon: "🇪🇺", label: "申根签证", slug: "schengen-visa-photo-size" },
+      { icon: "🇮🇳", label: "印度护照", slug: "india-passport-photo-size" }
     ],
-    visualLabel: "规格指南",
-    visualTitle: "先选你要制作的证件照规格",
-    ctaTrust: "一次买断，无订阅。照片本地处理，不上传服务器。",
-    guides: "规格指南",
-    moreGuides: "查看更多证件照规格",
-    workflow: "避坑检查",
-    inside: "App 界面",
-    insideTitle: "再看一下 IDPhoto Pro 里的具体页面",
-    presetLabel: "规格库",
-    presetTitle: "多国家、多证件类型规格适配",
-    presetText:
-      "App 内置多国家证件照规格库，不只是单一的 2x2 裁切。用户可以按国家、护照、签证、移民、居留卡、身份证件和打印用途筛选模板。",
-    specLabel: "规格详情",
-    specTitle: "先看背景、尺寸和要求，再开始制作",
-    specText: "规格页会先展示尺寸、像素、背景和要求来源，再进入编辑流程。",
-    editorLabel: "编辑器",
-    editorTitle: "智能自动校准，也能手动精细调整",
-    editorText:
-      "编辑器会根据当前国家和证件类型的公开尺寸、比例和构图要求做校准，并用多项检测评分提示风险；用户也可以手动调整位置、缩放、旋转、亮度、锐度、背景和文件输出。",
-    checks: "检查结果",
-    export: "导出方式",
-    exportedResult: "导出结果",
-    purchase: "购买方式",
-    finalCtaTitle: "准备在 iPhone 上制作证件照？",
-    finalCtaText: "可以直接打开 App Store 下载，也可以进入下载页，用另一台设备扫码。",
-    openStore: "查看 App Store",
-    support: "查看技术支持",
-    download: "下载入口"
+    allStandardsLabel: "全部证件照规格",
+    featureColumns: [
+      { title: "全球合规", text: "覆盖 100+ 证件照标准，并自动完成常见要求校验。" },
+      { title: "本地处理", text: "所有图像处理均在设备端完成。无需云端上传。" },
+      { title: "导出系统", text: "支持 JPG、PNG、HEIC、PDF，以及 4x6、A4、Letter 打印版式。" }
+    ],
+    abstractCards: [
+      { title: "合规校验", tag: "通过", kind: "check" },
+      { title: "本地处理", tag: "照片不上云", kind: "privacy" },
+      { title: "打印排版", tag: "4x6", kind: "print" }
+    ],
+    complianceLink: "查看所有校验",
+    finalTitle: "数秒生成合规证件照。",
+    finalTrust: "一次性购买，非订阅。照片本地处理，不上传服务器。",
+    moreGuides: "查看更多证件照规格"
   },
   ar: {
-    appStoreCta: "تنزيل التطبيق",
-    heroMetaAria: "أبرز مزايا المنتج",
-    heroMeta: [
-      { value: "80+", label: "قوالب دول ومستندات" },
-      { value: "300 DPI", label: "تصدير جاهز للطباعة" },
-      { value: "On-device", label: "معالجة خاصة على الجهاز" }
+    heroTitle: "صور مستندات متوافقة خلال ثوانٍ",
+    heroText: "حضّر صور الجواز والتأشيرة والهوية على iPhone. اختر المقاس، أضف الصورة، افحص الوجه والخلفية، ثم صدّر ملفاً رقمياً أو صفحة طباعة 4x6.",
+    cta: "تنزيل التطبيق",
+    trust: "معالجة محلية. تبقى الصور على جهازك.",
+    trustPills: ["شراء لمرة واحدة", "بدون اشتراك", "فحص AI", "تبقى الصور على جهازك"],
+    standardsKicker: "مصمم للدقة والخصوصية.",
+    standardsTitle: "أكثر من 100 معيار لصور المستندات",
+    standardsText: "اختر الدولة أو نوع المستند أو مقاس الطباعة قبل إنشاء الصورة.",
+    searchPlaceholder: "ابحث في 100+ معيار",
+    searchMeta: "جواز · تأشيرة · هوية · طباعة",
+    standardLinks: [
+      { icon: "🇺🇸", label: "جواز أمريكا", slug: "us-passport-photo-size" },
+      { icon: "🇺🇸", label: "تأشيرة أمريكا", slug: "us-visa-photo-size" },
+      { icon: "🇬🇧", label: "جواز بريطانيا", slug: "uk-passport-photo-size" },
+      { icon: "🇯🇵", label: "جواز اليابان", slug: "japan-passport-photo-size" },
+      { icon: "🇨🇦", label: "جواز كندا", slug: "canada-passport-photo-size" },
+      { icon: "🇪🇺", label: "تأشيرة شنغن", slug: "schengen-visa-photo-size" },
+      { icon: "🇮🇳", label: "جواز الهند", slug: "india-passport-photo-size" }
     ],
-    visualLabel: "محرك قوالب احترافي",
-    visualTitle: "مصمم كأداة صور رسمية، وليس مجرد أداة قص.",
-    ctaTrust: "شراء مرة واحدة. بدون اشتراك. تبقى الصور على جهازك.",
-    guides: "الأدلة",
-    moreGuides: "تصفح كل أدلة المقاسات",
-    workflow: "طريقة الاستخدام",
-    inside: "داخل التطبيق",
-    insideTitle: "هذه الشاشات تطابق وظائف التطبيق الحقيقية",
-    presetLabel: "مكتبة القوالب",
-    presetTitle: "قوالب متعددة للدول والمستندات",
-    presetText:
-      "يتضمن التطبيق مكتبة قوالب لعدة دول، وليس مجرد قص 2x2. يمكنك التصفية حسب الدولة والجواز والتأشيرة والإقامة والهوية والطباعة.",
-    specLabel: "تفاصيل القالب",
-    specTitle: "راجع المقاس والخلفية والملاحظات قبل التحرير",
-    specText:
-      "تعرض شاشة القالب المقاس والبكسل وخيارات الخلفية وملاحظات المصدر قبل بدء التحرير.",
-    editorLabel: "المحرر",
-    editorTitle: "محاذاة ذكية مع تحكم يدوي دقيق",
-    editorText:
-      "يعتمد المحرر على متطلبات الدولة والمستند المحدد للمقاس والنسبة والتأطير، ثم يعرض المخاطر عبر فحوصات متعددة مع إمكانية ضبط الموضع والتكبير والدوران والإضاءة والحدة والخلفية والإخراج يدوياً.",
-    checks: "الفحوصات",
-    export: "التصدير",
-    exportedResult: "نتيجة التصدير",
-    purchase: "الشراء",
-    finalCtaTitle: "جاهز لتجهيز الصورة على iPhone؟",
-    finalCtaText:
-      "نزّل التطبيق من App Store مباشرة، أو افتح صفحة التنزيل إذا كنت تريد مسح رمز QR من جهاز آخر.",
-    openStore: "فتح App Store",
-    support: "الدعم الفني",
-    download: "التنزيل"
+    allStandardsLabel: "كل المقاسات",
+    featureColumns: [
+      { title: "توافق عالمي", text: "يدعم أكثر من 100 معيار ويفحص المتطلبات الشائعة." },
+      { title: "معالجة على الجهاز", text: "تتم معالجة الصور على جهازك بدون رفع سحابي." },
+      { title: "نظام تصدير", text: "يدعم JPG وPNG وHEIC وPDF وتخطيطات 4x6 وA4 وLetter." }
+    ],
+    abstractCards: [
+      { title: "فحص التوافق", tag: "ناجح", kind: "check" },
+      { title: "معالجة على الجهاز", tag: "بدون رفع", kind: "privacy" },
+      { title: "تخطيط الطباعة", tag: "4x6", kind: "print" }
+    ],
+    complianceLink: "عرض كل الفحوصات",
+    finalTitle: "أنشئ صورة مستند متوافقة خلال ثوانٍ.",
+    finalTrust: "شراء لمرة واحدة. بدون اشتراك. تبقى الصور على جهازك.",
+    moreGuides: "تصفح كل أدلة المقاسات"
   },
   de: {
-    appStoreCta: "App laden",
-    heroMetaAria: "Produktvorteile",
-    heroMeta: [
-      { value: "80+", label: "Länder- und Dokumentvorlagen" },
-      { value: "300 DPI", label: "druckfertiger Export" },
-      { value: "On-device", label: "private Verarbeitung" }
+    heroTitle: "Konforme Passfotos in Sekunden",
+    heroText: "Erstelle Pass-, Visa- und Ausweisfotos auf dem iPhone. Größe wählen, Foto importieren, Gesicht und Hintergrund prüfen, digital oder als 4x6-Drucklayout exportieren.",
+    cta: "App laden",
+    trust: "Lokale Verarbeitung. Fotos bleiben auf deinem Gerät.",
+    trustPills: ["Einmaliger Kauf", "Kein Abo", "AI-Prüfung", "Fotos bleiben lokal"],
+    standardsKicker: "Für Genauigkeit gebaut. Für Datenschutz entwickelt.",
+    standardsTitle: "100+ Dokumentfoto-Standards",
+    standardsText: "Wähle Land, Dokumenttyp oder Druckgröße vor der Erstellung.",
+    searchPlaceholder: "100+ Standards suchen",
+    searchMeta: "Pass · Visum · Ausweis · Druck",
+    standardLinks: [
+      { icon: "🇺🇸", label: "US-Passfoto", slug: "us-passport-photo-size" },
+      { icon: "🇺🇸", label: "US-Visum", slug: "us-visa-photo-size" },
+      { icon: "🇬🇧", label: "UK-Passfoto", slug: "uk-passport-photo-size" },
+      { icon: "🇯🇵", label: "Japan-Passfoto", slug: "japan-passport-photo-size" },
+      { icon: "🇨🇦", label: "Kanada-Passfoto", slug: "canada-passport-photo-size" },
+      { icon: "🇪🇺", label: "Schengen-Visum", slug: "schengen-visa-photo-size" },
+      { icon: "🇮🇳", label: "Indien-Passfoto", slug: "india-passport-photo-size" }
     ],
-    visualLabel: "Professioneller Vorlagen-Assistent",
-    visualTitle: "Entwickelt wie ein ernsthaftes Fotowerkzeug, nicht wie ein einfacher Zuschnitt.",
-    ctaTrust: "Einmalige Freischaltung. Kein Abo. Fotos bleiben auf deinem Gerät.",
-    guides: "Ratgeber",
-    moreGuides: "Alle Fotogrößen-Ratgeber ansehen",
-    workflow: "So funktioniert es",
-    inside: "In der App",
-    insideTitle: "Diese Ansichten zeigen echte App-Funktionen",
-    presetLabel: "Vorlagenbibliothek",
-    presetTitle: "Vorlagen für mehrere Länder und Dokumenttypen",
-    presetText:
-      "Die App enthält eine Vorlagenbibliothek für viele Dokumentfotos und ist nicht nur ein 2x2-Zuschnitt. Du kannst nach Land, Pass, Visum, Aufenthaltstitel, Ausweis und Druckzweck filtern.",
-    specLabel: "Vorlagendetails",
-    specTitle: "Größe, Hintergrund und Hinweise vor der Bearbeitung prüfen",
-    specText:
-      "Jede Vorlage zeigt Größe, Pixelziel, Hintergrundoptionen und Quellenhinweise, bevor du mit der Bearbeitung beginnst.",
-    editorLabel: "Editor",
-    editorTitle: "Intelligente Ausrichtung mit manueller Feinkontrolle",
-    editorText:
-      "Der Editor orientiert sich an Land, Dokumenttyp, Größe, Seitenverhältnis und Bildausschnitt. Gleichzeitig zeigen Prüfungen mögliche Risiken, während du Position, Zoom, Drehung, Licht, Schärfe, Hintergrund und Export manuell anpassen kannst.",
-    checks: "Prüfungen",
-    export: "Export",
-    exportedResult: "Exportiertes Ergebnis",
-    purchase: "Kauf",
-    finalCtaTitle: "Bereit, das Foto auf dem iPhone zu erstellen?",
-    finalCtaText:
-      "Lade die App direkt im App Store oder öffne die Downloadseite, wenn du den QR-Code von einem anderen Gerät scannen möchtest.",
-    openStore: "App Store öffnen",
-    support: "Support ansehen",
-    download: "Download"
+    allStandardsLabel: "Alle Fotogrößen",
+    featureColumns: [
+      { title: "Globale Standards", text: "Deckt 100+ Fotostandards ab und prüft häufige Anforderungen." },
+      { title: "Lokal verarbeitet", text: "Alle Bildprozesse laufen auf dem Gerät. Kein Cloud-Upload nötig." },
+      { title: "Exportsystem", text: "JPG, PNG, HEIC, PDF sowie 4x6-, A4- und Letter-Drucklayouts." }
+    ],
+    abstractCards: [
+      { title: "Konformitätsprüfung", tag: "Bestanden", kind: "check" },
+      { title: "Lokal verarbeitet", tag: "Kein Upload", kind: "privacy" },
+      { title: "Drucklayout", tag: "4x6", kind: "print" }
+    ],
+    complianceLink: "Alle Prüfungen ansehen",
+    finalTitle: "Erstelle ein konformes Ausweisfoto in Sekunden.",
+    finalTrust: "Einmaliger Kauf. Kein Abo. Fotos bleiben auf deinem Gerät.",
+    moreGuides: "Alle Fotogrößen-Ratgeber ansehen"
   }
 } satisfies Record<Locale, {
-  appStoreCta: string;
-  heroMetaAria: string;
-  heroMeta: { value: string; label: string }[];
-  visualLabel: string;
-  visualTitle: string;
-  ctaTrust: string;
-  guides: string;
+  heroTitle: string;
+  heroText: string;
+  cta: string;
+  trust: string;
+  trustPills: string[];
+  standardsKicker: string;
+  standardsTitle: string;
+  standardsText: string;
+  searchPlaceholder: string;
+  searchMeta: string;
+  standardLinks: { icon: string; label: string; slug: string }[];
+  allStandardsLabel: string;
+  featureColumns: { title: string; text: string }[];
+  abstractCards: { title: string; tag: string; kind: "check" | "privacy" | "print" }[];
+  complianceLink: string;
+  finalTitle: string;
+  finalTrust: string;
   moreGuides: string;
-  workflow: string;
-  inside: string;
-  insideTitle: string;
-  presetLabel: string;
-  presetTitle: string;
-  presetText: string;
-  specLabel: string;
-  specTitle: string;
-  specText: string;
-  editorLabel: string;
-  editorTitle: string;
-  editorText: string;
-  checks: string;
-  export: string;
-  exportedResult: string;
-  purchase: string;
-  finalCtaTitle: string;
-  finalCtaText: string;
-  openStore: string;
-  support: string;
-  download: string;
 }>;
 
 export function MarketingHome({ locale }: { locale: Locale }) {
-  const copy = getCopy(locale);
   const labels = homeLabels[locale];
 
   return (
-    <main className={`page-shell locale-${locale}`}>
-      <section className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">{copy.home.eyebrow}</p>
-          <h1>{copy.home.title}</h1>
-          <p className="hero-text">{copy.home.description}</p>
-          <div className="hero-actions">
-            <TrackedLink
-              className="button button-primary hero-primary-cta"
-              href={siteConfig.appStoreUrl}
-              target="_blank"
-              rel="noreferrer"
-              eventName="app_store_click"
-              eventParams={{ source: "home_hero", locale }}
-            >
-              {copy.home.ctaPrimary}
-            </TrackedLink>
-            <Link className="button button-secondary" href="#guides">
-              {copy.home.ctaSecondary}
-            </Link>
-          </div>
-          <p className="hero-trust-note">{labels.ctaTrust}</p>
-          <div className="hero-meta" aria-label={labels.heroMetaAria}>
-            {labels.heroMeta.map((item) => (
-              <div className="hero-meta-item" key={item.label}>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-              </div>
+    <main className={`page-shell framer-home locale-${locale}`}>
+      <section className="framer-hero">
+        <div className="framer-hero-copy">
+          <h1>{labels.heroTitle}</h1>
+          <p>{labels.heroText}</p>
+          <TrackedLink
+            className="button button-primary framer-primary-cta"
+            href={siteConfig.appStoreUrl}
+            target="_blank"
+            rel="noreferrer"
+            eventName="app_store_click"
+            eventParams={{ source: "home_framer_hero", locale }}
+          >
+            {labels.cta}
+          </TrackedLink>
+          <div className="framer-trust-pills" aria-label={labels.trust}>
+            {labels.trustPills.map((item) => (
+              <span key={item}>{item}</span>
             ))}
           </div>
-          <ul className="hero-points hero-proof-grid">
-            {copy.home.highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </div>
-        <div className="hero-visual hero-guide-visual" id="guides" aria-label={copy.home.seoHeading}>
-          <div className="hero-guide-header">
-            <div className="hero-visual-copy">
-              <p>{labels.visualLabel}</p>
-              <h2>{labels.visualTitle}</h2>
+
+        <div className="framer-product-panel" aria-hidden="true">
+          <div className="framer-spec-list">
+            <div className="framer-panel-header">
+              <span>{locale === "zh" ? "证件照标准" : "Photo standards"}</span>
+              <strong>100+</strong>
             </div>
-            <Link className="guide-more-link" href={`/${locale}/blog`}>
-              {labels.moreGuides}
-            </Link>
+            <div className="framer-search-line">{labels.searchPlaceholder}</div>
+            <div className="framer-spec-row">
+              <span>{locale === "zh" ? "美国护照" : "US Passport"}</span>
+              <em>2 x 2 in</em>
+            </div>
+            <div className="framer-spec-row">
+              <span>{locale === "zh" ? "中国签证" : "China Visa"}</span>
+              <em>33 x 48 mm</em>
+            </div>
+            <div className="framer-spec-row">
+              <span>{locale === "zh" ? "日本个人编号卡" : "Japan ID Card"}</span>
+              <em>35 x 45 mm</em>
+            </div>
           </div>
-          <div className="seo-link-grid hero-guide-grid">
-            {seoLinks.map((item) => (
-              <TrackedLink
-                className="seo-link-card"
-                href={`/${locale}/${item.slug}`}
-                key={item.slug}
-                eventName="spec_guide_click"
-                eventParams={{ source: "home_hero_guides", locale, slug: item.slug }}
-              >
-                <span className="seo-link-icon" aria-hidden="true">{item.icon}</span>
-                <span>{item.label}</span>
-              </TrackedLink>
-            ))}
+          <div className="framer-check-panel">
+            <div className="abstract-face-frame">
+              <img
+                alt=""
+                className="hero-compliance-shot"
+                src="/screenshots/hero-compliance-preview.png"
+              />
+            </div>
+            <div className="abstract-score-card">
+              <div>
+                <span>{locale === "zh" ? "合规评分" : "Compliance score"}</span>
+                <strong>100%</strong>
+              </div>
+              <i />
+              <b />
+              <b />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section" id="workflow">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.workflow}</p>
-          <h2>{copy.home.stepsHeading}</h2>
+      <section className="framer-standards" id="guides">
+        <p className="framer-kicker">{labels.standardsKicker}</p>
+        <div className="framer-section-heading">
+          <h2>{labels.standardsTitle}</h2>
+          <p>{labels.standardsText}</p>
         </div>
-        <div className="step-grid">
-          {copy.home.steps.map((step, index) => (
-            <article className="step-card" key={step.title}>
-              <span className="step-index">0{index + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
+        <div className="framer-search-card">
+          <Link className="framer-search-input" href={`/${locale}/blog`}>
+            <span>{labels.searchPlaceholder}</span>
+            <em>{labels.searchMeta}</em>
+          </Link>
+          <div className="framer-chip-grid">
+            {labels.standardLinks.map((item) => (
+              <Link
+                className="framer-chip"
+                href={`/${locale}/${item.slug}`}
+                key={item.slug}
+              >
+                <span className="framer-chip-icon" aria-hidden="true">{item.icon}</span>
+                <span>{item.label}</span>
+              </Link>
+            ))}
+            <Link className="framer-chip framer-chip-active" href={`/${locale}/blog`}>
+              <span>{labels.allStandardsLabel}</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="framer-feature-row">
+          {labels.featureColumns.map((item) => (
+            <article key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="framer-abstract-grid">
+          {labels.abstractCards.map((card) => (
+            <article className="framer-abstract-card" key={card.title}>
+              <div className={`abstract-visual abstract-${card.kind}`}>
+                {card.kind === "check" && (
+                  <div className="abstract-compliance-phone">
+                    <div className="abstract-compliance-photo">
+                      <div className="abstract-compliance-grid" />
+                      <div className="abstract-compliance-eye" />
+                      <div className="abstract-compliance-head" />
+                      <div className="abstract-compliance-body" />
+                      <span>{locale === "zh" ? "眼高范围" : "Eye range"}</span>
+                    </div>
+                    <div className="abstract-export-score">
+                      <div className="abstract-badge">✓</div>
+                      <div>
+                        <strong>{locale === "zh" ? "Ready to Export" : "Ready to Export"}</strong>
+                        <p>{locale === "zh" ? "关键检查已通过" : "All key checks passed"}</p>
+                      </div>
+                      <em>100%</em>
+                    </div>
+                    <div className="abstract-pass-note">
+                      <span>✓</span>
+                      <p>{locale === "zh" ? "所有关键检查已通过，可以导出。" : "All key checks passed. Ready to export."}</p>
+                    </div>
+                    <div className="abstract-check-list">
+                      {[
+                        locale === "zh" ? "分辨率" : "Resolution",
+                        locale === "zh" ? "背景" : "Background",
+                        locale === "zh" ? "头部比例" : "Head size",
+                        locale === "zh" ? "脸部居中" : "Face centered"
+                      ].map((item) => (
+                        <div key={item}>
+                          <span>✓</span>
+                          <strong>{item}</strong>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="abstract-export-button">
+                      ✓ {locale === "zh" ? "准备导出" : "Ready - Export"}
+                    </div>
+                  </div>
+                )}
+                {card.kind === "privacy" && (
+                  <div className="abstract-privacy-panel">
+                    <div className="abstract-pro-card">
+                      <div className="abstract-crown">♛</div>
+                      <div>
+                        <strong>{locale === "zh" ? "Pro Member" : "Pro Member"}</strong>
+                        <p>{locale === "zh" ? "一次买断已解锁" : "Lifetime access active"}</p>
+                      </div>
+                    </div>
+                    <div className="abstract-trust-pills">
+                      <span>{locale === "zh" ? "买断" : "Lifetime"}</span>
+                      <span>{locale === "zh" ? "无广告" : "No Ads"}</span>
+                      <span>{locale === "zh" ? "本地处理" : "On-device"}</span>
+                    </div>
+                    <div className="abstract-privacy-card">
+                      <div className="abstract-lock-row">
+                        <span>▣</span>
+                        <div>
+                          <strong>{locale === "zh" ? "私密、安全、合规" : "Private, Secure, Compliant"}</strong>
+                          <p>{locale === "zh" ? "照片处理在设备端完成" : "Photo processing happens on device"}</p>
+                        </div>
+                      </div>
+                      {[
+                        locale === "zh" ? "照片不上传服务器" : "Photos are not uploaded",
+                        locale === "zh" ? "无广告 SDK" : "No ad SDKs",
+                        locale === "zh" ? "记录留在本机" : "Records stay on this device"
+                      ].map((item) => (
+                        <div className="abstract-privacy-row" key={item}>
+                          <span />
+                          <strong>{item}</strong>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {card.kind === "print" && (
+                  <div className="abstract-export-flow">
+                    <div className="abstract-export-status">
+                      <span>✓</span>
+                      <strong>Ready</strong>
+                      <em>100%</em>
+                      <b>4 x 6 in</b>
+                    </div>
+                    <div className="abstract-output-card">
+                      <strong>{locale === "zh" ? "选择导出" : "Choose Output"}</strong>
+                      <div className="abstract-output-options">
+                        <div>
+                          <i />
+                          <span>{locale === "zh" ? "电子版" : "Digital Photo"}</span>
+                          <p>600 x 600 px · JPG</p>
+                        </div>
+                        <div className="abstract-output-active">
+                          <i />
+                          <span>{locale === "zh" ? "打印版" : "Print Sheet"}</span>
+                          <p>4 x 6 in · crop marks</p>
+                        </div>
+                      </div>
+                      <div className="abstract-more-settings">
+                        <span>{locale === "zh" ? "更多设置" : "More settings"}</span>
+                        <em>JPG · 4 x 6 · compact</em>
+                      </div>
+                    </div>
+                    <div className="abstract-print-preview">
+                      {Array.from({ length: 6 }).map((_, index) => (
+                        <span key={index}>
+                          <i />
+                          <b />
+                        </span>
+                      ))}
+                    </div>
+                    <div className="abstract-save-button">
+                      {locale === "zh" ? "保存打印版" : "Save Print Sheet"}
+                    </div>
+                  </div>
+                )}
+              </div>
+              <h3>{card.title}</h3>
+              <p>{card.tag}</p>
+              {card.kind === "check" && (
+                <Link className="framer-detail-link" href={`/${locale}/compliance`}>
+                  {labels.complianceLink}
+                </Link>
+              )}
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section split-section">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.checks}</p>
-          <h2>{copy.home.checksHeading}</h2>
-        </div>
-        <div className="split-grid">
-          <article className="info-card">
-            <p>{copy.home.checksIntro}</p>
-            <ul className="smart-check-list">
-              {copy.home.checks.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="image-card">
-            <div className="device-frame">
-              <Image
-                src="/screenshots/smart-check-score.png"
-                alt={labels.checks}
-                width={1320}
-                height={2868}
-              />
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="section split-section">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.export}</p>
-          <h2>{copy.home.exportHeading}</h2>
-        </div>
-        <div className="export-showcase-grid">
-          <article className="image-card phone-media-card">
-            <LazyAutoplayVideo
-              className="device-video"
-              src="/screenshots/export-demo.mp4"
-              label={labels.export}
-            />
-          </article>
-          <article className="info-card export-info-card">
-            <p>{copy.home.exportIntro}</p>
-            <ul className="launch-list export-feature-grid">
-              {copy.home.exportItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="image-card export-result-card">
-            <p className="card-label">{labels.exportedResult}</p>
-            <Image
-              src="/screenshots/export-result-4up.jpg"
-              alt={labels.exportedResult}
-              width={3600}
-              height={5400}
-            />
-          </article>
-        </div>
-      </section>
-
-      <section className="section showcase" id="showcase">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.inside}</p>
-          <h2>{labels.insideTitle}</h2>
-        </div>
-        <div className="showcase-grid">
-          <article className="showcase-card showcase-card-large">
-            <div className="showcase-copy">
-              <p className="card-label">{labels.presetLabel}</p>
-              <h3>{labels.presetTitle}</h3>
-              <p>{labels.presetText}</p>
-            </div>
-            <div className="device-frame">
-              <LazyAutoplayVideo
-                className="device-video"
-                src="/screenshots/country-selection-demo.mp4"
-                label={labels.presetTitle}
-              />
-            </div>
-          </article>
-          <article className="showcase-card">
-            <div className="showcase-copy">
-              <p className="card-label">{labels.specLabel}</p>
-              <h3>{labels.specTitle}</h3>
-              <p>{labels.specText}</p>
-            </div>
-            <div className="device-frame">
-              <Image
-                src="/screenshots/details.png"
-                alt="IDPhoto Pro spec details"
-                width={1320}
-                height={2868}
-              />
-            </div>
-          </article>
-          <article className="showcase-card">
-            <div className="showcase-copy">
-              <p className="card-label">{labels.editorLabel}</p>
-              <h3>{labels.editorTitle}</h3>
-              <p>{labels.editorText}</p>
-            </div>
-            <div className="device-frame">
-              <LazyAutoplayVideo
-                className="device-video"
-                src="/screenshots/editor-demo.mp4"
-                label={labels.editorTitle}
-              />
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="section final-cta-section">
-        <div className="section-heading">
-          <p className="eyebrow">{labels.download}</p>
-          <h2>{labels.finalCtaTitle}</h2>
-        </div>
-        <div className="split-grid">
-          <article className="info-card">
-            <p>{labels.finalCtaText}</p>
-            <p>{copy.home.pricingIntro}</p>
-            <ul className="pricing-check-list">
-              {copy.home.pricingItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="image-card unlock-shot-card">
-            <Image
-              src="/screenshots/lifetime-unlock.png"
-              alt={labels.purchase}
-              width={1320}
-              height={2868}
-            />
-            <div className="hero-actions">
-              <TrackedLink
-                className="button button-primary"
-                href={siteConfig.appStoreUrl}
-                target="_blank"
-                rel="noreferrer"
-                eventName="app_store_click"
-                eventParams={{ source: "home_final_cta", locale }}
-              >
-                {labels.openStore}
-              </TrackedLink>
-              <TrackedLink
-                className="button button-secondary"
-                href={`/${locale}/download`}
-                eventName="download_page_click"
-                eventParams={{ source: "home_final_cta", locale }}
-              >
-                {copy.home.qrPage}
-              </TrackedLink>
-            </div>
-          </article>
-        </div>
+      <section className="framer-bottom-cta">
+        <h2>{labels.finalTitle}</h2>
+        <TrackedLink
+          className="button button-primary framer-primary-cta"
+          href={siteConfig.appStoreUrl}
+          target="_blank"
+          rel="noreferrer"
+          eventName="app_store_click"
+          eventParams={{ source: "home_framer_bottom", locale }}
+        >
+          {labels.cta}
+        </TrackedLink>
+        <span>{labels.finalTrust}</span>
       </section>
     </main>
   );
