@@ -182,10 +182,21 @@ h3 {
   letter-spacing: 0;
 }
 
+.locale-zh .framer-hero-copy h1 {
+  font-size: clamp(2.7rem, 5.6vw, 4.4rem);
+}
+
 .framer-hero-copy p {
   max-width: 700px;
   color: var(--muted);
   font-size: clamp(1rem, 1.7vw, 1.18rem);
+}
+
+.framer-hero-copy .framer-hero-disclaimer {
+  max-width: 620px;
+  color: rgba(93, 106, 120, 0.68);
+  font-size: 0.9rem;
+  font-weight: 750;
 }
 
 .framer-hero-copy span,
@@ -2621,6 +2632,10 @@ h3 {
     font-size: clamp(2.6rem, 10vw, 4.7rem);
   }
 
+  .locale-zh .framer-hero-copy h1 {
+    font-size: clamp(2.45rem, 7.4vw, 3.55rem);
+  }
+
   .framer-product-panel {
     width: min(100%, 620px);
   }
@@ -2751,6 +2766,10 @@ h3 {
   .framer-hero-copy h1,
   .framer-bottom-cta h2 {
     font-size: clamp(2.35rem, 12vw, 3.5rem);
+  }
+
+  .locale-zh .framer-hero-copy h1 {
+    font-size: clamp(2.2rem, 9.8vw, 2.55rem);
   }
 
   .framer-hero-copy p {

@@ -17,15 +17,16 @@ const seoLinks = [
 
 const homeLabels = {
   en: {
-    heroTitle: "Compliant ID photos, generated instantly",
-    heroText: "Prepare passport, visa, and ID photos on iPhone. Choose a size, import a portrait, check face position and background, then export a digital file or 4x6 print layout.",
+    heroTitle: "Passport, visa, and ID photos, made in minutes",
+    heroText: "Choose from 100+ passport, visa, and ID photo size presets. Import a portrait, check face position, background, and dimensions, then export a digital file or 4x6 print layout.",
+    disclaimer: "Creates photo files only. Does not generate IDs, passports, visas, or official documents.",
     cta: "Download App",
     trust: "Local processing. Photos stay on your device.",
-    trustPills: ["One-time purchase", "No subscription", "AI checks", "Photos stay on device"],
+    trustPills: ["One-time purchase", "No subscription", "Photo checks", "No photo upload"],
     standardsKicker: "Built for accuracy. Designed for privacy.",
-    standardsTitle: "100+ document photo standards",
-    standardsText: "Choose the country, document type, or print size before generating your photo.",
-    searchPlaceholder: "Search 100+ standards",
+    standardsTitle: "100+ photo size presets",
+    standardsText: "Choose the country, document type, or print size before preparing your photo.",
+    searchPlaceholder: "Search 100+ presets",
     searchMeta: "passport · visa · ID · print",
     standardLinks: [
       { icon: "🇺🇸", label: "US Passport", slug: "us-passport-photo-size" },
@@ -38,30 +39,31 @@ const homeLabels = {
     ],
     allStandardsLabel: "All photo sizes",
     featureColumns: [
-      { title: "Global compliance", text: "Covers 100+ document photo standards and validates common requirements." },
-      { title: "On-device processing", text: "All image processing is completed on your device. No cloud upload needed." },
-      { title: "Export system", text: "Supports JPG, PNG, HEIC, PDF, plus 4x6, A4, and Letter print layouts." }
+      { title: "Size Presets", text: "Covers 100+ passport, visa, and ID photo presets, with checks for common photo requirements." },
+      { title: "On-device Processing", text: "All image processing is completed on your device. No cloud upload needed." },
+      { title: "Digital & Print Export", text: "Supports JPG, PNG, HEIC, PDF, plus 4x6, A4, and Letter print layouts." }
     ],
     abstractCards: [
-      { title: "Compliance check", tag: "Pass", kind: "check" },
+      { title: "Photo checks", tag: "Size, face, background", kind: "check" },
       { title: "On-device processing", tag: "No upload", kind: "privacy" },
       { title: "Print layout", tag: "4x6", kind: "print" }
     ],
-    complianceLink: "View all checks",
-    finalTitle: "Generate a compliant ID photo in seconds.",
+    complianceLink: "View photo checks",
+    finalTitle: "Prepare a photo that matches the required size in minutes.",
     finalTrust: "One-time purchase. No subscription. Photos stay on your device.",
     moreGuides: "Browse all photo size guides"
   },
   zh: {
-    heroTitle: "合规证件照，即刻生成",
-    heroText: "面向 100+ 全球标准的护照照、签证照与身份证照生成系统。选择规格，导入照片，检查脸部位置和背景，然后导出电子版或 4x6 打印排版。",
+    heroTitle: "护照照、签证照和证件照，即刻制作",
+    heroText: "支持 100+ 护照、签证和身份照规格。选择规格，导入照片，检查脸部位置、背景和尺寸，然后导出电子版或 4x6 打印排版。",
+    disclaimer: "只制作照片文件，不生成任何证件或官方文件。",
     cta: "下载 App",
     trust: "本地处理。照片不上云。",
-    trustPills: ["一次性购买", "非订阅", "AI 检测", "照片不上云"],
+    trustPills: ["一次性购买", "非订阅", "照片检测", "照片不上传"],
     standardsKicker: "为准确而构建。为隐私而设计。",
-    standardsTitle: "100+ 证件照标准",
-    standardsText: "生成前选择国家、证件类型或打印尺寸。",
-    searchPlaceholder: "搜索 100+ 标准",
+    standardsTitle: "100+ 证件照规格",
+    standardsText: "制作前选择国家、证件类型或打印尺寸。",
+    searchPlaceholder: "搜索 100+ 规格",
     searchMeta: "护照 · 签证 · 身份证 · 打印",
     standardLinks: [
       { icon: "🇺🇸", label: "美国护照", slug: "us-passport-photo-size" },
@@ -74,23 +76,24 @@ const homeLabels = {
     ],
     allStandardsLabel: "全部证件照规格",
     featureColumns: [
-      { title: "全球合规", text: "覆盖 100+ 证件照标准，并自动完成常见要求校验。" },
+      { title: "规格覆盖", text: "覆盖 100+ 护照、签证和身份照规格，并提供常见照片要求检查。" },
       { title: "本地处理", text: "所有图像处理均在设备端完成。无需云端上传。" },
-      { title: "导出系统", text: "支持 JPG、PNG、HEIC、PDF，以及 4x6、A4、Letter 打印版式。" }
+      { title: "电子版与打印版导出", text: "支持 JPG、PNG、HEIC、PDF，以及 4x6、A4、Letter 打印排版。" }
     ],
     abstractCards: [
-      { title: "合规校验", tag: "通过", kind: "check" },
+      { title: "照片检测", tag: "尺寸、脸部、背景", kind: "check" },
       { title: "本地处理", tag: "照片不上云", kind: "privacy" },
       { title: "打印排版", tag: "4x6", kind: "print" }
     ],
-    complianceLink: "查看所有校验",
-    finalTitle: "数秒生成合规证件照。",
+    complianceLink: "查看检查项",
+    finalTitle: "数秒制作符合规格的证件照。",
     finalTrust: "一次性购买，非订阅。照片本地处理，不上传服务器。",
     moreGuides: "查看更多证件照规格"
   },
   ar: {
     heroTitle: "صور مستندات متوافقة خلال ثوانٍ",
     heroText: "حضّر صور الجواز والتأشيرة والهوية على iPhone. اختر المقاس، أضف الصورة، افحص الوجه والخلفية، ثم صدّر ملفاً رقمياً أو صفحة طباعة 4x6.",
+    disclaimer: "",
     cta: "تنزيل التطبيق",
     trust: "معالجة محلية. تبقى الصور على جهازك.",
     trustPills: ["شراء لمرة واحدة", "بدون اشتراك", "فحص AI", "تبقى الصور على جهازك"],
@@ -127,6 +130,7 @@ const homeLabels = {
   de: {
     heroTitle: "Konforme Passfotos in Sekunden",
     heroText: "Erstelle Pass-, Visa- und Ausweisfotos auf dem iPhone. Größe wählen, Foto importieren, Gesicht und Hintergrund prüfen, digital oder als 4x6-Drucklayout exportieren.",
+    disclaimer: "",
     cta: "App laden",
     trust: "Lokale Verarbeitung. Fotos bleiben auf deinem Gerät.",
     trustPills: ["Einmaliger Kauf", "Kein Abo", "AI-Prüfung", "Fotos bleiben lokal"],
@@ -163,6 +167,7 @@ const homeLabels = {
 } satisfies Record<Locale, {
   heroTitle: string;
   heroText: string;
+  disclaimer?: string;
   cta: string;
   trust: string;
   trustPills: string[];
@@ -190,6 +195,9 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         <div className="framer-hero-copy">
           <h1>{labels.heroTitle}</h1>
           <p>{labels.heroText}</p>
+          {labels.disclaimer ? (
+            <p className="framer-hero-disclaimer">{labels.disclaimer}</p>
+          ) : null}
           <TrackedLink
             className="button button-primary framer-primary-cta"
             href={siteConfig.appStoreUrl}
@@ -210,7 +218,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         <div className="framer-product-panel" aria-hidden="true">
           <div className="framer-spec-list">
             <div className="framer-panel-header">
-              <span>{locale === "zh" ? "证件照标准" : "Photo standards"}</span>
+              <span>{locale === "zh" ? "证件照规格" : "Photo sizes"}</span>
               <strong>100+</strong>
             </div>
             <div className="framer-search-line">{labels.searchPlaceholder}</div>
@@ -237,7 +245,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             </div>
             <div className="abstract-score-card">
               <div>
-                <span>{locale === "zh" ? "合规评分" : "Compliance score"}</span>
+                <span>{locale === "zh" ? "照片检测" : "Photo checks"}</span>
                 <strong>100%</strong>
               </div>
               <i />
