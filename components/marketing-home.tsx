@@ -20,7 +20,7 @@ const homeLabels = {
     heroTitle: "Passport, visa, and ID photos, made in minutes",
     heroText: "Choose from 100+ passport, visa, and ID photo size presets. Import a portrait, check face position, background, and dimensions, then export a digital file or 4x6 print layout.",
     disclaimer: "Creates photo files only. Does not generate IDs, passports, visas, or official documents.",
-    cta: "Download App",
+    cta: "Download iPhone App",
     trust: "Local processing. Photos stay on your device.",
     trustPills: ["One-time purchase", "No subscription", "Photo checks", "No photo upload"],
     standardsKicker: "Built for accuracy. Designed for privacy.",
@@ -57,7 +57,7 @@ const homeLabels = {
     heroTitle: "护照照、签证照和证件照，即刻制作",
     heroText: "支持 100+ 护照、签证和身份照规格。选择规格，导入照片，检查脸部位置、背景和尺寸，然后导出电子版或 4x6 打印排版。",
     disclaimer: "只制作照片文件，不生成任何证件或官方文件。",
-    cta: "下载 App",
+    cta: "下载 iPhone App",
     trust: "本地处理。照片不上云。",
     trustPills: ["一次性购买", "非订阅", "照片检测", "照片不上传"],
     standardsKicker: "为准确而构建。为隐私而设计。",
@@ -91,12 +91,12 @@ const homeLabels = {
     moreGuides: "查看更多证件照规格"
   },
   ar: {
-    heroTitle: "صور مستندات متوافقة خلال ثوانٍ",
+    heroTitle: "حضّر صور الجواز والتأشيرة والهوية خلال دقائق",
     heroText: "حضّر صور الجواز والتأشيرة والهوية على iPhone. اختر المقاس، أضف الصورة، افحص الوجه والخلفية، ثم صدّر ملفاً رقمياً أو صفحة طباعة 4x6.",
-    disclaimer: "",
+    disclaimer: "ينشئ ملفات صور فقط. لا ينشئ هويات أو جوازات أو تأشيرات أو مستندات رسمية.",
     cta: "تنزيل التطبيق",
     trust: "معالجة محلية. تبقى الصور على جهازك.",
-    trustPills: ["شراء لمرة واحدة", "بدون اشتراك", "فحص AI", "تبقى الصور على جهازك"],
+    trustPills: ["شراء لمرة واحدة", "بدون اشتراك", "فحص الصورة", "بدون رفع الصور"],
     standardsKicker: "مصمم للدقة والخصوصية.",
     standardsTitle: "أكثر من 100 معيار لصور المستندات",
     standardsText: "اختر الدولة أو نوع المستند أو مقاس الطباعة قبل إنشاء الصورة.",
@@ -113,27 +113,27 @@ const homeLabels = {
     ],
     allStandardsLabel: "كل المقاسات",
     featureColumns: [
-      { title: "توافق عالمي", text: "يدعم أكثر من 100 معيار ويفحص المتطلبات الشائعة." },
+      { title: "مقاسات جاهزة", text: "يدعم أكثر من 100 مقاس لصور الجواز والتأشيرة والهوية ويفحص المتطلبات الشائعة." },
       { title: "معالجة على الجهاز", text: "تتم معالجة الصور على جهازك بدون رفع سحابي." },
-      { title: "نظام تصدير", text: "يدعم JPG وPNG وHEIC وPDF وتخطيطات 4x6 وA4 وLetter." }
+      { title: "تصدير رقمي وللطباعة", text: "يدعم JPG وPNG وHEIC وPDF وتخطيطات 4x6 وA4 وLetter." }
     ],
     abstractCards: [
-      { title: "فحص التوافق", tag: "ناجح", kind: "check" },
+      { title: "فحص الصورة", tag: "المقاس والوجه والخلفية", kind: "check" },
       { title: "معالجة على الجهاز", tag: "بدون رفع", kind: "privacy" },
       { title: "تخطيط الطباعة", tag: "4x6", kind: "print" }
     ],
     complianceLink: "عرض كل الفحوصات",
-    finalTitle: "أنشئ صورة مستند متوافقة خلال ثوانٍ.",
+    finalTitle: "حضّر صورة تطابق المقاس المطلوب خلال دقائق.",
     finalTrust: "شراء لمرة واحدة. بدون اشتراك. تبقى الصور على جهازك.",
     moreGuides: "تصفح كل أدلة المقاسات"
   },
   de: {
-    heroTitle: "Konforme Passfotos in Sekunden",
+    heroTitle: "Pass-, Visa- und Ausweisfotos in Minuten erstellen",
     heroText: "Erstelle Pass-, Visa- und Ausweisfotos auf dem iPhone. Größe wählen, Foto importieren, Gesicht und Hintergrund prüfen, digital oder als 4x6-Drucklayout exportieren.",
-    disclaimer: "",
+    disclaimer: "Erstellt nur Fotodateien. Erstellt keine Ausweise, Pässe, Visa oder offiziellen Dokumente.",
     cta: "App laden",
     trust: "Lokale Verarbeitung. Fotos bleiben auf deinem Gerät.",
-    trustPills: ["Einmaliger Kauf", "Kein Abo", "AI-Prüfung", "Fotos bleiben lokal"],
+    trustPills: ["Einmaliger Kauf", "Kein Abo", "Foto-Checks", "Kein Foto-Upload"],
     standardsKicker: "Für Genauigkeit gebaut. Für Datenschutz entwickelt.",
     standardsTitle: "100+ Dokumentfoto-Standards",
     standardsText: "Wähle Land, Dokumenttyp oder Druckgröße vor der Erstellung.",
@@ -150,17 +150,17 @@ const homeLabels = {
     ],
     allStandardsLabel: "Alle Fotogrößen",
     featureColumns: [
-      { title: "Globale Standards", text: "Deckt 100+ Fotostandards ab und prüft häufige Anforderungen." },
+      { title: "Größen-Vorlagen", text: "Deckt 100+ Pass-, Visa- und Ausweisfoto-Größen ab und prüft häufige Anforderungen." },
       { title: "Lokal verarbeitet", text: "Alle Bildprozesse laufen auf dem Gerät. Kein Cloud-Upload nötig." },
-      { title: "Exportsystem", text: "JPG, PNG, HEIC, PDF sowie 4x6-, A4- und Letter-Drucklayouts." }
+      { title: "Digital- und Druckexport", text: "JPG, PNG, HEIC, PDF sowie 4x6-, A4- und Letter-Drucklayouts." }
     ],
     abstractCards: [
-      { title: "Konformitätsprüfung", tag: "Bestanden", kind: "check" },
+      { title: "Foto-Checks", tag: "Größe, Gesicht, Hintergrund", kind: "check" },
       { title: "Lokal verarbeitet", tag: "Kein Upload", kind: "privacy" },
       { title: "Drucklayout", tag: "4x6", kind: "print" }
     ],
     complianceLink: "Alle Prüfungen ansehen",
-    finalTitle: "Erstelle ein konformes Ausweisfoto in Sekunden.",
+    finalTitle: "Bereite ein Foto vor, das zur benötigten Größe passt.",
     finalTrust: "Einmaliger Kauf. Kein Abo. Fotos bleiben auf deinem Gerät.",
     moreGuides: "Alle Fotogrößen-Ratgeber ansehen"
   }
@@ -206,7 +206,9 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             eventName="app_store_click"
             eventParams={{ source: "home_framer_hero", locale }}
           >
-            {labels.cta}
+            <span className="framer-cta-icon" aria-hidden="true">↓</span>
+            <span>{labels.cta}</span>
+            <span className="framer-cta-arrow" aria-hidden="true">→</span>
           </TrackedLink>
           <div className="framer-trust-pills" aria-label={labels.trust}>
             {labels.trustPills.map((item) => (
@@ -242,6 +244,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                 className="hero-compliance-shot"
                 src="/screenshots/hero-compliance-preview.png"
               />
+              <span>{locale === "zh" ? "眼高范围" : "Eye height range"}</span>
             </div>
             <div className="abstract-score-card">
               <div>
@@ -249,8 +252,11 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                 <strong>100%</strong>
               </div>
               <i />
-              <b />
-              <b />
+              <div className="hero-proof-row">
+                <span>{locale === "zh" ? "尺寸正确" : "Size OK"}</span>
+                <span>{locale === "zh" ? "脸部居中" : "Face centered"}</span>
+                <span>{locale === "zh" ? "可导出" : "Ready"}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -299,18 +305,26 @@ export function MarketingHome({ locale }: { locale: Locale }) {
             <article className="framer-abstract-card" key={card.title}>
               <div className={`abstract-visual abstract-${card.kind}`}>
                 {card.kind === "check" && (
-                  <div className="feature-shot-stack feature-shot-stack-check">
-                    <div className="feature-shot-crop feature-shot-crop-face">
+                  <div className="feature-device feature-device-check">
+                    <div className="feature-photo-window">
                       <img
                         src="/screenshots/hero-checks.png"
                         alt={locale === "zh" ? "证件照检测网格和眼高范围" : "Photo check grid and eye height range"}
                       />
+                      <span>{locale === "zh" ? "眼高范围" : "Eye height range"}</span>
                     </div>
-                    <div className="feature-shot-crop feature-shot-crop-checks">
-                      <img
-                        src="/screenshots/hero-checks.png"
-                        alt={locale === "zh" ? "Ready to Export 和已通过检查项" : "Ready to Export and passed checks"}
-                      />
+                    <div className="feature-status-card">
+                      <span aria-hidden="true">✓</span>
+                      <div>
+                        <strong>Ready to Export</strong>
+                        <p>{locale === "zh" ? "关键检查已通过" : "Key checks passed"}</p>
+                      </div>
+                      <em>100%</em>
+                    </div>
+                    <div className="feature-scan-list">
+                      <span>{locale === "zh" ? "尺寸" : "Size"}</span>
+                      <span>{locale === "zh" ? "脸部" : "Face"}</span>
+                      <span>{locale === "zh" ? "背景" : "Background"}</span>
                     </div>
                   </div>
                 )}
@@ -332,7 +346,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                       <div className="abstract-lock-row">
                         <span>▣</span>
                         <div>
-                          <strong>{locale === "zh" ? "私密、安全、合规" : "Private, Secure, Compliant"}</strong>
+                          <strong>{locale === "zh" ? "私密、本地处理" : "Private, on-device processing"}</strong>
                           <p>{locale === "zh" ? "照片处理在设备端完成" : "Photo processing happens on device"}</p>
                         </div>
                       </div>
@@ -350,18 +364,22 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                   </div>
                 )}
                 {card.kind === "print" && (
-                  <div className="feature-shot-stack feature-shot-stack-export">
-                    <div className="feature-shot-crop feature-shot-crop-output">
+                  <div className="feature-device feature-device-export">
+                    <div className="feature-export-window">
                       <img
                         src="/screenshots/feature-export-real.png"
                         alt={locale === "zh" ? "电子版和打印排版导出选项" : "Digital photo and print sheet export options"}
                       />
                     </div>
-                    <div className="feature-shot-crop feature-shot-crop-print">
+                    <div className="feature-print-window">
                       <img
                         src="/screenshots/feature-export-real.png"
                         alt={locale === "zh" ? "4x6 打印排版预览和保存按钮" : "4x6 print sheet preview and save button"}
                       />
+                    </div>
+                    <div className="feature-save-pill">
+                      <span aria-hidden="true">⇩</span>
+                      {locale === "zh" ? "保存 4x6 打印排版" : "Save 4x6 Print Sheet"}
                     </div>
                   </div>
                 )}
