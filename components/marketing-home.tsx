@@ -18,7 +18,7 @@ const seoLinks = [
 const homeLabels = {
   en: {
     heroTitle: "Passport, visa, and ID photos, made in minutes",
-    heroText: "Choose from 100+ passport, visa, and ID photo size presets. Import a portrait, check face position, background, and dimensions, then export a digital file or 4x6 print layout.",
+    heroText: "Choose a size, check face position and background, then export a digital file or 4x6 print layout.",
     disclaimer: "Creates photo files only. Does not generate IDs, passports, visas, or official documents.",
     cta: "Download iPhone App",
     trust: "Local processing. Photos stay on your device.",
@@ -44,9 +44,9 @@ const homeLabels = {
       { title: "Digital & Print Export", text: "Supports JPG, PNG, HEIC, PDF, plus 4x6, A4, and Letter print layouts." }
     ],
     abstractCards: [
-      { title: "Photo checks", tag: "Size, face, background", kind: "check" },
-      { title: "On-device processing", tag: "No upload", kind: "privacy" },
-      { title: "Print layout", tag: "4x6", kind: "print" }
+      { title: "Photo checks", tag: "Check size, face position, eye line, background, and export readiness before saving.", kind: "check" },
+      { title: "On-device processing", tag: "One-time purchase. No subscription. Photos stay on your iPhone.", kind: "privacy" },
+      { title: "Digital and print export", tag: "Save JPG, PNG, HEIC, PDF, or a 4x6, A4, and Letter print layout.", kind: "print" }
     ],
     complianceLink: "View photo checks",
     finalTitle: "Prepare a photo that matches the required size in minutes.",
@@ -55,7 +55,7 @@ const homeLabels = {
   },
   zh: {
     heroTitle: "护照照、签证照和证件照，即刻制作",
-    heroText: "支持 100+ 护照、签证和身份照规格。选择规格，导入照片，检查脸部位置、背景和尺寸，然后导出电子版或 4x6 打印排版。",
+    heroText: "选择规格，检查脸部位置和背景，然后导出电子版或 4x6 打印排版。",
     disclaimer: "只制作照片文件，不生成任何证件或官方文件。",
     cta: "下载 iPhone App",
     trust: "本地处理。照片不上云。",
@@ -81,9 +81,9 @@ const homeLabels = {
       { title: "电子版与打印版导出", text: "支持 JPG、PNG、HEIC、PDF，以及 4x6、A4、Letter 打印排版。" }
     ],
     abstractCards: [
-      { title: "照片检测", tag: "尺寸、脸部、背景", kind: "check" },
-      { title: "本地处理", tag: "照片不上云", kind: "privacy" },
-      { title: "打印排版", tag: "4x6", kind: "print" }
+      { title: "照片检测", tag: "导出前检查尺寸、脸部位置、眼线、背景和可导出状态。", kind: "check" },
+      { title: "本地处理", tag: "一次性购买，非订阅。照片留在 iPhone 上处理。", kind: "privacy" },
+      { title: "电子版与打印版导出", tag: "保存 JPG、PNG、HEIC、PDF，或 4x6、A4、Letter 打印排版。", kind: "print" }
     ],
     complianceLink: "查看检查项",
     finalTitle: "数秒制作符合规格的证件照。",
@@ -92,7 +92,7 @@ const homeLabels = {
   },
   ar: {
     heroTitle: "حضّر صور الجواز والتأشيرة والهوية خلال دقائق",
-    heroText: "حضّر صور الجواز والتأشيرة والهوية على iPhone. اختر المقاس، أضف الصورة، افحص الوجه والخلفية، ثم صدّر ملفاً رقمياً أو صفحة طباعة 4x6.",
+    heroText: "اختر المقاس، افحص موضع الوجه والخلفية، ثم صدّر ملفاً رقمياً أو صفحة طباعة 4x6.",
     disclaimer: "ينشئ ملفات صور فقط. لا ينشئ هويات أو جوازات أو تأشيرات أو مستندات رسمية.",
     cta: "تنزيل التطبيق",
     trust: "معالجة محلية. تبقى الصور على جهازك.",
@@ -118,9 +118,9 @@ const homeLabels = {
       { title: "تصدير رقمي وللطباعة", text: "يدعم JPG وPNG وHEIC وPDF وتخطيطات 4x6 وA4 وLetter." }
     ],
     abstractCards: [
-      { title: "فحص الصورة", tag: "المقاس والوجه والخلفية", kind: "check" },
-      { title: "معالجة على الجهاز", tag: "بدون رفع", kind: "privacy" },
-      { title: "تخطيط الطباعة", tag: "4x6", kind: "print" }
+      { title: "فحص الصورة", tag: "افحص المقاس والوجه وخط العين والخلفية قبل الحفظ.", kind: "check" },
+      { title: "معالجة على الجهاز", tag: "شراء لمرة واحدة. بدون اشتراك. تبقى الصور على iPhone.", kind: "privacy" },
+      { title: "تصدير رقمي وللطباعة", tag: "احفظ JPG أو PNG أو HEIC أو PDF أو تخطيط 4x6 وA4 وLetter.", kind: "print" }
     ],
     complianceLink: "عرض كل الفحوصات",
     finalTitle: "حضّر صورة تطابق المقاس المطلوب خلال دقائق.",
@@ -129,7 +129,7 @@ const homeLabels = {
   },
   de: {
     heroTitle: "Pass-, Visa- und Ausweisfotos in Minuten erstellen",
-    heroText: "Erstelle Pass-, Visa- und Ausweisfotos auf dem iPhone. Größe wählen, Foto importieren, Gesicht und Hintergrund prüfen, digital oder als 4x6-Drucklayout exportieren.",
+    heroText: "Größe wählen, Gesicht und Hintergrund prüfen, dann digital oder als 4x6-Drucklayout exportieren.",
     disclaimer: "Erstellt nur Fotodateien. Erstellt keine Ausweise, Pässe, Visa oder offiziellen Dokumente.",
     cta: "App laden",
     trust: "Lokale Verarbeitung. Fotos bleiben auf deinem Gerät.",
@@ -155,9 +155,9 @@ const homeLabels = {
       { title: "Digital- und Druckexport", text: "JPG, PNG, HEIC, PDF sowie 4x6-, A4- und Letter-Drucklayouts." }
     ],
     abstractCards: [
-      { title: "Foto-Checks", tag: "Größe, Gesicht, Hintergrund", kind: "check" },
-      { title: "Lokal verarbeitet", tag: "Kein Upload", kind: "privacy" },
-      { title: "Drucklayout", tag: "4x6", kind: "print" }
+      { title: "Foto-Checks", tag: "Prüfe Größe, Gesicht, Augenlinie, Hintergrund und Exportbereitschaft vor dem Speichern.", kind: "check" },
+      { title: "Lokal verarbeitet", tag: "Einmaliger Kauf. Kein Abo. Fotos bleiben auf deinem iPhone.", kind: "privacy" },
+      { title: "Digital- und Druckexport", tag: "Speichere JPG, PNG, HEIC, PDF oder 4x6-, A4- und Letter-Drucklayouts.", kind: "print" }
     ],
     complianceLink: "Alle Prüfungen ansehen",
     finalTitle: "Bereite ein Foto vor, das zur benötigten Größe passt.",
@@ -195,9 +195,6 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         <div className="framer-hero-copy">
           <h1>{labels.heroTitle}</h1>
           <p>{labels.heroText}</p>
-          {labels.disclaimer ? (
-            <p className="framer-hero-disclaimer">{labels.disclaimer}</p>
-          ) : null}
           <TrackedLink
             className="button button-primary framer-primary-cta"
             href={siteConfig.appStoreUrl}
@@ -217,23 +214,26 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="framer-product-panel" aria-hidden="true">
+        <div className="framer-product-panel">
           <div className="framer-spec-list">
             <div className="framer-panel-header">
               <span>{locale === "zh" ? "证件照规格" : "Photo sizes"}</span>
               <strong>100+</strong>
             </div>
-            <div className="framer-search-line">{labels.searchPlaceholder}</div>
+            <Link className="framer-search-line" href={`/${locale}/blog`}>
+              <span>{labels.searchPlaceholder}</span>
+              <span aria-hidden="true">→</span>
+            </Link>
             <div className="framer-spec-row">
               <span>{locale === "zh" ? "美国护照" : "US Passport"}</span>
               <em>2 x 2 in</em>
             </div>
             <div className="framer-spec-row">
-              <span>{locale === "zh" ? "中国签证" : "China Visa"}</span>
-              <em>33 x 48 mm</em>
+              <span>{locale === "zh" ? "沙特 Iqama" : locale === "ar" ? "إقامة السعودية" : locale === "de" ? "Saudi-Iqama" : "Saudi Iqama"}</span>
+              <em>200 x 200 px</em>
             </div>
             <div className="framer-spec-row">
-              <span>{locale === "zh" ? "日本个人编号卡" : "Japan ID Card"}</span>
+              <span>{locale === "zh" ? "加拿大护照" : locale === "ar" ? "جواز كندا" : locale === "de" ? "Kanada-Passfoto" : "Canada Passport"}</span>
               <em>35 x 45 mm</em>
             </div>
           </div>
@@ -242,7 +242,9 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               <img
                 alt=""
                 className="hero-compliance-shot"
-                src="/screenshots/hero-compliance-preview.png"
+                src="/screenshots/hero-compliance-preview-fast.jpg"
+                width="560"
+                height="466"
               />
               <span>{locale === "zh" ? "眼高范围" : "Eye height range"}</span>
             </div>
@@ -291,15 +293,6 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="framer-feature-row">
-          {labels.featureColumns.map((item) => (
-            <article key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-
         <div className="framer-abstract-grid">
           {labels.abstractCards.map((card) => (
             <article className="framer-abstract-card" key={card.title}>
@@ -308,8 +301,12 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                   <div className="feature-device feature-device-check">
                     <div className="feature-photo-window">
                       <img
-                        src="/screenshots/hero-checks.png"
+                        src="/screenshots/hero-checks-home.jpg"
                         alt={locale === "zh" ? "证件照检测网格和眼高范围" : "Photo check grid and eye height range"}
+                        loading="lazy"
+                        decoding="async"
+                        width="560"
+                        height="1216"
                       />
                       <span>{locale === "zh" ? "眼高范围" : "Eye height range"}</span>
                     </div>
@@ -367,14 +364,22 @@ export function MarketingHome({ locale }: { locale: Locale }) {
                   <div className="feature-device feature-device-export">
                     <div className="feature-export-window">
                       <img
-                        src="/screenshots/feature-export-real.png"
+                        src="/screenshots/feature-export-home.jpg"
                         alt={locale === "zh" ? "电子版和打印排版导出选项" : "Digital photo and print sheet export options"}
+                        loading="lazy"
+                        decoding="async"
+                        width="560"
+                        height="1103"
                       />
                     </div>
                     <div className="feature-print-window">
                       <img
-                        src="/screenshots/feature-export-real.png"
+                        src="/screenshots/feature-export-home.jpg"
                         alt={locale === "zh" ? "4x6 打印排版预览和保存按钮" : "4x6 print sheet preview and save button"}
+                        loading="lazy"
+                        decoding="async"
+                        width="560"
+                        height="1103"
                       />
                     </div>
                     <div className="feature-save-pill">
@@ -409,6 +414,9 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           {labels.cta}
         </TrackedLink>
         <span>{labels.finalTrust}</span>
+        {labels.disclaimer ? (
+          <p className="framer-footer-disclaimer">{labels.disclaimer}</p>
+        ) : null}
       </section>
     </main>
   );
