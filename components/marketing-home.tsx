@@ -279,6 +279,39 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ul>
+          <div className="framer-mobile-stage" aria-hidden="true">
+            <div className="framer-phone">
+              <div className="framer-phone-top">
+                <span>9:41</span>
+                <i />
+              </div>
+              <div className="framer-phone-title">
+                <strong>{locale === "zh" ? "美国护照" : "U.S. Passport"}</strong>
+                <span>51 x 51 mm · 600 x 600 px</span>
+              </div>
+              <div className="framer-phone-photo">
+                <img
+                  alt=""
+                  src="/screenshots/hero-checks-home.jpg"
+                  width="560"
+                  height="1216"
+                />
+                <span>{locale === "zh" ? "眼高范围" : "Crop height range"}</span>
+              </div>
+              <div className="framer-ready-card">
+                <span aria-hidden="true">✓</span>
+                <div>
+                  <strong>Ready to Export</strong>
+                  <p>{locale === "zh" ? "关键检查已通过" : "All blocking checks passed"}</p>
+                </div>
+                <em>100%</em>
+              </div>
+              <div className="framer-phone-cta">Ready to Export</div>
+            </div>
+            <div className="framer-print-sheet">
+              <img src="/screenshots/print-sheet-real.jpg" alt="" width="933" height="1400" />
+            </div>
+          </div>
           <div className="framer-proof-icons" aria-label={locale === "zh" ? "核心能力" : "Key capabilities"}>
             {heroProofItems.map((item) => (
               <div key={`${item.value}-${item.label}`}>

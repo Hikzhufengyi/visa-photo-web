@@ -214,6 +214,11 @@
   min-height: 520px;
 }
 
+.framer-mobile-stage {
+  display: none;
+  order: 0;
+}
+
 .framer-phone {
   position: absolute;
   left: 8%;
@@ -5164,6 +5169,211 @@ h3 {
   }
 
   .framer-home .framer-hero-stage {
+    display: block;
+    width: min(100%, 560px);
+    min-height: 430px;
+    margin: 18px auto 0;
+    transform: none;
+    transform-origin: center;
+  }
+
+  .framer-home .framer-phone {
+    left: 6%;
+    top: 50%;
+    width: min(260px, 48vw);
+    min-height: 420px;
+    transform: translateY(-50%);
+  }
+
+  .framer-home .framer-phone-photo {
+    height: 178px;
+  }
+
+  .framer-home .framer-print-sheet {
+    right: 4%;
+    top: 54px;
+    width: min(220px, 40vw);
+    transform: rotate(6deg);
+  }
+
+  .framer-home .framer-print-note {
+    right: 5%;
+    bottom: 74px;
+  }
+}
+
+@media (max-width: 760px) {
+  .framer-home .framer-mobile-stage {
+    display: block;
+    position: relative;
+    order: 1;
+    width: min(100%, 360px);
+    min-height: 248px;
+    margin: 4px auto 2px;
+  }
+
+  .framer-home .framer-hero-bullets {
+    order: 2;
+  }
+
+  .framer-home .framer-proof-icons {
+    order: 3;
+  }
+
+  .framer-home .framer-hero-download {
+    order: 4;
+  }
+
+  .framer-home .framer-hero-trust-row {
+    order: 5;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone {
+    left: 0;
+    top: 50%;
+    width: min(182px, 52vw);
+    min-height: 286px;
+    padding: 8px;
+    border-width: 6px;
+    border-radius: 30px;
+    transform: translateY(-50%);
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-top {
+    height: 20px;
+    padding-inline: 7px;
+    font-size: 0.58rem;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-top i {
+    width: 46px;
+    height: 15px;
+    margin-right: 32px;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-title {
+    gap: 1px;
+    padding: 4px 6px 6px;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-title strong {
+    font-size: 0.72rem;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-title span {
+    font-size: 0.54rem;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-photo {
+    height: 104px;
+    border-radius: 12px;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-photo span {
+    right: 5px;
+    top: 32px;
+    padding: 3px 5px;
+    font-size: 0.48rem;
+  }
+
+  .framer-home .framer-mobile-stage .framer-ready-card {
+    gap: 6px;
+    min-height: 52px;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 12px;
+  }
+
+  .framer-home .framer-mobile-stage .framer-ready-card > span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .framer-home .framer-mobile-stage .framer-ready-card strong,
+  .framer-home .framer-mobile-stage .framer-ready-card em {
+    font-size: 0.66rem;
+  }
+
+  .framer-home .framer-mobile-stage .framer-ready-card p {
+    font-size: 0.5rem;
+  }
+
+  .framer-home .framer-mobile-stage .framer-phone-cta {
+    min-height: 26px;
+    margin-top: 7px;
+    border-radius: 8px;
+    font-size: 0.62rem;
+  }
+
+  .framer-home .framer-mobile-stage .framer-print-sheet {
+    right: 0;
+    top: 18px;
+    z-index: 4;
+    width: min(154px, 43vw);
+    padding: 7px;
+    border-radius: 14px;
+    opacity: 1;
+    transform: rotate(6deg);
+  }
+
+  .framer-home .framer-hero-stage {
+    display: none;
+  }
+
+  .framer-home .framer-phone {
+    left: 4%;
+    width: min(232px, 53vw);
+    min-height: 386px;
+    border-width: 7px;
+    border-radius: 34px;
+  }
+
+  .framer-home .framer-phone-top {
+    height: 24px;
+    padding-inline: 9px;
+  }
+
+  .framer-home .framer-phone-top i {
+    width: 58px;
+    height: 18px;
+    margin-right: 42px;
+  }
+
+  .framer-home .framer-phone-title {
+    padding: 5px 8px 8px;
+  }
+
+  .framer-home .framer-phone-title strong {
+    font-size: 0.85rem;
+  }
+
+  .framer-home .framer-phone-title span {
+    font-size: 0.62rem;
+  }
+
+  .framer-home .framer-phone-photo {
+    height: 150px;
+    border-radius: 14px;
+  }
+
+  .framer-home .framer-ready-card {
+    min-height: 70px;
+    margin-top: 10px;
+    padding: 11px;
+  }
+
+  .framer-home .framer-phone-cta {
+    min-height: 32px;
+    margin-top: 9px;
+  }
+
+  .framer-home .framer-print-sheet {
+    right: 0;
+    top: 50px;
+    width: min(190px, 43vw);
+  }
+
+  .framer-home .framer-print-note {
     display: none;
   }
 }
@@ -5195,28 +5405,99 @@ h3 {
   }
 
   .framer-home .framer-proof-icons {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .framer-home .framer-proof-icons div {
+    min-height: 64px;
+    gap: 4px;
+    padding: 7px 4px;
   }
 
   .framer-home .framer-proof-icons div:nth-child(2n) {
+    border-right: 1px solid rgba(0, 71, 171, 0.1);
+  }
+
+  .framer-home .framer-proof-icons div:last-child {
     border-right: 0;
   }
 
   .framer-home .framer-proof-icons span {
-    width: 60px;
-    height: 60px;
-    border-radius: 17px;
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
   }
 
   .framer-home .framer-proof-icons span img {
-    width: 29px;
-    height: 29px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .framer-home .framer-proof-icons strong {
+    font-size: 0.66rem;
+  }
+
+  .framer-home .framer-proof-icons small {
+    font-size: 0.58rem;
+    line-height: 1.1;
   }
 
   .framer-home .framer-hero-download {
     min-height: 62px;
     font-size: 1.28rem;
+  }
+
+  .framer-home .framer-hero-stage {
+    display: none;
+  }
+
+  .framer-home .framer-phone {
+    left: 0;
+    width: min(210px, 57vw);
+    min-height: 344px;
+    padding: 10px;
+  }
+
+  .framer-home .framer-phone-photo {
+    height: 126px;
+  }
+
+  .framer-home .framer-phone-photo span {
+    right: 7px;
+    top: 40px;
+    padding: 4px 6px;
+    font-size: 0.55rem;
+  }
+
+  .framer-home .framer-ready-card {
+    grid-template-columns: auto 1fr auto;
+    gap: 7px;
+    min-height: 62px;
+    border-radius: 14px;
+  }
+
+  .framer-home .framer-ready-card > span {
+    width: 24px;
+    height: 24px;
+  }
+
+  .framer-home .framer-ready-card strong,
+  .framer-home .framer-ready-card em {
+    font-size: 0.78rem;
+  }
+
+  .framer-home .framer-ready-card p {
+    font-size: 0.6rem;
+  }
+
+  .framer-home .framer-print-sheet {
+    right: -2px;
+    top: 40px;
+    width: min(166px, 45vw);
+    opacity: 1;
   }
 
   .framer-hero-trust-row {
