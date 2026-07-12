@@ -33,7 +33,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
     <>
       <header className="site-header" dir={isRtl ? "rtl" : "ltr"}>
         <Link className="brand" href={`/${locale}`} aria-label={`${siteConfig.name} home`}>
-          <span className="brand-mark">ID</span>
+          <img className="brand-mark" src="/app-icon-design.png" alt="" width="34" height="34" />
           <span>{siteConfig.name}</span>
         </Link>
 

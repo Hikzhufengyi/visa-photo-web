@@ -188,215 +188,255 @@ const homeLabels = {
 
 export function MarketingHome({ locale }: { locale: Locale }) {
   const labels = homeLabels[locale];
+  const heroBullets = locale === "zh"
+    ? ["导出前完成 21 项照片检查", "覆盖护照、签证、移民和身份照常用规格", "照片本地处理，不上传服务器", "支持电子版和 4x6 打印排版"]
+    : ["Run 21 photo checks before export", "Passport, visa, immigration, and ID photo presets", "Photos stay on your device", "Digital files and 4x6 print layouts"];
+  const heroProofItems = locale === "zh"
+    ? [
+        { icon: "/icon-network.svg", value: "100+", label: "官方规格" },
+        { icon: "/icon-ai.svg", value: "AI", label: "照片检测" },
+        { icon: "/icon-shield.svg", value: "Private", label: "本地处理" },
+        { icon: "/icon-print.svg", value: "电子版 + 打印版", label: "导出" }
+      ]
+    : [
+        { icon: "/icon-network.svg", value: "100+", label: "Official Sizes" },
+        { icon: "/icon-ai.svg", value: "AI", label: "Compliance Check" },
+        { icon: "/icon-shield.svg", value: "Private", label: "On-Device" },
+        { icon: "/icon-print.svg", value: "Digital & Print", label: "Export" }
+      ];
+  const heroTrustItems = locale === "zh"
+    ? [
+        { icon: "/icon-one-time.svg", label: "一次购买" },
+        { icon: "/icon-subscription.svg", label: "不订阅" },
+        { icon: "/icon-cloud-offline.svg", label: "不上云" }
+      ]
+    : [
+        { icon: "/icon-one-time.svg", label: "One-time purchase" },
+        { icon: "/icon-subscription.svg", label: "No subscription" },
+        { icon: "/icon-cloud-offline.svg", label: "No cloud upload" }
+      ];
+  const exportFormats = ["JPG", "HEIC", "PNG", "PDF"];
+  const printSizes = ["4 x 6 in", "A4", "5 x 7 in", "4 x 4 in", "3 x 4 in", "Letter"];
+  const privacyItems = locale === "zh"
+    ? ["不上传照片", "无追踪", "可离线处理"]
+    : ["No upload", "No tracking", "Works offline"];
+  const specRows = locale === "zh"
+    ? [
+        { icon: "🇺🇸", title: "美国护照", meta: "51 x 51 mm · 600 x 600 px" },
+        { icon: "🇸🇦", title: "沙特 Iqama", meta: "200 x 200 px" },
+        { icon: "🇨🇦", title: "加拿大护照", meta: "50 x 70 mm · 600 x 840 px" }
+      ]
+    : [
+        { icon: "🇺🇸", title: "U.S. Passport", meta: "51 x 51 mm · 600 x 600 px" },
+        { icon: "🇸🇦", title: "Saudi Iqama", meta: "200 x 200 px" },
+        { icon: "🇨🇦", title: "Canada Passport", meta: "50 x 70 mm · 600 x 840 px" }
+      ];
 
   return (
     <main className={`page-shell framer-home locale-${locale}`}>
-      <section className="framer-hero">
-        <div className="framer-hero-copy">
-          <h1>{labels.heroTitle}</h1>
+      <section className="framer-hero framer-hero-showcase">
+        <div className="framer-hero-copy framer-showcase-copy">
+          <div className="framer-brand-lockup" aria-label="IDPhoto Pro">
+            <img className="framer-app-icon" src="/app-icon-design.png" alt="" width="76" height="76" />
+            <strong>IDPhoto Pro</strong>
+          </div>
+          <h1>
+            {locale === "zh" ? (
+              <>
+                专业<span>证件照，</span>简单制作。
+              </>
+            ) : (
+              <>
+                Professional <span>ID Photos,</span> Made Simple.
+              </>
+            )}
+          </h1>
           <p>{labels.heroText}</p>
+          <ul className="framer-hero-bullets">
+            {heroBullets.map((item, index) => (
+              <li key={item}>
+                <img src="/check-square.png" alt="" width="24" height="24" />
+                {index === 0 ? (
+                  locale === "zh" ? (
+                    <>
+                      导出前完成{" "}
+                      <Link className="framer-inline-text-link" href={`/${locale}/compliance`}>
+                        21 项照片检查
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      Run{" "}
+                      <Link className="framer-inline-text-link" href={`/${locale}/compliance`}>
+                        21 photo checks
+                      </Link>{" "}
+                      before export
+                    </>
+                  )
+                ) : (
+                  item
+                )}
+              </li>
+            ))}
+          </ul>
+          <div className="framer-proof-icons" aria-label={locale === "zh" ? "核心能力" : "Key capabilities"}>
+            {heroProofItems.map((item) => (
+              <div key={`${item.value}-${item.label}`}>
+                <span>
+                  <img src={item.icon} alt="" width="28" height="28" />
+                </span>
+                <strong>{item.value}</strong>
+                <small>{item.label}</small>
+              </div>
+            ))}
+          </div>
           <TrackedLink
-            className="button button-primary framer-primary-cta"
+            className="button button-primary framer-primary-cta framer-hero-download"
             href={siteConfig.appStoreUrl}
             target="_blank"
             rel="noreferrer"
             eventName="app_store_click"
-            eventParams={{ source: "home_framer_hero", locale }}
+            eventParams={{ source: "home_showcase_hero", locale }}
           >
-            <span className="framer-cta-icon" aria-hidden="true">↓</span>
+            <span aria-hidden="true"></span>
             <span>{labels.cta}</span>
-            <span className="framer-cta-arrow" aria-hidden="true">→</span>
           </TrackedLink>
-          <div className="framer-trust-pills" aria-label={labels.trust}>
-            {labels.trustPills.map((item) => (
-              <span key={item}>{item}</span>
+          <div className="framer-hero-trust-row" aria-label={locale === "zh" ? "购买和隐私" : "Purchase and privacy"}>
+            {heroTrustItems.map((item) => (
+              <span key={item.label}>
+                <img src={item.icon} alt="" width="18" height="18" />
+                {item.label}
+              </span>
             ))}
           </div>
         </div>
 
-        <div className="framer-product-panel">
-          <div className="framer-spec-list">
-            <div className="framer-panel-header">
-              <span>{locale === "zh" ? "证件照规格" : "Photo sizes"}</span>
-              <strong>100+</strong>
+        <div className="framer-hero-stage" aria-hidden="true">
+          <div className="framer-phone">
+            <div className="framer-phone-top">
+              <span>9:41</span>
+              <i />
             </div>
-            <Link className="framer-search-line" href={`/${locale}/blog`}>
-              <span>{labels.searchPlaceholder}</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-            <div className="framer-spec-row">
-              <span>{locale === "zh" ? "美国护照" : "US Passport"}</span>
-              <em>2 x 2 in</em>
+            <div className="framer-phone-title">
+              <strong>{locale === "zh" ? "美国护照" : "U.S. Passport"}</strong>
+              <span>51 x 51 mm · 600 x 600 px</span>
             </div>
-            <div className="framer-spec-row">
-              <span>{locale === "zh" ? "沙特 Iqama" : locale === "ar" ? "إقامة السعودية" : locale === "de" ? "Saudi-Iqama" : "Saudi Iqama"}</span>
-              <em>200 x 200 px</em>
-            </div>
-            <div className="framer-spec-row">
-              <span>{locale === "zh" ? "加拿大护照" : locale === "ar" ? "جواز كندا" : locale === "de" ? "Kanada-Passfoto" : "Canada Passport"}</span>
-              <em>35 x 45 mm</em>
-            </div>
-          </div>
-          <div className="framer-check-panel">
-            <div className="abstract-face-frame">
+            <div className="framer-phone-photo">
               <img
                 alt=""
-                className="hero-compliance-shot"
-                src="/screenshots/hero-compliance-preview-fast.jpg"
+                src="/screenshots/hero-checks-home.jpg"
                 width="560"
-                height="466"
+                height="1216"
               />
-              <span>{locale === "zh" ? "眼高范围" : "Eye height range"}</span>
+              <span>{locale === "zh" ? "眼高范围" : "Crop height range"}</span>
             </div>
-            <div className="abstract-score-card">
+            <div className="framer-ready-card">
+              <span aria-hidden="true">✓</span>
               <div>
-                <span>{locale === "zh" ? "照片检测" : "Photo checks"}</span>
-                <strong>100%</strong>
+                <strong>Ready to Export</strong>
+                <p>{locale === "zh" ? "关键检查已通过" : "All blocking checks passed"}</p>
               </div>
-              <i />
-              <div className="hero-proof-row">
-                <span>{locale === "zh" ? "尺寸正确" : "Size OK"}</span>
-                <span>{locale === "zh" ? "脸部居中" : "Face centered"}</span>
-                <span>{locale === "zh" ? "可导出" : "Ready"}</span>
-              </div>
+              <em>100%</em>
             </div>
+            <div className="framer-phone-cta">Ready to Export</div>
+          </div>
+          <div className="framer-print-sheet">
+            <img src="/screenshots/print-sheet-real.jpg" alt="" width="933" height="1400" />
+          </div>
+          <p className="framer-print-note">{locale === "zh" ? "可在家打印或到照相馆冲印" : "Print at home or at any photo lab"}</p>
+        </div>
+      </section>
+
+      <section className="framer-format-section" id="guides">
+        <div className="framer-format-copy">
+          <h2>{labels.standardsTitle}</h2>
+          <p>{labels.standardsText}</p>
+          <Link className="framer-format-search" href={`/${locale}/blog`}>
+            <span>{labels.searchPlaceholder}</span>
+            <em>{labels.searchMeta}</em>
+          </Link>
+          <div className="framer-format-list">
+            {specRows.map((row) => (
+              <Link href={`/${locale}/blog`} key={row.title}>
+                <span>{row.icon}</span>
+                <div>
+                  <strong>{row.title}</strong>
+                  <small>{row.meta}</small>
+                </div>
+                <em>›</em>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="framer-world-panel" aria-hidden="true">
+          <div className="framer-world-map">
+            <img src="/world-map-dots.png" alt="" width="1717" height="916" />
+          </div>
+          <div className="framer-map-badge badge-one">
+            <strong>100+</strong>
+            <span>{locale === "zh" ? "国家和地区" : "Countries"}</span>
+          </div>
+          <div className="framer-map-badge badge-two">
+            <strong>100+</strong>
+            <span>{locale === "zh" ? "证件类型" : "Document types"}</span>
+          </div>
+          <div className="framer-map-badge badge-three">
+            <strong>{locale === "zh" ? "精准" : "Exact"}</strong>
+            <span>{locale === "zh" ? "尺寸规格" : "Photo sizes"}</span>
           </div>
         </div>
       </section>
 
-      <section className="framer-standards" id="guides">
-        <p className="framer-kicker">{labels.standardsKicker}</p>
-        <div className="framer-section-heading">
-          <h2>{labels.standardsTitle}</h2>
-          <p>{labels.standardsText}</p>
-        </div>
-        <div className="framer-search-card">
-          <Link className="framer-search-input" href={`/${locale}/blog`}>
-            <span>{labels.searchPlaceholder}</span>
-            <em>{labels.searchMeta}</em>
-          </Link>
-          <div className="framer-chip-grid">
-            {labels.standardLinks.map((item) => (
-              <Link
-                className="framer-chip"
-                href={`/${locale}/${item.slug}`}
-                key={item.slug}
-              >
-                <span className="framer-chip-icon" aria-hidden="true">{item.icon}</span>
-                <span>{item.label}</span>
-              </Link>
+      <section className="framer-export-section">
+        <div className="framer-export-card">
+          <h2>{locale === "zh" ? "一张照片，多种格式。" : "One Photo. Every Format You Need."}</h2>
+          <p>{locale === "zh" ? "适合线上申请上传，并支持自定义文件大小。" : "Perfect for online applications, with custom file size controls."}</p>
+          <div className="framer-format-buttons">
+            {exportFormats.map((format, index) => (
+              <span className={index === 0 ? "is-active" : ""} key={format}>{format}</span>
             ))}
-            <Link className="framer-chip framer-chip-active" href={`/${locale}/blog`}>
-              <span>{labels.allStandardsLabel}</span>
-              <span aria-hidden="true">→</span>
-            </Link>
+          </div>
+          <label className="framer-size-slider">
+            <span>{locale === "zh" ? "文件压缩" : "Custom size"}</span>
+            <i />
+            <em>200 KB</em>
+            <em>500 KB</em>
+            <em>{locale === "zh" ? "原图" : "Original"}</em>
+          </label>
+        </div>
+        <div className="framer-export-card">
+          <h2>{locale === "zh" ? "打印尺寸，直接排好。" : "Print Sheets, Ready to Save."}</h2>
+          <p>{locale === "zh" ? "适合在家或照相馆打印，支持裁切线和自动填充。" : "For home printers or photo labs, with crop marks and auto fill."}</p>
+          <div className="framer-print-options">
+            {printSizes.map((size, index) => (
+              <span className={index === 0 ? "is-active" : ""} key={size}>{size}<small>300 DPI</small></span>
+            ))}
+          </div>
+          <div className="framer-toggle-row"><span>Auto fill</span><i /></div>
+          <div className="framer-toggle-row"><span>Crop marks</span><i /></div>
+        </div>
+        <div className="framer-export-card framer-export-preview-card">
+          <div className="framer-export-preview" aria-hidden="true">
+            <img src="/screenshots/print-sheet-real.jpg" alt="" width="933" height="1400" />
           </div>
         </div>
+      </section>
 
-        <div className="framer-abstract-grid">
-          {labels.abstractCards.map((card) => (
-            <article className="framer-abstract-card" key={card.title}>
-              <div className={`abstract-visual abstract-${card.kind}`}>
-                {card.kind === "check" && (
-                  <div className="feature-device feature-device-check">
-                    <div className="feature-photo-window">
-                      <img
-                        src="/screenshots/hero-checks-home.jpg"
-                        alt={locale === "zh" ? "证件照检测网格和眼高范围" : "Photo check grid and eye height range"}
-                        loading="lazy"
-                        decoding="async"
-                        width="560"
-                        height="1216"
-                      />
-                      <span>{locale === "zh" ? "眼高范围" : "Eye height range"}</span>
-                    </div>
-                    <div className="feature-status-card">
-                      <span aria-hidden="true">✓</span>
-                      <div>
-                        <strong>Ready to Export</strong>
-                        <p>{locale === "zh" ? "关键检查已通过" : "Key checks passed"}</p>
-                      </div>
-                      <em>100%</em>
-                    </div>
-                    <div className="feature-scan-list">
-                      <span>{locale === "zh" ? "尺寸" : "Size"}</span>
-                      <span>{locale === "zh" ? "脸部" : "Face"}</span>
-                      <span>{locale === "zh" ? "背景" : "Background"}</span>
-                    </div>
-                  </div>
-                )}
-                {card.kind === "privacy" && (
-                  <div className="abstract-privacy-panel">
-                    <div className="abstract-pro-card">
-                      <div className="abstract-crown">♛</div>
-                      <div>
-                        <strong>{locale === "zh" ? "Pro Member" : "Pro Member"}</strong>
-                        <p>{locale === "zh" ? "一次买断已解锁" : "Lifetime access active"}</p>
-                      </div>
-                    </div>
-                    <div className="abstract-trust-pills">
-                      <span>{locale === "zh" ? "买断" : "Lifetime"}</span>
-                      <span>{locale === "zh" ? "无广告" : "No Ads"}</span>
-                      <span>{locale === "zh" ? "本地处理" : "On-device"}</span>
-                    </div>
-                    <div className="abstract-privacy-card">
-                      <div className="abstract-lock-row">
-                        <span>▣</span>
-                        <div>
-                          <strong>{locale === "zh" ? "私密、本地处理" : "Private, on-device processing"}</strong>
-                          <p>{locale === "zh" ? "照片处理在设备端完成" : "Photo processing happens on device"}</p>
-                        </div>
-                      </div>
-                      {[
-                        locale === "zh" ? "照片不上传服务器" : "Photos are not uploaded",
-                        locale === "zh" ? "无广告 SDK" : "No ad SDKs",
-                        locale === "zh" ? "记录留在本机" : "Records stay on this device"
-                      ].map((item) => (
-                        <div className="abstract-privacy-row" key={item}>
-                          <span />
-                          <strong>{item}</strong>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {card.kind === "print" && (
-                  <div className="feature-device feature-device-export">
-                    <div className="feature-export-window">
-                      <img
-                        src="/screenshots/feature-export-home.jpg"
-                        alt={locale === "zh" ? "电子版和打印排版导出选项" : "Digital photo and print sheet export options"}
-                        loading="lazy"
-                        decoding="async"
-                        width="560"
-                        height="1103"
-                      />
-                    </div>
-                    <div className="feature-print-window">
-                      <img
-                        src="/screenshots/feature-export-home.jpg"
-                        alt={locale === "zh" ? "4x6 打印排版预览和保存按钮" : "4x6 print sheet preview and save button"}
-                        loading="lazy"
-                        decoding="async"
-                        width="560"
-                        height="1103"
-                      />
-                    </div>
-                    <div className="feature-save-pill">
-                      <span aria-hidden="true">⇩</span>
-                      {locale === "zh" ? "保存 4x6 打印排版" : "Save 4x6 Print Sheet"}
-                    </div>
-                  </div>
-                )}
-              </div>
-              <h3>{card.title}</h3>
-              <p>{card.tag}</p>
-              {card.kind === "check" && (
-                <Link className="framer-detail-link" href={`/${locale}/compliance`}>
-                  {labels.complianceLink}
-                </Link>
-              )}
-            </article>
+      <section className="framer-privacy-section">
+        <div className="framer-privacy-lock" aria-hidden="true">
+          <img src="/icon-shield.svg" alt="" width="30" height="30" />
+        </div>
+        <div>
+          <h2>{locale === "zh" ? "100% 本地私密处理" : "100% Private Processing"}</h2>
+          <p>{locale === "zh" ? "照片处理留在设备端，不上传服务器，不跟踪你的照片。" : "Photo processing stays on device. No upload, no tracking."}</p>
+        </div>
+        <div className="framer-privacy-list">
+          {privacyItems.map((item) => (
+            <span key={item}>
+              <img src="/check-square.png" alt="" width="20" height="20" />
+              {item}
+            </span>
           ))}
         </div>
       </section>
@@ -411,7 +451,8 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           eventName="app_store_click"
           eventParams={{ source: "home_framer_bottom", locale }}
         >
-          {labels.cta}
+          <span aria-hidden="true"></span>
+          <span>{labels.cta}</span>
         </TrackedLink>
         <span>{labels.finalTrust}</span>
         {labels.disclaimer ? (
