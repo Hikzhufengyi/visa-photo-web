@@ -24,6 +24,8 @@ const intentLabels = {
   }
 };
 
+const contentReviewDate = "2026-07-16";
+
 export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
   const isZh = locale === "zh";
   const isAr = locale === "ar";
@@ -201,6 +203,8 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
       description: page.intro,
       url,
       mainEntityOfPage: url,
+      datePublished: contentReviewDate,
+      dateModified: contentReviewDate,
       articleSection: intentLabels[page.searchIntent][locale],
       about: [
         page.country,
@@ -214,7 +218,54 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
       publisher: {
         "@type": "Organization",
         name: siteConfig.name
-      }
+      },
+      citation: page.sourceUrl ? [page.sourceUrl] : undefined
+    },
+    comparison: page.comparisonRows?.length
+      ? {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: `${page.heading} comparison`,
+          description: page.answerSummary ?? page.intro,
+          itemListElement: page.comparisonRows.map((row, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: row.factor,
+            description: `IDPhoto Pro: ${row.idphotoPro} Common alternative: ${row.alternative}`
+          }))
+        }
+      : null,
+    webPage: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: page.heading,
+      description: page.answerSummary ?? page.intro,
+      url,
+      inLanguage: locale,
+      dateModified: contentReviewDate,
+      isPartOf: {
+        "@type": "WebSite",
+        name: siteConfig.name,
+        url: siteConfig.domain
+      },
+      about: {
+        "@type": "Thing",
+        name: `${page.country} ${page.documentName} photo requirements`,
+        description: `${page.documentName} photo guidance covering size, background, digital file, print layout, and pre-export checks.`
+      },
+      mainEntity: {
+        "@type": "Question",
+        name: page.geoQuestion ?? page.heading,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: page.answerSummary ?? page.intro
+        }
+      },
+      reviewedBy: {
+        "@type": "Organization",
+        name: siteConfig.name
+      },
+      citation: page.sourceUrl ? [page.sourceUrl] : undefined
     },
     breadcrumb: {
       "@context": "https://schema.org",

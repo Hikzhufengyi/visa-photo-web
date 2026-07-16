@@ -43,6 +43,16 @@ export function SeoLanding({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.article) }}
       />
+      {jsonLd.comparison ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.comparison) }}
+        />
+      ) : null}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.webPage) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.breadcrumb) }}
@@ -107,8 +117,16 @@ export function SeoLanding({
                 ? "ينشئ IDPhoto Pro ملفات صور فقط ولا ينشئ جوازات أو تأشيرات أو هويات أو مستندات رسمية."
                 : isDe
                   ? "IDPhoto Pro erstellt nur Fotodateien, keine Ausweise, Pässe, Visa oder amtlichen Dokumente."
-                  : "IDPhoto Pro creates photo files only. It does not generate IDs, passports, visas, or official documents."}
+                : "IDPhoto Pro creates photo files only. It does not generate IDs, passports, visas, or official documents."}
           </p>
+          <dl className="geo-source-row">
+            {getGeoTrustItems(page, locale).map((item) => (
+              <div key={item.label}>
+                <dt>{item.label}</dt>
+                <dd>{item.value}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
 
         <section className="seo-grid">
@@ -183,6 +201,27 @@ export function SeoLanding({
           </article>
         </section>
 
+        {page.comparisonRows?.length ? (
+          <section className="seo-faq comparison-section">
+            <p className="card-label">{isZh ? "决策对比" : isAr ? "مقارنة القرار" : isDe ? "Entscheidungshilfe" : "Decision comparison"}</p>
+            <h2>{isZh ? "为什么这个场景适合用 IDPhoto Pro" : isAr ? "لماذا يناسب IDPhoto Pro هذا الاستخدام" : isDe ? "Warum IDPhoto Pro für diesen Fall passt" : "Why IDPhoto Pro fits this use case"}</h2>
+            <div className="comparison-table" role="table">
+              <div className="comparison-row comparison-row-head" role="row">
+                <div role="columnheader">{isZh ? "用户关心点" : isAr ? "ما يهم المستخدم" : isDe ? "Kriterium" : "What matters"}</div>
+                <div role="columnheader">IDPhoto Pro</div>
+                <div role="columnheader">{isZh ? "常见替代方案" : isAr ? "البديل الشائع" : isDe ? "Typische Alternative" : "Common alternative"}</div>
+              </div>
+              {page.comparisonRows.map((row) => (
+                <div className="comparison-row" role="row" key={row.factor}>
+                  <div role="cell">{row.factor}</div>
+                  <div role="cell">{row.idphotoPro}</div>
+                  <div role="cell">{row.alternative}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <section className="seo-faq">
           <p className="card-label">FAQ</p>
           <h2>{isZh ? "常见问题" : isAr ? "الأسئلة الشائعة" : isDe ? "Häufige Fragen" : "Frequently asked questions"}</h2>
@@ -229,6 +268,35 @@ export function SeoLanding({
       </div>
     </main>
   );
+}
+
+function getGeoTrustItems(page: SeoPage, locale: Locale) {
+  const isZh = locale === "zh";
+  const isAr = locale === "ar";
+  const isDe = locale === "de";
+
+  return [
+    {
+      label: isZh ? "更新时间" : isAr ? "آخر مراجعة" : isDe ? "Geprüft" : "Last reviewed",
+      value: "2026-07-16"
+    },
+    {
+      label: isZh ? "要求来源" : isAr ? "المصدر" : isDe ? "Quelle" : "Requirement source",
+      value: page.sourceUrl
+        ? (isZh ? "已提供来源链接" : isAr ? "رابط المصدر متاح" : isDe ? "Quellenlink vorhanden" : "Source link available")
+        : (isZh ? "按公开照片要求整理" : isAr ? "ملخص من متطلبات الصور العامة" : isDe ? "Aus öffentlichen Fotoanforderungen zusammengefasst" : "Summarized from public photo requirements")
+    },
+    {
+      label: isZh ? "适用范围" : isAr ? "النطاق" : isDe ? "Umfang" : "Scope",
+      value: isZh
+        ? "照片文件制作"
+        : isAr
+          ? "إعداد ملف الصورة"
+          : isDe
+            ? "Fotodatei erstellen"
+            : "Photo file preparation"
+    }
+  ];
 }
 
 function getQuickAnswer(page: SeoPage, locale: Locale) {

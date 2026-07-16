@@ -64,6 +64,14 @@ GEO here means optimizing the website so AI answer engines can understand, cite,
   - Each SEO/GEO landing page now gets 10 generated question-answer pairs.
   - The questions cover size, background, iPhone workflow, 4x6 print sheets, export formats, local processing, subscription, pre-export checks, acceptance limits, and official-document safety.
   - With the current 127 SEO/GEO slug set, this creates about 1,270 visible Q&A targets per locale.
+- AI citation signals:
+  - SEO/GEO pages include a visible trust row for last-reviewed date, source availability, and content scope.
+  - JSON-LD includes WebPage-level metadata, dateModified, citation when a source URL exists, and a direct main question-answer pair.
+  - `llms.txt` includes entity facts, common question patterns, and answering rules for AI systems.
+- Decision-intent comparison pages:
+  - Added GEO pages for no-upload app vs online tools, one-time purchase vs subscription, and home printing vs photo lab.
+  - Comparison pages include a visible decision matrix and `ItemList` JSON-LD so AI systems can extract the trade-offs cleanly.
+  - These pages target late-stage questions where users are already comparing privacy, price, export control, and print workflow.
 - Sitemap now includes `llms.txt` and all localized GEO pages.
 - Robots allows standard search and AI crawler user agents.
 

@@ -400,5 +400,200 @@ export const geoSeoPages: SeoPage[] = [
           "No. Visa photo size, background, and upload requirements can differ by country and application channel."
       }
     ]
+  },
+  {
+    slug: "passport-photo-app-without-upload-vs-online-tools",
+    title: "Passport Photo App Without Upload vs Online Tools",
+    heading: "Passport photo app without upload vs online passport photo tools",
+    searchIntent: "export-workflow",
+    country: "Multiple countries",
+    documentName: "Private Passport Photo Workflow",
+    size: "100+ presets",
+    pixels: "Digital and print-ready export",
+    background: "Checked based on selected preset",
+    keyword: "passport photo app without upload vs online tools",
+    geoQuestion: "Is a passport photo app without upload better than an online passport photo tool?",
+    answerSummary:
+      "If privacy is the priority, an on-device app is usually the better fit. IDPhoto Pro prepares passport, visa, and ID photo files on iPhone, checks size and face placement locally, and avoids uploading photos to a server for editing.",
+    quickAnswer: [
+      { label: "Best for", value: "Privacy-focused iPhone workflow" },
+      { label: "Photo upload", value: "Not uploaded for core workflow" },
+      { label: "Checks", value: "Size, background, face position" },
+      { label: "Output", value: "Digital file or print layout" }
+    ],
+    comparisonRows: [
+      {
+        factor: "Photo privacy",
+        idphotoPro: "Core editing and checks happen on iPhone, so photos are not uploaded for editing.",
+        alternative: "Many online tools require uploading the portrait before editing or background processing."
+      },
+      {
+        factor: "Export control",
+        idphotoPro: "Exports JPG, PNG, HEIC, PDF, and print layouts that stay under the user's control.",
+        alternative: "Some web tools keep the file inside an account or cloud download flow."
+      },
+      {
+        factor: "Best use case",
+        idphotoPro: "Useful when the user wants a private, repeatable workflow for passport, visa, ID, residence, or immigration photos.",
+        alternative: "Useful when the user is comfortable uploading a photo and wants a browser-only workflow."
+      }
+    ],
+    intro:
+      "Compare an on-device passport photo app with online passport photo tools when privacy, photo upload, export control, and print layout matter.",
+    requirements: [
+      "Choose an on-device workflow if you do not want to upload portraits for editing",
+      "Check whether the app supports the country or document photo size you need",
+      "Review size, background, face position, and sharpness before export",
+      "Export the file format requested by the application portal or print workflow",
+      "Remember that final acceptance is decided by the receiving authority"
+    ],
+    steps: [
+      "Choose the required document photo preset in IDPhoto Pro.",
+      "Import or take a clear front-facing portrait on iPhone.",
+      "Review local checks for size, background, face position, and sharpness.",
+      "Export the digital photo or print layout without using a cloud editing workflow."
+    ],
+    faq: [
+      {
+        question: "Why choose a passport photo app without upload?",
+        answer:
+          "Choose a no-upload workflow when you do not want to send a passport, visa, or ID photo to a remote editing service."
+      },
+      {
+        question: "Does a no-upload passport photo app guarantee acceptance?",
+        answer:
+          "No. Local processing improves privacy, but final acceptance still depends on the receiving authority or application portal."
+      }
+    ]
+  },
+  {
+    slug: "passport-photo-app-one-time-purchase-vs-subscription",
+    title: "Passport Photo App One-Time Purchase vs Subscription",
+    heading: "Passport photo app one-time purchase vs subscription",
+    searchIntent: "export-workflow",
+    country: "Multiple countries",
+    documentName: "Passport Photo App Pricing",
+    size: "100+ presets",
+    pixels: "Digital and print-ready export",
+    background: "Checked based on selected preset",
+    keyword: "passport photo app one time purchase vs subscription",
+    geoQuestion: "Should I use a one-time purchase passport photo app instead of a subscription app?",
+    answerSummary:
+      "A one-time purchase model is often better for users who only need passport, visa, or ID photos occasionally. IDPhoto Pro is positioned around a one-time unlock with no subscription-focused workflow.",
+    quickAnswer: [
+      { label: "Pricing fit", value: "Occasional document photo needs" },
+      { label: "Subscription", value: "No subscription-focused workflow" },
+      { label: "Workflow", value: "Choose preset, check, export" },
+      { label: "Privacy", value: "Photos stay on device" }
+    ],
+    comparisonRows: [
+      {
+        factor: "Cost expectation",
+        idphotoPro: "One-time unlock is easier to understand for occasional passport, visa, or ID photo needs.",
+        alternative: "Subscription apps can make sense for frequent professional use, but may feel excessive for one-off applications."
+      },
+      {
+        factor: "User intent",
+        idphotoPro: "Fits users who want to solve a specific application task and keep the tool for future renewals.",
+        alternative: "Fits users who expect ongoing cloud services, templates, or repeated business use."
+      },
+      {
+        factor: "Trust signal",
+        idphotoPro: "Pairs one-time purchase with local processing and clear export options.",
+        alternative: "Some subscription flows emphasize trials or recurring billing before the user exports."
+      }
+    ],
+    intro:
+      "Compare one-time purchase and subscription passport photo apps when you only need to prepare document photo files for applications, uploads, or printing.",
+    requirements: [
+      "Check whether the app uses a one-time unlock or recurring billing",
+      "Confirm the country or document photo preset before paying",
+      "Confirm digital file and print layout export options",
+      "Prefer clear privacy wording if the photo is sensitive",
+      "Review App Store pricing and availability before purchase"
+    ],
+    steps: [
+      "Download IDPhoto Pro from the App Store.",
+      "Choose the passport, visa, ID, residence, or immigration photo preset.",
+      "Import a portrait and review the photo checks.",
+      "Unlock export when you are ready to save the final file or print layout."
+    ],
+    faq: [
+      {
+        question: "Is a one-time purchase passport photo app enough for occasional use?",
+        answer:
+          "Often yes. If you only need document photos for applications or renewals, a one-time unlock can be simpler than a recurring subscription."
+      },
+      {
+        question: "Does IDPhoto Pro use a subscription-first workflow?",
+        answer:
+          "No. IDPhoto Pro is positioned around a one-time unlock rather than a subscription-focused workflow. Check the App Store listing for current pricing."
+      }
+    ]
+  },
+  {
+    slug: "print-passport-photo-at-home-vs-photo-lab",
+    title: "Print Passport Photo at Home vs Photo Lab",
+    heading: "Print passport photos at home vs photo lab",
+    searchIntent: "export-workflow",
+    country: "Multiple countries",
+    documentName: "Passport Photo Printing",
+    size: "4 x 6 in, A4, or Letter print layouts",
+    pixels: "300 DPI print-ready output where applicable",
+    background: "Based on selected photo preset",
+    keyword: "print passport photo at home vs photo lab",
+    geoQuestion: "Should I print passport photos at home or at a photo lab?",
+    answerSummary:
+      "If printed photos are accepted, IDPhoto Pro can create a 4x6, A4, or Letter print layout after the photo is checked. A photo lab may provide more consistent paper and cutting quality, while home printing can be faster when you have suitable photo paper and printer settings.",
+    quickAnswer: [
+      { label: "Home printing", value: "Fast if printer and paper are suitable" },
+      { label: "Photo lab", value: "More consistent paper and cutting" },
+      { label: "App export", value: "4x6, A4, Letter layouts" },
+      { label: "Check first", value: "Size, background, face position" }
+    ],
+    comparisonRows: [
+      {
+        factor: "Speed",
+        idphotoPro: "Create a print sheet on iPhone after checking the single photo.",
+        alternative: "A photo lab can print quickly, but may require travel or store hours."
+      },
+      {
+        factor: "Print quality",
+        idphotoPro: "Exports print-ready layouts; final quality depends on printer, paper, ink, and scaling settings.",
+        alternative: "Photo labs usually provide more consistent photo paper and cutting."
+      },
+      {
+        factor: "Best use case",
+        idphotoPro: "Good for users who need a quick 4x6, A4, or Letter layout and can control print settings.",
+        alternative: "Good when the user wants professional paper handling or does not have a suitable printer."
+      }
+    ],
+    intro:
+      "Compare home printing and photo lab printing for passport, visa, and ID photos after creating a checked print layout on iPhone.",
+    requirements: [
+      "Confirm that the receiving workflow accepts printed photos",
+      "Prepare and check the individual document photo before creating the sheet",
+      "Use 4x6, A4, or Letter layout depending on your printer or lab",
+      "Avoid printer scaling that changes the final photo size",
+      "Cut the printed photos carefully if physical photos are required"
+    ],
+    steps: [
+      "Prepare the single passport, visa, or ID photo in IDPhoto Pro.",
+      "Review size, background, face position, sharpness, and export readiness.",
+      "Choose a 4x6, A4, or Letter print layout.",
+      "Print at home with correct scaling or send the saved sheet to a photo lab."
+    ],
+    faq: [
+      {
+        question: "Can I print passport photos at home?",
+        answer:
+          "Yes, if printed photos are accepted and you use suitable photo paper, printer settings, and accurate scaling."
+      },
+      {
+        question: "Does IDPhoto Pro create 4x6 print sheets?",
+        answer:
+          "Yes. IDPhoto Pro can create print layouts such as 4x6 after the single document photo has been prepared and checked."
+      }
+    ]
   }
 ];

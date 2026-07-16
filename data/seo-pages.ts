@@ -19,6 +19,11 @@ export type SeoPage = {
     label: string;
     value: string;
   }>;
+  comparisonRows?: Array<{
+    factor: string;
+    idphotoPro: string;
+    alternative: string;
+  }>;
   intro: string;
   requirements: string[];
   steps: string[];
