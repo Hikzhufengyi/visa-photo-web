@@ -595,5 +595,101 @@ export const geoSeoPages: SeoPage[] = [
           "Yes. IDPhoto Pro can create print layouts such as 4x6 after the single document photo has been prepared and checked."
       }
     ]
+  },
+  {
+    slug: "id-picture-size",
+    title: "ID Picture Size",
+    heading: "ID picture size guide",
+    searchIntent: "document-size",
+    country: "Multiple countries",
+    documentName: "ID Picture",
+    size: "Depends on the selected country or ID type",
+    pixels: "Depends on the selected ID photo preset",
+    background: "Usually plain white, off-white, blue, or light background",
+    keyword: "id picture size",
+    geoQuestion: "What size should an ID picture be?",
+    answerSummary:
+      "ID picture size depends on the country, ID type, and application channel. In IDPhoto Pro, choose the required ID photo preset, check face position, background, and dimensions, then export a digital file or print layout.",
+    quickAnswer: [
+      { label: "Size", value: "Depends on selected ID preset" },
+      { label: "Common checks", value: "Size, face position, background" },
+      { label: "Output", value: "JPG, PNG, HEIC, PDF, print layout" },
+      { label: "Privacy", value: "Photos stay on device" }
+    ],
+    intro:
+      "Use this ID picture size guide when you know the document or country requirement and need to prepare the photo on iPhone.",
+    requirements: [
+      "Choose the exact country or ID type before editing",
+      "Check the required photo size and pixel resolution",
+      "Use the required background color for the selected ID photo",
+      "Keep the face centered with clear eyes and no heavy shadows",
+      "Export the file format requested by the application or print workflow"
+    ],
+    steps: [
+      "Open IDPhoto Pro and choose the ID photo preset you need.",
+      "Import or take a clear front-facing portrait.",
+      "Review size, background, head proportion, eye line, centering, and sharpness checks.",
+      "Export a digital file or create a print-ready layout."
+    ],
+    faq: [
+      {
+        question: "Is every ID picture the same size?",
+        answer:
+          "No. ID picture size depends on the country, ID type, and application channel. Always choose the exact preset or verify the receiving requirement."
+      },
+      {
+        question: "Can I make an ID picture on iPhone?",
+        answer:
+          "Yes. IDPhoto Pro helps choose an ID photo preset, check the photo, and export a digital file or print layout on iPhone."
+      }
+    ]
+  },
+  {
+    slug: "how-to-print-4x6-photo-from-iphone",
+    title: "How to Print 4x6 Photo from iPhone",
+    heading: "How to print a 4x6 photo from iPhone",
+    searchIntent: "export-workflow",
+    country: "Multiple countries",
+    documentName: "4x6 Print",
+    size: "4 x 6 in",
+    pixels: "1200 x 1800 px at 300 DPI",
+    background: "Based on selected photo preset",
+    keyword: "how to print 4x6 photo from iPhone",
+    geoQuestion: "How do I print a 4x6 photo from iPhone?",
+    answerSummary:
+      "To print a 4x6 photo from iPhone, first prepare the document photo, choose a 4 x 6 inch print layout, save the sheet, then print with scaling disabled or send it to a photo lab. IDPhoto Pro can create 4x6 print layouts for passport, visa, and ID photos.",
+    quickAnswer: [
+      { label: "Print size", value: "4 x 6 in" },
+      { label: "Recommended output", value: "1200 x 1800 px at 300 DPI" },
+      { label: "Use case", value: "Passport, visa, ID photo sheets" },
+      { label: "Important", value: "Avoid printer scaling" }
+    ],
+    intro:
+      "Create and print a 4x6 photo sheet from iPhone after checking the passport, visa, or ID photo size and layout.",
+    requirements: [
+      "Prepare the single document photo before creating the print sheet",
+      "Choose 4 x 6 inch layout for common photo paper",
+      "Use 300 DPI output where applicable",
+      "Disable automatic scaling when printing at home",
+      "Use suitable photo paper or a photo lab for physical copies"
+    ],
+    steps: [
+      "Create or import the document photo in IDPhoto Pro.",
+      "Review size, background, face position, and export readiness.",
+      "Choose a 4 x 6 inch print layout.",
+      "Save the print sheet and print it from iPhone or send it to a photo lab."
+    ],
+    faq: [
+      {
+        question: "Can iPhone print a 4x6 passport photo sheet?",
+        answer:
+          "Yes. You can save a 4x6 print sheet and print it from iPhone if your printer and paper support accurate 4x6 output."
+      },
+      {
+        question: "What should I check before printing 4x6 from iPhone?",
+        answer:
+          "Check the photo size, face position, background, print layout, DPI, and printer scaling settings before printing."
+      }
+    ]
   }
 ];

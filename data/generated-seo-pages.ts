@@ -70,6 +70,14 @@ export const generatedSeoPages: SeoPage[] = appPhotoSpecs
       pixels: `${spec.pixels} or higher`,
       background,
       keyword: `${spec.title.toLowerCase()} photo size`,
+      geoQuestion: `What size is a ${spec.title} photo?`,
+      answerSummary: `A ${spec.title} photo uses ${spec.size} in IDPhoto Pro, with ${spec.pixels} or higher export guidance. On iPhone, choose the preset, check face position and background, then export a digital file or print layout.`,
+      quickAnswer: [
+        { label: "Photo size", value: spec.size },
+        { label: "Digital target", value: `${spec.pixels} or higher` },
+        { label: "Workflow", value: "Choose preset, check, export" },
+        { label: "Export", value: "Digital file or print layout" }
+      ],
       intro: `Prepare a ${spec.title} photo on iPhone with ${spec.size} sizing, ${spec.pixels} export guidance, face-position checks, background review, and digital or print layout export.`,
       requirements: [
         `Photo size: ${spec.size}`,

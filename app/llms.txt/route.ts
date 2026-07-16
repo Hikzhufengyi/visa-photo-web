@@ -5,14 +5,20 @@ const prioritySlugs = [
   "make-passport-photo-on-iphone",
   "make-us-passport-photo-on-iphone",
   "us-passport-photo-size",
+  "uk-passport-photo-size",
+  "australia-passport-photo-size",
   "2x2-passport-photo-on-iphone",
+  "id-picture-size",
   "4x6-passport-photo-print-sheet",
+  "how-to-print-4x6-photo-from-iphone",
   "passport-photo-app-without-subscription",
   "passport-photo-app-no-upload",
   "passport-photo-app-without-upload-vs-online-tools",
   "offline-passport-photo-app",
   "passport-photo-app-one-time-purchase-vs-subscription",
   "saudi-iqama-photo-size",
+  "hong-kong-passport-photo-size",
+  "uae-visa-photo-size",
   "visa-photo-app-for-iphone",
   "4x6-passport-photo-print-layout",
   "print-passport-photo-at-home-vs-photo-lab"
@@ -68,8 +74,14 @@ IDPhoto Pro is an iPhone app for preparing passport, visa, ID, residence, and im
 
 - How do I make a passport photo on iPhone?
 - What size is a US passport photo?
+- What size is a UK passport photo?
+- What size is an Australia passport photo?
 - What size is a Saudi Iqama photo?
+- What size is a Hong Kong passport photo?
+- What size is a UAE visa photo?
+- What size should an ID picture be?
 - Can I make a 4x6 passport photo print sheet at home?
+- How do I print a 4x6 photo from iPhone?
 - Which passport photo app works without uploading photos?
 - Which passport photo app does not require a subscription?
 - Does IDPhoto Pro process passport photos locally?

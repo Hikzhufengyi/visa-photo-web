@@ -717,6 +717,15 @@ const curatedSeoPages: SeoPage[] = [
     pixels: "472 x 709 px at 300 DPI or higher",
     background: "White",
     keyword: "saudi iqama photo size",
+    geoQuestion: "What size is a Saudi Iqama photo?",
+    answerSummary:
+      "A common Saudi Iqama photo preset is 4 x 6 cm with a white background. In IDPhoto Pro, choose the Saudi Iqama preset on iPhone, check face position, background, and framing, then export a digital file or print layout.",
+    quickAnswer: [
+      { label: "Photo size", value: "4 x 6 cm" },
+      { label: "Digital target", value: "472 x 709 px at 300 DPI or higher" },
+      { label: "Background", value: "White" },
+      { label: "Export", value: "Digital file or print sheet" }
+    ],
     intro:
       "Use IDPhoto Pro on iPhone to prepare a Saudi Iqama photo with the right size, background, framing, and export format before submission or printing.",
     requirements: [
@@ -738,6 +747,11 @@ const curatedSeoPages: SeoPage[] = [
         question: "What is the Saudi Iqama photo size?",
         answer:
           "A common target is 4 x 6 cm with a plain white background. Always verify the latest submission channel requirements before final use."
+      },
+      {
+        question: "Can I make a Saudi Iqama photo on iPhone?",
+        answer:
+          "Yes. Choose the Saudi Iqama preset in IDPhoto Pro, import a clear portrait, review size, background, and face-position checks, then export the final file."
       },
       {
         question: "Can I print the Saudi Iqama photo at home?",
@@ -918,6 +932,15 @@ const curatedSeoPages: SeoPage[] = [
     background: "Plain light grey or cream",
     keyword: "UK passport photo size",
     sourceUrl: "https://www.gov.uk/photos-for-passports/photo-requirements",
+    geoQuestion: "What size is a UK passport photo?",
+    answerSummary:
+      "A UK passport photo is commonly 35 x 45 mm with a plain light grey or cream background. On iPhone, IDPhoto Pro lets you choose the UK passport preset, check face framing and background, then export a digital file or print layout.",
+    quickAnswer: [
+      { label: "Photo size", value: "35 x 45 mm" },
+      { label: "Digital target", value: "600 x 750 px or higher" },
+      { label: "Background", value: "Plain light grey or cream" },
+      { label: "Source", value: "GOV.UK requirement link provided" }
+    ],
     intro:
       "Create a UK passport photo on iPhone with 35 x 45 mm sizing, light background guidance, face-framing checks, and export options for digital upload or printing.",
     requirements: [
@@ -941,6 +964,11 @@ const curatedSeoPages: SeoPage[] = [
           "A common UK passport photo size is 35 x 45 mm. Digital submission rules can include additional quality checks, so review the latest GOV.UK guidance."
       },
       {
+        question: "What are UK passport photo dimensions?",
+        answer:
+          "The common printed UK passport photo dimensions are 35 x 45 mm. Digital upload checks may also review image quality, face position, and background."
+      },
+      {
         question: "What background is used for UK passport photos?",
         answer:
           "UK passport photos commonly require a plain light grey or cream background with no shadows or patterns."
@@ -959,6 +987,15 @@ const curatedSeoPages: SeoPage[] = [
     background: "Plain white or light-colored",
     keyword: "Australia passport photo size",
     sourceUrl: "https://www.passports.gov.au/getting-passport-how-it-works/photo-guidelines",
+    geoQuestion: "What size is an Australia passport photo?",
+    answerSummary:
+      "An Australia passport photo is commonly 35 x 45 mm with a plain white or light-colored background. In IDPhoto Pro, choose the Australia passport preset, check face position and image quality, then export a digital file or print layout.",
+    quickAnswer: [
+      { label: "Photo size", value: "35 x 45 mm" },
+      { label: "Digital target", value: "420 x 540 px at 300 DPI or higher" },
+      { label: "Background", value: "Plain white or light-colored" },
+      { label: "Export", value: "Digital image, PDF, or print sheet" }
+    ],
     intro:
       "Prepare an Australia passport photo on iPhone with 35 x 45 mm sizing, light background guidance, face-position checks, and print or digital export.",
     requirements: [
@@ -980,6 +1017,11 @@ const curatedSeoPages: SeoPage[] = [
         question: "What size is an Australia passport photo?",
         answer:
           "A common Australia passport photo size is 35 x 45 mm. Always verify the latest Australian Passport Office guidance before submitting."
+      },
+      {
+        question: "What are Australian passport photo dimensions?",
+        answer:
+          "Australian passport photo dimensions are commonly 35 x 45 mm, with a plain white or light-colored background and clear face positioning."
       },
       {
         question: "Can I make an Australia passport photo on iPhone?",
