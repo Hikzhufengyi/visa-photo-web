@@ -63,6 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1
     },
     {
+      url: `${siteConfig.domain}/llms.txt`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.6
+    },
+    {
       url: `${siteConfig.domain}/${locales[0]}`,
       lastModified: now,
       changeFrequency: "weekly",

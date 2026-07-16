@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { TrackedLink } from "@/components/tracked-link";
+import { buildGeoQuestions } from "@/data/geo-question-bank";
 import type { Locale } from "@/data/localization";
 import { seoPages, type SeoPage } from "@/data/seo-pages";
 import { buildSeoPageJsonLd } from "@/data/seo-utils";
@@ -17,12 +18,22 @@ export function SeoLanding({
   const isDe = locale === "de";
   const jsonLd = buildSeoPageJsonLd(page, locale);
   const relatedPages = getRelatedPages(page);
+  const quickAnswer = getQuickAnswer(page, locale);
+  const geoQuestions = buildGeoQuestions(page, locale);
 
   return (
     <main className="legal-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.faq) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.qa) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.howTo) }}
       />
       <script
         type="application/ld+json"
@@ -76,6 +87,29 @@ export function SeoLanding({
             </TrackedLink>
           </div>
         </div>
+
+        <section className="geo-answer-card">
+          <p className="card-label">{isZh ? "快速答案" : isAr ? "إجابة سريعة" : isDe ? "Kurzantwort" : "Quick Answer"}</p>
+          <h2>{page.geoQuestion ?? page.heading}</h2>
+          <p>{page.answerSummary ?? page.intro}</p>
+          <dl className="geo-answer-grid">
+            {quickAnswer.map((item) => (
+              <div key={`${item.label}-${item.value}`}>
+                <dt>{item.label}</dt>
+                <dd>{item.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="geo-answer-note">
+            {isZh
+              ? "IDPhoto Pro 只制作照片文件，不生成任何证件、护照、签证或官方文件。"
+              : isAr
+                ? "ينشئ IDPhoto Pro ملفات صور فقط ولا ينشئ جوازات أو تأشيرات أو هويات أو مستندات رسمية."
+                : isDe
+                  ? "IDPhoto Pro erstellt nur Fotodateien, keine Ausweise, Pässe, Visa oder amtlichen Dokumente."
+                  : "IDPhoto Pro creates photo files only. It does not generate IDs, passports, visas, or official documents."}
+          </p>
+        </section>
 
         <section className="seo-grid">
           <article className="seo-card">
@@ -162,6 +196,19 @@ export function SeoLanding({
           </div>
         </section>
 
+        <section className="seo-faq geo-question-section">
+          <p className="card-label">{isZh ? "GEO 问答索引" : isAr ? "فهرس أسئلة GEO" : isDe ? "GEO-Fragenindex" : "GEO question index"}</p>
+          <h2>{isZh ? "更多用户会问的问题" : isAr ? "أسئلة إضافية يطرحها المستخدمون" : isDe ? "Weitere Fragen, die Nutzer stellen" : "More questions people ask"}</h2>
+          <div className="geo-question-list">
+            {geoQuestions.map((item) => (
+              <article className="geo-question-item" key={item.question}>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         {relatedPages.length > 0 ? (
           <section className="seo-faq">
             <p className="card-label">{isZh ? "相关规格" : isAr ? "أدلة مرتبطة" : isDe ? "Verwandte Ratgeber" : "Related guides"}</p>
@@ -182,6 +229,41 @@ export function SeoLanding({
       </div>
     </main>
   );
+}
+
+function getQuickAnswer(page: SeoPage, locale: Locale) {
+  if (page.quickAnswer?.length) {
+    return page.quickAnswer;
+  }
+
+  const isZh = locale === "zh";
+  const isAr = locale === "ar";
+  const isDe = locale === "de";
+
+  return [
+    {
+      label: isZh ? "尺寸" : isAr ? "المقاس" : isDe ? "Größe" : "Size",
+      value: page.size
+    },
+    {
+      label: isZh ? "像素/文件" : isAr ? "البكسل/الملف" : isDe ? "Pixel/Datei" : "Pixels/File",
+      value: page.pixels
+    },
+    {
+      label: isZh ? "背景" : isAr ? "الخلفية" : isDe ? "Hintergrund" : "Background",
+      value: page.background
+    },
+    {
+      label: isZh ? "导出" : isAr ? "التصدير" : isDe ? "Export" : "Export",
+      value: isZh
+        ? "电子版或打印排版"
+        : isAr
+          ? "ملف رقمي أو تخطيط طباعة"
+          : isDe
+            ? "Digitaldatei oder Drucklayout"
+            : "Digital file or print layout"
+    }
+  ];
 }
 
 function getRelatedPages(page: SeoPage) {

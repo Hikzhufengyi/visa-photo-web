@@ -1,4 +1,5 @@
 import { generatedSeoPages } from "@/data/generated-seo-pages";
+import { geoSeoPages } from "@/data/geo-pages";
 
 export type SeoPage = {
   slug: string;
@@ -12,6 +13,12 @@ export type SeoPage = {
   background: string;
   keyword: string;
   sourceUrl?: string;
+  geoQuestion?: string;
+  answerSummary?: string;
+  quickAnswer?: Array<{
+    label: string;
+    value: string;
+  }>;
   intro: string;
   requirements: string[];
   steps: string[];
@@ -1264,7 +1271,11 @@ const curatedSeoPages: SeoPage[] = [
   }
 ];
 
-export const seoPages: SeoPage[] = [...curatedSeoPages, ...generatedSeoPages];
+export const seoPages: SeoPage[] = [
+  ...curatedSeoPages,
+  ...geoSeoPages,
+  ...generatedSeoPages
+];
 
 export function getSeoPage(slug: string) {
   return seoPages.find((page) => page.slug === slug);

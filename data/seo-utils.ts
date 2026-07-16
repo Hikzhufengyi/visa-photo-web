@@ -1,4 +1,5 @@
 import type { Locale } from "@/data/localization";
+import { buildGeoQuestions } from "@/data/geo-question-bank";
 import type { SeoPage } from "@/data/seo-pages";
 import { siteConfig } from "@/data/site";
 
@@ -118,6 +119,7 @@ export function buildSeoTitle(page: SeoPage, locale: Locale) {
 
 export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
   const url = `${siteConfig.domain}/${locale}/${page.slug}`;
+  const faqItems = mergeFaqItems(page.faq, buildGeoQuestions(page, locale));
   const breadcrumbName = locale === "zh"
     ? "证件照规格指南"
     : locale === "ar"
@@ -130,13 +132,53 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
     faq: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: page.faq.map((item) => ({
+      mainEntity: faqItems.map((item) => ({
         "@type": "Question",
         name: item.question,
         acceptedAnswer: {
           "@type": "Answer",
           text: item.answer
         }
+      }))
+    },
+    qa: {
+      "@context": "https://schema.org",
+      "@type": "QAPage",
+      mainEntity: {
+        "@type": "Question",
+        name: page.geoQuestion ?? page.heading,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: page.answerSummary ?? page.intro
+        }
+      }
+    },
+    howTo: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: page.geoQuestion ?? page.heading,
+      description: page.answerSummary ?? page.intro,
+      totalTime: "PT3M",
+      supply: [
+        {
+          "@type": "HowToSupply",
+          name: "A clear front-facing portrait"
+        },
+        {
+          "@type": "HowToSupply",
+          name: "IDPhoto Pro on iPhone"
+        }
+      ],
+      tool: [
+        {
+          "@type": "HowToTool",
+          name: siteConfig.name
+        }
+      ],
+      step: page.steps.map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        text: step
       }))
     },
     software: {
@@ -199,4 +241,22 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
       ]
     }
   };
+}
+
+function mergeFaqItems(
+  primary: Array<{ question: string; answer: string }>,
+  generated: Array<{ question: string; answer: string }>
+) {
+  const seen = new Set<string>();
+
+  return [...primary, ...generated].filter((item) => {
+    const key = item.question.trim().toLowerCase();
+
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
 }
