@@ -11,6 +11,7 @@ type GtagParameters = [
 
 declare global {
   interface Window {
+    dataLayer?: GtagParameters[];
     gtag?: (...args: GtagParameters) => void;
   }
 }
@@ -30,7 +31,9 @@ export function TrackedLink({
     <Link
       {...props}
       onClick={(event) => {
-        window.gtag?.("event", eventName, {
+        window.dataLayer ??= [];
+        window.gtag ??= (...args) => window.dataLayer?.push(args);
+        window.gtag("event", eventName, {
           product: "idphoto_pro",
           page_hostname: window.location.hostname,
           ...eventParams
