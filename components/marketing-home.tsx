@@ -193,13 +193,13 @@ export function MarketingHome({ locale }: { locale: Locale }) {
     : ["Run 21 photo checks before export", "Passport, visa, immigration, and ID photo presets", "Photos stay on your device", "Digital files and 4x6 print layouts"];
   const heroProofItems = locale === "zh"
     ? [
-        { icon: "/icon-network.svg", value: "100+", label: "官方规格" },
+        { icon: "/icon-network.svg", value: "100+", label: "规格模板" },
         { icon: "/icon-ai.svg", value: "AI", label: "照片检测" },
         { icon: "/icon-shield.svg", value: "Private", label: "本地处理" },
         { icon: "/icon-print.svg", value: "电子版 + 打印版", label: "导出" }
       ]
     : [
-        { icon: "/icon-network.svg", value: "100+", label: "Official Sizes" },
+        { icon: "/icon-network.svg", value: "100+", label: "Size Presets" },
         { icon: "/icon-ai.svg", value: "AI", label: "Compliance Check" },
         { icon: "/icon-shield.svg", value: "Private", label: "On-Device" },
         { icon: "/icon-print.svg", value: "Digital & Print", label: "Export" }
@@ -222,18 +222,55 @@ export function MarketingHome({ locale }: { locale: Locale }) {
     : ["No upload", "No tracking", "Works offline"];
   const specRows = locale === "zh"
     ? [
-        { icon: "🇺🇸", title: "美国护照", meta: "51 x 51 mm · 600 x 600 px" },
-        { icon: "🇸🇦", title: "沙特 Iqama", meta: "200 x 200 px" },
-        { icon: "🇨🇦", title: "加拿大护照", meta: "50 x 70 mm · 600 x 840 px" }
+        { icon: "🇺🇸", title: "美国护照", meta: "51 x 51 mm · 600 x 600 px", slug: "us-passport-photo-size" },
+        { icon: "🇸🇦", title: "沙特 Iqama", meta: "200 x 200 px", slug: "saudi-iqama-photo-size" },
+        { icon: "🇨🇦", title: "加拿大护照", meta: "50 x 70 mm · 600 x 840 px", slug: "canada-passport-photo-size" }
       ]
     : [
-        { icon: "🇺🇸", title: "U.S. Passport", meta: "51 x 51 mm · 600 x 600 px" },
-        { icon: "🇸🇦", title: "Saudi Iqama", meta: "200 x 200 px" },
-        { icon: "🇨🇦", title: "Canada Passport", meta: "50 x 70 mm · 600 x 840 px" }
+        { icon: "🇺🇸", title: "U.S. Passport", meta: "51 x 51 mm · 600 x 600 px", slug: "us-passport-photo-size" },
+        { icon: "🇸🇦", title: "Saudi Iqama", meta: "200 x 200 px", slug: "saudi-iqama-photo-size" },
+        { icon: "🇨🇦", title: "Canada Passport", meta: "50 x 70 mm · 600 x 840 px", slug: "canada-passport-photo-size" }
       ];
 
   return (
-    <main className={`page-shell framer-home locale-${locale}`}>
+    <main
+      className={`page-shell framer-home locale-${locale}`}
+      dir={locale === "ar" ? "ltr" : undefined}
+    >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": `${siteConfig.domain}/#organization`,
+                name: siteConfig.name,
+                url: siteConfig.domain
+              },
+              {
+                "@type": "WebSite",
+                "@id": `${siteConfig.domain}/#website`,
+                name: siteConfig.name,
+                url: siteConfig.domain,
+                publisher: { "@id": `${siteConfig.domain}/#organization` },
+                inLanguage: locale
+              },
+              {
+                "@type": "SoftwareApplication",
+                "@id": `${siteConfig.domain}/#app`,
+                name: siteConfig.appStoreName,
+                applicationCategory: "PhotographyApplication",
+                operatingSystem: "iOS",
+                url: siteConfig.appStoreUrl,
+                description: siteConfig.description,
+                publisher: { "@id": `${siteConfig.domain}/#organization` }
+              }
+            ]
+          })
+        }}
+      />
       <section className="framer-hero framer-hero-showcase">
         <div className="framer-hero-copy framer-showcase-copy">
           <div className="framer-brand-lockup" aria-label="IDPhoto Pro">
@@ -390,7 +427,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </Link>
           <div className="framer-format-list">
             {specRows.map((row) => (
-              <Link href={`/${locale}/blog`} key={row.title}>
+              <Link href={`/${locale}/${row.slug}`} key={row.title}>
                 <span>{row.icon}</span>
                 <div>
                   <strong>{row.title}</strong>

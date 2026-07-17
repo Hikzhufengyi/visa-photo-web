@@ -30,7 +30,11 @@ export function TrackedLink({
     <Link
       {...props}
       onClick={(event) => {
-        window.gtag?.("event", eventName, eventParams);
+        window.gtag?.("event", eventName, {
+          product: "idphoto_pro",
+          page_hostname: window.location.hostname,
+          ...eventParams
+        });
         onClick?.(event);
       }}
     />

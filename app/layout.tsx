@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteChrome } from "@/components/site-chrome";
@@ -83,6 +84,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Script id="document-locale" strategy="beforeInteractive">
+          {`(function(){var locale=location.pathname.split('/')[1];var map={zh:'zh-CN',ar:'ar',de:'de',en:'en'};document.documentElement.lang=map[locale]||'en';document.documentElement.dir=locale==='ar'?'rtl':'ltr';})();`}
+        </Script>
         <GoogleAnalytics measurementId={googleAnalyticsId} />
         <SiteChrome>{children}</SiteChrome>
       </body>
