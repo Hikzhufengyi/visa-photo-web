@@ -1,4 +1,9 @@
 import { getCopy } from "@/data/localization";
+import { staticRouteAlternates } from "@/data/static-route-metadata";
+
+export const metadata = {
+  alternates: staticRouteAlternates("zh", "/about")
+};
 
 export default function ZhAboutPage() {
   const copy = getCopy("zh");

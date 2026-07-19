@@ -143,18 +143,6 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
         }
       }))
     },
-    qa: {
-      "@context": "https://schema.org",
-      "@type": "QAPage",
-      mainEntity: {
-        "@type": "Question",
-        name: page.geoQuestion ?? page.heading,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: page.answerSummary ?? page.intro
-        }
-      }
-    },
     howTo: {
       "@context": "https://schema.org",
       "@type": "HowTo",

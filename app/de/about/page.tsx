@@ -1,4 +1,9 @@
 import { getCopy } from "@/data/localization";
+import { staticRouteAlternates } from "@/data/static-route-metadata";
+
+export const metadata = {
+  alternates: staticRouteAlternates("de", "/about")
+};
 
 export default function DeAboutPage() {
   const copy = getCopy("de");

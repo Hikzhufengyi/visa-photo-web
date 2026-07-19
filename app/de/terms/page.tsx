@@ -1,5 +1,10 @@
 import { getCopy } from "@/data/localization";
 import { siteConfig } from "@/data/site";
+import { staticRouteAlternates } from "@/data/static-route-metadata";
+
+export const metadata = {
+  alternates: staticRouteAlternates("de", "/terms")
+};
 
 export default function DeTermsPage() {
   const copy = getCopy("de");

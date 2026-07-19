@@ -1,11 +1,5 @@
-import { SupportPage } from "@/components/support-page";
+import { redirect } from "next/navigation";
 
-export const metadata = {
-  title: "Technical Support",
-  description:
-    "Technical support for IDPhoto Pro. Get help with document photo checks, export, purchase restore, privacy, and print layouts."
-};
-
-export default function RootSupportPage() {
-  return <SupportPage locale="en" />;
+export default function SupportRedirectPage() {
+  redirect("/en/support");
 }

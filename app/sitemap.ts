@@ -57,12 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: siteConfig.domain,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1
-    },
-    {
       url: `${siteConfig.domain}/llms.txt`,
       lastModified: now,
       changeFrequency: "weekly",

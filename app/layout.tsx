@@ -42,16 +42,6 @@ export const metadata: Metadata = {
     icon: "/app-icon.png",
     apple: "/app-icon.png"
   },
-  alternates: {
-    canonical: "/",
-    languages: {
-      en: "/en",
-      zh: "/zh",
-      ar: "/ar",
-      de: "/de",
-      "x-default": "/en"
-    }
-  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
