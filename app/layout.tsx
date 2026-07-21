@@ -72,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Script id="document-locale" strategy="beforeInteractive">
           {`(function(){var locale=location.pathname.split('/')[1];var map={zh:'zh-CN',ar:'ar',de:'de',en:'en'};document.documentElement.lang=map[locale]||'en';document.documentElement.dir=locale==='ar'?'rtl':'ltr';})();`}

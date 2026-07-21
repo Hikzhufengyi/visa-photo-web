@@ -19,6 +19,9 @@ const homeLabels = {
   en: {
     heroTitle: "Passport, visa, and ID photos, made in minutes",
     heroText: "Choose a size, check face position and background, then export a digital file or 4x6 print layout.",
+    heroInputLabel: "Take or import",
+    heroOutputLabel: "Ready to use",
+    heroResultCaption: "From phone photo to checked ID photo",
     disclaimer: "Creates photo files only. Does not generate IDs, passports, visas, or official documents.",
     cta: "Download iPhone App",
     trust: "Local processing. Photos stay on your device.",
@@ -56,6 +59,9 @@ const homeLabels = {
   zh: {
     heroTitle: "护照照、签证照和证件照，即刻制作",
     heroText: "选择规格，检查脸部位置和背景，然后导出电子版或 4x6 打印排版。",
+    heroInputLabel: "拍摄或导入",
+    heroOutputLabel: "完成并导出",
+    heroResultCaption: "从手机照片到完成检查的证件照",
     disclaimer: "只制作照片文件，不生成任何证件或官方文件。",
     cta: "下载 iPhone App",
     trust: "本地处理。照片不上云。",
@@ -93,6 +99,9 @@ const homeLabels = {
   ar: {
     heroTitle: "حضّر صور الجواز والتأشيرة والهوية خلال دقائق",
     heroText: "اختر المقاس، افحص موضع الوجه والخلفية، ثم صدّر ملفاً رقمياً أو صفحة طباعة 4x6.",
+    heroInputLabel: "التقط أو استورد",
+    heroOutputLabel: "جاهزة للاستخدام",
+    heroResultCaption: "من صورة الهاتف إلى صورة هوية مفحوصة",
     disclaimer: "ينشئ ملفات صور فقط. لا ينشئ هويات أو جوازات أو تأشيرات أو مستندات رسمية.",
     cta: "تنزيل التطبيق",
     trust: "معالجة محلية. تبقى الصور على جهازك.",
@@ -130,6 +139,9 @@ const homeLabels = {
   de: {
     heroTitle: "Pass-, Visa- und Ausweisfotos in Minuten erstellen",
     heroText: "Größe wählen, Gesicht und Hintergrund prüfen, dann digital oder als 4x6-Drucklayout exportieren.",
+    heroInputLabel: "Aufnehmen oder importieren",
+    heroOutputLabel: "Bereit zur Nutzung",
+    heroResultCaption: "Vom Handyfoto zum geprüften Passfoto",
     disclaimer: "Erstellt nur Fotodateien. Erstellt keine Ausweise, Pässe, Visa oder offiziellen Dokumente.",
     cta: "App laden",
     trust: "Lokale Verarbeitung. Fotos bleiben auf deinem Gerät.",
@@ -167,6 +179,9 @@ const homeLabels = {
 } satisfies Record<Locale, {
   heroTitle: string;
   heroText: string;
+  heroInputLabel: string;
+  heroOutputLabel: string;
+  heroResultCaption: string;
   disclaimer?: string;
   cta: string;
   trust: string;
@@ -231,6 +246,36 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         { icon: "🇸🇦", title: "Saudi Iqama", meta: "200 x 200 px", slug: "saudi-iqama-photo-size" },
         { icon: "🇨🇦", title: "Canada Passport", meta: "50 x 70 mm · 600 x 840 px", slug: "canada-passport-photo-size" }
       ];
+
+  const heroResultStory = (
+    <div className="framer-result-story">
+      <div className="framer-result-step framer-result-input">
+        <span className="framer-result-label">1 · {labels.heroInputLabel}</span>
+        <div className="framer-result-editor">
+          <img
+            src="/screenshots/hero-checks-home.jpg"
+            alt={locale === "zh" ? "IDPhoto Pro 中正在检查和调整的证件照" : "An ID photo being checked and adjusted in IDPhoto Pro"}
+            width="560"
+            height="1216"
+          />
+        </div>
+      </div>
+      <span className="framer-result-arrow" aria-hidden="true">→</span>
+      <div className="framer-result-step framer-result-output">
+        <span className="framer-result-label">2 · {labels.heroOutputLabel}</span>
+        <div className="framer-result-export">
+          <img
+            src="/screenshots/print-sheet-real.jpg"
+            alt={locale === "zh" ? "IDPhoto Pro 导出的证件照打印版" : "An ID photo print sheet exported by IDPhoto Pro"}
+            width="933"
+            height="1400"
+          />
+        </div>
+        <span className="framer-result-ready" aria-hidden="true">✓</span>
+      </div>
+      <strong className="framer-result-caption">{labels.heroResultCaption}</strong>
+    </div>
+  );
 
   return (
     <main
@@ -316,39 +361,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ul>
-          <div className="framer-mobile-stage" aria-hidden="true">
-            <div className="framer-phone">
-              <div className="framer-phone-top">
-                <span>9:41</span>
-                <i />
-              </div>
-              <div className="framer-phone-title">
-                <strong>{locale === "zh" ? "美国护照" : "U.S. Passport"}</strong>
-                <span>51 x 51 mm · 600 x 600 px</span>
-              </div>
-              <div className="framer-phone-photo">
-                <img
-                  alt=""
-                  src="/screenshots/hero-checks-home.jpg"
-                  width="560"
-                  height="1216"
-                />
-                <span>{locale === "zh" ? "眼高范围" : "Crop height range"}</span>
-              </div>
-              <div className="framer-ready-card">
-                <span aria-hidden="true">✓</span>
-                <div>
-                  <strong>Ready to Export</strong>
-                  <p>{locale === "zh" ? "关键检查已通过" : "All blocking checks passed"}</p>
-                </div>
-                <em>100%</em>
-              </div>
-              <div className="framer-phone-cta">Ready to Export</div>
-            </div>
-            <div className="framer-print-sheet">
-              <img src="/screenshots/print-sheet-real.jpg" alt="" width="933" height="1400" />
-            </div>
-          </div>
+          <div className="framer-mobile-stage">{heroResultStory}</div>
           <div className="framer-proof-icons" aria-label={locale === "zh" ? "核心能力" : "Key capabilities"}>
             {heroProofItems.map((item) => (
               <div key={`${item.value}-${item.label}`}>
@@ -381,40 +394,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="framer-hero-stage" aria-hidden="true">
-          <div className="framer-phone">
-            <div className="framer-phone-top">
-              <span>9:41</span>
-              <i />
-            </div>
-            <div className="framer-phone-title">
-              <strong>{locale === "zh" ? "美国护照" : "U.S. Passport"}</strong>
-              <span>51 x 51 mm · 600 x 600 px</span>
-            </div>
-            <div className="framer-phone-photo">
-              <img
-                alt=""
-                src="/screenshots/hero-checks-home.jpg"
-                width="560"
-                height="1216"
-              />
-              <span>{locale === "zh" ? "眼高范围" : "Crop height range"}</span>
-            </div>
-            <div className="framer-ready-card">
-              <span aria-hidden="true">✓</span>
-              <div>
-                <strong>Ready to Export</strong>
-                <p>{locale === "zh" ? "关键检查已通过" : "All blocking checks passed"}</p>
-              </div>
-              <em>100%</em>
-            </div>
-            <div className="framer-phone-cta">Ready to Export</div>
-          </div>
-          <div className="framer-print-sheet">
-            <img src="/screenshots/print-sheet-real.jpg" alt="" width="933" height="1400" />
-          </div>
-          <p className="framer-print-note">{locale === "zh" ? "可在家打印或到照相馆冲印" : "Print at home or at any photo lab"}</p>
-        </div>
+        <div className="framer-hero-stage">{heroResultStory}</div>
       </section>
 
       <section className="framer-format-section" id="guides">
