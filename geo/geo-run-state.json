@@ -5,13 +5,13 @@
   "mode": "baseline_audit",
   "stage": "claim",
   "status": "active",
-  "authority": "local_write",
+  "authority": "production_publish",
   "owners": {
     "accountable": "董事长",
     "operator": "增长运营"
   },
   "constraints": [
-    "No production deployment without chairman approval",
+    "Production deployment approved by chairman on 2026-07-28",
     "Do not expand unsupported government or document requirement claims",
     "GA property contains cross-product traffic"
   ],
@@ -42,8 +42,13 @@
       "approved_by": ""
     },
     "publish": {
-      "status": "pending",
-      "evidence": ["Chairman approved production deployment on 2026-07-17; design review, independent QA, technical checks, and claim checks remain open"],
+      "status": "blocked",
+      "evidence": [
+        "Chairman approved production deployment on 2026-07-28",
+        "Commit d431b60 deployed successfully by Vercel",
+        "Production QA passed for the scoped release: four English guide routes 200, unsupported locales 404, sitemap and llms.txt verified, GA4 tag present",
+        "Overall GEO publish gate remains blocked by the unresolved long-tail claim registry: CLM-005 and OBS-005"
+      ],
       "approved_by": "董事长"
     },
     "learning": {
@@ -52,7 +57,7 @@
       "approved_by": ""
     }
   },
-  "current_module": "product-evidence-registry",
-  "next_action": "Complete mandatory designer review and independent QA for the current website patch before preparing the approved production release; keep Apple Ads blocked pending separate approval.",
-  "updated_at": "2026-07-17T15:35:00+08:00"
+  "current_module": "geo-operations",
+  "next_action": "Record a 28-day Search Console and GA4 baseline for the four English guides. Keep unsupported long-tail specification claims out of expansion until the evidence registry is completed; keep Apple Ads blocked pending separate approval.",
+  "updated_at": "2026-07-28T07:45:00+08:00"
 }
