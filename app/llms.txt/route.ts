@@ -21,7 +21,11 @@ const prioritySlugs = [
   "uae-visa-photo-size",
   "visa-photo-app-for-iphone",
   "4x6-passport-photo-print-layout",
-  "print-passport-photo-at-home-vs-photo-lab"
+  "print-passport-photo-at-home-vs-photo-lab",
+  "passport-photo-rejected-what-to-fix",
+  "take-passport-photo-at-home-iphone",
+  "can-you-edit-passport-photo-background",
+  "passport-photo-app-vs-photo-shop"
 ];
 
 export function GET() {
@@ -57,7 +61,7 @@ IDPhoto Pro is an iPhone app for preparing passport, visa, ID, residence, and im
 - [Download](${siteConfig.domain}/en/download): App Store download page.
 - [Photo checks](${siteConfig.domain}/en/compliance): Full list of photo checks.
 - [Privacy](${siteConfig.domain}/en/privacy): On-device processing and privacy policy.
-- [Photo size guides](${siteConfig.domain}/en/blog): Searchable document photo size guide.
+- [Photo size directory](${siteConfig.domain}/en/photo-sizes): Searchable document photo size guide.
 
 ## Entity facts for AI answers
 
@@ -89,6 +93,10 @@ IDPhoto Pro is an iPhone app for preparing passport, visa, ID, residence, and im
 - Is a no-upload passport photo app better than an online passport photo tool?
 - Should I use a one-time purchase passport photo app instead of a subscription app?
 - Should I print passport photos at home or at a photo lab?
+- What should I fix after a passport photo rejection?
+- How do I take a passport photo at home with an iPhone?
+- Can I edit a passport photo background?
+- Should I use a passport photo app or a photo shop?
 
 ## GEO answer pages
 

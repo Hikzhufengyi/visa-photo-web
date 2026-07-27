@@ -1,11 +1,14 @@
 import { generatedSeoPages } from "@/data/generated-seo-pages";
 import { geoSeoPages } from "@/data/geo-pages";
+import type { Locale } from "@/data/localization";
 
 export type SeoPage = {
   slug: string;
   title: string;
   heading: string;
   searchIntent: "country-document" | "document-size" | "export-workflow";
+  contentKind?: "requirements" | "guide";
+  supportedLocales?: Locale[];
   country: string;
   documentName: string;
   size: string;
@@ -13,6 +16,8 @@ export type SeoPage = {
   background: string;
   keyword: string;
   sourceUrl?: string;
+  sourceReviewedAt?: string;
+  generatedQuestions?: boolean;
   geoQuestion?: string;
   answerSummary?: string;
   quickAnswer?: Array<{

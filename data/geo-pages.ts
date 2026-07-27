@@ -691,5 +691,246 @@ export const geoSeoPages: SeoPage[] = [
           "Check the photo size, face position, background, print layout, DPI, and printer scaling settings before printing."
       }
     ]
+  },
+  {
+    slug: "passport-photo-rejected-what-to-fix",
+    title: "Passport Photo Rejected: What to Fix",
+    heading: "Passport photo rejected: what to check before you retake it",
+    searchIntent: "export-workflow",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States guidance; requirements vary by receiving authority",
+    documentName: "Passport Photo Rejection Checklist",
+    size: "Use the exact size required by your application",
+    pixels: "Use the exact portal or print requirement",
+    background: "Use the background required by the receiving authority",
+    keyword: "passport photo rejected what to fix",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "What should I fix when a passport photo is rejected?",
+    answerSummary:
+      "Start with the rejection notice and the receiving authority's current photo rules. Retake the image when you cannot clearly resolve framing, lighting, sharpness, background, or file-format issues. A photo app can help prepare the file, but it cannot determine final acceptance.",
+    quickAnswer: [
+      { label: "First step", value: "Read the rejection notice and current official rule" },
+      { label: "Retake when", value: "Lighting, framing, sharpness, or background is uncertain" },
+      { label: "Do not assume", value: "A previous acceptance guarantees a new submission" },
+      { label: "Final decision", value: "Receiving authority or application portal" }
+    ],
+    intro:
+      "A rejected passport photo does not identify one universal problem. Use the rejection notice and the current requirement for your exact application, then fix or retake the photo before submitting again.",
+    requirements: [
+      "Read the rejection notice before changing the photo",
+      "Confirm the exact size, file type, and file-size limit for the current application channel",
+      "Check face framing, top margin, eye line, sharpness, and exposure",
+      "Use even lighting and a plain required background without visible distractions",
+      "If a correction would be uncertain or materially change the portrait, retake the photo instead"
+    ],
+    steps: [
+      "Keep the rejection notice or portal error message with the application details.",
+      "Open the current official photo instruction for the same passport or visa workflow.",
+      "Compare the notice and original image against framing, lighting, background, sharpness, and file requirements.",
+      "Retake the portrait with even lighting when the issue cannot be verified from the original image.",
+      "Use IDPhoto Pro to choose the correct preset, review the photo checks, and export the requested file format."
+    ],
+    faq: [
+      {
+        question: "Why was my passport photo rejected?",
+        answer:
+          "The rejection notice or upload portal is the best source for the reason. Common review areas include framing, background, shadows, sharpness, facial visibility, image editing, dimensions, and file rules, but the receiving authority decides which rule applies."
+      },
+      {
+        question: "Can I fix a rejected passport photo without retaking it?",
+        answer:
+          "Only make a change when it is allowed by the current requirement and you can verify it resolves the issue. If lighting, pose, facial visibility, or image quality is uncertain, retaking a clean portrait is lower risk than making aggressive edits."
+      },
+      {
+        question: "Does a passport photo app guarantee a resubmission will be accepted?",
+        answer:
+          "No. IDPhoto Pro helps prepare a photo file and review common checks. The receiving authority or application portal makes the final acceptance decision."
+      }
+    ]
+  },
+  {
+    slug: "take-passport-photo-at-home-iphone",
+    title: "Take a Passport Photo at Home With iPhone",
+    heading: "How to take a passport photo at home with iPhone",
+    searchIntent: "export-workflow",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "Multiple countries; verify your exact requirement",
+    documentName: "At-home Passport Photo",
+    size: "Choose the document preset before export",
+    pixels: "Use the target required by the application channel",
+    background: "Depends on the selected document requirement",
+    keyword: "take passport photo at home iPhone",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "How do I take a passport photo at home with iPhone?",
+    answerSummary:
+      "Use a recent, unfiltered, front-facing portrait with even light, enough distance from the wall to reduce cast shadows, and the correct document preset before exporting. Check the current rule for your exact country and application channel before submitting.",
+    quickAnswer: [
+      { label: "Lighting", value: "Even, front-facing light with no strong shadows" },
+      { label: "Background", value: "Plain background required by your document" },
+      { label: "Camera", value: "Use a sharp, unfiltered portrait" },
+      { label: "Before export", value: "Choose the exact country or document preset" }
+    ],
+    intro:
+      "An iPhone can capture a usable starting portrait at home, but the photo still needs correct lighting, framing, background, and output settings for the receiving application.",
+    requirements: [
+      "Use a current, sharp portrait with the face fully visible",
+      "Avoid beauty filters, portrait effects, strong blur, or dramatic editing",
+      "Use even front light and move away from the wall enough to reduce cast shadows",
+      "Keep the camera level with the face and look directly at it",
+      "Choose the exact country or document preset before preparing the final file"
+    ],
+    steps: [
+      "Read the current photo rule for the exact passport, visa, or ID workflow.",
+      "Set up a plain background and even front-facing light.",
+      "Take several sharp, front-facing portraits without filters or beauty effects.",
+      "Import the best portrait into IDPhoto Pro and choose the correct preset.",
+      "Review framing, background, and sharpness before exporting the requested format."
+    ],
+    faq: [
+      {
+        question: "Can I take my own passport photo with an iPhone?",
+        answer:
+          "You can use an iPhone to create the starting portrait when the receiving workflow permits it. Use current official requirements to determine the required background, expression, framing, and output file."
+      },
+      {
+        question: "Should I use the iPhone front camera for a passport photo?",
+        answer:
+          "Use whichever camera gives you a sharp, natural, front-facing portrait without distortion, filters, or poor lighting. A helper using the rear camera can make positioning easier, but the receiving requirement matters more than the camera choice."
+      },
+      {
+        question: "How do I avoid a shadow in a passport photo at home?",
+        answer:
+          "Use soft, even light in front of the face and leave enough distance from the background to reduce cast shadows. If a shadow remains or you cannot judge it confidently, retake the photo."
+      }
+    ]
+  },
+  {
+    slug: "can-you-edit-passport-photo-background",
+    title: "Can You Edit a Passport Photo Background?",
+    heading: "Can you edit a passport photo background?",
+    searchIntent: "export-workflow",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "Requirements vary by passport, visa, and application channel",
+    documentName: "Passport Photo Editing",
+    size: "Not applicable; preserve the required final dimensions",
+    pixels: "Use the exact portal or print requirement",
+    background: "Use only the background specified by the receiving authority",
+    keyword: "can you edit passport photo background",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "Can I edit or remove the background in a passport photo?",
+    answerSummary:
+      "Do not assume that digital background replacement or other edits are accepted. Check the current rule for the exact receiving authority. When the original image has unsuitable lighting or background, retaking a clean photo is the most conservative option.",
+    quickAnswer: [
+      { label: "Rule", value: "Check the exact receiving authority" },
+      { label: "Lowest-risk option", value: "Retake a clean, correctly lit photo" },
+      { label: "Avoid", value: "Filters, beautification, or changes that alter facial appearance" },
+      { label: "Final decision", value: "Receiving authority or portal" }
+    ],
+    intro:
+      "Photo editing rules differ by authority and application channel. A correct final background alone does not make a photo acceptable if the portrait, lighting, or editing method conflicts with the relevant requirement.",
+    requirements: [
+      "Read the current rule for the exact passport, visa, or ID workflow",
+      "Do not use filters, beautification, or edits that change facial features",
+      "Prefer a clean original photograph with the required background and even lighting",
+      "Keep the final crop, face framing, and file output within the published requirement",
+      "Use the official source or portal instruction as the final decision reference"
+    ],
+    steps: [
+      "Find the current photo rule for the exact receiving authority.",
+      "Decide whether the original portrait already has a compliant background and lighting setup.",
+      "If the original setup is unsuitable or the editing rule is unclear, retake the portrait against the required background.",
+      "Use IDPhoto Pro to prepare the crop, framing, and export file after you have a suitable portrait.",
+      "Review the final image against the official requirement before submission."
+    ],
+    faq: [
+      {
+        question: "Is it safe to remove the background from a passport photo?",
+        answer:
+          "It depends on the current rule for the receiving authority. Do not treat a background replacement as automatically acceptable. When the rule is unclear, retake the photo with the required background and even lighting."
+      },
+      {
+        question: "Can I use filters or beauty edits on a passport photo?",
+        answer:
+          "Do not use filters or edits that change natural facial appearance. Check the official instruction for your exact workflow; a clean, natural portrait is the conservative starting point."
+      },
+      {
+        question: "Does IDPhoto Pro create official documents?",
+        answer:
+          "No. IDPhoto Pro prepares photo files only. It does not create passports, IDs, visas, or official documents."
+      }
+    ]
+  },
+  {
+    slug: "passport-photo-app-vs-photo-shop",
+    title: "Passport Photo App vs Photo Shop",
+    heading: "Passport photo app vs photo shop: which should you use?",
+    searchIntent: "export-workflow",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "Multiple countries; check the exact application requirement",
+    documentName: "Passport Photo Workflow Choice",
+    size: "Use the exact document preset",
+    pixels: "Use the target required by the receiving workflow",
+    background: "Depends on the selected document requirement",
+    keyword: "passport photo app vs photo shop",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "Should I use a passport photo app or a photo shop?",
+    answerSummary:
+      "Use a photo app when you need privacy-conscious local preparation, multiple document sizes, a digital export, or a print layout from your own portrait. Use a photo shop when you need in-person help taking the portrait or the receiving workflow specifically requires a service provider. Neither option guarantees acceptance.",
+    quickAnswer: [
+      { label: "Use an app for", value: "Local preparation, digital export, multiple presets, print layouts" },
+      { label: "Use a shop for", value: "In-person help with the starting portrait" },
+      { label: "Privacy question", value: "Ask where photos are processed and stored" },
+      { label: "Final decision", value: "Receiving authority or application portal" }
+    ],
+    comparisonRows: [
+      { factor: "Starting portrait", idphotoPro: "Use your own portrait and prepare it on iPhone", alternative: "A staff member takes the starting portrait" },
+      { factor: "Document sizes", idphotoPro: "Choose from document presets and export formats", alternative: "Availability depends on the shop service" },
+      { factor: "Privacy", idphotoPro: "Core photo processing happens on device", alternative: "Ask the shop how it stores and processes photos" },
+      { factor: "Final acceptance", idphotoPro: "No guarantee; verify the receiving rule", alternative: "No guarantee; verify the receiving rule" }
+    ],
+    intro:
+      "The right passport photo workflow depends on whether you need help taking the portrait, a digital file, a print sheet, or more control over where your photo is processed.",
+    requirements: [
+      "Confirm whether the application needs a digital file, printed photos, or both",
+      "Choose a workflow that supports the required country or document size",
+      "Ask how photos are processed and stored when privacy matters",
+      "Review the result against the current official requirement",
+      "Do not treat an app or shop as a guarantee of acceptance"
+    ],
+    steps: [
+      "Check the receiving workflow's current photo and submission requirements.",
+      "Use a photo shop if you need in-person help taking a suitable starting portrait.",
+      "Use IDPhoto Pro if you want to prepare a portrait locally, choose a preset, and export a digital file or print sheet.",
+      "Review the final photo against the official requirement before submitting it."
+    ],
+    faq: [
+      {
+        question: "Is a passport photo app cheaper than a photo shop?",
+        answer:
+          "Costs vary by app, shop, country, and whether you need printing or delivery. Compare the current price, included exports, document coverage, and privacy approach rather than assuming one route is always cheaper."
+      },
+      {
+        question: "Is a photo shop more likely to be accepted?",
+        answer:
+          "No provider can guarantee final acceptance. A shop can help take the starting portrait, while an app can help prepare the required size and file. The receiving authority or portal makes the final decision."
+      },
+      {
+        question: "Does IDPhoto Pro upload my photo?",
+        answer:
+          "No. The core IDPhoto Pro workflow processes photos on device and does not upload photos to a server for editing."
+      }
+    ]
   }
 ];

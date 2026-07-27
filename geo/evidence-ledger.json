@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "product_key": "idphoto-pro",
+  "claims": [
+    {
+      "id": "CLM-001",
+      "entity_id": "ENT-001",
+      "claim": "IDPhoto Pro is an iPhone app that prepares passport, visa, and ID photo files.",
+      "scope": "global; current App Store listing",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/us/app/idphoto-pro-passport-photo/id6771586096",
+          "tier": 2,
+          "title": "IDPhoto Pro App Store listing"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "产品经理",
+      "reviewed_at": "2026-07-17",
+      "expires_at": "2026-10-17",
+      "caveat": "The app prepares photo files only; it does not create or verify official documents."
+    },
+    {
+      "id": "CLM-002",
+      "entity_id": "ENT-001",
+      "claim": "Core photo processing happens on device and photos are not uploaded to a server for editing.",
+      "scope": "current iOS product workflow",
+      "sources": [
+        {
+          "url": "https://www.passportidphoto.com/en/privacy",
+          "tier": 2,
+          "title": "IDPhoto Pro privacy policy"
+        },
+        {
+          "url": "https://apps.apple.com/us/app/idphoto-pro-passport-photo/id6771586096",
+          "tier": 2,
+          "title": "IDPhoto Pro App Store listing"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "CTO",
+      "reviewed_at": "2026-07-17",
+      "expires_at": "2026-10-17",
+      "caveat": "Recheck after adding any cloud, analytics, or third-party photo-processing service."
+    },
+    {
+      "id": "CLM-003",
+      "entity_id": "ENT-001",
+      "claim": "The product uses a one-time unlock rather than a subscription and has no advertising.",
+      "scope": "current iOS monetization model",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/us/app/idphoto-pro-passport-photo/id6771586096",
+          "tier": 2,
+          "title": "IDPhoto Pro App Store listing"
+        },
+        {
+          "url": "https://www.passportidphoto.com/en/support",
+          "tier": 2,
+          "title": "IDPhoto Pro support page"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "董事长",
+      "reviewed_at": "2026-07-17",
+      "expires_at": "2026-08-17",
+      "caveat": "Pricing and availability can vary by storefront; do not state a price without storefront evidence."
+    },
+    {
+      "id": "CLM-004",
+      "entity_id": "ENT-001",
+      "claim": "IDPhoto Pro supports 100+ photo size presets.",
+      "scope": "current app preset dataset",
+      "sources": [
+        {
+          "url": "https://www.passportidphoto.com/en/blog",
+          "tier": 2,
+          "title": "IDPhoto Pro searchable preset catalog"
+        }
+      ],
+      "confidence": "observed",
+      "status": "draft",
+      "owner": "产品经理",
+      "reviewed_at": "2026-07-17",
+      "expires_at": "2026-08-17",
+      "caveat": "The repository contains 113 preset records. Confirm released-app parity before approval."
+    },
+    {
+      "id": "CLM-005",
+      "entity_id": "ENT-002",
+      "claim": "Each generated country or document photo page states a current size, pixel target, and background requirement.",
+      "scope": "approximately 87 generated pages derived from app-photo-specs.ts",
+      "sources": [],
+      "confidence": "unknown",
+      "status": "blocked",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-07-17",
+      "expires_at": "2026-07-31",
+      "caveat": "The 113-row source dataset has no per-row authority URL, reviewed date, market scope, or evidence owner."
+    },
+    {
+      "id": "CLM-006",
+      "entity_id": "ENT-001",
+      "claim": "IDPhoto Pro can guarantee acceptance of a prepared photo.",
+      "scope": "all markets and authorities",
+      "sources": [],
+      "confidence": "unknown",
+      "status": "blocked",
+      "owner": "董事长",
+      "reviewed_at": "2026-07-17",
+      "expires_at": "2026-07-31",
+      "caveat": "This claim must remain prohibited; final acceptance belongs to the receiving authority."
+    }
+  ]
+}

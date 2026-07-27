@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "product_key": "idphoto-pro",
+  "observations": [
+    {
+      "id": "OBS-001",
+      "observation_type": "search_performance",
+      "source": "SRC-001",
+      "collected_at": "2026-07-17T14:45:00+08:00",
+      "date_range": "2026-06-19/2026-07-16",
+      "market": "global",
+      "device": "all",
+      "confidence": "observed",
+      "finding": "1,236 impressions, 0 clicks, 0% CTR, average position 75.53 across 724 queries.",
+      "limitation": "No per-page export collected in this run."
+    },
+    {
+      "id": "OBS-002",
+      "observation_type": "conversion",
+      "source": "SRC-002",
+      "collected_at": "2026-07-17T14:44:00+08:00",
+      "date_range": "past 28 days",
+      "market": "global",
+      "device": "all",
+      "confidence": "observed",
+      "finding": "app_store_click fired 16 times from 7 users.",
+      "limitation": "Historical events lack product and hostname dimensions; property includes Receipt Vault."
+    },
+    {
+      "id": "OBS-003",
+      "observation_type": "ai_referral",
+      "source": "SRC-002",
+      "collected_at": "2026-07-17T14:44:00+08:00",
+      "date_range": "past 7 days",
+      "market": "global",
+      "device": "all",
+      "confidence": "observed",
+      "finding": "GA displayed 2 sessions from chatgpt.com / ai-assistant.",
+      "limitation": "Property-level channel data is contaminated and does not prove citation or IDPhoto attribution."
+    },
+    {
+      "id": "OBS-004",
+      "observation_type": "programmatic_surface",
+      "source": "SRC-004",
+      "collected_at": "2026-07-17T15:00:00+08:00",
+      "date_range": "point-in-time",
+      "market": "global",
+      "device": "not applicable",
+      "confidence": "observed",
+      "finding": "The website generates approximately 131 SEO/GEO slugs across four locales and the production build generated 708 static pages.",
+      "limitation": "Page count includes static utility routes in addition to landing pages."
+    },
+    {
+      "id": "OBS-005",
+      "observation_type": "evidence_coverage",
+      "source": "SRC-004",
+      "collected_at": "2026-07-17T15:00:00+08:00",
+      "date_range": "point-in-time",
+      "market": "global",
+      "device": "not applicable",
+      "confidence": "observed",
+      "finding": "Only about 15 curated page records contain sourceUrl while the 113-row preset dataset contains no per-row source metadata.",
+      "limitation": "A source may exist outside the repository but is not connected to the generated page dataset."
+    },
+    {
+      "id": "OBS-006",
+      "observation_type": "answer_asset",
+      "source": "SRC-004",
+      "collected_at": "2026-07-17T15:00:00+08:00",
+      "date_range": "point-in-time",
+      "market": "global",
+      "device": "not applicable",
+      "confidence": "observed",
+      "finding": "Each landing page emits visible quick answers, 10 generated Q&A pairs, llms.txt references, and up to eight JSON-LD blocks.",
+      "limitation": "Presence is not evidence of AI citation or rich-result eligibility."
+    },
+    {
+      "id": "OBS-007",
+      "observation_type": "production_drift",
+      "source": "SRC-006",
+      "collected_at": "2026-07-17T15:15:00+08:00",
+      "date_range": "point-in-time",
+      "market": "global",
+      "device": "curl without personalization",
+      "confidence": "observed",
+      "finding": "Production robots.txt and sitemap.xml return 200, but /llms.txt resolves to /en HTML. Production sitemap exposes 509 URLs while the local build generated 708 total routes.",
+      "limitation": "Total build routes include utility routes and cannot be compared one-to-one with sitemap URLs; the llms.txt content-type and redirect are independently confirmed."
+    }
+  ]
+}

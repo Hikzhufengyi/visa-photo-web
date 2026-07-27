@@ -15,7 +15,8 @@ export const uiCopy = {
       support: "支持",
       privacy: "隐私",
       about: "关于",
-      blog: "内容"
+      blog: "内容",
+      photoSizes: "照片尺寸"
     },
     footer: {
       notice: "IDPhoto Pro 不隶属于任何政府机构。",
@@ -144,7 +145,8 @@ export const uiCopy = {
       support: "الدعم",
       privacy: "الخصوصية",
       about: "حول التطبيق",
-      blog: "الدليل"
+      blog: "الدليل",
+      photoSizes: "مقاسات الصور"
     },
     footer: {
       notice: "IDPhoto Pro ليس تابعاً لأي جهة حكومية.",
@@ -267,7 +269,8 @@ export const uiCopy = {
       support: "Support",
       privacy: "Privacy",
       about: "About",
-      blog: "Blog"
+      blog: "Blog",
+      photoSizes: "Photo Sizes"
     },
     footer: {
       notice: "IDPhoto Pro is not affiliated with any government agency.",
@@ -406,7 +409,8 @@ export const uiCopy = {
       support: "Support",
       privacy: "Datenschutz",
       about: "Über uns",
-      blog: "Ratgeber"
+      blog: "Ratgeber",
+      photoSizes: "Fotogrößen"
     },
     footer: {
       notice: "IDPhoto Pro ist nicht mit einer Behörde verbunden.",

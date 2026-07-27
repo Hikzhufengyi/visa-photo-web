@@ -24,13 +24,14 @@ const intentLabels = {
   }
 };
 
-const contentReviewDate = "2026-07-16";
+const contentReviewDate = "2026-07-27";
 
 export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
   const isZh = locale === "zh";
   const isAr = locale === "ar";
   const isDe = locale === "de";
   const title = buildSeoTitle(page, locale);
+  const supportedLocales = page.supportedLocales ?? ["en", "zh", "ar", "de"];
   const description = isZh
     ? `${page.heading}。常见尺寸：${page.size}。背景要求：${page.background}。可在 iPhone 上用 IDPhoto Pro 调整照片、检查细节并导出电子版或打印版。`
     : isAr
@@ -44,13 +45,13 @@ export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
     description,
     alternates: {
       canonical: `/${locale}/${page.slug}`,
-      languages: {
-        en: `/en/${page.slug}`,
-        zh: `/zh/${page.slug}`,
-        ar: `/ar/${page.slug}`,
-        de: `/de/${page.slug}`,
-        "x-default": `/en/${page.slug}`
-      }
+      languages: Object.fromEntries([
+        ...supportedLocales.map((supportedLocale) => [
+          supportedLocale,
+          `/${supportedLocale}/${page.slug}`
+        ]),
+        ["x-default", `/en/${page.slug}`]
+      ])
     },
     openGraph: {
       title,
@@ -86,6 +87,11 @@ export function buildSeoTitle(page: SeoPage, locale: Locale) {
   const isZh = locale === "zh";
   const isAr = locale === "ar";
   const isDe = locale === "de";
+
+  if (page.contentKind === "guide") {
+    // The root metadata template appends the product name once.
+    return page.title;
+  }
 
   if (isZh) {
     if (page.searchIntent === "export-workflow") {
@@ -171,19 +177,6 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
         text: step
       }))
     },
-    software: {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: siteConfig.appStoreName,
-      applicationCategory: "PhotographyApplication",
-      operatingSystem: "iOS",
-      url: siteConfig.appStoreUrl,
-      offers: {
-        "@type": "Offer",
-        priceCurrency: "USD",
-        availability: "https://schema.org/InStock"
-      }
-    },
     article: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -191,8 +184,8 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
       description: page.intro,
       url,
       mainEntityOfPage: url,
-      datePublished: contentReviewDate,
-      dateModified: contentReviewDate,
+      datePublished: page.sourceReviewedAt ?? contentReviewDate,
+      dateModified: page.sourceReviewedAt ?? contentReviewDate,
       articleSection: intentLabels[page.searchIntent][locale],
       about: [
         page.country,
@@ -230,7 +223,7 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
       description: page.answerSummary ?? page.intro,
       url,
       inLanguage: locale,
-      dateModified: contentReviewDate,
+      dateModified: page.sourceReviewedAt ?? contentReviewDate,
       isPartOf: {
         "@type": "WebSite",
         name: siteConfig.name,

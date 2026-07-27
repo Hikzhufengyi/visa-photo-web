@@ -16,10 +16,12 @@ export function SeoLanding({
   const isZh = locale === "zh";
   const isAr = locale === "ar";
   const isDe = locale === "de";
+  const isGuide = page.contentKind === "guide";
   const jsonLd = buildSeoPageJsonLd(page, locale);
   const relatedPages = getRelatedPages(page);
   const quickAnswer = getQuickAnswer(page, locale);
   const geoQuestions = buildGeoQuestions(page, locale);
+  const preparationGuides = getPreparationGuides(page);
 
   return (
     <main className="legal-page">
@@ -30,10 +32,6 @@ export function SeoLanding({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.howTo) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd.software) }}
       />
       <script
         type="application/ld+json"
@@ -127,25 +125,35 @@ export function SeoLanding({
 
         <section className="seo-grid">
           <article className="seo-card">
-            <p className="card-label">{isZh ? "照片规格" : isAr ? "مواصفات الصورة" : isDe ? "Fotodaten" : "Photo Specs"}</p>
+            <p className="card-label">{isGuide ? (isZh ? "使用边界" : "Scope and limits") : (isZh ? "照片规格" : isAr ? "مواصفات الصورة" : isDe ? "Fotodaten" : "Photo Specs")}</p>
             <h2>
-              {isZh ? `${page.documentName} 照片规格` : isAr ? `مقاس صورة ${page.documentName}` : isDe ? `${page.documentName} Fotogröße` : `${page.documentName} photo size`}
+              {isGuide
+                ? (isZh ? "本指南能帮助什么" : "What this guide can help with")
+                : (isZh ? `${page.documentName} 照片规格` : isAr ? `مقاس صورة ${page.documentName}` : isDe ? `${page.documentName} Fotogröße` : `${page.documentName} photo size`)}
             </h2>
-            <ul className="check-list">
-              <li>{isZh ? `国家/地区：${page.country}` : isAr ? `الدولة/المنطقة: ${page.country}` : isDe ? `Land/Region: ${page.country}` : `Country: ${page.country}`}</li>
-              <li>{isZh ? `证件类型：${page.documentName}` : isAr ? `المستند: ${page.documentName}` : isDe ? `Dokument: ${page.documentName}` : `Document: ${page.documentName}`}</li>
-              <li>{isZh ? `常见尺寸：${page.size}` : isAr ? `المقاس الشائع: ${page.size}` : isDe ? `Übliche Größe: ${page.size}` : `Typical size: ${page.size}`}</li>
-              <li>
+            {isGuide ? (
+              <p>
                 {isZh
-                  ? `建议数字文件：${page.pixels}`
-                  : isAr
-                    ? `الملف الرقمي المقترح: ${page.pixels}`
-                    : isDe
-                      ? `Empfohlene digitale Datei: ${page.pixels}`
-                      : `Recommended digital file: ${page.pixels}`}
-              </li>
-              <li>{isZh ? `背景：${page.background}` : isAr ? `الخلفية: ${page.background}` : isDe ? `Hintergrund: ${page.background}` : `Background: ${page.background}`}</li>
-            </ul>
+                  ? "本指南帮助你准备照片文件和识别需要重拍或复核的风险。它不替代接收机构的最新要求，也不保证最终受理。"
+                  : "This guide helps you prepare a photo file and identify risks that may need a retake or review. It does not replace the current receiving-authority rule or guarantee final acceptance."}
+              </p>
+            ) : (
+              <ul className="check-list">
+                <li>{isZh ? `国家/地区：${page.country}` : isAr ? `الدولة/المنطقة: ${page.country}` : isDe ? `Land/Region: ${page.country}` : `Country: ${page.country}`}</li>
+                <li>{isZh ? `证件类型：${page.documentName}` : isAr ? `المستند: ${page.documentName}` : isDe ? `Dokument: ${page.documentName}` : `Document: ${page.documentName}`}</li>
+                <li>{isZh ? `常见尺寸：${page.size}` : isAr ? `المقاس الشائع: ${page.size}` : isDe ? `Übliche Größe: ${page.size}` : `Typical size: ${page.size}`}</li>
+                <li>
+                  {isZh
+                    ? `建议数字文件：${page.pixels}`
+                    : isAr
+                      ? `الملف الرقمي المقترح: ${page.pixels}`
+                      : isDe
+                        ? `Empfohlene digitale Datei: ${page.pixels}`
+                        : `Recommended digital file: ${page.pixels}`}
+                </li>
+                <li>{isZh ? `背景：${page.background}` : isAr ? `الخلفية: ${page.background}` : isDe ? `Hintergrund: ${page.background}` : `Background: ${page.background}`}</li>
+              </ul>
+            )}
             {page.sourceUrl ? (
               <Link
                 className="inline-source-link"
@@ -173,7 +181,9 @@ export function SeoLanding({
           <article className="seo-card">
             <p className="card-label">{isZh ? "操作方式" : isAr ? "طريقة العمل" : isDe ? "Vorgehen" : "How To"}</p>
             <h2>
-              {isZh ? "如何在 iPhone 上制作这类照片" : isAr ? "كيفية إنشاء هذه الصورة على iPhone" : isDe ? "So erstellst du dieses Foto auf dem iPhone" : "How to create this photo on iPhone"}
+              {isGuide
+                ? (isZh ? "如何使用本指南" : "How to use this guide")
+                : (isZh ? "如何在 iPhone 上制作这类照片" : isAr ? "كيفية إنشاء هذه الصورة على iPhone" : isDe ? "So erstellst du dieses Foto auf dem iPhone" : "How to create this photo on iPhone")}
             </h2>
             <ol className="launch-list">
               {page.steps.map((step) => (
@@ -184,7 +194,7 @@ export function SeoLanding({
 
           <article className="seo-card">
             <p className="card-label">{isZh ? "为什么适合这个 App" : isAr ? "لماذا هذا التطبيق" : isDe ? "Warum diese App passt" : "Why This Tool"}</p>
-            <h2>{isZh ? "功能和这个页面的需求是匹配的" : isAr ? "لماذا يناسب هذا التطبيق هذه الصفحة" : isDe ? "Die App passt zu diesem Ablauf" : "Why this page matches the app"}</h2>
+            <h2>{isGuide ? (isZh ? "IDPhoto Pro 如何帮助" : "How IDPhoto Pro helps") : (isZh ? "功能和这个页面的需求是匹配的" : isAr ? "لماذا يناسب هذا التطبيق هذه الصفحة" : isDe ? "Die App passt zu diesem Ablauf" : "Why this page matches the app")}</h2>
             <p>
               {isZh
                 ? "IDPhoto Pro 的流程是先选择国家或证件规格，再在 iPhone 本地调整照片、检查背景和构图，最后导出电子文件或打印排版。它不是政府官方服务，也不会保证最终受理结果。"
@@ -231,18 +241,38 @@ export function SeoLanding({
           </div>
         </section>
 
-        <section className="seo-faq geo-question-section">
-          <p className="card-label">{isZh ? "GEO 问答索引" : isAr ? "فهرس أسئلة GEO" : isDe ? "GEO-Fragenindex" : "GEO question index"}</p>
-          <h2>{isZh ? "更多用户会问的问题" : isAr ? "أسئلة إضافية يطرحها المستخدمون" : isDe ? "Weitere Fragen, die Nutzer stellen" : "More questions people ask"}</h2>
-          <div className="geo-question-list">
-            {geoQuestions.map((item) => (
-              <article className="geo-question-item" key={item.question}>
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+        {geoQuestions.length > 0 ? (
+          <section className="seo-faq geo-question-section">
+            <p className="card-label">{isZh ? "GEO 问答索引" : "GEO question index"}</p>
+            <h2>{isZh ? "更多用户会问的问题" : "More questions people ask"}</h2>
+            <div className="geo-question-list">
+              {geoQuestions.map((item) => (
+                <article className="geo-question-item" key={item.question}>
+                  <h3>{item.question}</h3>
+                  <p>{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {preparationGuides.length > 0 ? (
+          <section className="seo-faq">
+            <p className="card-label">{isZh ? "拍摄与提交帮助" : "Photo preparation help"}</p>
+            <h2>{isZh ? "提交前处理常见风险" : "Solve common risks before you submit"}</h2>
+            <div className="seo-grid">
+              {preparationGuides.map((guide) => (
+                <article className="seo-card" key={guide.slug}>
+                  <h3>{guide.title}</h3>
+                  <p>{guide.answerSummary ?? guide.intro}</p>
+                  <Link className="button button-secondary" href={`/${locale}/${guide.slug}`}>
+                    {isZh ? "查看指南" : "Read guide"}
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {relatedPages.length > 0 ? (
           <section className="seo-faq">
@@ -274,7 +304,7 @@ function getGeoTrustItems(page: SeoPage, locale: Locale) {
   return [
     {
       label: isZh ? "更新时间" : isAr ? "آخر مراجعة" : isDe ? "Geprüft" : "Last reviewed",
-      value: "2026-07-16"
+      value: page.sourceReviewedAt ?? "2026-07-16"
     },
     {
       label: isZh ? "要求来源" : isAr ? "المصدر" : isDe ? "Quelle" : "Requirement source",
@@ -344,4 +374,21 @@ function getRelatedPages(page: SeoPage) {
     .sort((a, b) => b.score - a.score || a.page.title.localeCompare(b.page.title))
     .slice(0, 4)
     .map((item) => item.page);
+}
+
+const preparationGuideSlugs = [
+  "passport-photo-rejected-what-to-fix",
+  "take-passport-photo-at-home-iphone",
+  "can-you-edit-passport-photo-background",
+  "passport-photo-app-vs-photo-shop"
+];
+
+function getPreparationGuides(page: SeoPage) {
+  if (preparationGuideSlugs.includes(page.slug)) {
+    return [];
+  }
+
+  return preparationGuideSlugs
+    .map((slug) => seoPages.find((candidate) => candidate.slug === slug))
+    .filter((candidate): candidate is SeoPage => Boolean(candidate));
 }

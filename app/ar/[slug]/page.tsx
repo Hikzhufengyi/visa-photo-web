@@ -12,9 +12,11 @@ type PageProps = {
 };
 
 export async function generateStaticParams() {
-  return seoPages.map((page) => ({
+  return seoPages
+    .filter((page) => !page.supportedLocales || page.supportedLocales.includes("ar"))
+    .map((page) => ({
     slug: page.slug
-  }));
+    }));
 }
 
 export async function generateMetadata({
@@ -23,7 +25,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = getSeoPage(slug);
 
-  if (!page) {
+  if (!page || (page.supportedLocales && !page.supportedLocales.includes("ar"))) {
     return {};
   }
 
@@ -37,7 +39,7 @@ export default async function ArSeoPage({ params }: PageProps) {
   const { slug } = await params;
   const page = getSeoPage(slug);
 
-  if (!page) {
+  if (!page || (page.supportedLocales && !page.supportedLocales.includes("ar"))) {
     notFound();
   }
 

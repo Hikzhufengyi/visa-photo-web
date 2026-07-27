@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-20260717-001",
+  "product_key": "idphoto-pro",
+  "mode": "baseline_audit",
+  "stage": "claim",
+  "status": "active",
+  "authority": "local_write",
+  "owners": {
+    "accountable": "董事长",
+    "operator": "增长运营"
+  },
+  "constraints": [
+    "No production deployment without chairman approval",
+    "Do not expand unsupported government or document requirement claims",
+    "GA property contains cross-product traffic"
+  ],
+  "artifacts": [
+    "geo/geo-product-profile.json",
+    "geo/evidence-ledger.json",
+    "geo/source-inventory.json",
+    "geo/observations.json",
+    "geo/opportunity-portfolio.json",
+    "geo/programmatic-page-audit.md",
+    "docs/geo-strategy.md",
+    "docs/geo-search-console-opportunities.md"
+  ],
+  "gates": {
+    "contract": {
+      "status": "passed",
+      "evidence": ["geo/geo-product-profile.json"],
+      "approved_by": "董事长"
+    },
+    "claim": {
+      "status": "blocked",
+      "evidence": ["CLM-005", "OBS-005"],
+      "approved_by": ""
+    },
+    "opportunity": {
+      "status": "pending",
+      "evidence": ["geo/opportunity-portfolio.json"],
+      "approved_by": ""
+    },
+    "publish": {
+      "status": "pending",
+      "evidence": ["Chairman approved production deployment on 2026-07-17; design review, independent QA, technical checks, and claim checks remain open"],
+      "approved_by": "董事长"
+    },
+    "learning": {
+      "status": "pending",
+      "evidence": ["OBS-001", "OBS-002"],
+      "approved_by": ""
+    }
+  },
+  "current_module": "product-evidence-registry",
+  "next_action": "Complete mandatory designer review and independent QA for the current website patch before preparing the approved production release; keep Apple Ads blocked pending separate approval.",
+  "updated_at": "2026-07-17T15:35:00+08:00"
+}

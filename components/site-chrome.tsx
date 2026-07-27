@@ -39,6 +39,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
 
         <nav className="header-links" aria-label="Main navigation">
           <Link href={localizedHref("/")}>{copy.nav.home}</Link>
+          <Link href={localizedHref("/photo-sizes")}>{copy.nav.photoSizes}</Link>
           <Link href={localizedHref("/download")}>{copy.nav.download}</Link>
           <Link href={localizedHref("/support")}>{copy.nav.support}</Link>
           <Link href={localizedHref("/privacy")}>{copy.nav.privacy}</Link>

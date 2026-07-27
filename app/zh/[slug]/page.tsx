@@ -12,9 +12,11 @@ type PageProps = {
 };
 
 export async function generateStaticParams() {
-  return seoPages.map((page) => ({
+  return seoPages
+    .filter((page) => !page.supportedLocales || page.supportedLocales.includes("zh"))
+    .map((page) => ({
     slug: page.slug
-  }));
+    }));
 }
 
 export async function generateMetadata({
@@ -23,7 +25,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = getSeoPage(slug);
 
-  if (!page) {
+  if (!page || (page.supportedLocales && !page.supportedLocales.includes("zh"))) {
     return {};
   }
 
@@ -46,7 +48,7 @@ export default async function ZhSeoPage({ params }: PageProps) {
   const { slug } = await params;
   const page = getSeoPage(slug);
 
-  if (!page) {
+  if (!page || (page.supportedLocales && !page.supportedLocales.includes("zh"))) {
     notFound();
   }
 

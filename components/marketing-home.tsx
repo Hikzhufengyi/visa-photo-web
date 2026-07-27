@@ -401,7 +401,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
         <div className="framer-format-copy">
           <h2>{labels.standardsTitle}</h2>
           <p>{labels.standardsText}</p>
-          <Link className="framer-format-search" href={`/${locale}/blog`}>
+          <Link className="framer-format-search" href={`/${locale}/photo-sizes`}>
             <span>{labels.searchPlaceholder}</span>
             <em>{labels.searchMeta}</em>
           </Link>

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "product_key": "idphoto-pro",
+  "product_name": "IDPhoto Pro",
+  "canonical_domain": "https://www.passportidphoto.com",
+  "primary_entity": "IDPhoto Pro",
+  "category": "iPhone passport, visa, and ID photo preparation app",
+  "audiences": [
+    "iPhone users preparing passport, visa, immigration, residence, or ID photo files",
+    "Users who prefer on-device photo processing and a one-time purchase"
+  ],
+  "jobs_to_be_done": [
+    "Prepare a portrait to a required photo size",
+    "Check common face, background, and composition issues",
+    "Export a digital file or print-ready layout"
+  ],
+  "supported_workflows": [
+    "Choose a size preset",
+    "Import or capture a portrait",
+    "Adjust and check the photo on iPhone",
+    "Export JPG, PNG, HEIC, PDF, or print layouts"
+  ],
+  "limitations": [
+    "Creates photo files only and does not create or verify official documents",
+    "Does not guarantee acceptance by a receiving authority",
+    "Specific requirements can change by authority, market, and application channel"
+  ],
+  "primary_conversion": {
+    "name": "App Store click",
+    "event": "app_store_click"
+  },
+  "markets": ["global"],
+  "locales": ["en", "zh-CN", "ar", "de"],
+  "evidence_ledger": "geo/evidence-ledger.json",
+  "analytics": {
+    "search_console_property": "https://www.passportidphoto.com",
+    "analytics_property": "IDPhoto Pro Website (GA4 property 543513512)"
+  },
+  "owners": {
+    "product_truth": "董事长 / 产品经理",
+    "content": "增长运营",
+    "technical": "CTO",
+    "measurement": "增长运营",
+    "risk": "董事长"
+  },
+  "constraints": [
+    "Production publication requires chairman approval",
+    "Government and document requirement claims require authoritative sources",
+    "GA property currently contains Receipt Vault traffic and must be segmented"
+  ]
+}

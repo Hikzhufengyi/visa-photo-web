@@ -7,6 +7,10 @@ export type GeoQuestion = {
 };
 
 export function buildGeoQuestions(page: SeoPage, locale: Locale): GeoQuestion[] {
+  if (page.generatedQuestions === false || (locale !== "en" && locale !== "zh")) {
+    return [];
+  }
+
   if (locale === "zh") {
     return buildZhQuestions(page);
   }

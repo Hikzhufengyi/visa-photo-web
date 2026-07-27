@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "product_key": "idphoto-pro",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "source": "Google Search Console via linked GA4 report",
+      "property": "IDPhoto Pro Website",
+      "collected_at": "2026-07-17T14:45:00+08:00",
+      "date_range": "2026-06-19/2026-07-16",
+      "market": "global",
+      "device": "all",
+      "limitations": "GA-linked report; 28-day query totals observed in UI"
+    },
+    {
+      "id": "SRC-002",
+      "source": "Google Analytics 4",
+      "property": "IDPhoto Pro Website (543513512)",
+      "collected_at": "2026-07-17T14:44:00+08:00",
+      "date_range": "past 28 days and selected 7-day cards",
+      "market": "global",
+      "device": "all",
+      "limitations": "Property also contains Receipt Vault page traffic; unsegmented users, sessions, and channels are contaminated"
+    },
+    {
+      "id": "SRC-003",
+      "source": "Production website inspection",
+      "property": "https://www.passportidphoto.com/zh",
+      "collected_at": "2026-07-17T14:43:00+08:00",
+      "date_range": "point-in-time",
+      "market": "zh",
+      "device": "desktop Chrome",
+      "limitations": "Rendered DOM observation, not raw server logs"
+    },
+    {
+      "id": "SRC-004",
+      "source": "Local website repository",
+      "property": "/Users/seafon/Documents/IDPhoto AI项目/visa-photo-web.git",
+      "collected_at": "2026-07-17T15:00:00+08:00",
+      "date_range": "main branch working tree",
+      "market": "global",
+      "device": "not applicable",
+      "limitations": "Repository is ahead of origin and contains pre-existing untracked work; production deployment state may differ"
+    },
+    {
+      "id": "SRC-005",
+      "source": "App Store Connect",
+      "property": "App 6771586096",
+      "collected_at": "2026-07-17T14:39:00+08:00",
+      "date_range": "point-in-time",
+      "market": "global",
+      "device": "not applicable",
+      "limitations": "Analytics view did not render; review status and listing metadata were visible"
+    },
+    {
+      "id": "SRC-006",
+      "source": "Production HTTP endpoint check",
+      "property": "https://www.passportidphoto.com",
+      "collected_at": "2026-07-17T15:15:00+08:00",
+      "date_range": "point-in-time",
+      "market": "global",
+      "device": "curl without personalization",
+      "limitations": "Observed deployed production only; local repository is ahead of origin and generated a newer route set"
+    }
+  ]
+}
