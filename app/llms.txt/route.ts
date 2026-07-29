@@ -25,7 +25,11 @@ const prioritySlugs = [
   "passport-photo-rejected-what-to-fix",
   "take-passport-photo-at-home-iphone",
   "can-you-edit-passport-photo-background",
-  "passport-photo-app-vs-photo-shop"
+  "passport-photo-app-vs-photo-shop",
+  "us-visa-photo-last-six-months",
+  "canada-pr-digital-photo-checklist",
+  "uk-visa-photo-background",
+  "australia-visa-photo-reuse"
 ];
 
 export function GET() {
@@ -97,6 +101,10 @@ IDPhoto Pro is an iPhone app for preparing passport, visa, ID, residence, and im
 - How do I take a passport photo at home with an iPhone?
 - Can I edit a passport photo background?
 - Should I use a passport photo app or a photo shop?
+- How recent must a US visa photo be?
+- Does a Canada PR application require a digital photo?
+- Does a UK visa photo need a white background?
+- Can I reuse a passport photo for an Australian visa?
 
 ## GEO answer pages
 

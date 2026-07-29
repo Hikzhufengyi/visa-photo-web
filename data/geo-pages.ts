@@ -932,5 +932,241 @@ export const geoSeoPages: SeoPage[] = [
           "No. The core IDPhoto Pro workflow processes photos on device and does not upload photos to a server for editing."
       }
     ]
+  },
+  {
+    slug: "us-visa-photo-last-six-months",
+    title: "How Recent Must a US Visa Photo Be?",
+    heading: "US visa photo: use a photo taken within the last 6 months",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "US Visa Photo Recency",
+    size: "Taken within the last 6 months",
+    pixels: "See the current US visa photo instruction",
+    background: "White or off-white for the US visa photo workflow",
+    keyword: "how recent must a US visa photo be",
+    sourceUrl: "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html",
+    sourceReviewedAt: "2026-07-29",
+    generatedQuestions: false,
+    geoQuestion: "How recent must a US visa photo be?",
+    answerSummary:
+      "For a US nonimmigrant visa application, use a photo taken within the last 6 months so it reflects your current appearance. Confirm the current Department of State instruction for your application before submitting.",
+    quickAnswer: [
+      { label: "US visa rule", value: "Taken within the last 6 months" },
+      { label: "Why", value: "It must reflect your current appearance" },
+      { label: "Authority", value: "US Department of State" },
+      { label: "Final check", value: "Use the current instruction for your application" }
+    ],
+    intro:
+      "Photo recency is a separate requirement from the crop, background, and pixel size. A correctly sized file can still be unsuitable if the portrait no longer reflects your current appearance.",
+    requirements: [
+      "Use a portrait taken within the last 6 months for a US nonimmigrant visa application",
+      "Use a photo that reflects your current appearance",
+      "Check the current Department of State photo instruction before you submit",
+      "Confirm the application portal's file and upload requirements separately",
+      "Do not rely on an older passport photo merely because it was accepted before"
+    ],
+    steps: [
+      "Open the current US Department of State visa-photo instruction.",
+      "Confirm that your portrait was taken within the last 6 months and still reflects your current appearance.",
+      "Prepare the required crop, background, and digital file using the current visa requirement.",
+      "Use IDPhoto Pro to review the photo file and export the format requested by the application portal.",
+      "Review the final file against the current official instruction before upload."
+    ],
+    faq: [
+      {
+        question: "Can I use a US visa photo older than 6 months?",
+        answer:
+          "No. The US Department of State says a visa photo must have been taken within the last 6 months to reflect your current appearance."
+      },
+      {
+        question: "Is an accepted passport photo automatically suitable for a US visa application?",
+        answer:
+          "Not automatically. Check the photo's age and the current US visa instruction for your exact application before you reuse it."
+      },
+      {
+        question: "Can IDPhoto Pro decide whether a US visa photo will be accepted?",
+        answer:
+          "No. IDPhoto Pro prepares photo files and common checks. The US Department of State and the application workflow decide final acceptance."
+      }
+    ]
+  },
+  {
+    slug: "canada-pr-digital-photo-checklist",
+    title: "Does Canada PR Require a Digital Photo?",
+    heading: "Canada PR digital photo: check your IRCC document checklist",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "Canada",
+    documentName: "Permanent Residence Application Photo",
+    size: "Depends on your IRCC application checklist",
+    pixels: "Use the format shown in your application instructions",
+    background: "Use the requirement for your exact IRCC application flow",
+    keyword: "Canada PR digital photo requirement",
+    sourceUrl: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/apply-permanent-residence.html",
+    sourceReviewedAt: "2026-07-29",
+    generatedQuestions: false,
+    geoQuestion: "Does a Canada PR application require a digital photo?",
+    answerSummary:
+      "For Express Entry permanent-residence applications, IRCC provides a personalized document checklist after the online form. Submit a digital identity photo only when that checklist includes it; other PR programs can use different requirements.",
+    quickAnswer: [
+      { label: "Start here", value: "Your personalized IRCC document checklist" },
+      { label: "Express Entry", value: "Submit a digital photo only when listed" },
+      { label: "Do not assume", value: "Every Canada PR program has the same photo rule" },
+      { label: "Full documents", value: "Use the official program checklist, not this photo guide" }
+    ],
+    intro:
+      "A Canada PR photo question has two parts: whether your application currently asks for a photo, and how to prepare the file if it does. This page explains the first boundary; it does not replace an IRCC program checklist.",
+    requirements: [
+      "Complete the correct IRCC online form for your PR program",
+      "Use the personalized document checklist generated for your application",
+      "Submit a digital identity photo only when it appears in that checklist",
+      "Use the file format and any photo instruction provided in the live application flow",
+      "Do not use a photo guide as a complete Canada PR document checklist"
+    ],
+    steps: [
+      "Open the official IRCC instructions for your permanent-residence program.",
+      "Complete the application information needed to receive the personalized checklist.",
+      "Check whether a digital identity photo is listed for your application.",
+      "If it is listed, prepare the photo according to the live IRCC instruction and application portal requirements.",
+      "Use IDPhoto Pro only to prepare the requested photo file; keep the official checklist as the final reference."
+    ],
+    faq: [
+      {
+        question: "Do all Canada PR applications require a digital photo?",
+        answer:
+          "Do not assume that they do. IRCC's Express Entry guidance says the online system provides a personalized document checklist and that digital identity photos are submitted only if included in that checklist."
+      },
+      {
+        question: "Can this page tell me every document needed for Canada PR?",
+        answer:
+          "No. Canada PR document requirements depend on the program and application. Use the official IRCC program instructions and your personalized checklist."
+      },
+      {
+        question: "What photo size should I use for Canada PR?",
+        answer:
+          "Use the photo instruction shown for your exact IRCC application flow. Do not infer a universal size from another Canada program, a passport application, or a previous submission."
+      }
+    ]
+  },
+  {
+    slug: "uk-visa-photo-background",
+    title: "Does a UK Visa Photo Need a White Background?",
+    heading: "UK visa photo background: do not assume passport rules apply",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United Kingdom",
+    documentName: "Visa Biometric Photograph",
+    size: "Follow your visa application or appointment instruction",
+    pixels: "Only if your application asks for a digital upload",
+    background: "Do not assume a universal white or light-background rule",
+    keyword: "does UK visa photo need white background",
+    sourceUrl: "https://www.gov.uk/apply-to-come-to-the-uk",
+    sourceReviewedAt: "2026-07-29",
+    generatedQuestions: false,
+    geoQuestion: "Does a UK visa photo need a white background?",
+    answerSummary:
+      "Do not assume that a UK visa requires a white or light-background upload. GOV.UK's visa process normally collects a biometric photograph, while the plain light-background rule is published for UK passport applications. Follow the instruction for your visa application or visa-centre appointment.",
+    quickAnswer: [
+      { label: "Direct answer", value: "Do not assume a universal background rule" },
+      { label: "Visa process", value: "Usually includes a biometric photograph" },
+      { label: "Passport rule", value: "Plain light background applies to UK passport photos" },
+      { label: "Final reference", value: "Your visa application or appointment instruction" }
+    ],
+    intro:
+      "UK passport photo guidance and UK visa biometrics are different workflows. Applying a passport background rule to a visa application without checking its instructions can lead to unnecessary retakes or an incorrect upload.",
+    requirements: [
+      "Read the instructions for your exact UK visa application",
+      "Check whether the process asks you to upload a photo or attend a biometric appointment",
+      "Follow the visa-centre or application-portal instruction when a photograph is collected",
+      "Do not treat UK passport photo background guidance as a universal visa rule",
+      "Use a document-photo app only after you know the actual photo format requested"
+    ],
+    steps: [
+      "Open the official GOV.UK instructions for your visa route.",
+      "Check whether you must provide biometrics at a visa application centre or upload a photo in the application flow.",
+      "Follow the specific background, format, and appointment instructions shown for that route.",
+      "If a digital photo is requested, use IDPhoto Pro to prepare the file after confirming the required specification.",
+      "Keep the current official visa instruction as the final submission reference."
+    ],
+    faq: [
+      {
+        question: "Why does a UK passport photo page say to use a light background?",
+        answer:
+          "That guidance is for applying for a UK passport online. It does not establish a universal background rule for every UK visa application."
+      },
+      {
+        question: "Will my UK visa process include a photograph?",
+        answer:
+          "GOV.UK says visa applicants provide biometrics including a photograph, usually through a visa application centre. Follow the instruction for your route and appointment."
+      },
+      {
+        question: "Can I prepare a UK visa photo before I apply?",
+        answer:
+          "Only when your specific application asks for a digital photo. Confirm the route's current instruction before preparing or uploading a file."
+      }
+    ]
+  },
+  {
+    slug: "australia-visa-photo-reuse",
+    title: "Can I Reuse a Passport Photo for an Australian Visa?",
+    heading: "Australian visa photo reuse: check your subclass checklist first",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "Australia",
+    documentName: "Visa Application Photo",
+    size: "Depends on the visa subclass and application checklist",
+    pixels: "Use the format requested in ImmiAccount or by the receiving channel",
+    background: "Follow the requirement for your exact visa application",
+    keyword: "can I reuse passport photo for Australian visa",
+    sourceUrl: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing",
+    sourceReviewedAt: "2026-07-29",
+    generatedQuestions: false,
+    geoQuestion: "Can I reuse a passport photo for an Australian visa?",
+    answerSummary:
+      "Do not assume that an existing passport photo is accepted for every Australian visa. Australia has different visa subclasses and document requirements, so check the document checklist in ImmiAccount or the instructions for your exact visa before relying on an older photo.",
+    quickAnswer: [
+      { label: "Direct answer", value: "Do not assume reuse is accepted" },
+      { label: "Why", value: "Visa subclasses and requirements differ" },
+      { label: "Check", value: "Your ImmiAccount or subclass document checklist" },
+      { label: "When uncertain", value: "Use a current photo that reflects your appearance" }
+    ],
+    intro:
+      "A passport photo and a visa photo can look similar, but similarity does not prove that an earlier file is acceptable for a new Australian visa application. The relevant checklist controls the decision.",
+    requirements: [
+      "Identify the exact Australian visa subclass before preparing a photo",
+      "Review the current document checklist in ImmiAccount or the official route instruction",
+      "Do not rely on a passport-photo rule as proof of a visa-upload rule",
+      "Use a current portrait that reflects your appearance when a new photo is requested",
+      "Follow the requested file type, size, and submission method for your application"
+    ],
+    steps: [
+      "Open the official information for your Australian visa subclass.",
+      "Check the document checklist in ImmiAccount or the official application instructions.",
+      "Confirm whether a photo is requested and whether an existing file is permitted for that application.",
+      "When a new file is required, use a current portrait and prepare it to the stated specification.",
+      "Use IDPhoto Pro to prepare the photo file only after the requested format is known."
+    ],
+    faq: [
+      {
+        question: "Does Australia allow the same passport photo for every visa application?",
+        answer:
+          "Do not assume that it does. The Department of Home Affairs has different visa subclasses and application requirements. Check the instructions for your exact visa."
+      },
+      {
+        question: "Does every Australian visa require a new photo?",
+        answer:
+          "Do not assume that either. The relevant application checklist or ImmiAccount instruction determines whether a photo is needed and what file is accepted."
+      },
+      {
+        question: "What is the safest choice when the reuse rule is unclear?",
+        answer:
+          "Use the current official instruction for your visa subclass. If a photo is requested and reuse is not clearly allowed, prepare a current portrait that reflects your appearance."
+      }
+    ]
   }
 ];

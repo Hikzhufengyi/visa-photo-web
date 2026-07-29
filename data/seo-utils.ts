@@ -30,15 +30,18 @@ export function buildSeoPageMetadata(page: SeoPage, locale: Locale) {
   const isZh = locale === "zh";
   const isAr = locale === "ar";
   const isDe = locale === "de";
+  const isGuide = page.contentKind === "guide";
   const title = buildSeoTitle(page, locale);
   const supportedLocales = page.supportedLocales ?? ["en", "zh", "ar", "de"];
-  const description = isZh
-    ? `${page.heading}。常见尺寸：${page.size}。背景要求：${page.background}。可在 iPhone 上用 IDPhoto Pro 调整照片、检查细节并导出电子版或打印版。`
-    : isAr
-      ? `${page.heading}. المقاس الشائع: ${page.size}. الخلفية: ${page.background}. استخدم IDPhoto Pro على iPhone لضبط الصورة ومراجعة الفحوصات وتصدير ملف رقمي أو جاهز للطباعة.`
-      : isDe
-        ? `${page.heading}. Übliche Größe: ${page.size}. Hintergrund: ${page.background}. Mit IDPhoto Pro kannst du das Foto auf dem iPhone anpassen, Prüfungen ansehen und digital oder druckfertig exportieren.`
-        : `${page.heading}. Typical size: ${page.size}. Background: ${page.background}. Use IDPhoto Pro on iPhone to adjust the photo, review checks, and export digital or print-ready files.`;
+  const description = isGuide
+    ? page.answerSummary ?? page.intro
+    : isZh
+      ? `${page.heading}。常见尺寸：${page.size}。背景要求：${page.background}。可在 iPhone 上用 IDPhoto Pro 调整照片、检查细节并导出电子版或打印版。`
+      : isAr
+        ? `${page.heading}. المقاس الشائع: ${page.size}. الخلفية: ${page.background}. استخدم IDPhoto Pro على iPhone لضبط الصورة ومراجعة الفحوصات وتصدير ملف رقمي أو جاهز للطباعة.`
+        : isDe
+          ? `${page.heading}. Übliche Größe: ${page.size}. Hintergrund: ${page.background}. Mit IDPhoto Pro kannst du das Foto auf dem iPhone anpassen, Prüfungen ansehen und digital oder druckfertig exportieren.`
+          : `${page.heading}. Typical size: ${page.size}. Background: ${page.background}. Use IDPhoto Pro on iPhone to adjust the photo, review checks, and export digital or print-ready files.`;
 
   return {
     title,

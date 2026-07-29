@@ -113,6 +113,87 @@
       "reviewed_at": "2026-07-17",
       "expires_at": "2026-07-31",
       "caveat": "This claim must remain prohibited; final acceptance belongs to the receiving authority."
+    },
+    {
+      "id": "CLM-007",
+      "entity_id": "ENT-003",
+      "claim": "A US nonimmigrant visa photo must have been taken within the last six months to reflect the applicant's current appearance.",
+      "scope": "US nonimmigrant visa photo workflow",
+      "sources": [
+        {
+          "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html",
+          "tier": 1,
+          "title": "US Department of State visa photo instructions"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-07-29",
+      "expires_at": "2026-10-29",
+      "caveat": "Applies to the cited US visa workflow; recheck the current instruction before submission."
+    },
+    {
+      "id": "CLM-008",
+      "entity_id": "ENT-004",
+      "claim": "IRCC's Express Entry online system creates a personalized document checklist; digital identity photos are submitted only when included in that checklist.",
+      "scope": "Canada Express Entry permanent-residence application",
+      "sources": [
+        {
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/apply-permanent-residence.html",
+          "tier": 1,
+          "title": "IRCC Express Entry permanent residence application instructions"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-07-29",
+      "expires_at": "2026-10-29",
+      "caveat": "Do not generalize this requirement to every Canadian PR program."
+    },
+    {
+      "id": "CLM-009",
+      "entity_id": "ENT-005",
+      "claim": "GOV.UK visa guidance requires biometric information including a photograph, usually collected through a visa application centre; UK passport light-background guidance is not a universal visa-upload rule.",
+      "scope": "UK visa process compared with UK passport online photo guidance",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/apply-to-come-to-the-uk",
+          "tier": 1,
+          "title": "GOV.UK visa application process"
+        },
+        {
+          "url": "https://www.gov.uk/photos-for-passports",
+          "tier": 1,
+          "title": "GOV.UK passport photo guidance"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-07-29",
+      "expires_at": "2026-10-29",
+      "caveat": "A specific visa route can provide different photo instructions; its live application guidance controls."
+    },
+    {
+      "id": "CLM-010",
+      "entity_id": "ENT-006",
+      "claim": "Australian visa subclasses and requirements differ; no primary source in the current review authorizes reuse of an existing passport photo for every Australian visa application.",
+      "scope": "Australian visa applications generally",
+      "sources": [
+        {
+          "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing",
+          "tier": 1,
+          "title": "Australian Department of Home Affairs visa listing"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-07-29",
+      "expires_at": "2026-10-29",
+      "caveat": "Check the exact subclass and ImmiAccount document checklist before relying on a previous photo."
     }
   ]
 }
