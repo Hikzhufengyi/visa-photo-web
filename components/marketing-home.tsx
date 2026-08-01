@@ -26,6 +26,7 @@ const homeLabels = {
     cta: "Download iPhone App",
     trust: "Local processing. Photos stay on your device.",
     trustPills: ["One-time purchase", "No subscription", "Photo checks", "No photo upload"],
+    usPriceNote: "US$4.99 one-time unlock in the U.S. App Store",
     standardsKicker: "Built for accuracy. Designed for privacy.",
     standardsTitle: "100+ photo size presets",
     standardsText: "Choose the country, document type, or print size before preparing your photo.",
@@ -66,6 +67,7 @@ const homeLabels = {
     cta: "下载 iPhone App",
     trust: "本地处理。照片不上云。",
     trustPills: ["一次性购买", "非订阅", "照片检测", "照片不上传"],
+    usPriceNote: "美国区 App Store 一次性解锁 US$4.99",
     standardsKicker: "为准确而构建。为隐私而设计。",
     standardsTitle: "100+ 证件照规格",
     standardsText: "制作前选择国家、证件类型或打印尺寸。",
@@ -106,6 +108,7 @@ const homeLabels = {
     cta: "تنزيل التطبيق",
     trust: "معالجة محلية. تبقى الصور على جهازك.",
     trustPills: ["شراء لمرة واحدة", "بدون اشتراك", "فحص الصورة", "بدون رفع الصور"],
+    usPriceNote: "فتح لمرة واحدة بسعر 4.99 دولار أمريكي في متجر App Store الأمريكي",
     standardsKicker: "مصمم للدقة والخصوصية.",
     standardsTitle: "أكثر من 100 معيار لصور المستندات",
     standardsText: "اختر الدولة أو نوع المستند أو مقاس الطباعة قبل إنشاء الصورة.",
@@ -146,6 +149,7 @@ const homeLabels = {
     cta: "App laden",
     trust: "Lokale Verarbeitung. Fotos bleiben auf deinem Gerät.",
     trustPills: ["Einmaliger Kauf", "Kein Abo", "Foto-Checks", "Kein Foto-Upload"],
+    usPriceNote: "Einmalige Freischaltung im US App Store: 4,99 USD",
     standardsKicker: "Für Genauigkeit gebaut. Für Datenschutz entwickelt.",
     standardsTitle: "100+ Dokumentfoto-Standards",
     standardsText: "Wähle Land, Dokumenttyp oder Druckgröße vor der Erstellung.",
@@ -186,6 +190,7 @@ const homeLabels = {
   cta: string;
   trust: string;
   trustPills: string[];
+  usPriceNote: string;
   standardsKicker: string;
   standardsTitle: string;
   standardsText: string;
@@ -392,6 +397,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               </span>
             ))}
           </div>
+          <p className="framer-price-note">{labels.usPriceNote}</p>
         </div>
 
         <div className="framer-hero-stage">{heroResultStory}</div>

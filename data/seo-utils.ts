@@ -157,7 +157,6 @@ export function buildSeoPageJsonLd(page: SeoPage, locale: Locale) {
       "@type": "HowTo",
       name: page.geoQuestion ?? page.heading,
       description: page.answerSummary ?? page.intro,
-      totalTime: "PT3M",
       supply: [
         {
           "@type": "HowToSupply",

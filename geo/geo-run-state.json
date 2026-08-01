@@ -58,6 +58,6 @@
     }
   },
   "current_module": "geo-operations",
-  "next_action": "Record a 28-day Search Console and GA4 baseline for the four English guides. Keep unsupported long-tail specification claims out of expansion until the evidence registry is completed; keep Apple Ads blocked pending separate approval.",
-  "updated_at": "2026-07-28T07:45:00+08:00"
+  "next_action": "Verify GA4 product/hostname/source/locale/landing-page reporting, obtain a current 28-day Search Console page and query export, and keep unsupported long-tail specification claims out of expansion until row-level evidence is complete. See geo/2026-08-01-machine-geo-growth-diagnosis.md.",
+  "updated_at": "2026-08-01T09:00:00+08:00"
 }

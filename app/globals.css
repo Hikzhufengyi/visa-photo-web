@@ -4056,6 +4056,23 @@ h3 {
   color: var(--muted);
 }
 
+.purchase-notice {
+  margin-top: 12px;
+}
+
+.purchase-notice strong {
+  color: var(--ink);
+}
+
+.purchase-notice p {
+  margin: 8px 0 4px;
+}
+
+.purchase-notice small {
+  display: block;
+  line-height: 1.55;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -5290,6 +5307,17 @@ h3 {
   width: 20px;
   height: 20px;
   object-fit: contain;
+}
+
+.framer-price-note {
+  margin: 7px 0 0;
+  color: #516072;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.framer-home .framer-showcase-copy .framer-price-note {
+  display: block;
 }
 
 .framer-home .framer-hero-stage {

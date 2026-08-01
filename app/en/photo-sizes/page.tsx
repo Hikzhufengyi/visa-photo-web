@@ -3,7 +3,7 @@ import { ContentHubPage } from "@/components/content-hub-page";
 import { staticRouteAlternates } from "@/data/static-route-metadata";
 
 export const metadata: Metadata = {
-  title: "All Photo Sizes | IDPhoto Pro",
+  title: "All Photo Sizes",
   description: "Browse all IDPhoto Pro photo-size presets by country, document type, dimensions, or pixels.",
   alternates: staticRouteAlternates("en", "/photo-sizes")
 };
