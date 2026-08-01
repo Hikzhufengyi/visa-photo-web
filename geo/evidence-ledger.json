@@ -194,6 +194,25 @@
       "reviewed_at": "2026-07-29",
       "expires_at": "2026-10-29",
       "caveat": "Check the exact subclass and ImmiAccount document checklist before relying on a previous photo."
+    },
+    {
+      "id": "CLM-011",
+      "entity_id": "ENT-003",
+      "claim": "For the cited U.S. passport workflow, the photo is 2 x 2 inches with a plain white or off-white background; ordinary glasses are generally removed, while a medical exception requires the current official supporting material.",
+      "scope": "U.S. passport photo only; not U.S. visa, USCIS, or other-country photo workflows",
+      "sources": [
+        {
+          "url": "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+          "tier": 1,
+          "title": "U.S. Department of State passport photo instructions"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-07-27",
+      "expires_at": "2026-10-27",
+      "caveat": "The official page was Cloudflare-blocked during the 2026-08-02 release check. Recheck the live source before the expiry date and before any wording expansion; the receiving authority makes the final decision."
     }
   ]
 }

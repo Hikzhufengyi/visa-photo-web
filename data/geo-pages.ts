@@ -1168,5 +1168,341 @@ export const geoSeoPages: SeoPage[] = [
           "Use the current official instruction for your visa subclass. If a photo is requested and reuse is not clearly allowed, prepare a current portrait that reflects your appearance."
       }
     ]
+  },
+  {
+    slug: "us-passport-photo",
+    title: "US Passport Photo Guide",
+    heading: "US passport photo: choose the question you need to solve",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "Passport",
+    size: "2 x 2 in",
+    pixels: "Follow the current official digital submission instruction",
+    background: "Plain white or off-white",
+    keyword: "us passport photo",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "How do I prepare a US passport photo?",
+    answerSummary:
+      "Start with the current U.S. Department of State photo instructions, then choose the specific task you need: review size requirements, check the background, understand glasses rules, compare your photo against a checklist, make a file on iPhone, or prepare a print layout.",
+    quickAnswer: [
+      { label: "Starting point", value: "Current official U.S. passport photo instructions" },
+      { label: "Common format", value: "2 x 2 in photo" },
+      { label: "Background", value: "Plain white or off-white" },
+      { label: "Final decision", value: "Made by the receiving authority" }
+    ],
+    intro:
+      "A US passport photo search can mean different things: you may be checking a background, wondering about glasses, comparing an example, making the file, or printing a sheet. This page routes each task to a focused guide instead of treating them as one generic requirement list.",
+    requirements: [
+      "Use the official U.S. passport photo instructions as the submission source of truth",
+      "Choose the guide that matches the issue you are solving before editing or printing",
+      "Do not treat an app check, sample image, or another applicant's photo as approval",
+      "Review the final photo and the current official instruction before submitting"
+    ],
+    steps: [
+      "Identify whether you need a requirement, background, glasses, example, maker, or print answer.",
+      "Open the focused guide below and review its direct answer and limits.",
+      "Prepare the photo only after you know the requirement for your application.",
+      "Use the official U.S. instruction for the final submission decision."
+    ],
+    topicLinks: [
+      { slug: "us-passport-photo-size", title: "Size and requirements", description: "Review the 2 x 2 inch format and the broader requirement checklist." },
+      { slug: "us-passport-photo-background", title: "Background", description: "Check whether a background is plain enough before you edit or retake." },
+      { slug: "us-passport-photo-glasses", title: "Glasses", description: "Understand the general glasses rule and the medical exception boundary." },
+      { slug: "us-passport-photo-example", title: "Examples", description: "Use a checklist to assess a photo without relying on a copied sample." },
+      { slug: "us-passport-photo-maker", title: "Make a photo on iPhone", description: "Follow a device workflow and understand what a photo app cannot decide." },
+      { slug: "us-passport-photo-print", title: "Print a 4x6 sheet", description: "Prepare a print layout only when a physical photo is appropriate." }
+    ],
+    faq: [
+      {
+        question: "Is this page an official US passport photo service?",
+        answer: "No. It is a navigation guide. The U.S. Department of State instructions control the photo requirements and the receiving authority makes the final decision."
+      },
+      {
+        question: "Which US passport photo question should I check first?",
+        answer: "Start with the size and requirements guide. Then use the background, glasses, example, maker, or print guide only for the specific question you still need to resolve."
+      }
+    ]
+  },
+  {
+    slug: "us-passport-photo-background",
+    title: "US Passport Photo Background",
+    heading: "US passport photo background: what to check before you submit",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "Passport Background",
+    size: "2 x 2 in passport photo",
+    pixels: "Use the file format requested by the current application channel",
+    background: "Plain white or off-white",
+    keyword: "us passport photo background",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "What background should a US passport photo have?",
+    answerSummary:
+      "For a US passport photo, use a plain white or off-white background. If the background is patterned, contains objects, creates a strong shadow, or makes the outline of your face and hair unclear, retaking the source photo is safer than relying on aggressive edits.",
+    quickAnswer: [
+      { label: "Required look", value: "Plain white or off-white" },
+      { label: "Avoid", value: "Patterns, visible objects, and strong shadows" },
+      { label: "Best input", value: "An evenly lit, front-facing original photo" },
+      { label: "When unsure", value: "Retake and check the official instruction" }
+    ],
+    comparisonRows: [
+      { factor: "Backdrop", idphotoPro: "Start from a plain white or off-white background", alternative: "Busy wall, scenery, furniture, or visible objects" },
+      { factor: "Lighting", idphotoPro: "Even light around the face and background", alternative: "Hard cast shadow behind the head or on the wall" },
+      { factor: "Edge quality", idphotoPro: "Hair and face outline remain natural and visible", alternative: "Harsh cutout edge or remaining original-background halo" }
+    ],
+    intro:
+      "The background question is about the original capture as much as the final color. A plain, evenly lit setup gives you a more reliable file and reduces the risk that a background edit leaves visible artifacts around hair, ears, or shoulders.",
+    requirements: [
+      "Use a plain white or off-white background",
+      "Keep background objects, textures, and patterns out of frame",
+      "Use even lighting to avoid a strong shadow behind the head",
+      "Keep the face, hair, ears, and shoulders clearly separated from the background",
+      "Review the latest official instruction before submitting"
+    ],
+    steps: [
+      "Start with a clear portrait against a plain, evenly lit background.",
+      "Check for wall texture, objects, visible seams, and cast shadows before editing.",
+      "If you use a background adjustment, inspect hair and shoulder edges at normal viewing size.",
+      "Retake the original photo when the edge or lighting still looks artificial.",
+      "Compare the final file with the current official U.S. instruction before submitting."
+    ],
+    faq: [
+      {
+        question: "Can I change a US passport photo background to white?",
+        answer: "A background adjustment can help prepare a photo file, but it does not guarantee acceptance. If editing leaves an artificial edge, halo, or uneven lighting, a new photo against a plain background is safer."
+      },
+      {
+        question: "Can a US passport photo background be off-white?",
+        answer: "The U.S. Department of State photo guidance describes a plain white or off-white background. Check the latest official instruction before submitting."
+      }
+    ]
+  },
+  {
+    slug: "us-passport-photo-glasses",
+    title: "US Passport Photo Glasses Rule",
+    heading: "Can you wear glasses in a US passport photo?",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "Passport Photo Appearance",
+    size: "2 x 2 in passport photo",
+    pixels: "Follow the current official digital submission instruction",
+    background: "Plain white or off-white",
+    keyword: "us passport photo glasses",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "Can I wear glasses in a US passport photo?",
+    answerSummary:
+      "Usually, no. U.S. passport photo guidance generally requires removing glasses. A medical exception may require a signed statement from a medical professional, so use the current State Department instruction instead of assuming a personal exception applies.",
+    quickAnswer: [
+      { label: "General rule", value: "Remove glasses" },
+      { label: "Exception", value: "Medical need with supporting statement" },
+      { label: "Do not rely on", value: "A previous passport photo or app result" },
+      { label: "Final check", value: "Current official U.S. photo instruction" }
+    ],
+    comparisonRows: [
+      { factor: "Ordinary glasses", idphotoPro: "Remove them before taking the photo", alternative: "Keep them because an old photo was accepted" },
+      { factor: "Medical need", idphotoPro: "Check the current exception and required supporting statement", alternative: "Assume the reason alone is sufficient" },
+      { factor: "Image review", idphotoPro: "Keep eyes and face unobstructed in the final file", alternative: "Rely only on a crop or background check" }
+    ],
+    intro:
+      "Glasses are a specific compliance question, not a general styling preference. Solve the rule before you take the final portrait, because an edit cannot reliably remove reflections, frames, or face obstruction from a finished photo.",
+    requirements: [
+      "Remove ordinary glasses before taking a US passport photo",
+      "If a medical exception may apply, read the current official exception requirement",
+      "Keep eyes and the full face visible without frame or reflection obstruction",
+      "Use a new photo when the original includes glasses that should be removed"
+    ],
+    steps: [
+      "Read the current State Department photo guidance for the glasses rule.",
+      "Remove glasses before taking the portrait unless you have confirmed a valid medical exception.",
+      "If an exception applies, prepare the required supporting statement before submitting.",
+      "Check the final image for clear, unobstructed eyes and face."
+    ],
+    faq: [
+      {
+        question: "Can I use my old US passport photo if I was wearing glasses?",
+        answer: "Do not assume that you can. Current requirements control the new application, so compare the photo with the current U.S. Department of State instruction."
+      },
+      {
+        question: "Can a passport photo app remove glasses?",
+        answer: "IDPhoto Pro prepares photo files; it does not establish an exception or guarantee acceptance. Taking a new portrait without ordinary glasses is the safer path when the rule requires removal."
+      }
+    ]
+  },
+  {
+    slug: "us-passport-photo-example",
+    title: "US Passport Photo Examples and Checklist",
+    heading: "US passport photo examples: use a checklist, not a copied sample",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "Passport Photo Example",
+    size: "2 x 2 in passport photo",
+    pixels: "Follow the current official digital submission instruction",
+    background: "Plain white or off-white",
+    keyword: "us passport photo example",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "What should a US passport photo example show?",
+    answerSummary:
+      "A useful US passport photo example should show the current required format, not just a person who looks similar to you. Check the square 2 x 2 inch format, plain white or off-white background, clear face visibility, neutral front-facing pose, and current official requirements before submitting.",
+    quickAnswer: [
+      { label: "Use examples for", value: "A visual checklist" },
+      { label: "Do not copy", value: "Someone else's crop, edit, or personal exception" },
+      { label: "Check", value: "Format, background, face visibility, and current rule" },
+      { label: "Authority", value: "U.S. Department of State" }
+    ],
+    comparisonRows: [
+      { factor: "What an example proves", idphotoPro: "A checklist for visible requirements", alternative: "Guaranteed acceptance for your own photo" },
+      { factor: "Photo subject", idphotoPro: "Your current, front-facing portrait", alternative: "A copied crop or retouched image of another person" },
+      { factor: "Submission rule", idphotoPro: "Current official guidance", alternative: "An old blog image or unverified social-media sample" }
+    ],
+    intro:
+      "This page deliberately does not present a stock or generated portrait as proof that a passport photo is ready to submit. A sample can mislead when it hides the applicant's real pose, lighting, glasses, or current application requirements. Use the checklist to assess your own photo instead.",
+    requirements: [
+      "Confirm the photo is a square 2 x 2 inch passport photo",
+      "Check for a plain white or off-white background",
+      "Keep the face visible, front-facing, and clearly separated from the background",
+      "Avoid treating a sample image as proof that your own photo is compliant",
+      "Compare against the current official instruction before submission"
+    ],
+    steps: [
+      "Open the current official U.S. passport photo instruction.",
+      "Use the listed requirements as a checklist for your own portrait.",
+      "Review background, face visibility, glasses, crop, and image quality individually.",
+      "Retake the photo if any requirement cannot be checked clearly.",
+      "Use a photo app to prepare the file only after the original capture is suitable."
+    ],
+    faq: [
+      {
+        question: "Where can I find an official US passport photo example?",
+        answer: "Use the U.S. Department of State passport photo instructions for the current official guidance. This page links to that source and provides a checklist rather than presenting an unverified sample as approval evidence."
+      },
+      {
+        question: "Can I copy the crop from a passport photo example?",
+        answer: "No. A sample cannot account for your face, pose, image quality, or application details. Compare your own photo with the current official requirements instead."
+      }
+    ]
+  },
+  {
+    slug: "us-passport-photo-maker",
+    title: "US Passport Photo Maker for iPhone",
+    heading: "Make a US passport photo on iPhone without sending it to a photo editor",
+    searchIntent: "export-workflow",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "US Passport Photo Maker",
+    size: "2 x 2 in",
+    pixels: "Follow the current official digital submission instruction",
+    background: "Plain white or off-white",
+    keyword: "us passport photo maker",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "How can I make a US passport photo on iPhone?",
+    answerSummary:
+      "Use a US passport photo maker to prepare a photo file, not to replace the official review. In IDPhoto Pro, choose the US preset, import a clear current portrait, review the crop, background, face position, and sharpness, then export a digital file or print layout on iPhone.",
+    quickAnswer: [
+      { label: "Platform", value: "iPhone" },
+      { label: "Workflow", value: "Choose US preset, check, export" },
+      { label: "Privacy", value: "Core photo processing stays on device" },
+      { label: "Limit", value: "No app can guarantee acceptance" }
+    ],
+    intro:
+      "A photo maker is most useful after you have a suitable original portrait. It can help prepare the dimensions and file, but it cannot turn an unsuitable capture into a submission-ready passport photo or decide whether the receiving authority will accept it.",
+    requirements: [
+      "Start with a current, clear, front-facing original portrait",
+      "Select the US passport preset before cropping or exporting",
+      "Review background, face position, eye line, head proportion, and sharpness",
+      "Use the current official instruction as the final submission reference",
+      "Treat the output as a photo file, not an official document or acceptance decision"
+    ],
+    steps: [
+      "Open IDPhoto Pro on iPhone and choose the US passport photo preset.",
+      "Import a clear current portrait with a suitable plain background.",
+      "Review the crop, face position, eye line, background, and sharpness checks.",
+      "Export the digital file requested by your application, or create a print layout when needed.",
+      "Review the current State Department instruction before final submission."
+    ],
+    faq: [
+      {
+        question: "Is IDPhoto Pro an official US passport photo maker?",
+        answer: "No. IDPhoto Pro is an iPhone app for preparing photo files. It is not affiliated with the U.S. government, and the receiving authority decides final acceptance."
+      },
+      {
+        question: "Does a US passport photo maker upload my image?",
+        answer: "IDPhoto Pro's core photo workflow is designed to process photos on device without uploading them to a server for editing. Review the privacy page for the current policy."
+      }
+    ]
+  },
+  {
+    slug: "us-passport-photo-print",
+    title: "Print a US Passport Photo on a 4x6 Sheet",
+    heading: "Print a US passport photo on a 4x6 sheet",
+    searchIntent: "export-workflow",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "US Passport Photo Print",
+    size: "4 x 6 in print sheet with 2 x 2 in photos",
+    pixels: "1200 x 1800 px at 300 DPI for the 4 x 6 in sheet",
+    background: "Based on the prepared US passport photo",
+    keyword: "us passport photo print",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "How do I print a US passport photo?",
+    answerSummary:
+      "Prepare and check the individual 2 x 2 inch US passport photo first, then export a 4 x 6 inch print layout at 300 DPI for a home printer or photo lab. Confirm that your application accepts a printed photo before you print it.",
+    quickAnswer: [
+      { label: "Individual photo", value: "2 x 2 in" },
+      { label: "Print sheet", value: "4 x 6 in at 300 DPI" },
+      { label: "Use", value: "Home printer or photo lab" },
+      { label: "Before printing", value: "Confirm physical photos are accepted" }
+    ],
+    comparisonRows: [
+      { factor: "First step", idphotoPro: "Prepare one checked 2 x 2 photo", alternative: "Print an unreviewed phone photo directly" },
+      { factor: "Print output", idphotoPro: "4 x 6 inch sheet at 300 DPI", alternative: "A screen capture with unknown dimensions" },
+      { factor: "Submission method", idphotoPro: "Confirm whether the receiving workflow accepts prints", alternative: "Assume a printed sheet replaces a requested digital upload" }
+    ],
+    intro:
+      "Printing is a separate task from preparing the photo. A correct 4 x 6 sheet can be useful for a photo lab or home printer, but it does not change an online application that asks for a digital upload.",
+    requirements: [
+      "Prepare the single US passport photo before creating a sheet",
+      "Keep the individual photo at the required 2 x 2 inch size",
+      "Export a 4 x 6 inch layout at 300 DPI when a printed photo is appropriate",
+      "Use suitable paper and a printer or lab that preserves image quality",
+      "Confirm whether the receiving application accepts physical prints"
+    ],
+    steps: [
+      "Prepare and review the individual US passport photo first.",
+      "Open export in IDPhoto Pro and choose a 4 x 6 print layout.",
+      "Save the sheet at 300 DPI and inspect the crop marks and photo edges.",
+      "Print it at home or send the 4 x 6 file to a photo lab.",
+      "Use the printed photo only where the receiving workflow accepts a physical print."
+    ],
+    faq: [
+      {
+        question: "How many US passport photos fit on a 4x6 sheet?",
+        answer: "The number depends on the selected layout, margins, and crop marks. Check the final layout before printing rather than assuming every 4x6 sheet has the same count."
+      },
+      {
+        question: "Can I print a US passport photo at CVS or another photo lab?",
+        answer: "A photo lab can print a 4 x 6 image file, but you should first confirm that the final dimensions and your application workflow are appropriate. The receiving authority decides whether the photo is accepted."
+      }
+    ]
   }
 ];

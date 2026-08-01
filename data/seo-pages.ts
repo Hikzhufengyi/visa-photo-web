@@ -29,6 +29,11 @@ export type SeoPage = {
     idphotoPro: string;
     alternative: string;
   }>;
+  topicLinks?: Array<{
+    slug: string;
+    title: string;
+    description: string;
+  }>;
   intro: string;
   requirements: string[];
   steps: string[];

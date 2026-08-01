@@ -228,6 +228,24 @@ export function SeoLanding({
           </section>
         ) : null}
 
+        {page.topicLinks?.length ? (
+          <section className="seo-faq topic-link-section">
+            <p className="card-label">Choose the task you need to complete</p>
+            <h2>US passport photo help by question</h2>
+            <div className="seo-grid">
+              {page.topicLinks.map((item) => (
+                <article className="seo-card" key={item.slug}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <Link className="button button-secondary" href={`/${locale}/${item.slug}`}>
+                    Read this guide
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <section className="seo-faq">
           <p className="card-label">FAQ</p>
           <h2>{isZh ? "常见问题" : isAr ? "الأسئلة الشائعة" : isDe ? "Häufige Fragen" : "Frequently asked questions"}</h2>
