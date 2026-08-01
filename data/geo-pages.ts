@@ -1209,7 +1209,8 @@ export const geoSeoPages: SeoPage[] = [
       "Use the official U.S. instruction for the final submission decision."
     ],
     topicLinks: [
-      { slug: "us-passport-photo-size", title: "Size and requirements", description: "Review the 2 x 2 inch format and the broader requirement checklist." },
+      { slug: "us-passport-photo-requirements", title: "All requirements", description: "Review the full rule checklist before you take, edit, or submit a photo." },
+      { slug: "us-passport-photo-size", title: "Photo size", description: "Check the 2 x 2 inch format, digital dimensions, and head-size framing." },
       { slug: "us-passport-photo-background", title: "Background", description: "Check whether a background is plain enough before you edit or retake." },
       { slug: "us-passport-photo-glasses", title: "Glasses", description: "Understand the general glasses rule and the medical exception boundary." },
       { slug: "us-passport-photo-example", title: "Examples", description: "Use a checklist to assess a photo without relying on a copied sample." },
@@ -1224,6 +1225,75 @@ export const geoSeoPages: SeoPage[] = [
       {
         question: "Which US passport photo question should I check first?",
         answer: "Start with the size and requirements guide. Then use the background, glasses, example, maker, or print guide only for the specific question you still need to resolve."
+      }
+    ]
+  },
+  {
+    slug: "us-passport-photo-requirements",
+    title: "US Passport Photo Requirements",
+    heading: "US passport photo requirements: the full checklist before you submit",
+    searchIntent: "country-document",
+    contentKind: "guide",
+    supportedLocales: ["en"],
+    country: "United States",
+    documentName: "Passport Photo Requirements",
+    size: "2 x 2 in; see the size guide for framing detail",
+    pixels: "Follow the current official digital submission instruction",
+    background: "Plain white or off-white",
+    keyword: "us passport photo requirements",
+    sourceUrl: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html",
+    sourceReviewedAt: "2026-07-27",
+    generatedQuestions: false,
+    geoQuestion: "What are the current US passport photo requirements?",
+    answerSummary:
+      "A US passport photo needs more than the correct 2 x 2 inch size. Before submitting, check that the image is recent, clear, front-facing, evenly lit, shown against a plain white or off-white background, and free of ordinary glasses or other face obstruction. The current U.S. Department of State instruction is the final source of truth.",
+    quickAnswer: [
+      { label: "Format", value: "2 x 2 in photo" },
+      { label: "Background", value: "Plain white or off-white" },
+      { label: "Appearance", value: "Clear, front-facing, unobstructed" },
+      { label: "Final authority", value: "Current U.S. Department of State instruction" }
+    ],
+    comparisonRows: [
+      { factor: "What this page answers", idphotoPro: "The complete pre-submission checklist", alternative: "Only the 2 x 2 inch dimensions" },
+      { factor: "When to use the size guide", idphotoPro: "For crop, format, and head-size detail", alternative: "Assume size covers background, glasses, and quality rules" },
+      { factor: "When a detail is uncertain", idphotoPro: "Check the current official instruction and retake if needed", alternative: "Treat an app check or old example as approval" }
+    ],
+    intro:
+      "Use this page as the complete pre-submission checklist. It is intentionally different from the US passport photo size page: size answers the measurement question, while this guide helps you review the full set of visible photo rules before you take, edit, export, or submit a file.",
+    requirements: [
+      "Use a recent color portrait that reflects your current appearance",
+      "Use a 2 x 2 inch square photo; review the size guide for framing and digital-file detail",
+      "Use a plain white or off-white background without visible objects, pattern, or strong shadow",
+      "Face the camera directly with the face clearly visible and evenly lit",
+      "Remove ordinary glasses; confirm the current official exception process before relying on a medical need",
+      "Avoid blur, heavy retouching, filters, face obstruction, or an artificial-looking edit",
+      "Review the current official U.S. instruction immediately before submission"
+    ],
+    steps: [
+      "Read the current U.S. Department of State passport photo instruction for your application.",
+      "Take or select a current, clear, front-facing portrait with even lighting.",
+      "Check the complete list: size, background, face visibility, glasses, sharpness, and natural-looking edges.",
+      "Open the focused size, background, or glasses guide when one item needs a closer review.",
+      "Use IDPhoto Pro to prepare the photo file, then make the final comparison against the official instruction before submitting."
+    ],
+    topicLinks: [
+      { slug: "us-passport-photo-size", title: "US passport photo size", description: "Check the 2 x 2 inch format, crop, and digital-size detail." },
+      { slug: "us-passport-photo-background", title: "Background rule", description: "Check plain white or off-white background and edge risks." },
+      { slug: "us-passport-photo-glasses", title: "Glasses rule", description: "Understand the ordinary-glasses rule and medical exception boundary." },
+      { slug: "us-passport-photo-example", title: "Example checklist", description: "Assess your own image without treating a sample as approval." }
+    ],
+    faq: [
+      {
+        question: "Are US passport photo requirements only about the 2 x 2 inch size?",
+        answer: "No. Size is only one part of the requirement. Background, current appearance, pose, face visibility, glasses, lighting, and image quality also matter. Use the current official instruction for the full rule."
+      },
+      {
+        question: "Can a photo app confirm that my US passport photo will be accepted?",
+        answer: "No. IDPhoto Pro can help prepare a photo file and identify visible issues, but it does not make the final acceptance decision. The receiving authority decides whether a submitted photo is accepted."
+      },
+      {
+        question: "Where should I check the current US passport photo requirements?",
+        answer: "Use the current U.S. Department of State passport photo instruction linked on this page. Requirements and submission processes can change."
       }
     ]
   },

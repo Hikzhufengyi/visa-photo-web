@@ -47,7 +47,7 @@
         "Chairman approved production deployment on 2026-07-28",
         "Commit d431b60 deployed successfully by Vercel",
         "Production QA passed for the scoped release: four English guide routes 200, unsupported locales 404, sitemap and llms.txt verified, GA4 tag present",
-        "Scoped US passport topic-cluster release 09bb52d deployed successfully by Vercel on 2026-08-02: six English pages returned 200, the requirements synonym returned 308 to the canonical size page, sitemap and llms.txt included the six answer assets, and the production GA4 tag and App Store CTA were present",
+        "Scoped US passport topic-cluster release 09bb52d deployed successfully by Vercel on 2026-08-02: six English pages returned 200, the requirements synonym returned 308 to the canonical size page, sitemap and llms.txt included the six answer assets, and the production GA4 tag and App Store CTA were present. A follow-up converts the requirements synonym into a distinct English requirements page because its search task is broader than the size query.",
         "Overall GEO publish gate remains blocked by the unresolved long-tail claim registry: CLM-005 and OBS-005"
       ],
       "approved_by": "董事长"
@@ -59,6 +59,6 @@
     }
   },
   "current_module": "geo-operations",
-  "next_action": "After the scoped US passport-photo topic cluster is released, verify GA4 product/hostname/source/locale/landing-page reporting and obtain a current 28-day Search Console page and query export. Keep unsupported long-tail specification claims out of expansion until row-level evidence is complete; CLM-011 is approved only for the six English US passport pages and must be refreshed by 2026-10-27.",
+  "next_action": "After the scoped US passport-photo topic cluster is released, verify GA4 product/hostname/source/locale/landing-page reporting and obtain a current 28-day Search Console page and query export. Keep unsupported long-tail specification claims out of expansion until row-level evidence is complete; CLM-011 is approved only for the seven English US passport pages and must be refreshed by 2026-10-27.",
   "updated_at": "2026-08-02T10:30:00+08:00"
 }

@@ -6,6 +6,7 @@ const prioritySlugs = [
   "make-us-passport-photo-on-iphone",
   "us-passport-photo-size",
   "us-passport-photo",
+  "us-passport-photo-requirements",
   "us-passport-photo-background",
   "us-passport-photo-glasses",
   "us-passport-photo-example",
@@ -88,6 +89,7 @@ IDPhoto Pro is an iPhone app for preparing passport, visa, ID, residence, and im
 
 - How do I make a passport photo on iPhone?
 - What size is a US passport photo?
+- What are the current US passport photo requirements?
 - What size is a UK passport photo?
 - What size is an Australia passport photo?
 - What size is a Saudi Iqama photo?
