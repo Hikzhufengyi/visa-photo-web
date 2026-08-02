@@ -1,0 +1,3259 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-08-02T14:24:15.346Z",
+  "source": "data/app-photo-specs.ts",
+  "publicationPolicy": {
+    "purpose": "Create country-specific search and GEO pages only where the user task and official evidence are distinct.",
+    "prohibited": [
+      "Copying the U.S. page set to another country without country-specific evidence",
+      "Publishing size, background, glasses, example, or print claims solely from the app preset dataset",
+      "Claiming government approval or guaranteed acceptance"
+    ],
+    "indexGate": [
+      "A primary authority source supports the exact visible rule",
+      "The page has a distinct search task and unique answer",
+      "The released iOS app supports the referenced preset or workflow",
+      "Product, design, CTO, and QA gates have passed"
+    ]
+  },
+  "summary": {
+    "totalCandidates": 113,
+    "published": 1,
+    "blockedPendingEvidence": 112
+  },
+  "rows": [
+    {
+      "id": "CTC-us-passport",
+      "specId": "us-passport",
+      "country": "United States",
+      "document": "U.S. Passport",
+      "category": "passport",
+      "existingSizeSlug": "us-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [
+        "CLM-011"
+      ],
+      "reviewedAt": "2026-07-27",
+      "indexState": "published",
+      "owner": "增长运营 / 产品经理",
+      "publicationRule": "Published only for the evidence-backed U.S. passport scope.",
+      "note": "US passport cluster is the reference implementation. The country-specific rule source must be refreshed by 2026-10-27."
+    },
+    {
+      "id": "CTC-us-visa",
+      "specId": "us-visa",
+      "country": "United States",
+      "document": "U.S. Visa",
+      "category": "visa",
+      "existingSizeSlug": "us-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-uk-passport",
+      "specId": "uk-passport",
+      "country": "United Kingdom",
+      "document": "UK Passport",
+      "category": "passport",
+      "existingSizeSlug": "uk-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-canada-passport",
+      "specId": "canada-passport",
+      "country": "Canada",
+      "document": "Canada Passport",
+      "category": "passport",
+      "existingSizeSlug": "canada-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-schengen-visa",
+      "specId": "schengen-visa",
+      "country": "Schengen Area",
+      "document": "Schengen Visa",
+      "category": "visa",
+      "existingSizeSlug": "schengen-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-australia-passport",
+      "specId": "australia-passport",
+      "country": "Australia",
+      "document": "Australia Passport",
+      "category": "passport",
+      "existingSizeSlug": "australia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-china-visa",
+      "specId": "china-visa",
+      "country": "China",
+      "document": "China Visa",
+      "category": "visa",
+      "existingSizeSlug": "china-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-india-visa",
+      "specId": "india-visa",
+      "country": "India",
+      "document": "India Visa",
+      "category": "visa",
+      "existingSizeSlug": "india-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-us-green-card",
+      "specId": "us-green-card",
+      "country": "United States",
+      "document": "Green Card / USCIS",
+      "category": "immigration",
+      "existingSizeSlug": "us-green-card-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-dv-lottery",
+      "specId": "dv-lottery",
+      "country": "United States",
+      "document": "DV Lottery",
+      "category": "immigration",
+      "existingSizeSlug": "dv-lottery-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-uscis-ead",
+      "specId": "uscis-ead",
+      "country": "United States",
+      "document": "USCIS EAD / OPT",
+      "category": "immigration",
+      "existingSizeSlug": "uscis-ead-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-canada-pr",
+      "specId": "canada-pr",
+      "country": "Canada",
+      "document": "Canada PR Card",
+      "category": "immigration",
+      "existingSizeSlug": "canada-pr-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-uk-immigration",
+      "specId": "uk-immigration",
+      "country": "United Kingdom",
+      "document": "UK Immigration Photo",
+      "category": "immigration",
+      "existingSizeSlug": "uk-immigration-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-australia-immigration",
+      "specId": "australia-immigration",
+      "country": "Australia",
+      "document": "Australia Immigration Photo",
+      "category": "immigration",
+      "existingSizeSlug": "australia-immigration-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-eu-residence-permit",
+      "specId": "eu-residence-permit",
+      "country": "European Union",
+      "document": "EU Residence Permit",
+      "category": "immigration",
+      "existingSizeSlug": "eu-residence-permit-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-saudi-iqama",
+      "specId": "saudi-iqama",
+      "country": "Saudi Arabia",
+      "document": "Saudi Iqama",
+      "category": "immigration",
+      "existingSizeSlug": "saudi-iqama-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-uae-emirates-id",
+      "specId": "uae-emirates-id",
+      "country": "United Arab Emirates",
+      "document": "UAE Emirates ID",
+      "category": "immigration",
+      "existingSizeSlug": "uae-emirates-id-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-qatar-residence-permit",
+      "specId": "qatar-residence-permit",
+      "country": "Qatar",
+      "document": "Qatar Residence Permit",
+      "category": "immigration",
+      "existingSizeSlug": "qatar-residence-permit-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-kuwait-civil-id",
+      "specId": "kuwait-civil-id",
+      "country": "Kuwait",
+      "document": "Kuwait Civil ID",
+      "category": "immigration",
+      "existingSizeSlug": "kuwait-civil-id-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-oman-residence-card",
+      "specId": "oman-residence-card",
+      "country": "Oman",
+      "document": "Oman Residence Card",
+      "category": "immigration",
+      "existingSizeSlug": "oman-residence-card-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-bahrain-cpr",
+      "specId": "bahrain-cpr",
+      "country": "Bahrain",
+      "document": "Bahrain CPR / Residence Permit",
+      "category": "immigration",
+      "existingSizeSlug": "bahrain-cpr-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-us-2x2",
+      "specId": "print-us-2x2",
+      "country": "Print",
+      "document": "2 x 2 in Photo",
+      "category": "print",
+      "existingSizeSlug": "print-us-2x2-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-1x1",
+      "specId": "print-1x1",
+      "country": "Print",
+      "document": "1 x 1 in Photo",
+      "category": "print",
+      "existingSizeSlug": "print-1x1-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-35x45",
+      "specId": "print-35x45",
+      "country": "Print",
+      "document": "35 x 45 mm Photo",
+      "category": "print",
+      "existingSizeSlug": "print-35x45-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-33x48",
+      "specId": "print-33x48",
+      "country": "Print",
+      "document": "33 x 48 mm Photo",
+      "category": "print",
+      "existingSizeSlug": "print-33x48-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-40x50",
+      "specId": "print-40x50",
+      "country": "Print",
+      "document": "40 x 50 mm Photo",
+      "category": "print",
+      "existingSizeSlug": "print-40x50-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-50x70",
+      "specId": "print-50x70",
+      "country": "Print",
+      "document": "50 x 70 mm Photo",
+      "category": "print",
+      "existingSizeSlug": "print-50x70-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-square-digital",
+      "specId": "print-square-digital",
+      "country": "Print",
+      "document": "Square Digital Upload",
+      "category": "print",
+      "existingSizeSlug": "print-square-digital-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-print-linkedin-headshot",
+      "specId": "print-linkedin-headshot",
+      "country": "Print",
+      "document": "Clean Profile Headshot",
+      "category": "print",
+      "existingSizeSlug": "print-linkedin-headshot-photo-size",
+      "candidateQuestionTypes": [
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-eu-passport",
+      "specId": "eu-passport",
+      "country": "European Union",
+      "document": "European Union Passport",
+      "category": "passport",
+      "existingSizeSlug": "eu-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-germany-passport",
+      "specId": "germany-passport",
+      "country": "Germany",
+      "document": "Germany Passport",
+      "category": "passport",
+      "existingSizeSlug": "germany-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-france-passport",
+      "specId": "france-passport",
+      "country": "France",
+      "document": "France Passport",
+      "category": "passport",
+      "existingSizeSlug": "france-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-italy-passport",
+      "specId": "italy-passport",
+      "country": "Italy",
+      "document": "Italy Passport",
+      "category": "passport",
+      "existingSizeSlug": "italy-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-spain-passport",
+      "specId": "spain-passport",
+      "country": "Spain",
+      "document": "Spain Passport",
+      "category": "passport",
+      "existingSizeSlug": "spain-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-netherlands-passport",
+      "specId": "netherlands-passport",
+      "country": "Netherlands",
+      "document": "Netherlands Passport",
+      "category": "passport",
+      "existingSizeSlug": "netherlands-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-ireland-passport",
+      "specId": "ireland-passport",
+      "country": "Ireland",
+      "document": "Ireland Passport",
+      "category": "passport",
+      "existingSizeSlug": "ireland-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-switzerland-passport",
+      "specId": "switzerland-passport",
+      "country": "Switzerland",
+      "document": "Switzerland Passport",
+      "category": "passport",
+      "existingSizeSlug": "switzerland-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-sweden-passport",
+      "specId": "sweden-passport",
+      "country": "Sweden",
+      "document": "Sweden Passport",
+      "category": "passport",
+      "existingSizeSlug": "sweden-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-norway-passport",
+      "specId": "norway-passport",
+      "country": "Norway",
+      "document": "Norway Passport",
+      "category": "passport",
+      "existingSizeSlug": "norway-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-denmark-passport",
+      "specId": "denmark-passport",
+      "country": "Denmark",
+      "document": "Denmark Passport",
+      "category": "passport",
+      "existingSizeSlug": "denmark-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-finland-passport",
+      "specId": "finland-passport",
+      "country": "Finland",
+      "document": "Finland Passport",
+      "category": "passport",
+      "existingSizeSlug": "finland-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-austria-passport",
+      "specId": "austria-passport",
+      "country": "Austria",
+      "document": "Austria Passport",
+      "category": "passport",
+      "existingSizeSlug": "austria-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-belgium-passport",
+      "specId": "belgium-passport",
+      "country": "Belgium",
+      "document": "Belgium Passport",
+      "category": "passport",
+      "existingSizeSlug": "belgium-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-portugal-passport",
+      "specId": "portugal-passport",
+      "country": "Portugal",
+      "document": "Portugal Passport",
+      "category": "passport",
+      "existingSizeSlug": "portugal-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-poland-passport",
+      "specId": "poland-passport",
+      "country": "Poland",
+      "document": "Poland Passport",
+      "category": "passport",
+      "existingSizeSlug": "poland-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-czech-passport",
+      "specId": "czech-passport",
+      "country": "Czech Republic",
+      "document": "Czech Republic Passport",
+      "category": "passport",
+      "existingSizeSlug": "czech-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-greece-passport",
+      "specId": "greece-passport",
+      "country": "Greece",
+      "document": "Greece Passport",
+      "category": "passport",
+      "existingSizeSlug": "greece-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-turkey-passport",
+      "specId": "turkey-passport",
+      "country": "Turkey",
+      "document": "Turkey Passport",
+      "category": "passport",
+      "existingSizeSlug": "turkey-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-russia-passport",
+      "specId": "russia-passport",
+      "country": "Russia",
+      "document": "Russia Passport",
+      "category": "passport",
+      "existingSizeSlug": "russia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-ukraine-passport",
+      "specId": "ukraine-passport",
+      "country": "Ukraine",
+      "document": "Ukraine Passport",
+      "category": "passport",
+      "existingSizeSlug": "ukraine-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-romania-passport",
+      "specId": "romania-passport",
+      "country": "Romania",
+      "document": "Romania Passport",
+      "category": "passport",
+      "existingSizeSlug": "romania-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-hungary-passport",
+      "specId": "hungary-passport",
+      "country": "Hungary",
+      "document": "Hungary Passport",
+      "category": "passport",
+      "existingSizeSlug": "hungary-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-iceland-passport",
+      "specId": "iceland-passport",
+      "country": "Iceland",
+      "document": "Iceland Passport",
+      "category": "passport",
+      "existingSizeSlug": "iceland-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-croatia-passport",
+      "specId": "croatia-passport",
+      "country": "Croatia",
+      "document": "Croatia Passport",
+      "category": "passport",
+      "existingSizeSlug": "croatia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-slovenia-passport",
+      "specId": "slovenia-passport",
+      "country": "Slovenia",
+      "document": "Slovenia Passport",
+      "category": "passport",
+      "existingSizeSlug": "slovenia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-slovakia-passport",
+      "specId": "slovakia-passport",
+      "country": "Slovakia",
+      "document": "Slovakia Passport",
+      "category": "passport",
+      "existingSizeSlug": "slovakia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-estonia-passport",
+      "specId": "estonia-passport",
+      "country": "Estonia",
+      "document": "Estonia Passport",
+      "category": "passport",
+      "existingSizeSlug": "estonia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-latvia-passport",
+      "specId": "latvia-passport",
+      "country": "Latvia",
+      "document": "Latvia Passport",
+      "category": "passport",
+      "existingSizeSlug": "latvia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-lithuania-passport",
+      "specId": "lithuania-passport",
+      "country": "Lithuania",
+      "document": "Lithuania Passport",
+      "category": "passport",
+      "existingSizeSlug": "lithuania-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-bulgaria-passport",
+      "specId": "bulgaria-passport",
+      "country": "Bulgaria",
+      "document": "Bulgaria Passport",
+      "category": "passport",
+      "existingSizeSlug": "bulgaria-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-mexico-passport",
+      "specId": "mexico-passport",
+      "country": "Mexico",
+      "document": "Mexico Passport",
+      "category": "passport",
+      "existingSizeSlug": "mexico-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-brazil-passport",
+      "specId": "brazil-passport",
+      "country": "Brazil",
+      "document": "Brazil Passport",
+      "category": "passport",
+      "existingSizeSlug": "brazil-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-argentina-passport",
+      "specId": "argentina-passport",
+      "country": "Argentina",
+      "document": "Argentina Passport",
+      "category": "passport",
+      "existingSizeSlug": "argentina-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-chile-passport",
+      "specId": "chile-passport",
+      "country": "Chile",
+      "document": "Chile Passport",
+      "category": "passport",
+      "existingSizeSlug": "chile-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-colombia-passport",
+      "specId": "colombia-passport",
+      "country": "Colombia",
+      "document": "Colombia Passport",
+      "category": "passport",
+      "existingSizeSlug": "colombia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-peru-passport",
+      "specId": "peru-passport",
+      "country": "Peru",
+      "document": "Peru Passport",
+      "category": "passport",
+      "existingSizeSlug": "peru-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-japan-passport",
+      "specId": "japan-passport",
+      "country": "Japan",
+      "document": "Japan Passport",
+      "category": "passport",
+      "existingSizeSlug": "japan-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-south-korea-passport",
+      "specId": "south-korea-passport",
+      "country": "South Korea",
+      "document": "South Korea Passport",
+      "category": "passport",
+      "existingSizeSlug": "south-korea-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-singapore-passport",
+      "specId": "singapore-passport",
+      "country": "Singapore",
+      "document": "Singapore Passport",
+      "category": "passport",
+      "existingSizeSlug": "singapore-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-malaysia-passport",
+      "specId": "malaysia-passport",
+      "country": "Malaysia",
+      "document": "Malaysia Passport",
+      "category": "passport",
+      "existingSizeSlug": "malaysia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-thailand-passport",
+      "specId": "thailand-passport",
+      "country": "Thailand",
+      "document": "Thailand Passport",
+      "category": "passport",
+      "existingSizeSlug": "thailand-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-vietnam-passport",
+      "specId": "vietnam-passport",
+      "country": "Vietnam",
+      "document": "Vietnam Passport",
+      "category": "passport",
+      "existingSizeSlug": "vietnam-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-indonesia-passport",
+      "specId": "indonesia-passport",
+      "country": "Indonesia",
+      "document": "Indonesia Passport",
+      "category": "passport",
+      "existingSizeSlug": "indonesia-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-philippines-passport",
+      "specId": "philippines-passport",
+      "country": "Philippines",
+      "document": "Philippines Passport",
+      "category": "passport",
+      "existingSizeSlug": "philippines-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-taiwan-passport",
+      "specId": "taiwan-passport",
+      "country": "Taiwan",
+      "document": "Taiwan Passport",
+      "category": "passport",
+      "existingSizeSlug": "taiwan-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-hong-kong-passport",
+      "specId": "hong-kong-passport",
+      "country": "Hong Kong",
+      "document": "Hong Kong Passport",
+      "category": "passport",
+      "existingSizeSlug": "hong-kong-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-uae-passport",
+      "specId": "uae-passport",
+      "country": "United Arab Emirates",
+      "document": "United Arab Emirates Passport",
+      "category": "passport",
+      "existingSizeSlug": "uae-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-saudi-passport",
+      "specId": "saudi-passport",
+      "country": "Saudi Arabia",
+      "document": "Saudi Arabia Passport",
+      "category": "passport",
+      "existingSizeSlug": "saudi-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-qatar-passport",
+      "specId": "qatar-passport",
+      "country": "Qatar",
+      "document": "Qatar Passport",
+      "category": "passport",
+      "existingSizeSlug": "qatar-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-kuwait-passport",
+      "specId": "kuwait-passport",
+      "country": "Kuwait",
+      "document": "Kuwait Passport",
+      "category": "passport",
+      "existingSizeSlug": "kuwait-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-oman-passport",
+      "specId": "oman-passport",
+      "country": "Oman",
+      "document": "Oman Passport",
+      "category": "passport",
+      "existingSizeSlug": "oman-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-bahrain-passport",
+      "specId": "bahrain-passport",
+      "country": "Bahrain",
+      "document": "Bahrain Passport",
+      "category": "passport",
+      "existingSizeSlug": "bahrain-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-israel-passport",
+      "specId": "israel-passport",
+      "country": "Israel",
+      "document": "Israel Passport",
+      "category": "passport",
+      "existingSizeSlug": "israel-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-south-africa-passport",
+      "specId": "south-africa-passport",
+      "country": "South Africa",
+      "document": "South Africa Passport",
+      "category": "passport",
+      "existingSizeSlug": "south-africa-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-new-zealand-passport",
+      "specId": "new-zealand-passport",
+      "country": "New Zealand",
+      "document": "New Zealand Passport",
+      "category": "passport",
+      "existingSizeSlug": "new-zealand-passport-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "glasses",
+        "example",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-uk-visa",
+      "specId": "uk-visa",
+      "country": "United Kingdom",
+      "document": "United Kingdom Visa",
+      "category": "visa",
+      "existingSizeSlug": "uk-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-canada-visa",
+      "specId": "canada-visa",
+      "country": "Canada",
+      "document": "Canada Visa",
+      "category": "visa",
+      "existingSizeSlug": "canada-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-australia-visa",
+      "specId": "australia-visa",
+      "country": "Australia",
+      "document": "Australia Visa",
+      "category": "visa",
+      "existingSizeSlug": "australia-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-new-zealand-visa",
+      "specId": "new-zealand-visa",
+      "country": "New Zealand",
+      "document": "New Zealand Visa",
+      "category": "visa",
+      "existingSizeSlug": "new-zealand-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-japan-visa",
+      "specId": "japan-visa",
+      "country": "Japan",
+      "document": "Japan Visa",
+      "category": "visa",
+      "existingSizeSlug": "japan-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-south-korea-visa",
+      "specId": "south-korea-visa",
+      "country": "South Korea",
+      "document": "South Korea Visa",
+      "category": "visa",
+      "existingSizeSlug": "south-korea-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-singapore-visa",
+      "specId": "singapore-visa",
+      "country": "Singapore",
+      "document": "Singapore Visa",
+      "category": "visa",
+      "existingSizeSlug": "singapore-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-malaysia-visa",
+      "specId": "malaysia-visa",
+      "country": "Malaysia",
+      "document": "Malaysia Visa",
+      "category": "visa",
+      "existingSizeSlug": "malaysia-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-thailand-visa",
+      "specId": "thailand-visa",
+      "country": "Thailand",
+      "document": "Thailand Visa",
+      "category": "visa",
+      "existingSizeSlug": "thailand-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-vietnam-visa",
+      "specId": "vietnam-visa",
+      "country": "Vietnam",
+      "document": "Vietnam Visa",
+      "category": "visa",
+      "existingSizeSlug": "vietnam-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-indonesia-visa",
+      "specId": "indonesia-visa",
+      "country": "Indonesia",
+      "document": "Indonesia Visa",
+      "category": "visa",
+      "existingSizeSlug": "indonesia-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-philippines-visa",
+      "specId": "philippines-visa",
+      "country": "Philippines",
+      "document": "Philippines Visa",
+      "category": "visa",
+      "existingSizeSlug": "philippines-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-taiwan-visa",
+      "specId": "taiwan-visa",
+      "country": "Taiwan",
+      "document": "Taiwan Visa",
+      "category": "visa",
+      "existingSizeSlug": "taiwan-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-hong-kong-visa",
+      "specId": "hong-kong-visa",
+      "country": "Hong Kong",
+      "document": "Hong Kong Visa",
+      "category": "visa",
+      "existingSizeSlug": "hong-kong-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-turkey-visa",
+      "specId": "turkey-visa",
+      "country": "Turkey",
+      "document": "Turkey Visa",
+      "category": "visa",
+      "existingSizeSlug": "turkey-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-uae-visa",
+      "specId": "uae-visa",
+      "country": "United Arab Emirates",
+      "document": "United Arab Emirates Visa",
+      "category": "visa",
+      "existingSizeSlug": "uae-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-saudi-visa",
+      "specId": "saudi-visa",
+      "country": "Saudi Arabia",
+      "document": "Saudi Arabia Visa",
+      "category": "visa",
+      "existingSizeSlug": "saudi-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-qatar-visa",
+      "specId": "qatar-visa",
+      "country": "Qatar",
+      "document": "Qatar Visa",
+      "category": "visa",
+      "existingSizeSlug": "qatar-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-kuwait-visa",
+      "specId": "kuwait-visa",
+      "country": "Kuwait",
+      "document": "Kuwait Visa",
+      "category": "visa",
+      "existingSizeSlug": "kuwait-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-oman-visa",
+      "specId": "oman-visa",
+      "country": "Oman",
+      "document": "Oman Visa",
+      "category": "visa",
+      "existingSizeSlug": "oman-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-bahrain-visa",
+      "specId": "bahrain-visa",
+      "country": "Bahrain",
+      "document": "Bahrain Visa",
+      "category": "visa",
+      "existingSizeSlug": "bahrain-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-brazil-visa",
+      "specId": "brazil-visa",
+      "country": "Brazil",
+      "document": "Brazil Visa",
+      "category": "visa",
+      "existingSizeSlug": "brazil-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-mexico-visa",
+      "specId": "mexico-visa",
+      "country": "Mexico",
+      "document": "Mexico Visa",
+      "category": "visa",
+      "existingSizeSlug": "mexico-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-russia-visa",
+      "specId": "russia-visa",
+      "country": "Russia",
+      "document": "Russia Visa",
+      "category": "visa",
+      "existingSizeSlug": "russia-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-france-visa",
+      "specId": "france-visa",
+      "country": "France",
+      "document": "France Visa",
+      "category": "visa",
+      "existingSizeSlug": "france-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-germany-visa",
+      "specId": "germany-visa",
+      "country": "Germany",
+      "document": "Germany Visa",
+      "category": "visa",
+      "existingSizeSlug": "germany-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-italy-visa",
+      "specId": "italy-visa",
+      "country": "Italy",
+      "document": "Italy Visa",
+      "category": "visa",
+      "existingSizeSlug": "italy-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    },
+    {
+      "id": "CTC-spain-visa",
+      "specId": "spain-visa",
+      "country": "Spain",
+      "document": "Spain Visa",
+      "category": "visa",
+      "existingSizeSlug": "spain-visa-photo-size",
+      "candidateQuestionTypes": [
+        "overview",
+        "size",
+        "requirements",
+        "background",
+        "maker",
+        "print"
+      ],
+      "requiredEvidence": [
+        "Primary authority URL for this exact document workflow",
+        "Source review date and expiry date",
+        "Scope boundary: country, document, application channel, and exceptions",
+        "Product preset parity with the released iOS version"
+      ],
+      "evidenceIds": [],
+      "reviewedAt": null,
+      "indexState": "blocked",
+      "owner": "增长运营",
+      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+    }
+  ]
+}
