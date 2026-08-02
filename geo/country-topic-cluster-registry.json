@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-08-02T16:11:26.624Z",
+  "generatedAt": "2026-08-02T16:14:34.492Z",
   "source": "data/app-photo-specs.ts",
   "publicationPolicy": {
     "purpose": "Create country-specific search and GEO pages only where the user task and official evidence are distinct.",
