@@ -1,4 +1,5 @@
 import { generatedSeoPages } from "@/data/generated-seo-pages";
+import { evidenceBackedCountryPages } from "@/data/evidence-backed-country-pages";
 import { geoSeoPages } from "@/data/geo-pages";
 import type { Locale } from "@/data/localization";
 
@@ -8,6 +9,7 @@ export type SeoPage = {
   heading: string;
   searchIntent: "country-document" | "document-size" | "export-workflow";
   contentKind?: "requirements" | "guide";
+  conversionMode?: "product" | "official-first";
   supportedLocales?: Locale[];
   country: string;
   documentName: string;
@@ -327,6 +329,7 @@ const curatedSeoPages: SeoPage[] = [
     title: "Canada Passport Photo Size",
     heading: "Canada passport photo size and requirements",
     searchIntent: "country-document",
+    conversionMode: "official-first",
     country: "Canada",
     documentName: "Passport",
     size: "50 x 70 mm",
@@ -334,20 +337,21 @@ const curatedSeoPages: SeoPage[] = [
     background: "White or light-colored",
     keyword: "Canada passport photo size",
     sourceUrl: "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/photos.html",
+    sourceReviewedAt: "2026-08-02",
     intro:
-      "Prepare a Canada passport photo on iPhone with 50 x 70 mm sizing, white or light-colored background guidance, face-framing checks, and print-ready export support.",
+      "Canada passport photo requirements include more than the 50 x 70 mm dimensions. The current Government of Canada guidance requires an in-person commercial photographer or photo studio and restricts background changes and image alteration.",
     requirements: [
       "Common Canada passport photo size: 50 x 70 mm",
       "Plain white or light-colored background",
-      "Face centered with neutral expression",
+      "Photo taken in person by a commercial photographer or photo studio",
       "Head height and chin-to-crown measurement should follow current official guidance",
-      "Sharp photo with balanced lighting and no heavy shadows"
+      "Do not change the background or remove shadows in software"
     ],
     steps: [
-      "Choose the Canada passport preset.",
-      "Import a recent front-facing portrait.",
-      "Review head size, centering, top margin, background, and sharpness checks.",
-      "Export a digital file or print-ready sheet."
+      "Read the current Government of Canada passport photo guidance.",
+      "Arrange an in-person commercial photographer or photo studio session.",
+      "Check the 50 x 70 mm dimensions and 31 to 36 mm chin-to-crown face height.",
+      "Use the official submission instruction for the final decision."
     ],
     faq: [
       {
@@ -358,7 +362,7 @@ const curatedSeoPages: SeoPage[] = [
       {
         question: "Can I create a Canada passport photo on iPhone?",
         answer:
-          "Yes. You can use the app to crop, check, and export the photo, but the final receiving authority decides acceptance."
+          "The Government of Canada guidance requires the photo to be taken in person by a commercial photographer or photo studio. Follow the current official instruction rather than treating an app as a substitute for that route."
       }
     ]
   },
@@ -935,43 +939,47 @@ const curatedSeoPages: SeoPage[] = [
     title: "UK Passport Photo Size",
     heading: "UK passport photo size and requirements",
     searchIntent: "country-document",
+    conversionMode: "official-first",
     country: "United Kingdom",
     documentName: "Passport",
     size: "35 x 45 mm",
     pixels: "600 x 750 px or higher",
     background: "Plain light grey or cream",
     keyword: "UK passport photo size",
-    sourceUrl: "https://www.gov.uk/photos-for-passports/photo-requirements",
+    sourceUrl: "https://www.gov.uk/photos-for-passports",
+    sourceReviewedAt: "2026-08-02",
     geoQuestion: "What size is a UK passport photo?",
     answerSummary:
-      "A UK passport photo is commonly 35 x 45 mm with a plain light grey or cream background. On iPhone, IDPhoto Pro lets you choose the UK passport preset, check face framing and background, then export a digital file or print layout.",
+      "The UK 35 x 45 mm size applies to printed photos for a paper passport application. GOV.UK has separate requirements for an online digital photo, including at least 600 by 750 pixels and no computer-software alteration.",
     quickAnswer: [
-      { label: "Photo size", value: "35 x 45 mm" },
-      { label: "Digital target", value: "600 x 750 px or higher" },
-      { label: "Background", value: "Plain light grey or cream" },
-      { label: "Source", value: "GOV.UK requirement link provided" }
+      { label: "Printed size", value: "45 x 35 mm" },
+      { label: "Digital minimum", value: "600 x 750 px" },
+      { label: "Printed background", value: "Plain cream or light grey" },
+      { label: "Source", value: "GOV.UK" }
     ],
     intro:
-      "Create a UK passport photo on iPhone with 35 x 45 mm sizing, light background guidance, face-framing checks, and export options for digital upload or printing.",
+      "Choose the UK passport photo rule that matches your application route. Paper applications use printed 45 x 35 mm photos; online applications use GOV.UK's separate digital-photo rules.",
     requirements: [
-      "Photo size: 35 x 45 mm",
-      "Plain light grey or cream background",
+      "Printed photo size: 45 mm high x 35 mm wide",
+      "Digital photo minimum: 600 x 750 px",
+      "Printed background: plain cream or light grey; digital background: plain light-coloured",
       "Head and shoulders visible with the face centered",
       "Neutral expression, mouth closed, and eyes open",
       "No shadows, blur, red eye, or visible heavy retouching",
+      "Digital photos must be unaltered by computer software",
       "Review the latest GOV.UK photo rules before submitting"
     ],
     steps: [
-      "Choose the UK passport preset in IDPhoto Pro.",
-      "Import or capture a front-facing portrait with even lighting.",
-      "Use checks for head size, eye height, centering, top margin, background, and sharpness.",
-      "Export a digital file or print-ready sheet after reviewing the checklist."
+      "Confirm whether you are applying online or on paper.",
+      "Use the current GOV.UK digital or printed-photo requirement for that route.",
+      "Check size, background, appearance, and editing boundaries before submission.",
+      "Use the official application flow for final upload or paper submission."
     ],
     faq: [
       {
         question: "What size is a UK passport photo?",
         answer:
-          "A common UK passport photo size is 35 x 45 mm. Digital submission rules can include additional quality checks, so review the latest GOV.UK guidance."
+          "For a paper application, the photo is 45 mm high by 35 mm wide. Online applications use a separate digital-photo rule, so review the latest GOV.UK guidance."
       },
       {
         question: "What are UK passport photo dimensions?",
@@ -1331,6 +1339,7 @@ const curatedSeoPages: SeoPage[] = [
 export const seoPages: SeoPage[] = [
   ...curatedSeoPages,
   ...geoSeoPages,
+  ...evidenceBackedCountryPages,
   ...generatedSeoPages
 ];
 

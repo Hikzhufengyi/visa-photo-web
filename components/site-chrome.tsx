@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { evidenceBackedCountryPages } from "@/data/evidence-backed-country-pages";
 import { defaultLocale, getCopy, isLocale, locales } from "@/data/localization";
 import { siteConfig } from "@/data/site";
 
@@ -21,6 +22,13 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathWithoutLocale = isLocale(firstSegment)
     ? pathname.replace(`/${firstSegment}`, "") || "/"
     : pathname;
+  const currentSlug = pathWithoutLocale.startsWith("/")
+    ? pathWithoutLocale.slice(1)
+    : pathWithoutLocale;
+  const currentCountryPage = evidenceBackedCountryPages.find(
+    (page) => page.slug === currentSlug
+  );
+  const availableLocales = currentCountryPage?.supportedLocales ?? locales;
 
   function localizedHref(path: string) {
     if (path === "/") {
@@ -44,7 +52,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
           <Link href={localizedHref("/support")}>{copy.nav.support}</Link>
           <Link href={localizedHref("/privacy")}>{copy.nav.privacy}</Link>
           <div className="locale-switcher">
-            {locales.map((nextLocale) => (
+            {availableLocales.map((nextLocale) => (
               <Link
                 className={nextLocale === locale ? "locale-link locale-link-active" : "locale-link"}
                 href={`/${nextLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`}

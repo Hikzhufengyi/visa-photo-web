@@ -17,6 +17,7 @@ export function SeoLanding({
   const isAr = locale === "ar";
   const isDe = locale === "de";
   const isGuide = page.contentKind === "guide";
+  const isOfficialFirst = page.conversionMode === "official-first";
   const jsonLd = buildSeoPageJsonLd(page, locale);
   const relatedPages = getRelatedPages(page);
   const quickAnswer = getQuickAnswer(page, locale);
@@ -59,36 +60,51 @@ export function SeoLanding({
           <h1>{page.heading}</h1>
           <p>{page.intro}</p>
           <div className="hero-actions">
-            <TrackedLink
-              className="button button-primary"
-              href={siteConfig.appStoreUrl}
-              target="_blank"
-              rel="noreferrer"
-              eventName="app_store_click"
-              eventParams={{ source: "seo_landing", locale, slug: page.slug }}
-            >
-              {isZh
-                ? "在 iPhone 上制作这张证件照"
-                : isAr
-                  ? "إنشاء هذه الصورة على iPhone"
-                  : isDe
-                    ? "Dieses Foto auf dem iPhone erstellen"
-                    : "Create this photo on iPhone"}
-            </TrackedLink>
-            <TrackedLink
-              className="button button-secondary"
-              href={`/${locale}/download`}
-              eventName="download_page_click"
-              eventParams={{ source: "seo_landing", locale, slug: page.slug }}
-            >
-              {isZh
-                ? "下载 IDPhoto Pro"
-                : isAr
-                  ? "تنزيل IDPhoto Pro"
-                  : isDe
-                    ? "IDPhoto Pro laden"
-                    : "Download IDPhoto Pro"}
-            </TrackedLink>
+            {isOfficialFirst && page.sourceUrl ? (
+              <TrackedLink
+                className="button button-primary"
+                href={page.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+                eventName="official_source_click"
+                eventParams={{ source: "seo_landing", locale, slug: page.slug }}
+              >
+                {isZh ? "查看当前官方要求" : "Review current official guidance"}
+              </TrackedLink>
+            ) : (
+              <>
+                <TrackedLink
+                  className="button button-primary"
+                  href={siteConfig.appStoreUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  eventName="app_store_click"
+                  eventParams={{ source: "seo_landing", locale, slug: page.slug }}
+                >
+                  {isZh
+                    ? "在 iPhone 上制作这张证件照"
+                    : isAr
+                      ? "إنشاء هذه الصورة على iPhone"
+                      : isDe
+                        ? "Dieses Foto auf dem iPhone erstellen"
+                        : "Create this photo on iPhone"}
+                </TrackedLink>
+                <TrackedLink
+                  className="button button-secondary"
+                  href={`/${locale}/download`}
+                  eventName="download_page_click"
+                  eventParams={{ source: "seo_landing", locale, slug: page.slug }}
+                >
+                  {isZh
+                    ? "下载 IDPhoto Pro"
+                    : isAr
+                      ? "تنزيل IDPhoto Pro"
+                      : isDe
+                        ? "IDPhoto Pro laden"
+                        : "Download IDPhoto Pro"}
+                </TrackedLink>
+              </>
+            )}
           </div>
         </div>
 
@@ -193,10 +209,24 @@ export function SeoLanding({
           </article>
 
           <article className="seo-card">
-            <p className="card-label">{isZh ? "为什么适合这个 App" : isAr ? "لماذا هذا التطبيق" : isDe ? "Warum diese App passt" : "Why This Tool"}</p>
-            <h2>{isGuide ? (isZh ? "IDPhoto Pro 如何帮助" : "How IDPhoto Pro helps") : (isZh ? "功能和这个页面的需求是匹配的" : isAr ? "لماذا يناسب هذا التطبيق هذه الصفحة" : isDe ? "Die App passt zu diesem Ablauf" : "Why this page matches the app")}</h2>
+            <p className="card-label">
+              {isOfficialFirst
+                ? (isZh ? "最终核对" : "Final check")
+                : (isZh ? "为什么适合这个 App" : isAr ? "لماذا هذا التطبيق" : isDe ? "Warum diese App passt" : "Why This Tool")}
+            </p>
+            <h2>
+              {isOfficialFirst
+                ? (isZh ? "以官方流程为准" : "Use the official process as the final authority")
+                : isGuide
+                  ? (isZh ? "IDPhoto Pro 如何帮助" : "How IDPhoto Pro helps")
+                  : (isZh ? "功能和这个页面的需求是匹配的" : isAr ? "لماذا يناسب هذا التطبيق هذه الصفحة" : isDe ? "Die App passt zu diesem Ablauf" : "Why this page matches the app")}
+            </h2>
             <p>
-              {isZh
+              {isOfficialFirst
+                ? (isZh
+                  ? "这页用于理解适用规则，不替代接收机构的当前要求、拍摄方式或提交流程。提交前请回到页面顶部的官方来源，并以其最新说明为准。"
+                  : "This page helps you understand the applicable rule. It does not replace the receiving authority's current capture, editing, or submission process. Before submitting, return to the official source linked above and follow its latest instruction.")
+                : isZh
                 ? "IDPhoto Pro 的流程是先选择国家或证件规格，再在 iPhone 本地调整照片、检查背景和构图，最后导出电子文件或打印排版。它不是政府官方服务，也不会保证最终受理结果。"
                 : isAr
                   ? "يعتمد IDPhoto Pro على اختيار قالب الدولة أو المستند، ثم ضبط الصورة محلياً على iPhone، ومراجعة الخلفية والإطار، ثم تصدير ملف رقمي أو تخطيط للطباعة. التطبيق ليس خدمة حكومية ولا يضمن القبول النهائي."
@@ -231,7 +261,7 @@ export function SeoLanding({
         {page.topicLinks?.length ? (
           <section className="seo-faq topic-link-section">
             <p className="card-label">Choose the task you need to complete</p>
-            <h2>US passport photo help by question</h2>
+            <h2>{page.country} passport photo help by question</h2>
             <div className="seo-grid">
               {page.topicLinks.map((item) => (
                 <article className="seo-card" key={item.slug}>
