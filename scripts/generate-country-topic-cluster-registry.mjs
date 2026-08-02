@@ -22,14 +22,14 @@ const evidenceBackedRows = {
   "uk-passport": {
     evidenceIds: ["CLM-012"],
     reviewedAt: "2026-08-02",
-    indexState: "ready_for_design",
-    note: "Primary GOV.UK digital and printed-photo requirements were retrieved. Country-specific page scope must preserve the online-versus-printed distinction."
+    indexState: "published",
+    note: "Published official-first UK passport guidance. The online digital and paper printed-photo routes remain separate; refresh the primary source by 2026-11-02."
   },
   "canada-passport": {
     evidenceIds: ["CLM-013"],
     reviewedAt: "2026-08-02",
-    indexState: "ready_for_design",
-    note: "Primary Government of Canada passport-photo requirements were retrieved. The official commercial-photographer and editing limits must remain visible."
+    indexState: "published",
+    note: "Published official-first Canada passport guidance. The commercial-photographer requirement and editing limits remain visible; refresh the primary source by 2026-11-02."
   }
 };
 
@@ -63,7 +63,7 @@ const rows = specs.map((spec) => {
     indexState: evidenceBacked?.indexState ?? "blocked",
     owner: evidenceBacked ? "增长运营 / 产品经理" : "增长运营",
     publicationRule: evidenceBacked?.indexState === "published"
-      ? "Published only for the evidence-backed U.S. passport scope."
+      ? "Published only for the exact country and document scope backed by the recorded evidence."
       : evidenceBacked
         ? "Evidence is recorded, but page creation and indexation remain blocked until product, design, CTO, and QA gates pass."
         : "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",

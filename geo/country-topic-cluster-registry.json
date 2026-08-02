@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-08-02T16:14:34.492Z",
+  "generatedAt": "2026-08-02T23:52:59.510Z",
   "source": "data/app-photo-specs.ts",
   "publicationPolicy": {
     "purpose": "Create country-specific search and GEO pages only where the user task and official evidence are distinct.",
@@ -18,8 +18,8 @@
   },
   "summary": {
     "totalCandidates": 113,
-    "published": 1,
-    "readyForDesign": 2,
+    "published": 3,
+    "readyForDesign": 0,
     "blockedPendingEvidence": 110
   },
   "rows": [
@@ -52,7 +52,7 @@
       "reviewedAt": "2026-07-27",
       "indexState": "published",
       "owner": "增长运营 / 产品经理",
-      "publicationRule": "Published only for the evidence-backed U.S. passport scope.",
+      "publicationRule": "Published only for the exact country and document scope backed by the recorded evidence.",
       "note": "US passport cluster is the reference implementation. The country-specific rule source must be refreshed by 2026-10-27."
     },
     {
@@ -110,10 +110,10 @@
         "CLM-012"
       ],
       "reviewedAt": "2026-08-02",
-      "indexState": "ready_for_design",
+      "indexState": "published",
       "owner": "增长运营 / 产品经理",
-      "publicationRule": "Evidence is recorded, but page creation and indexation remain blocked until product, design, CTO, and QA gates pass.",
-      "note": "Primary GOV.UK digital and printed-photo requirements were retrieved. Country-specific page scope must preserve the online-versus-printed distinction."
+      "publicationRule": "Published only for the exact country and document scope backed by the recorded evidence.",
+      "note": "Published official-first UK passport guidance. The online digital and paper printed-photo routes remain separate; refresh the primary source by 2026-11-02."
     },
     {
       "id": "CTC-canada-passport",
@@ -142,10 +142,10 @@
         "CLM-013"
       ],
       "reviewedAt": "2026-08-02",
-      "indexState": "ready_for_design",
+      "indexState": "published",
       "owner": "增长运营 / 产品经理",
-      "publicationRule": "Evidence is recorded, but page creation and indexation remain blocked until product, design, CTO, and QA gates pass.",
-      "note": "Primary Government of Canada passport-photo requirements were retrieved. The official commercial-photographer and editing limits must remain visible."
+      "publicationRule": "Published only for the exact country and document scope backed by the recorded evidence.",
+      "note": "Published official-first Canada passport guidance. The commercial-photographer requirement and editing limits remain visible; refresh the primary source by 2026-11-02."
     },
     {
       "id": "CTC-schengen-visa",
