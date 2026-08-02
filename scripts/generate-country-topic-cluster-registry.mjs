@@ -12,12 +12,24 @@ const questionTypesByCategory = {
   print: ["print"]
 };
 
-const publishedRows = {
+const evidenceBackedRows = {
   "us-passport": {
     evidenceIds: ["CLM-011"],
     reviewedAt: "2026-07-27",
     indexState: "published",
     note: "US passport cluster is the reference implementation. The country-specific rule source must be refreshed by 2026-10-27."
+  },
+  "uk-passport": {
+    evidenceIds: ["CLM-012"],
+    reviewedAt: "2026-08-02",
+    indexState: "ready_for_design",
+    note: "Primary GOV.UK digital and printed-photo requirements were retrieved. Country-specific page scope must preserve the online-versus-printed distinction."
+  },
+  "canada-passport": {
+    evidenceIds: ["CLM-013"],
+    reviewedAt: "2026-08-02",
+    indexState: "ready_for_design",
+    note: "Primary Government of Canada passport-photo requirements were retrieved. The official commercial-photographer and editing limits must remain visible."
   }
 };
 
@@ -30,7 +42,7 @@ if (!match) {
 
 const specs = JSON.parse(match[1]);
 const rows = specs.map((spec) => {
-  const published = publishedRows[spec.id];
+  const evidenceBacked = evidenceBackedRows[spec.id];
 
   return {
     id: `CTC-${spec.id}`,
@@ -46,14 +58,16 @@ const rows = specs.map((spec) => {
       "Scope boundary: country, document, application channel, and exceptions",
       "Product preset parity with the released iOS version"
     ],
-    evidenceIds: published?.evidenceIds ?? [],
-    reviewedAt: published?.reviewedAt ?? null,
-    indexState: published?.indexState ?? "blocked",
-    owner: published ? "增长运营 / 产品经理" : "增长运营",
-    publicationRule: published
+    evidenceIds: evidenceBacked?.evidenceIds ?? [],
+    reviewedAt: evidenceBacked?.reviewedAt ?? null,
+    indexState: evidenceBacked?.indexState ?? "blocked",
+    owner: evidenceBacked ? "增长运营 / 产品经理" : "增长运营",
+    publicationRule: evidenceBacked?.indexState === "published"
       ? "Published only for the evidence-backed U.S. passport scope."
-      : "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
-    note: published?.note ?? "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+      : evidenceBacked
+        ? "Evidence is recorded, but page creation and indexation remain blocked until product, design, CTO, and QA gates pass."
+        : "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
+    note: evidenceBacked?.note ?? "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
   };
 });
 
@@ -78,6 +92,7 @@ const registry = {
   summary: {
     totalCandidates: rows.length,
     published: rows.filter((row) => row.indexState === "published").length,
+    readyForDesign: rows.filter((row) => row.indexState === "ready_for_design").length,
     blockedPendingEvidence: rows.filter((row) => row.indexState === "blocked").length
   },
   rows

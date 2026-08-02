@@ -213,6 +213,44 @@
       "reviewed_at": "2026-07-27",
       "expires_at": "2026-10-27",
       "caveat": "The official page was Cloudflare-blocked during the 2026-08-02 release check. Recheck the live source before the expiry date and before any wording expansion; the receiving authority makes the final decision."
+    },
+    {
+      "id": "CLM-012",
+      "entity_id": "ENT-005",
+      "claim": "For a UK online passport application, GOV.UK requires a recent digital photo with a plain light-coloured background, at least 600 by 750 pixels, and no computer-software alteration; its printed-photo path separately uses 45 mm by 35 mm photos with a cream or light-grey background.",
+      "scope": "UK passport application only; online digital and paper printed-photo routes must remain distinct",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/photos-for-passports",
+          "tier": 1,
+          "title": "GOV.UK passport photo guidance"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-08-02",
+      "expires_at": "2026-11-02",
+      "caveat": "GOV.UK says a booth or shop photo is more likely to be approved than a photo taken on a personal device. Do not claim that an app can produce the official photo code, bypass the official crop flow, or guarantee acceptance."
+    },
+    {
+      "id": "CLM-013",
+      "entity_id": "ENT-004",
+      "claim": "For a Canadian passport application, the Government of Canada requires a 50 mm by 70 mm photo, a 31 to 36 mm chin-to-crown face height, a plain white or light-coloured background, and a photo taken in person by a commercial photographer or photo studio; its guidance prohibits changing the background or removing shadows.",
+      "scope": "Canadian passport application only; not Canada PR, visa, citizenship, or other immigration-photo workflows",
+      "sources": [
+        {
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/photos.html",
+          "tier": 1,
+          "title": "Government of Canada passport photo requirements"
+        }
+      ],
+      "confidence": "observed",
+      "status": "approved",
+      "owner": "增长运营 / 产品经理",
+      "reviewed_at": "2026-08-02",
+      "expires_at": "2026-11-02",
+      "caveat": "Do not present background replacement, retouching, or an iPhone workflow as a substitute for the official commercial-photographer requirement. Final acceptance is decided by the receiving authority."
     }
   ]
 }

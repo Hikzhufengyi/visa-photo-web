@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-08-02T14:24:15.346Z",
+  "generatedAt": "2026-08-02T16:11:26.624Z",
   "source": "data/app-photo-specs.ts",
   "publicationPolicy": {
     "purpose": "Create country-specific search and GEO pages only where the user task and official evidence are distinct.",
@@ -19,7 +19,8 @@
   "summary": {
     "totalCandidates": 113,
     "published": 1,
-    "blockedPendingEvidence": 112
+    "readyForDesign": 2,
+    "blockedPendingEvidence": 110
   },
   "rows": [
     {
@@ -105,12 +106,14 @@
         "Scope boundary: country, document, application channel, and exceptions",
         "Product preset parity with the released iOS version"
       ],
-      "evidenceIds": [],
-      "reviewedAt": null,
-      "indexState": "blocked",
-      "owner": "增长运营",
-      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
-      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+      "evidenceIds": [
+        "CLM-012"
+      ],
+      "reviewedAt": "2026-08-02",
+      "indexState": "ready_for_design",
+      "owner": "增长运营 / 产品经理",
+      "publicationRule": "Evidence is recorded, but page creation and indexation remain blocked until product, design, CTO, and QA gates pass.",
+      "note": "Primary GOV.UK digital and printed-photo requirements were retrieved. Country-specific page scope must preserve the online-versus-printed distinction."
     },
     {
       "id": "CTC-canada-passport",
@@ -135,12 +138,14 @@
         "Scope boundary: country, document, application channel, and exceptions",
         "Product preset parity with the released iOS version"
       ],
-      "evidenceIds": [],
-      "reviewedAt": null,
-      "indexState": "blocked",
-      "owner": "增长运营",
-      "publicationRule": "Do not create or index long-tail pages until every required evidence field is complete and the task has unique facts beyond the size page.",
-      "note": "Candidate only; no country-specific long-tail page is authorized from the preset dataset alone."
+      "evidenceIds": [
+        "CLM-013"
+      ],
+      "reviewedAt": "2026-08-02",
+      "indexState": "ready_for_design",
+      "owner": "增长运营 / 产品经理",
+      "publicationRule": "Evidence is recorded, but page creation and indexation remain blocked until product, design, CTO, and QA gates pass.",
+      "note": "Primary Government of Canada passport-photo requirements were retrieved. The official commercial-photographer and editing limits must remain visible."
     },
     {
       "id": "CTC-schengen-visa",
