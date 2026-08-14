@@ -1,22 +1,12 @@
-import { getCopy } from "@/data/localization";
+import { AboutPage } from "@/components/about-page";
 import { staticRouteAlternates } from "@/data/static-route-metadata";
 
 export const metadata = {
+  title: "IDPhoto Pro 能做什么，不能做什么",
+  description: "查看 IDPhoto Pro 的产品事实、隐私边界、使用限制和照片尺寸指南。",
   alternates: staticRouteAlternates("zh", "/about")
 };
 
 export default function ZhAboutPage() {
-  const copy = getCopy("zh");
-
-  return (
-    <main className="legal-page">
-      <div className="legal-shell">
-        <p className="eyebrow">关于</p>
-        <h1>{copy.about.title}</h1>
-        {copy.about.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </main>
-  );
+  return <AboutPage locale="zh" />;
 }

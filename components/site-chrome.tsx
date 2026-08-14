@@ -70,6 +70,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       <footer className="site-footer" dir={isRtl ? "rtl" : "ltr"}>
         <span>{`© 2026 ${siteConfig.name}`}</span>
         <span>{copy.footer.notice}</span>
+        <Link href={localizedHref("/about")}>{copy.nav.about}</Link>
         <Link href={localizedHref("/support")}>{copy.nav.support}</Link>
         <Link href={localizedHref("/privacy")}>{copy.nav.privacy}</Link>
         <a href={`mailto:${siteConfig.supportEmail}`}>{copy.footer.contact}</a>

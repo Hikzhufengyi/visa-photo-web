@@ -1,22 +1,12 @@
-import { getCopy } from "@/data/localization";
+import { AboutPage } from "@/components/about-page";
 import { staticRouteAlternates } from "@/data/static-route-metadata";
 
 export const metadata = {
+  title: "ما الذي يفعله IDPhoto Pro وما الذي لا يفعله",
+  description: "حقائق المنتج وحدود الخصوصية والقيود وأدلة مقاسات الصور في IDPhoto Pro.",
   alternates: staticRouteAlternates("ar", "/about")
 };
 
 export default function ArAboutPage() {
-  const copy = getCopy("ar");
-
-  return (
-    <main className="legal-page">
-      <div className="legal-shell">
-        <p className="eyebrow">حول التطبيق</p>
-        <h1>{copy.about.title}</h1>
-        {copy.about.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </main>
-  );
+  return <AboutPage locale="ar" />;
 }

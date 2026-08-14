@@ -1,22 +1,12 @@
-import { getCopy } from "@/data/localization";
+import { AboutPage } from "@/components/about-page";
 import { staticRouteAlternates } from "@/data/static-route-metadata";
 
 export const metadata = {
+  title: "What IDPhoto Pro Does and Does Not Do",
+  description: "Product facts, privacy boundary, limitations, and photo-size guidance for IDPhoto Pro on iPhone.",
   alternates: staticRouteAlternates("en", "/about")
 };
 
 export default function EnAboutPage() {
-  const copy = getCopy("en");
-
-  return (
-    <main className="legal-page">
-      <div className="legal-shell">
-        <p className="eyebrow">About</p>
-        <h1>{copy.about.title}</h1>
-        {copy.about.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </main>
-  );
+  return <AboutPage locale="en" />;
 }

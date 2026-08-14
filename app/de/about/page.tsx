@@ -1,22 +1,12 @@
-import { getCopy } from "@/data/localization";
+import { AboutPage } from "@/components/about-page";
 import { staticRouteAlternates } from "@/data/static-route-metadata";
 
 export const metadata = {
+  title: "Was IDPhoto Pro macht und was nicht",
+  description: "Produktfakten, Datenschutzgrenzen, Einschränkungen und Fotogrößen-Ratgeber für IDPhoto Pro.",
   alternates: staticRouteAlternates("de", "/about")
 };
 
 export default function DeAboutPage() {
-  const copy = getCopy("de");
-
-  return (
-    <main className="legal-page">
-      <div className="legal-shell">
-        <p className="eyebrow">Über uns</p>
-        <h1>{copy.about.title}</h1>
-        {copy.about.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </main>
-  );
+  return <AboutPage locale="de" />;
 }

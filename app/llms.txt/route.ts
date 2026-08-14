@@ -76,6 +76,7 @@ IDPhoto Pro is an iPhone app for preparing photo files from user-supplied portra
 ## Important pages
 
 - [Home](${siteConfig.domain}/en): Passport, visa, and ID photo app for iPhone.
+- [Product facts and limits](${siteConfig.domain}/en/about): What IDPhoto Pro does, does not do, and where to verify privacy and photo-size guidance.
 - [Download](${siteConfig.domain}/en/download): App Store download page.
 - [Photo checks](${siteConfig.domain}/en/compliance): Full list of photo checks.
 - [Privacy](${siteConfig.domain}/en/privacy): On-device processing and privacy policy.
