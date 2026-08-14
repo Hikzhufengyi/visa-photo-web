@@ -17,11 +17,11 @@ const seoLinks = [
 
 const homeLabels = {
   en: {
-    heroTitle: "Passport, visa, and ID photos, made in minutes",
+    heroTitle: "Passport, visa, and ID photo sizes, made simple",
     heroText: "Choose a size, check face position and background, then export a digital file or 4x6 print layout.",
     heroInputLabel: "Take or import",
     heroOutputLabel: "Ready to use",
-    heroResultCaption: "From phone photo to checked ID photo",
+    heroResultCaption: "From phone photo to a prepared photo file",
     disclaimer: "Creates photo files only. Does not generate IDs, passports, visas, or official documents.",
     cta: "Download iPhone App",
     trust: "Local processing. Photos stay on your device.",
@@ -43,7 +43,7 @@ const homeLabels = {
     ],
     allStandardsLabel: "All photo sizes",
     featureColumns: [
-      { title: "Size Presets", text: "Covers 100+ passport, visa, and ID photo presets, with checks for common photo requirements." },
+      { title: "Photo-Size Presets", text: "Covers 100+ passport, visa, and ID photo size presets, with review guidance for common photo requirements." },
       { title: "On-device Processing", text: "All image processing is completed on your device. No cloud upload needed." },
       { title: "Digital & Print Export", text: "Supports JPG, PNG, HEIC, PDF, plus 4x6, A4, and Letter print layouts." }
     ],
@@ -58,11 +58,11 @@ const homeLabels = {
     moreGuides: "Browse all photo size guides"
   },
   zh: {
-    heroTitle: "护照照、签证照和证件照，即刻制作",
+    heroTitle: "护照照、签证照和证件照尺寸，清楚准备",
     heroText: "选择规格，检查脸部位置和背景，然后导出电子版或 4x6 打印排版。",
     heroInputLabel: "拍摄或导入",
     heroOutputLabel: "完成并导出",
-    heroResultCaption: "从手机照片到完成检查的证件照",
+    heroResultCaption: "从手机照片到准备好的照片文件",
     disclaimer: "只制作照片文件，不生成任何证件或官方文件。",
     cta: "下载 iPhone App",
     trust: "本地处理。照片不上云。",
@@ -84,7 +84,7 @@ const homeLabels = {
     ],
     allStandardsLabel: "全部证件照规格",
     featureColumns: [
-      { title: "规格覆盖", text: "覆盖 100+ 护照、签证和身份照规格，并提供常见照片要求检查。" },
+      { title: "照片尺寸模板", text: "覆盖 100+ 护照、签证和身份照尺寸模板，并提供常见照片要求检查提示。" },
       { title: "本地处理", text: "所有图像处理均在设备端完成。无需云端上传。" },
       { title: "电子版与打印版导出", text: "支持 JPG、PNG、HEIC、PDF，以及 4x6、A4、Letter 打印排版。" }
     ],
@@ -99,11 +99,11 @@ const homeLabels = {
     moreGuides: "查看更多证件照规格"
   },
   ar: {
-    heroTitle: "حضّر صور الجواز والتأشيرة والهوية خلال دقائق",
+    heroTitle: "مقاسات صور الجواز والتأشيرة والهوية ببساطة",
     heroText: "اختر المقاس، افحص موضع الوجه والخلفية، ثم صدّر ملفاً رقمياً أو صفحة طباعة 4x6.",
     heroInputLabel: "التقط أو استورد",
     heroOutputLabel: "جاهزة للاستخدام",
-    heroResultCaption: "من صورة الهاتف إلى صورة هوية مفحوصة",
+    heroResultCaption: "من صورة الهاتف إلى ملف صورة مُجهز",
     disclaimer: "ينشئ ملفات صور فقط. لا ينشئ هويات أو جوازات أو تأشيرات أو مستندات رسمية.",
     cta: "تنزيل التطبيق",
     trust: "معالجة محلية. تبقى الصور على جهازك.",
@@ -140,11 +140,11 @@ const homeLabels = {
     moreGuides: "تصفح كل أدلة المقاسات"
   },
   de: {
-    heroTitle: "Pass-, Visa- und Ausweisfotos in Minuten erstellen",
+    heroTitle: "Pass-, Visa- und Ausweisfoto-Größen einfach vorbereiten",
     heroText: "Größe wählen, Gesicht und Hintergrund prüfen, dann digital oder als 4x6-Drucklayout exportieren.",
     heroInputLabel: "Aufnehmen oder importieren",
     heroOutputLabel: "Bereit zur Nutzung",
-    heroResultCaption: "Vom Handyfoto zum geprüften Passfoto",
+    heroResultCaption: "Vom Handyfoto zur vorbereiteten Fotodatei",
     disclaimer: "Erstellt nur Fotodateien. Erstellt keine Ausweise, Pässe, Visa oder offiziellen Dokumente.",
     cta: "App laden",
     trust: "Lokale Verarbeitung. Fotos bleiben auf deinem Gerät.",
@@ -209,8 +209,8 @@ const homeLabels = {
 export function MarketingHome({ locale }: { locale: Locale }) {
   const labels = homeLabels[locale];
   const heroBullets = locale === "zh"
-    ? ["导出前完成 21 项照片检查", "覆盖护照、签证、移民和身份照常用规格", "照片本地处理，不上传服务器", "支持电子版和 4x6 打印排版"]
-    : ["Run 21 photo checks before export", "Passport, visa, immigration, and ID photo presets", "Photos stay on your device", "Digital files and 4x6 print layouts"];
+    ? ["导出前完成 21 项照片检查", "覆盖护照、签证、移民和身份照常用尺寸", "照片本地处理，不上传服务器", "支持电子版和 4x6 打印排版"]
+    : ["Review 21 photo details before export", "Passport, visa, immigration, and ID photo size presets", "Photos stay on your device", "Digital files and 4x6 print layouts"];
   const heroProofItems = locale === "zh"
     ? [
         { icon: "/icon-network.svg", value: "100+", label: "规格模板" },
@@ -220,7 +220,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
       ]
     : [
         { icon: "/icon-network.svg", value: "100+", label: "Size Presets" },
-        { icon: "/icon-ai.svg", value: "AI", label: "Compliance Check" },
+        { icon: "/icon-ai.svg", value: "AI", label: "Photo Review" },
         { icon: "/icon-shield.svg", value: "Private", label: "On-Device" },
         { icon: "/icon-print.svg", value: "Digital & Print", label: "Export" }
       ];
@@ -334,7 +334,7 @@ export function MarketingHome({ locale }: { locale: Locale }) {
               </>
             ) : (
               <>
-                Professional <span>ID Photos,</span> Made Simple.
+                Photo <span>Sizes,</span> Made Simple.
               </>
             )}
           </h1>

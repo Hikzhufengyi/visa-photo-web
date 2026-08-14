@@ -7,5 +7,5 @@ export const siteConfig = {
   appStoreName: "IDPhoto Pro: Passport Photo",
   supportEmail: "passportidphoto.seafon@gmail.com",
   description:
-    "IDPhoto Pro helps people create passport, visa, and ID photos on iPhone with size presets, on-device checks, and export-ready files."
+    "IDPhoto Pro helps people prepare photo files on iPhone for passport, visa, residence, and ID photo workflows, with photo-size presets, on-device review guidance, and export-ready files. It does not create credentials or official documents."
 };

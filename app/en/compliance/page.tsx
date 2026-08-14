@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { CompliancePage } from "@/components/compliance-page";
 
 export const metadata: Metadata = {
-  title: "Passport Photo Compliance Checks on iPhone",
+  title: "Passport Photo Review Guidance on iPhone",
   description:
-    "See the full document-photo checklist in IDPhoto Pro, including size, background, face position, print readiness, and upload file guidance.",
+    "See the photo review guidance in IDPhoto Pro, including size, background, face position, print readiness, and upload file guidance.",
   alternates: {
     canonical: "/en/compliance",
     languages: {

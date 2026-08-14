@@ -8,7 +8,7 @@ const supportCopy = {
     eyebrow: "Technical Support",
     title: "IDPhoto Pro Support",
     lead:
-      "If you get stuck while creating, checking, or exporting a document photo, start with the common questions below. If that still does not solve it, contact us directly.",
+      "If you get stuck while preparing, reviewing, or exporting a photo file, start with the common questions below. If that still does not solve it, contact us directly.",
     privacyLabel: "Privacy reminder:",
     privacy:
       "Photo processing happens on your device. IDPhoto Pro does not upload your photos to a server.",
@@ -18,7 +18,7 @@ const supportCopy = {
     contact: "Contact",
     email: "Email:",
     contactHelp:
-      "If you can include the document type, the issue you hit, and a screenshot, it is much easier to pinpoint the problem.",
+      "If you can include the selected photo size, the issue you hit, and a screenshot, it is much easier to pinpoint the problem.",
     openStore: "Open App Store",
     download: "Download page",
     faqTitle: "Common Questions",
@@ -29,7 +29,7 @@ const supportCopy = {
       },
       {
         q: "Why does the preview show guide lines?",
-        a: "Guide lines help you align the face, eye line, top margin, and printable area for the selected document type. Different countries and document types may use different size and framing rules."
+        a: "Guide lines help you align the face, eye line, top margin, and printable area for the selected photo size. Different receiving authorities may publish different size and framing guidance."
       },
       {
         q: "Does IDPhoto Pro guarantee acceptance?",
@@ -46,7 +46,7 @@ const supportCopy = {
     ],
     featuresTitle: "Supported Features",
     features: [
-      "Official-size passport, visa, immigration, and ID photo presets",
+      "Photo-size presets for passport, visa, residence, and ID photo workflows",
       "On-device checks for head size, face position, eye line, top margin, and background guidance",
       "Background replacement and light repair",
       "300 DPI JPG, PNG, HEIF, and PDF export",
@@ -55,7 +55,7 @@ const supportCopy = {
     ],
     legalTitle: "Legal Notice",
     legal:
-      "IDPhoto Pro is not affiliated with any government, embassy, visa center, or official application portal. Compliance checks are guidance only, and final acceptance is decided by the receiving authority.",
+      "IDPhoto Pro prepares photo files from photos you provide. It does not create credentials, personal data fields, IDs, passports, visas, or official documents. It is not affiliated with any government, embassy, visa center, or official application portal. Photo review guidance is informational only, and final acceptance is decided by the receiving authority.",
     privacyLinkPrefix: "You can also review the full",
     privacyLink: "privacy policy",
     privacyLinkSuffix: "."
@@ -99,7 +99,7 @@ const supportCopy = {
     ],
     featuresTitle: "支持的功能",
     features: [
-      "护照照、签证照、移民照和证件照官方尺寸模板",
+      "适用于护照照、签证照、居留照和证件照流程的照片尺寸模板",
       "头部大小、面部位置、眼线、头顶留白和背景引导等本地检查",
       "背景替换和轻度画质修复",
       "300 DPI JPG、PNG、HEIF 和 PDF 导出",
@@ -108,7 +108,7 @@ const supportCopy = {
     ],
     legalTitle: "法律说明",
     legal:
-      "IDPhoto Pro 不隶属于任何政府、使领馆、签证中心或官方申请平台。合规检查仅作为辅助提示，最终是否接受由接收机构决定。",
+      "IDPhoto Pro 仅基于你提供的照片准备照片文件，不会生成任何证件信息、个人资料字段、身份证件、护照、签证或官方文件。它不隶属于任何政府、使领馆、签证中心或官方申请平台。照片检查仅作信息提示，最终是否接受由接收机构决定。",
     privacyLinkPrefix: "你也可以查看完整的",
     privacyLink: "隐私政策",
     privacyLinkSuffix: "。"
@@ -152,7 +152,7 @@ const supportCopy = {
     ],
     featuresTitle: "الميزات المدعومة",
     features: [
-      "قوالب رسمية لصور الجواز والتأشيرة والإقامة والهوية",
+      "قوالب مقاسات الصور لمسارات صور الجواز والتأشيرة والإقامة والهوية",
       "فحوصات على الجهاز لحجم الرأس وموضع الوجه وخط العين والهامش العلوي والخلفية",
       "تغيير الخلفية وتحسين خفيف للصورة",
       "تصدير JPG و PNG و HEIF و PDF بدقة 300 DPI",
@@ -161,7 +161,7 @@ const supportCopy = {
     ],
     legalTitle: "تنبيه قانوني",
     legal:
-      "IDPhoto Pro غير تابع لأي حكومة أو سفارة أو مركز تأشيرات أو بوابة تقديم رسمية. الفحوصات إرشادية فقط، والقبول النهائي تقرره الجهة المستقبلة.",
+      "يجهز IDPhoto Pro ملفات صور من الصور التي تقدمها فقط. ولا ينشئ بيانات اعتماد أو حقول بيانات شخصية أو هويات أو جوازات أو تأشيرات أو مستندات رسمية. وهو غير تابع لأي حكومة أو سفارة أو مركز تأشيرات أو بوابة تقديم رسمية. مراجعة الصور إرشادية فقط، والقبول النهائي تقرره الجهة المستقبلة.",
     privacyLinkPrefix: "يمكنك أيضاً مراجعة",
     privacyLink: "سياسة الخصوصية",
     privacyLinkSuffix: "."
@@ -208,7 +208,7 @@ const supportCopy = {
     ],
     featuresTitle: "Unterstützte Funktionen",
     features: [
-      "Vorlagen für Pass-, Visa-, Aufenthalts- und Ausweisfotos",
+      "Fotogrößen-Vorlagen für Pass-, Visa-, Aufenthalts- und Ausweisfoto-Workflows",
       "Prüfungen auf dem Gerät für Kopfhöhe, Gesichtsposition, Augenlinie, oberen Rand und Hintergrund",
       "Hintergrundwechsel und leichte Bildverbesserung",
       "300-DPI-Export als JPG, PNG, HEIF und PDF",
@@ -217,7 +217,7 @@ const supportCopy = {
     ],
     legalTitle: "Rechtlicher Hinweis",
     legal:
-      "IDPhoto Pro ist nicht mit Behörden, Botschaften, Visazentren oder offiziellen Antragsportalen verbunden. Prüfungen dienen nur als Orientierung; die endgültige Annahme entscheidet die empfangende Stelle.",
+      "IDPhoto Pro bereitet nur Fotodateien aus Fotos vor, die du bereitstellst. Es erstellt keine Zugangsdaten, personenbezogenen Datenfelder, Ausweise, Pässe, Visa oder amtlichen Dokumente. Die App ist nicht mit Behörden, Botschaften, Visazentren oder offiziellen Antragsportalen verbunden. Die Foto-Prüfung dient nur als Orientierung; die endgültige Annahme entscheidet die empfangende Stelle.",
     privacyLinkPrefix: "Du kannst auch die vollständige",
     privacyLink: "Datenschutzerklärung",
     privacyLinkSuffix: "lesen."

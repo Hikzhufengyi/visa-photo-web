@@ -4,15 +4,15 @@ import { siteConfig } from "@/data/site";
 
 const complianceCopy = {
   en: {
-    eyebrow: "Compliance Checks",
-    title: "Review every check before you export",
+    eyebrow: "Photo Review Guidance",
+    title: "Review key photo details before you export",
     intro:
-      "IDPhoto Pro shows a full pre-export checklist on iPhone so you can catch sizing, background, face-position, and file issues before submission.",
+      "IDPhoto Pro shows a pre-export photo review on iPhone so you can spot sizing, background, face-position, and file issues before you save or submit a photo file.",
     note:
       "Checks are guidance based on published requirements. Always review the latest official source before you submit a final photo.",
-    badge: "20+ checks",
+    badge: "20+ review items",
     items: [
-      "Country and document size",
+      "Selected photo-size preset",
       "Final aspect ratio",
       "Pixel resolution for export",
       "Required background color",
@@ -45,15 +45,15 @@ const complianceCopy = {
     ]
   },
   zh: {
-    eyebrow: "合规校验",
+    eyebrow: "照片检查指引",
     title: "导出前，把关键检查项先看清楚",
     intro:
       "IDPhoto Pro 会在 iPhone 上给出完整的导出前检查清单，尽量把尺寸、背景、脸部位置和文件问题提前暴露出来。",
     note:
       "这些检查基于公开要求提供辅助提示。正式提交前，仍建议核对最新官方来源。",
-    badge: "20+ 项检查",
+    badge: "20+ 项照片检查",
     items: [
-      "当前国家和证件类型的尺寸规格",
+      "当前选择的照片尺寸模板",
       "最终照片画幅比例",
       "像素分辨率是否足够导出",
       "背景颜色是否符合该证件要求",
@@ -86,15 +86,15 @@ const complianceCopy = {
     ]
   },
   ar: {
-    eyebrow: "فحوصات التوافق",
+    eyebrow: "إرشادات مراجعة الصورة",
     title: "راجع الفحوصات الأساسية قبل التصدير",
     intro:
       "يعرض IDPhoto Pro قائمة فحص كاملة على iPhone حتى تكتشف مشاكل المقاس والخلفية وموضع الوجه والملف قبل التقديم.",
     note:
       "هذه الفحوصات إرشادية وتعتمد على المتطلبات المنشورة. راجع المصدر الرسمي قبل التقديم النهائي.",
-    badge: "20+ فحصاً",
+    badge: "20+ بند مراجعة",
     items: [
-      "مقاس الدولة والمستند",
+      "قالب مقاس الصورة المحدد",
       "نسبة أبعاد الصورة",
       "دقة البكسل للتصدير",
       "لون الخلفية المطلوب",
@@ -127,15 +127,15 @@ const complianceCopy = {
     ]
   },
   de: {
-    eyebrow: "Konformitätsprüfungen",
+    eyebrow: "Hinweise zur Foto-Prüfung",
     title: "Prüfe die wichtigsten Punkte vor dem Export",
     intro:
       "IDPhoto Pro zeigt auf dem iPhone eine vollständige Prüfliste, damit Größen-, Hintergrund-, Gesichts- und Dateiprobleme vor dem Einreichen sichtbar werden.",
     note:
       "Die Prüfungen dienen als Orientierung auf Basis veröffentlichter Anforderungen. Prüfe vor der Abgabe immer die offizielle Quelle.",
-    badge: "20+ Prüfungen",
+    badge: "20+ Prüfpunkte",
     items: [
-      "Land und Dokumentgröße",
+      "Ausgewählte Fotogrößen-Vorlage",
       "Endgültiges Seitenverhältnis",
       "Pixelauflösung für den Export",
       "Erforderliche Hintergrundfarbe",
